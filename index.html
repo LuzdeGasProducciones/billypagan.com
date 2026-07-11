@@ -6,103 +6,12 @@
 
 <title>Billy Pagán | Sitio Oficial</title>
 
-<!-- Tipografías elegantes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Primera pantalla */
-.hero {
-    height: 100vh;
-    width: 100%;
-    background-image: url("fondo-web-index.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* Capa suave para que el texto destaque */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.18);
-}
-
-/* Texto principal */
-.contenido {
-    position: relative;
-    text-align: center;
-    color: #222;
-    animation: aparecer 2s ease;
-}
-
-h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(70px, 10vw, 130px);
-    font-weight: 600;
-    letter-spacing: 2px;
-    line-height: 0.9;
-    text-shadow: 0 2px 15px rgba(255,255,255,0.45);
-}
-
-.subtitulo {
-    margin-top: 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    letter-spacing: 9px;
-    font-weight: 300;
-}
-
-
-/* Entrada elegante */
-@keyframes aparecer {
-
-from {
-    opacity:0;
-    transform: translateY(30px);
-}
-
-to {
-    opacity:1;
-    transform: translateY(0);
-}
-
-}
-
-
-/* Móviles */
-@media(max-width:600px){
-
-h1 {
-    font-size:70px;
-}
-
-.subtitulo {
-    font-size:11px;
-    letter-spacing:5px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -116,6 +25,9 @@ h1 {
     </div>
 
 </section>
+
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
