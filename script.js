@@ -1,1 +1,5 @@
-console.log("Página cargada correctamente");
+document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("Web oficial de Billy Pagán cargada");
+
+});
