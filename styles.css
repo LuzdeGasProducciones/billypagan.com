@@ -1,383 +1,133 @@
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
 }
-
-
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
 
 
 body{
-
-font-family:"Montserrat",sans-serif;
-
+height:100vh;
 overflow:hidden;
-
 }
-
-
-
-
-
-/* =====================
-   PORTADA
-===================== */
 
 
 .hero{
 
-
 height:100vh;
-
 width:100%;
 
+background-image:url("fondo-web-index.png");
 
-background-image:url("../imagenes/fondo-web-index.png");
-
-
-background-size:100%;
-
+background-size:cover;
 background-position:center;
 
-background-repeat:no-repeat;
-
-
-
 display:flex;
-
-justify-content:center;
-
 align-items:center;
-
-
+justify-content:center;
 
 position:relative;
 
-
-animation:
-
-entradaFoto 2.5s ease forwards,
-
-movimientoFoto 20s ease-in-out 2.5s infinite alternate;
-
+animation:zoom 20s infinite alternate;
 
 }
-
-
-
 
 
 .hero::before{
 
-
 content:"";
 
-
 position:absolute;
-
 inset:0;
 
-
-background:
-
-linear-gradient(
-
-90deg,
-
-rgba(255,255,255,0.05),
-
-rgba(255,255,255,0.35)
-
-);
-
+background:rgba(255,255,255,0.20);
 
 }
 
-
-
-
-
-/* TEXTO */
 
 
 .contenido{
 
-
 position:relative;
-
-z-index:2;
-
 
 text-align:center;
 
+margin-left:35%;
 
-margin-left:38%;
+color:#222;
 
-
-opacity:0;
-
-
-animation:
-
-entradaTexto 2s ease forwards;
-
-
-animation-delay:1s;
-
+animation:entrada 2s ease;
 
 }
-
 
 
 
 h1{
 
+font-family:Georgia,serif;
 
-font-family:"Cormorant Garamond",serif;
+font-size:100px;
 
+font-weight:normal;
 
-font-size:clamp(70px,10vw,130px);
-
-
-font-weight:600;
-
-
-letter-spacing:4px;
-
-
-line-height:.9;
-
-
-color:#202020;
-
-
-
-text-shadow:
-
-0 4px 25px rgba(255,255,255,.8);
-
+letter-spacing:3px;
 
 }
 
 
 
+p{
 
+margin-top:25px;
 
-.subtitulo{
-
-
-margin-top:30px;
-
+font-family:Arial,sans-serif;
 
 font-size:14px;
 
-
 letter-spacing:10px;
-
-
-font-weight:300;
-
-
-color:#202020;
-
 
 }
 
-
-
-
-
-
-
-/* BOTON */
 
 
 button{
 
+margin-top:45px;
 
-margin-top:55px;
+padding:15px 40px;
 
+background:none;
 
-padding:15px 45px;
-
-
-background:transparent;
-
-
-border:1px solid #333;
-
-
-font-family:"Montserrat",sans-serif;
-
+border:1px solid #222;
 
 letter-spacing:5px;
 
-
-font-size:12px;
-
-
 cursor:pointer;
 
-
-transition:.5s;
-
-
 }
 
 
 
-
-
-button:hover{
-
-
-background:#202020;
-
-color:white;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
-   SEGUNDA PAGINA
-===================== */
-
-
-.principal{
-
-
-height:100vh;
-
-
-width:100%;
-
-
-background:#111;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-}
-
-
-
-
-
-nav ul{
-
-
-list-style:none;
-
-
-text-align:center;
-
-
-}
-
-
-
-nav li{
-
-
-color:white;
-
-
-font-family:"Montserrat",sans-serif;
-
-
-font-weight:300;
-
-
-font-size:18px;
-
-
-letter-spacing:8px;
-
-
-margin:30px;
-
-
-cursor:pointer;
-
-
-transition:.4s;
-
-
-}
-
-
-
-nav li:hover{
-
-
-opacity:.5;
-
-
-transform:translateX(10px);
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* ANIMACIONES */
-
-
-@keyframes entradaFoto{
-
+@keyframes entrada{
 
 from{
 
 opacity:0;
+transform:translateY(40px);
 
 }
 
 to{
 
 opacity:1;
+transform:translateY(0);
+
+}
 
 }
 
 
-}
 
-
-
-
-
-@keyframes movimientoFoto{
-
+@keyframes zoom{
 
 from{
 
@@ -385,67 +135,19 @@ background-size:100%;
 
 }
 
-
 to{
 
-background-size:112%;
+background-size:110%;
 
 }
-
-
-}
-
-
-
-
-
-
-@keyframes entradaTexto{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
-filter:blur(10px);
-
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-filter:blur(0);
-
-
-}
-
 
 }
 
 
 
-
-
-
-
-
-
-
-/* VERSION MOVIL */
-
-
-@media(max-width:600px){
-
+@media(max-width:700px){
 
 .contenido{
-
 
 margin-left:0;
 
@@ -454,23 +156,8 @@ margin-left:0;
 
 h1{
 
-
-font-size:70px;
-
+font-size:60px;
 
 }
-
-
-.subtitulo{
-
-
-font-size:11px;
-
-letter-spacing:6px;
-
-
-}
-
-
 
 }
