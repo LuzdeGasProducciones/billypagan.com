@@ -1,23 +1,23 @@
 * {
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
 
-html, body {
+html,
+body {
 
-    width:100%;
-    height:100%;
+width:100%;
+height:100%;
 
-    overflow:hidden;
+overflow:hidden;
 
-    font-family:"Montserrat",sans-serif;
+font-family:"Montserrat",sans-serif;
 
 }
-
 
 
 
@@ -25,76 +25,68 @@ html, body {
 
 
 /* ==========================
-   PORTADA PRINCIPAL
+   PORTADA
 ========================== */
 
 
 .hero {
 
 
-    height:100vh;
+height:100vh;
 
-    width:100%;
-
-
-    background-image:url("fondo-web-index.png");
+width:100%;
 
 
-    background-size:cover;
+background-image:url("fondo-web-index.png");
 
 
-    background-position:center;
+background-size:cover;
 
 
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+background-position:center;
 
 
 
-    position:relative;
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
 
 
 
-    animation:
+position:relative;
 
-    entradaFoto 2s ease forwards,
 
-    zoomFoto 20s ease-in-out 2s infinite alternate;
+
+animation:zoomFoto 20s ease-in-out infinite alternate;
 
 
 }
 
 
 
-
-
-
-
-/* Capa suave sobre la fotografía */
 
 
 .hero::before {
 
 
-    content:"";
+content:"";
 
 
-    position:absolute;
+position:absolute;
 
 
-    inset:0;
+inset:0;
 
 
 
-    background:rgba(255,255,255,0.18);
+background:rgba(255,255,255,0.15);
 
 
 }
-
 
 
 
@@ -104,33 +96,44 @@ html, body {
 
 
 /* ==========================
-   MENU SUPERIOR INTEGRADO
+   MENU SUPERIOR
 ========================== */
 
 
 .menu {
 
 
-    position:absolute;
+position:absolute;
 
 
-    top:0;
+top:0;
 
 
-    left:0;
+left:0;
 
 
-    width:100%;
+width:100%;
 
 
-    z-index:20;
+z-index:10;
 
 
-    padding:40px 60px;
+
+padding-top:35px;
 
 
 }
 
+
+
+
+.menu nav {
+
+
+width:100%;
+
+
+}
 
 
 
@@ -138,22 +141,33 @@ html, body {
 .menu ul {
 
 
-    display:flex;
+width:100%;
 
 
-    justify-content:center;
+display:flex;
 
 
-    align-items:center;
+justify-content:center;
 
 
-    flex-wrap:nowrap;
+align-items:center;
 
 
-    gap:55px;
+gap:55px;
 
 
-    list-style:none;
+list-style:none;
+
+
+}
+
+
+
+
+.menu li {
+
+
+white-space:nowrap;
 
 
 }
@@ -165,33 +179,36 @@ html, body {
 .menu a {
 
 
-    text-decoration:none;
+color:#242424;
 
 
-    color:#292929;
+text-decoration:none;
 
 
-    font-family:"Montserrat",sans-serif;
+font-family:"Montserrat",sans-serif;
 
 
-    font-size:12px;
+font-size:12px;
 
 
-    font-weight:300;
+font-weight:300;
 
 
-    letter-spacing:5px;
+letter-spacing:5px;
 
 
-    text-transform:uppercase;
+text-transform:uppercase;
 
 
-    transition:all .4s ease;
 
+text-shadow:0 1px 8px rgba(255,255,255,.5);
+
+
+
+transition:.4s;
 
 
 }
-
 
 
 
@@ -199,13 +216,14 @@ html, body {
 .menu a:hover {
 
 
-    color:#777;
+opacity:.5;
 
 
-    letter-spacing:7px;
+letter-spacing:7px;
 
 
 }
+
 
 
 
@@ -216,39 +234,36 @@ html, body {
 
 
 /* ==========================
-   TEXTO PRINCIPAL
+   TEXTO BILLY
 ========================== */
 
 
 .contenido {
 
 
-    position:relative;
+position:relative;
 
 
-    z-index:2;
-
-
-
-    text-align:center;
+z-index:5;
 
 
 
-    margin-left:38%;
+text-align:center;
 
 
 
-    opacity:0;
+margin-left:38%;
 
 
 
-    animation:
-
-    entradaTexto 2s ease forwards;
+opacity:0;
 
 
 
-    animation-delay:1s;
+animation:entradaTexto 2s ease forwards;
+
+
+animation-delay:1s;
 
 
 }
@@ -262,34 +277,27 @@ html, body {
 h1 {
 
 
-    font-family:"Cormorant Garamond",serif;
+font-family:"Cormorant Garamond",serif;
 
 
-    font-size:clamp(70px,10vw,130px);
+font-size:clamp(70px,10vw,130px);
 
 
-
-    font-weight:600;
-
+font-weight:600;
 
 
-    letter-spacing:3px;
+letter-spacing:3px;
 
 
-
-    line-height:.9;
-
+line-height:.9;
 
 
-    color:#202020;
+color:#202020;
 
 
+text-shadow:
 
-    text-shadow:
-
-
-    0 4px 25px rgba(255,255,255,.8);
-
+0 4px 25px rgba(255,255,255,.8);
 
 
 }
@@ -303,25 +311,19 @@ h1 {
 .subtitulo {
 
 
-    margin-top:30px;
+margin-top:30px;
 
 
-
-    font-family:"Montserrat",sans-serif;
-
-
-    font-size:14px;
+font-size:14px;
 
 
-
-    letter-spacing:10px;
-
+letter-spacing:10px;
 
 
-    font-weight:300;
+font-weight:300;
 
 
-    color:#202020;
+color:#202020;
 
 
 }
@@ -340,53 +342,28 @@ h1 {
 ========================== */
 
 
-@keyframes entradaFoto {
-
-
-    from {
-
-        opacity:0;
-
-    }
-
-
-    to {
-
-        opacity:1;
-
-    }
-
-
-}
-
-
-
-
-
-
 @keyframes zoomFoto {
 
 
-    from {
+from {
 
 
-        background-size:100%;
-
-
-    }
-
-
-    to {
-
-
-        background-size:112%;
-
-
-    }
+background-size:100%;
 
 
 }
 
+
+to {
+
+
+background-size:112%;
+
+
+}
+
+
+}
 
 
 
@@ -395,35 +372,35 @@ h1 {
 @keyframes entradaTexto {
 
 
-    from {
+from {
 
 
-        opacity:0;
+opacity:0;
 
 
-        transform:translateY(50px);
+transform:translateY(50px);
 
 
-        filter:blur(8px);
+filter:blur(8px);
 
 
-    }
+}
 
 
 
-    to {
+to {
 
 
-        opacity:1;
+opacity:1;
 
 
-        transform:translateY(0);
+transform:translateY(0);
 
 
-        filter:blur(0);
+filter:blur(0);
 
 
-    }
+}
 
 
 }
@@ -437,7 +414,7 @@ h1 {
 
 
 /* ==========================
-   VERSION MOVIL
+   MOVIL
 ========================== */
 
 
@@ -445,82 +422,75 @@ h1 {
 
 
 
-    .menu {
+.menu {
 
 
-        padding:25px 15px;
+padding-top:25px;
 
 
-    }
-
-
-
-
-
-    .menu ul {
-
-
-        gap:15px;
-
-
-        flex-wrap:wrap;
-
-
-    }
+}
 
 
 
+.menu ul {
 
 
-    .menu a {
+gap:15px;
 
 
-        font-size:10px;
+flex-wrap:wrap;
 
 
-        letter-spacing:3px;
+padding:0 15px;
 
 
-    }
-
-
-
-
-
-    .contenido {
-
-
-        margin-left:0;
-
-
-    }
+}
 
 
 
+.menu a {
 
 
-    h1 {
+font-size:10px;
 
 
-        font-size:70px;
+letter-spacing:2px;
 
 
-    }
-
-
+}
 
 
 
-    .subtitulo {
+.contenido {
 
 
-        font-size:11px;
+margin-left:0;
 
 
-        letter-spacing:6px;
+}
 
 
-    }
+
+h1 {
+
+
+font-size:70px;
+
+
+}
+
+
+
+.subtitulo {
+
+
+font-size:11px;
+
+
+letter-spacing:6px;
+
+
+}
 
 
 
