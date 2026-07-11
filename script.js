@@ -1,30 +1,5 @@
-const boton = document.getElementById("entrar");
+document.getElementById("entrar").onclick=function(){
 
-const portada = document.getElementById("inicio");
+alert("Web de Billy Pagán");
 
-const web = document.getElementById("web");
-
-
-
-boton.addEventListener("click", function(){
-
-
-portada.classList.add("salida");
-
-
-
-setTimeout(function(){
-
-
-web.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-},800);
-
-
-
-});
+};
