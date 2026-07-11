@@ -5,43 +5,33 @@
 }
 
 html,body{
-
     width:100%;
     height:100%;
-
     font-family:'Montserrat',sans-serif;
-
 }
 
 .hero{
-
     width:100%;
-
     height:100vh;
 
     background-image:url("fondo-web-index.png");
-
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
 
     position:relative;
-
 }
 
 .overlay{
 
     position:absolute;
-
     inset:0;
 
     background:linear-gradient(
-        to right,
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.12),
-        rgba(0,0,0,.05)
+        90deg,
+        rgba(0,0,0,.45) 0%,
+        rgba(0,0,0,.20) 45%,
+        rgba(0,0,0,.05) 100%
     );
 
 }
@@ -51,15 +41,13 @@ header{
     position:absolute;
 
     top:0;
-
     left:0;
 
     width:100%;
 
-    padding:40px 80px;
+    padding:40px 70px;
 
-    z-index:10;
-
+    z-index:100;
 }
 
 nav{
@@ -68,8 +56,7 @@ nav{
 
     justify-content:flex-end;
 
-    gap:50px;
-
+    gap:45px;
 }
 
 nav a{
@@ -78,14 +65,15 @@ nav a{
 
     text-decoration:none;
 
-    text-transform:uppercase;
-
     font-size:14px;
+
+    text-transform:uppercase;
 
     letter-spacing:3px;
 
-    transition:.3s;
+    font-weight:500;
 
+    transition:.3s;
 }
 
 nav a:hover{
@@ -98,13 +86,13 @@ nav a:hover{
 
     position:absolute;
 
-    top:50%;
+    right:8%;
 
-    right:9%;
+    top:50%;
 
     transform:translateY(-50%);
 
-    width:40%;
+    width:38%;
 
     z-index:20;
 
@@ -114,58 +102,26 @@ nav a:hover{
 
 .texto h1{
 
-    font-family:'Cormorant Garamond',serif;
+    font-size:96px;
 
-    font-size:100px;
+    font-weight:800;
+
+    line-height:.88;
+
+    letter-spacing:2px;
+
+    text-shadow:4px 4px 18px rgba(0,0,0,.75);
+
+}
+
+.texto p{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    letter-spacing:8px;
 
     font-weight:300;
-
-    line-height:.9;
-
-    margin-bottom:15px;
-
-}
-
-.texto h2{
-
-    font-size:20px;
-
-    letter-spacing:10px;
-
-    font-weight:300;
-
-    margin-bottom:45px;
-
-}
-
-.botones{
-
-    display:flex;
-
-    gap:20px;
-
-}
-
-.botones a{
-
-    color:white;
-
-    text-decoration:none;
-
-    border:1px solid white;
-
-    padding:15px 34px;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-}
-
-.botones a:hover{
-
-    background:white;
-
-    color:black;
 
 }
