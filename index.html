@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Billy Pagán | Sitio Oficial</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-
-<nav>
-
-<a href="#">Inicio</a>
-<a href="https://www.youtube.com/" target="_blank">YouTube</a>
-<a href="https://payhip.com/" target="_blank">Tienda</a>
-<a href="#">Contacto</a>
-
-</nav>
-
+    <nav>
+        <h1>Mi Sitio</h1>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="texto">
-
-<h1>BILLY<br>PAGÁN</h1>
-
-<p>SITIO OFICIAL</p>
-
-</div>
-
+<section class="hero" id="inicio">
+    <h2>Bienvenido</h2>
+    <p>Una página creada con GitHub Pages.</p>
+    <a href="#servicios" class="boton">Comenzar</a>
 </section>
 
+<section id="servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Diseño</h3>
+            <p>Interfaces modernas y responsivas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Desarrollo</h3>
+            <p>HTML, CSS y JavaScript.</p>
+        </div>
+
+        <div class="card">
+            <h3>Soporte</h3>
+            <p>Mantenimiento de proyectos.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contacto">
+    <p>© 2026 Mi Sitio</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
