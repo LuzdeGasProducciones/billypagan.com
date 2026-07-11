@@ -73,7 +73,6 @@ body{
 .menu ul{
 
     width:100%;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -104,20 +103,20 @@ body{
 
     text-shadow:0 1px 8px rgba(255,255,255,.5);
 
-    transition:.4s;
+    transition:.35s;
 
 }
 
 .menu a:hover{
 
-    opacity:.5;
+    opacity:.55;
     letter-spacing:7px;
 
 }
 
 
 /* ==========================
-   TEXTO
+   TEXTO PRINCIPAL
 ========================== */
 
 .contenido{
@@ -139,7 +138,6 @@ body{
 h1{
 
     font-family:"Cormorant Garamond",serif;
-
     font-size:clamp(70px,10vw,130px);
 
     font-weight:600;
@@ -216,12 +214,20 @@ h1{
 
 @media (max-width:700px){
 
+html,
+body{
+
+    overflow:hidden;
+
+}
+
 .hero{
 
     background-image:url("fondo-web-index-movil.png");
-    background-size:cover;
-    background-position:center center;
+    background-size:contain;
+    background-position:center bottom;
     background-repeat:no-repeat;
+    background-color:#efefef;
 
     animation:none;
 
@@ -239,7 +245,7 @@ h1{
     flex-wrap:wrap;
     justify-content:center;
 
-    padding:0 15px;
+    padding:0 12px;
 
 }
 
@@ -253,25 +259,23 @@ h1{
 .contenido{
 
     margin-left:0;
-
     width:100%;
-
-    padding:0 25px;
+    padding:0 20px;
+    text-align:center;
 
 }
 
 h1{
 
-    font-size:56px;
+    font-size:58px;
+    line-height:1;
 
 }
 
 .subtitulo{
 
     margin-top:18px;
-
     font-size:11px;
-
     letter-spacing:5px;
 
 }
