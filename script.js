@@ -1,1 +1,1 @@
-console.log("Billy Pagán");
+console.log("Página cargada correctamente");
