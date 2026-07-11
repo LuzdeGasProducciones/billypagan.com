@@ -442,3 +442,150 @@ letter-spacing:6px;
 
 
 }
+/* ==========================
+   MENU SUPERIOR
+========================== */
+
+
+.menu {
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:10;
+
+padding:35px 50px;
+
+
+}
+
+
+
+.menu ul {
+
+
+display:flex;
+
+justify-content:center;
+
+gap:45px;
+
+
+list-style:none;
+
+
+}
+
+
+
+.menu a {
+
+
+text-decoration:none;
+
+
+color:#202020;
+
+
+font-family:"Montserrat",sans-serif;
+
+
+font-size:12px;
+
+
+font-weight:400;
+
+
+letter-spacing:4px;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.menu a:hover {
+
+
+opacity:.5;
+
+
+}
+
+
+
+
+
+
+/* Ajuste del texto de portada */
+
+.contenido {
+
+
+margin-left:38%;
+
+
+}
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.menu {
+
+
+padding:25px 15px;
+
+
+}
+
+
+
+.menu ul {
+
+
+gap:15px;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+.menu a {
+
+
+font-size:10px;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
+.contenido {
+
+
+margin-left:0;
+
+
+}
+
+
+
+}
