@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
 
-    console.log("Billy Pagán - Sitio Oficial cargado");
+    console.log("Billy Pagán - Sitio Oficial cargado correctamente");
 
 
 });
