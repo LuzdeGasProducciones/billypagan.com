@@ -1,85 +1,93 @@
 * {
 
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
 
 
 html, body {
 
-width:100%;
-height:100%;
+    width:100%;
+    height:100%;
 
-overflow:hidden;
+    overflow:hidden;
 
-font-family:"Montserrat",sans-serif;
+    font-family:"Montserrat",sans-serif;
 
 }
 
 
 
 
-/* PORTADA */
+
+/* ==========================
+   PORTADA PRINCIPAL
+========================== */
+
 
 .hero {
 
 
-height:100vh;
+    height:100vh;
 
-width:100%;
-
-
-
-background-image:url("fondo-web-index.png");
+    width:100%;
 
 
-background-size:cover;
+    background-image:url("fondo-web-index.png");
 
 
-background-position:center;
+    background-size:cover;
 
 
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+    background-position:center;
 
 
 
-position:relative;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 
 
-animation:
+    position:relative;
 
-entradaFoto 2s ease forwards,
 
-zoomFoto 20s ease-in-out 2s infinite alternate;
+
+    animation:
+
+    entradaFoto 2s ease forwards,
+
+    zoomFoto 20s ease-in-out 2s infinite alternate;
 
 
 }
 
 
 
+
+
+
+
+/* Capa de luz sobre la imagen */
 
 
 .hero::before {
 
 
-content:"";
+    content:"";
 
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
 
 
-background:rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.18);
 
 
 }
@@ -88,38 +96,148 @@ background:rgba(255,255,255,0.18);
 
 
 
-/* TEXTO */
+
+
+
+/* ==========================
+   MENU SUPERIOR SOBRE FOTO
+========================== */
+
+
+.menu {
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    z-index:20;
+
+
+    padding:35px 50px;
+
+
+}
+
+
+
+
+
+.menu ul {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:45px;
+
+
+    list-style:none;
+
+
+}
+
+
+
+
+.menu a {
+
+
+    text-decoration:none;
+
+
+    color:#202020;
+
+
+    font-family:"Montserrat",sans-serif;
+
+
+    font-size:12px;
+
+
+    font-weight:400;
+
+
+    letter-spacing:4px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+.menu a:hover {
+
+
+    opacity:.45;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   TEXTO ARTISTA
+========================== */
 
 
 .contenido {
 
 
-position:relative;
-
-z-index:2;
+    position:relative;
 
 
-
-text-align:center;
+    z-index:2;
 
 
 
-margin-left:38%;
+    text-align:center;
 
 
 
-opacity:0;
+    margin-left:38%;
 
 
 
-animation:entradaTexto 2s ease forwards;
+    opacity:0;
 
 
 
-animation-delay:1s;
+    animation:
+
+    entradaTexto 2s ease forwards;
+
+
+
+    animation-delay:1s;
 
 
 }
+
+
 
 
 
@@ -128,36 +246,37 @@ animation-delay:1s;
 h1 {
 
 
-font-family:"Cormorant Garamond",serif;
+    font-family:"Cormorant Garamond",serif;
 
 
-font-size:clamp(70px,10vw,130px);
-
-
-
-font-weight:600;
+    font-size:clamp(70px,10vw,130px);
 
 
 
-letter-spacing:3px;
+    font-weight:600;
 
 
 
-line-height:.9;
+    letter-spacing:3px;
 
 
 
-color:#202020;
+    line-height:.9;
 
 
 
-text-shadow:
+    color:#202020;
 
-0 4px 25px rgba(255,255,255,.8);
 
+
+    text-shadow:
+
+    0 4px 25px rgba(255,255,255,.8);
 
 
 }
+
+
 
 
 
@@ -166,73 +285,19 @@ text-shadow:
 .subtitulo {
 
 
-margin-top:30px;
+    margin-top:30px;
 
 
 
-font-size:14px;
+    font-size:14px;
 
 
 
-letter-spacing:10px;
+    letter-spacing:10px;
 
 
 
-font-weight:300;
-
-
-}
-
-
-
-
-
-button {
-
-
-margin-top:50px;
-
-
-
-padding:15px 45px;
-
-
-
-background:transparent;
-
-
-
-border:1px solid #222;
-
-
-
-font-size:12px;
-
-
-
-letter-spacing:5px;
-
-
-
-cursor:pointer;
-
-
-
-transition:.4s;
-
-
-
-}
-
-
-
-
-button:hover {
-
-
-background:#222;
-
-color:white;
+    font-weight:300;
 
 
 }
@@ -242,95 +307,34 @@ color:white;
 
 
 
-/* SEGUNDA PANTALLA */
-
-
-.principal {
-
-
-height:100vh;
-
-
-width:100%;
-
-
-background:#111;
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-}
-
-
-
-nav ul {
-
-
-list-style:none;
-
-
-text-align:center;
-
-
-}
-
-
-
-nav li {
-
-
-color:white;
-
-
-font-size:18px;
-
-
-letter-spacing:8px;
-
-
-margin:30px;
-
-
-font-weight:300;
-
-
-}
 
 
 
 
-
-
-
-
-/* ANIMACIONES */
+/* ==========================
+   ANIMACIONES
+========================== */
 
 
 @keyframes entradaFoto {
 
 
-from {
+    from {
 
-opacity:0;
+        opacity:0;
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+    }
+
 
 }
 
-
-to {
-
-opacity:1;
-
-}
-
-
-}
 
 
 
@@ -339,25 +343,26 @@ opacity:1;
 @keyframes zoomFoto {
 
 
-from {
+    from {
 
 
-background-size:100%;
+        background-size:100%;
+
+
+    }
+
+
+    to {
+
+
+        background-size:112%;
+
+
+    }
 
 
 }
 
-
-to {
-
-
-background-size:112%;
-
-
-}
-
-
-}
 
 
 
@@ -366,226 +371,130 @@ background-size:112%;
 @keyframes entradaTexto {
 
 
-from {
+    from {
 
 
-opacity:0;
+        opacity:0;
 
 
-transform:translateY(50px);
+        transform:translateY(50px);
 
 
-filter:blur(8px);
+        filter:blur(8px);
 
 
-}
-
-
-to {
-
-
-opacity:1;
-
-
-transform:translateY(0);
-
-
-filter:blur(0);
-
-
-}
-
-
-}
+    }
 
 
 
+    to {
 
 
-
-/* MOVIL */
-
-
-@media(max-width:700px){
+        opacity:1;
 
 
-.contenido {
+        transform:translateY(0);
 
 
-margin-left:0;
+        filter:blur(0);
+
+
+    }
 
 
 }
 
 
 
-h1 {
-
-
-font-size:70px;
-
-
-}
 
 
 
-.subtitulo {
 
 
-font-size:11px;
 
 
-letter-spacing:6px;
-
-
-}
-
-
-}
 /* ==========================
-   MENU SUPERIOR
+   MOVIL
 ========================== */
 
 
-.menu {
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-z-index:10;
-
-padding:35px 50px;
-
-
-}
-
-
-
-.menu ul {
-
-
-display:flex;
-
-justify-content:center;
-
-gap:45px;
-
-
-list-style:none;
-
-
-}
-
-
-
-.menu a {
-
-
-text-decoration:none;
-
-
-color:#202020;
-
-
-font-family:"Montserrat",sans-serif;
-
-
-font-size:12px;
-
-
-font-weight:400;
-
-
-letter-spacing:4px;
-
-
-transition:.4s;
-
-
-}
-
-
-
-.menu a:hover {
-
-
-opacity:.5;
-
-
-}
-
-
-
-
-
-
-/* Ajuste del texto de portada */
-
-.contenido {
-
-
-margin-left:38%;
-
-
-}
-
-
-
-
-
-
 @media(max-width:700px){
 
 
-.menu {
+
+    .menu {
 
 
-padding:25px 15px;
+        padding:25px 10px;
 
 
-}
-
-
-
-.menu ul {
-
-
-gap:15px;
-
-
-flex-wrap:wrap;
-
-
-}
+    }
 
 
 
-.menu a {
+
+    .menu ul {
 
 
-font-size:10px;
+        gap:15px;
 
 
-letter-spacing:2px;
+        flex-wrap:wrap;
 
 
-}
+    }
 
 
 
-.contenido {
+
+    .menu a {
 
 
-margin-left:0;
+        font-size:10px;
 
 
-}
+        letter-spacing:2px;
 
+
+    }
+
+
+
+
+
+    .contenido {
+
+
+        margin-left:0;
+
+
+    }
+
+
+
+
+    h1 {
+
+
+        font-size:70px;
+
+
+    }
+
+
+
+
+
+    .subtitulo {
+
+
+        font-size:11px;
+
+
+        letter-spacing:6px;
+
+
+    }
 
 
 }
