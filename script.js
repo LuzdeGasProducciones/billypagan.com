@@ -1,7 +1,30 @@
-document.addEventListener("DOMContentLoaded", function(){
+const boton = document.getElementById("entrar");
+
+const portada = document.getElementById("inicio");
+
+const web = document.getElementById("web");
 
 
-    console.log("Billy Pagán - Sitio Oficial cargado correctamente");
+
+boton.addEventListener("click", function(){
+
+
+portada.classList.add("salida");
+
+
+
+setTimeout(function(){
+
+
+web.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+},800);
+
 
 
 });
