@@ -1,521 +1,279 @@
-* {
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
 
 html,
-body {
-
-width:100%;
-height:100%;
-
-overflow:hidden;
-
-font-family:"Montserrat",sans-serif;
-
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Montserrat",sans-serif;
 }
-
-
-
-
 
 
 /* ==========================
    PORTADA
 ========================== */
 
+.hero{
 
-.hero {
+    height:100vh;
+    width:100%;
 
+    background-image:url("fondo-web-index.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-width:100%;
+    position:relative;
 
-
-background-image:url("fondo-web-index.png");
-
-
-background-size:cover;
-
-
-background-position:center;
-
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-
-position:relative;
-
-
-
-animation:zoomFoto 20s ease-in-out infinite alternate;
-
+    animation:zoomFoto 20s ease-in-out infinite alternate;
 
 }
 
+.hero::before{
 
+    content:"";
+    position:absolute;
+    inset:0;
 
-
-
-.hero::before {
-
-
-content:"";
-
-
-position:absolute;
-
-
-inset:0;
-
-
-
-background:rgba(255,255,255,0.15);
-
+    background:rgba(255,255,255,.15);
 
 }
-
-
-
-
-
-
 
 
 /* ==========================
    MENU SUPERIOR
 ========================== */
 
+.menu{
 
-.menu {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
 
-
-position:absolute;
-
-
-top:0;
-
-
-left:0;
-
-
-width:100%;
-
-
-z-index:10;
-
-
-
-padding-top:35px;
-
+    padding-top:35px;
 
 }
 
+.menu nav{
 
-
-
-.menu nav {
-
-
-width:100%;
-
+    width:100%;
 
 }
 
+.menu ul{
 
+    width:100%;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-.menu ul {
+    gap:55px;
 
-
-width:100%;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-gap:55px;
-
-
-list-style:none;
-
+    list-style:none;
 
 }
 
+.menu li{
 
-
-
-.menu li {
-
-
-white-space:nowrap;
-
+    white-space:nowrap;
 
 }
 
+.menu a{
 
+    color:#242424;
+    text-decoration:none;
 
+    font-family:"Montserrat",sans-serif;
+    font-size:12px;
+    font-weight:300;
 
+    letter-spacing:5px;
+    text-transform:uppercase;
 
-.menu a {
+    text-shadow:0 1px 8px rgba(255,255,255,.5);
 
-
-color:#242424;
-
-
-text-decoration:none;
-
-
-font-family:"Montserrat",sans-serif;
-
-
-font-size:12px;
-
-
-font-weight:300;
-
-
-letter-spacing:5px;
-
-
-text-transform:uppercase;
-
-
-
-text-shadow:0 1px 8px rgba(255,255,255,.5);
-
-
-
-transition:.4s;
-
+    transition:.4s;
 
 }
 
+.menu a:hover{
 
-
-
-.menu a:hover {
-
-
-opacity:.5;
-
-
-letter-spacing:7px;
-
+    opacity:.5;
+    letter-spacing:7px;
 
 }
-
-
-
-
-
-
-
-
 
 
 /* ==========================
-   TEXTO BILLY
+   TEXTO
 ========================== */
 
+.contenido{
 
-.contenido {
+    position:relative;
+    z-index:5;
 
+    text-align:center;
 
-position:relative;
+    margin-left:38%;
 
+    opacity:0;
 
-z-index:5;
-
-
-
-text-align:center;
-
-
-
-margin-left:38%;
-
-
-
-opacity:0;
-
-
-
-animation:entradaTexto 2s ease forwards;
-
-
-animation-delay:1s;
-
+    animation:entradaTexto 2s ease forwards;
+    animation-delay:1s;
 
 }
 
+h1{
 
+    font-family:"Cormorant Garamond",serif;
 
+    font-size:clamp(70px,10vw,130px);
 
+    font-weight:600;
 
+    letter-spacing:3px;
 
+    line-height:.9;
 
-h1 {
+    color:#202020;
 
-
-font-family:"Cormorant Garamond",serif;
-
-
-font-size:clamp(70px,10vw,130px);
-
-
-font-weight:600;
-
-
-letter-spacing:3px;
-
-
-line-height:.9;
-
-
-color:#202020;
-
-
-text-shadow:
-
-0 4px 25px rgba(255,255,255,.8);
-
+    text-shadow:0 4px 25px rgba(255,255,255,.8);
 
 }
 
+.subtitulo{
 
+    margin-top:30px;
 
+    font-size:14px;
 
+    letter-spacing:10px;
 
+    font-weight:300;
 
-
-.subtitulo {
-
-
-margin-top:30px;
-
-
-font-size:14px;
-
-
-letter-spacing:10px;
-
-
-font-weight:300;
-
-
-color:#202020;
-
+    color:#202020;
 
 }
-
-
-
-
-
-
-
-
 
 
 /* ==========================
    ANIMACIONES
 ========================== */
 
+@keyframes zoomFoto{
 
-@keyframes zoomFoto {
+    from{
 
+        background-size:100%;
 
-from {
+    }
 
+    to{
 
-background-size:100%;
+        background-size:112%;
 
-
-}
-
-
-to {
-
-
-background-size:112%;
-
+    }
 
 }
 
+@keyframes entradaTexto{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+        filter:blur(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+
+    }
 
 }
-
-
-
-
-
-@keyframes entradaTexto {
-
-
-from {
-
-
-opacity:0;
-
-
-transform:translateY(50px);
-
-
-filter:blur(8px);
-
-
-}
-
-
-
-to {
-
-
-opacity:1;
-
-
-transform:translateY(0);
-
-
-filter:blur(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
 
 
 /* ==========================
    MOVIL
 ========================== */
 
+@media (max-width:700px){
 
-@media(max-width:700px){
+.hero{
 
+    background-image:url("fondo-web-index-movil.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 
-
-.hero {
-
-
-background-size:cover;
-
-background-position:center top;
-
-background-repeat:no-repeat;
-
-animation:none;
-
+    animation:none;
 
 }
 
+.menu{
 
-
-
-.menu {
-
-
-padding-top:25px;
-
+    padding-top:20px;
 
 }
 
+.menu ul{
 
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
 
-.menu ul {
-
-
-gap:15px;
-
-
-flex-wrap:wrap;
-
-
-padding:0 15px;
-
-
-justify-content:center;
-
+    padding:0 15px;
 
 }
 
+.menu a{
 
-
-.menu a {
-
-
-font-size:10px;
-
-
-letter-spacing:2px;
-
+    font-size:10px;
+    letter-spacing:2px;
 
 }
 
+.contenido{
 
+    margin-left:0;
 
-.contenido {
+    width:100%;
 
-
-margin-left:0;
-
-width:100%;
-
-padding:0 20px;
-
+    padding:0 25px;
 
 }
 
+h1{
 
-
-h1 {
-
-
-font-size:70px;
-
+    font-size:56px;
 
 }
 
+.subtitulo{
 
+    margin-top:18px;
 
-.subtitulo {
+    font-size:11px;
 
-
-font-size:11px;
-
-
-letter-spacing:6px;
-
+    letter-spacing:5px;
 
 }
-
-
 
 }
