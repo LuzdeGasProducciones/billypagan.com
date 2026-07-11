@@ -1,75 +1,26 @@
-* {
+*{
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-
-
-html,
-body {
-
-    width:100%;
-    height:100%;
-
-    overflow:hidden;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
 
 
+html{
 
+scroll-behavior:smooth;
 
-/* PORTADA */
-
-.hero {
-
-
-    width:100%;
-
-    height:100vh;
-
-
-    background-image:url("../imagenes/fondo-web-index.png");
-
-
-    background-size:100%;
-
-
-    background-position:center;
-
-
-    background-repeat:no-repeat;
+}
 
 
 
-    display:flex;
+body{
 
+font-family:"Montserrat",sans-serif;
 
-    justify-content:center;
-
-
-    align-items:center;
-
-
-
-    position:relative;
-
-
-
-    opacity:0;
-
-
-
-    animation:
-
-    aparecerFoto 2.5s ease forwards,
-
-    zoomFondo 18s ease-in-out 2.5s infinite alternate;
-
-
+overflow:hidden;
 
 }
 
@@ -77,37 +28,79 @@ body {
 
 
 
-/* Capa de luz sobre la fotografía */
-
-.hero::before {
-
-
-    content:"";
+/* =====================
+   PORTADA
+===================== */
 
 
-    position:absolute;
+.hero{
 
 
-    inset:0;
+height:100vh;
+
+width:100%;
+
+
+background-image:url("../imagenes/fondo-web-index.png");
+
+
+background-size:100%;
+
+background-position:center;
+
+background-repeat:no-repeat;
 
 
 
-    background:
+display:flex;
 
-    linear-gradient(
+justify-content:center;
 
-        90deg,
+align-items:center;
 
-        rgba(255,255,255,0.05),
 
-        rgba(255,255,255,0.28)
 
-    );
+position:relative;
+
+
+animation:
+
+entradaFoto 2.5s ease forwards,
+
+movimientoFoto 20s ease-in-out 2.5s infinite alternate;
 
 
 }
 
 
+
+
+
+.hero::before{
+
+
+content:"";
+
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(255,255,255,0.05),
+
+rgba(255,255,255,0.35)
+
+);
+
+
+}
 
 
 
@@ -115,35 +108,62 @@ body {
 
 /* TEXTO */
 
-.contenido {
+
+.contenido{
 
 
-    position:relative;
+position:relative;
+
+z-index:2;
 
 
-    text-align:center;
+text-align:center;
 
 
-    color:#202020;
+margin-left:38%;
+
+
+opacity:0;
+
+
+animation:
+
+entradaTexto 2s ease forwards;
+
+
+animation-delay:1s;
+
+
+}
 
 
 
-    margin-left:38%;
+
+h1{
+
+
+font-family:"Cormorant Garamond",serif;
+
+
+font-size:clamp(70px,10vw,130px);
+
+
+font-weight:600;
+
+
+letter-spacing:4px;
+
+
+line-height:.9;
+
+
+color:#202020;
 
 
 
-    opacity:0;
+text-shadow:
 
-
-
-    animation:
-
-    entradaTexto 2.5s ease forwards;
-
-
-
-    animation-delay:1s;
-
+0 4px 25px rgba(255,255,255,.8);
 
 
 }
@@ -152,69 +172,22 @@ body {
 
 
 
-/* Nombre */
-
-h1 {
+.subtitulo{
 
 
-    font-family:"Cormorant Garamond", serif;
+margin-top:30px;
 
 
-
-    font-size:clamp(70px,10vw,130px);
-
+font-size:14px;
 
 
-    font-weight:600;
+letter-spacing:10px;
 
 
-
-    letter-spacing:3px;
-
+font-weight:300;
 
 
-    line-height:0.9;
-
-
-
-    text-shadow:
-
-
-    0 3px 25px rgba(255,255,255,0.8);
-
-
-
-}
-
-
-
-
-
-
-
-/* SITIO OFICIAL */
-
-.subtitulo {
-
-
-    margin-top:30px;
-
-
-
-    font-family:"Montserrat", sans-serif;
-
-
-
-    font-size:14px;
-
-
-
-    font-weight:300;
-
-
-
-    letter-spacing:10px;
-
+color:#202020;
 
 
 }
@@ -225,58 +198,37 @@ h1 {
 
 
 
+/* BOTON */
 
 
-/* ANIMACION FOTO */
-
-@keyframes aparecerFoto {
+button{
 
 
-    from {
-
-        opacity:0;
-
-    }
+margin-top:55px;
 
 
-    to {
-
-        opacity:1;
-
-    }
+padding:15px 45px;
 
 
-}
+background:transparent;
 
 
+border:1px solid #333;
 
 
+font-family:"Montserrat",sans-serif;
 
 
-
-/* ZOOM CINEMATOGRAFICO */
-
-@keyframes zoomFondo {
+letter-spacing:5px;
 
 
-    from {
+font-size:12px;
 
 
-        background-size:100%;
+cursor:pointer;
 
 
-    }
-
-
-
-    to {
-
-
-        background-size:112%;
-
-
-    }
-
+transition:.5s;
 
 
 }
@@ -285,51 +237,12 @@ h1 {
 
 
 
+button:hover{
 
 
+background:#202020;
 
-/* ENTRADA TEXTO */
-
-@keyframes entradaTexto {
-
-
-
-    from {
-
-
-        opacity:0;
-
-
-        transform:translateY(50px);
-
-
-
-        filter:blur(8px);
-
-
-
-    }
-
-
-
-
-    to {
-
-
-
-        opacity:1;
-
-
-
-        transform:translateY(0);
-
-
-
-        filter:blur(0);
-
-
-
-    }
+color:white;
 
 
 }
@@ -342,56 +255,222 @@ h1 {
 
 
 
-/* MOVIL */
+/* =====================
+   SEGUNDA PAGINA
+===================== */
+
+
+.principal{
+
+
+height:100vh;
+
+
+width:100%;
+
+
+background:#111;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+}
+
+
+
+
+
+nav ul{
+
+
+list-style:none;
+
+
+text-align:center;
+
+
+}
+
+
+
+nav li{
+
+
+color:white;
+
+
+font-family:"Montserrat",sans-serif;
+
+
+font-weight:300;
+
+
+font-size:18px;
+
+
+letter-spacing:8px;
+
+
+margin:30px;
+
+
+cursor:pointer;
+
+
+transition:.4s;
+
+
+}
+
+
+
+nav li:hover{
+
+
+opacity:.5;
+
+
+transform:translateX(10px);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ANIMACIONES */
+
+
+@keyframes entradaFoto{
+
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+@keyframes movimientoFoto{
+
+
+from{
+
+background-size:100%;
+
+}
+
+
+to{
+
+background-size:112%;
+
+}
+
+
+}
+
+
+
+
+
+
+@keyframes entradaTexto{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+filter:blur(10px);
+
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+filter:blur(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* VERSION MOVIL */
+
 
 @media(max-width:600px){
 
 
-
-    .contenido {
-
-
-        margin-left:0;
+.contenido{
 
 
-    }
+margin-left:0;
+
+}
 
 
+h1{
 
 
-    h1 {
+font-size:70px;
 
 
-        font-size:70px;
+}
 
 
-    }
+.subtitulo{
 
 
+font-size:11px;
+
+letter-spacing:6px;
 
 
+}
 
-    .subtitulo {
-
-
-        font-size:11px;
-
-
-        letter-spacing:6px;
-
-
-    }
-
-
-
-
-    .hero {
-
-
-        background-position:center;
-
-
-    }
 
 
 }
