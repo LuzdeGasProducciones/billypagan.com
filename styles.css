@@ -1,219 +1,3 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,
-body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    font-family:"Montserrat",sans-serif;
-}
-
-
-/* ==========================
-   PORTADA
-========================== */
-
-.hero{
-
-    height:100vh;
-    width:100%;
-
-    background-image:url("fondo-web-index.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    position:relative;
-
-    animation:zoomFoto 20s ease-in-out infinite alternate;
-
-}
-
-.hero::before{
-
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:rgba(255,255,255,.15);
-
-}
-/* Imagen exclusiva para móvil */
-
-.hero-mobile{
-
-    display:none;
-
-}
-
-/* ==========================
-   MENU SUPERIOR
-========================== */
-
-.menu{
-
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:10;
-
-    padding-top:35px;
-
-}
-
-.menu nav{
-
-    width:100%;
-
-}
-
-.menu ul{
-
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    gap:55px;
-
-    list-style:none;
-
-}
-
-.menu li{
-
-    white-space:nowrap;
-
-}
-
-.menu a{
-
-    color:#242424;
-    text-decoration:none;
-
-    font-family:"Montserrat",sans-serif;
-    font-size:12px;
-    font-weight:300;
-
-    letter-spacing:5px;
-    text-transform:uppercase;
-
-    text-shadow:0 1px 8px rgba(255,255,255,.5);
-
-    transition:.35s;
-
-}
-
-.menu a:hover{
-
-    opacity:.55;
-    letter-spacing:7px;
-
-}
-
-
-/* ==========================
-   TEXTO PRINCIPAL
-========================== */
-
-.contenido{
-
-    position:relative;
-    z-index:5;
-
-    text-align:center;
-
-    margin-left:38%;
-
-    opacity:0;
-
-    animation:entradaTexto 2s ease forwards;
-    animation-delay:1s;
-
-}
-
-h1{
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:clamp(70px,10vw,130px);
-
-    font-weight:600;
-
-    letter-spacing:3px;
-
-    line-height:.9;
-
-    color:#202020;
-
-    text-shadow:0 4px 25px rgba(255,255,255,.8);
-
-}
-
-.subtitulo{
-
-    margin-top:30px;
-
-    font-size:14px;
-
-    letter-spacing:10px;
-
-    font-weight:300;
-
-    color:#202020;
-
-}
-
-
-/* ==========================
-   ANIMACIONES
-========================== */
-
-@keyframes zoomFoto{
-
-    from{
-
-        background-size:100%;
-
-    }
-
-    to{
-
-        background-size:112%;
-
-    }
-
-}
-
-@keyframes entradaTexto{
-
-    from{
-
-        opacity:0;
-        transform:translateY(50px);
-        filter:blur(8px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-        filter:blur(0);
-
-    }
-
-}
-
-
 /* ==========================
    MOVIL
 ========================== */
@@ -242,14 +26,16 @@ body{
 
 }
 
+/* Imagen de Billy */
+
 .hero-mobile{
 
     display:block;
 
     position:absolute;
 
-    left:50%;
     bottom:0;
+    left:50%;
 
     transform:translateX(-50%);
 
@@ -288,6 +74,7 @@ body{
 .contenido{
 
     position:relative;
+
     z-index:20;
 
     margin-left:0;
@@ -295,6 +82,7 @@ body{
     width:100%;
 
     padding:0 20px;
+
     padding-top:70px;
 
     text-align:center;
