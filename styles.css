@@ -1,134 +1,220 @@
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 body {
+
     height: 100vh;
+
     overflow: hidden;
+
 }
 
 
-/* Portada principal */
+
+/* Pantalla principal */
+
 .hero {
 
     height: 100vh;
+
     width: 100%;
 
+
     background-image: url("../imagenes/fondo-web-index.png");
+
     background-size: cover;
+
     background-position: center;
 
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
+
     position: relative;
+
 }
 
 
-/* Filtro suave sobre la imagen */
+
+/* Capa ligera para mejorar la lectura */
+
 .hero::before {
 
     content: "";
 
     position: absolute;
+
     inset: 0;
 
-    background: rgba(255,255,255,0.20);
+
+    background: rgba(255,255,255,0.18);
 
 }
 
 
-/* Bloque de texto */
+
+/* Contenedor del texto */
+
 .contenido {
 
     position: relative;
 
+
     text-align: center;
+
 
     color: #202020;
 
+
+    /* Movimiento elegante de entrada */
+
     animation: aparecer 2s ease forwards;
+
+
+    /* Desplaza el bloque hacia la derecha */
+
+    margin-left: 38%;
+
 
 }
 
 
+
 /* Nombre del artista */
+
 h1 {
 
     font-family: "Cormorant Garamond", serif;
 
+
     font-size: clamp(70px, 10vw, 130px);
+
 
     font-weight: 600;
 
+
     letter-spacing: 3px;
+
 
     line-height: 0.9;
 
+
     text-shadow:
-    0 3px 20px rgba(255,255,255,0.7);
+
+    0 3px 20px rgba(255,255,255,0.75);
+
 
 }
+
 
 
 /* Texto inferior */
+
 .subtitulo {
+
 
     margin-top: 30px;
 
+
     font-family: "Montserrat", sans-serif;
+
 
     font-size: 14px;
 
+
     font-weight: 300;
 
+
     letter-spacing: 10px;
+
 
 }
 
 
+
 /* Animación inicial */
+
 @keyframes aparecer {
+
 
     from {
 
-        opacity:0;
+
+        opacity: 0;
+
 
         transform: translateY(40px);
 
+
     }
+
 
 
     to {
 
-        opacity:1;
+
+        opacity: 1;
+
 
         transform: translateY(0);
 
+
     }
+
 
 }
 
 
-/* Versión móvil */
+
+
+
+/* Adaptación móvil */
+
 @media(max-width:600px){
+
+
+    .contenido {
+
+
+        margin-left:0;
+
+    }
+
+
 
     h1 {
 
+
         font-size:70px;
 
+
     }
+
 
 
     .subtitulo {
 
+
         font-size:11px;
+
 
         letter-spacing:6px;
 
+
     }
+
 
 }
