@@ -1,99 +1,134 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,
-body{
-
-    width:100%;
-    height:100%;
-
+body {
+    height: 100vh;
+    overflow: hidden;
 }
 
-body{
 
-    font-family:'League Spartan',sans-serif;
+/* Portada principal */
+.hero {
 
-    background:#000;
+    height: 100vh;
+    width: 100%;
 
+    background-image: url("../imagenes/fondo-web-index.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
 }
 
-.hero{
 
-    position:relative;
+/* Filtro suave sobre la imagen */
+.hero::before {
 
-    width:100%;
-    height:100vh;
+    content: "";
 
-    background-image:url("fondo-web-index.png");
+    position: absolute;
+    inset: 0;
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-.overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        to right,
-        rgba(0,0,0,.28),
-        rgba(0,0,0,.10),
-        rgba(0,0,0,.18)
-    );
+    background: rgba(255,255,255,0.20);
 
 }
 
-.titulo{
 
-    position:absolute;
+/* Bloque de texto */
+.contenido {
 
-    top:50%;
+    position: relative;
 
-    left:60%;
+    text-align: center;
 
-    transform:translate(-50%,-50%);
+    color: #202020;
 
-    width:34%;
-
-    color:white;
-
-    z-index:10;
+    animation: aparecer 2s ease forwards;
 
 }
 
-.titulo h1{
 
-    font-size:88px;
+/* Nombre del artista */
+h1 {
 
-    font-weight:700;
+    font-family: "Cormorant Garamond", serif;
 
-    line-height:1;
+    font-size: clamp(70px, 10vw, 130px);
 
-    letter-spacing:-2px;
+    font-weight: 600;
 
-    color:white;
+    letter-spacing: 3px;
+
+    line-height: 0.9;
+
+    text-shadow:
+    0 3px 20px rgba(255,255,255,0.7);
 
 }
 
-.titulo h2{
 
-    margin-top:18px;
+/* Texto inferior */
+.subtitulo {
 
-    font-size:20px;
+    margin-top: 30px;
 
-    font-weight:300;
+    font-family: "Montserrat", sans-serif;
 
-    letter-spacing:10px;
+    font-size: 14px;
 
-    color:#EAEAEA;
+    font-weight: 300;
+
+    letter-spacing: 10px;
+
+}
+
+
+/* Animación inicial */
+@keyframes aparecer {
+
+    from {
+
+        opacity:0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Versión móvil */
+@media(max-width:600px){
+
+    h1 {
+
+        font-size:70px;
+
+    }
+
+
+    .subtitulo {
+
+        font-size:11px;
+
+        letter-spacing:6px;
+
+    }
 
 }
