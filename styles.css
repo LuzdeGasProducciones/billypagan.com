@@ -422,6 +422,23 @@ filter:blur(0);
 
 
 
+.hero {
+
+
+background-size:cover;
+
+background-position:center top;
+
+background-repeat:no-repeat;
+
+animation:none;
+
+
+}
+
+
+
+
 .menu {
 
 
@@ -442,6 +459,9 @@ flex-wrap:wrap;
 
 
 padding:0 15px;
+
+
+justify-content:center;
 
 
 }
@@ -465,6 +485,10 @@ letter-spacing:2px;
 
 
 margin-left:0;
+
+width:100%;
+
+padding:0 20px;
 
 
 }
