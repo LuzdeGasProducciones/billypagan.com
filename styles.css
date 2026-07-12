@@ -285,8 +285,8 @@ body{
 .hero{
 
     background-image:url("fondo-web-index-movil.png");
-    background-size:contain;
-    background-position:center bottom;
+    background-size:cover;
+    background-position:center 70%;
     background-repeat:no-repeat;
     background-color:#efefef;
 
