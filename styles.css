@@ -441,3 +441,97 @@ h1{
 }
 
 }
+
+/* ==========================
+   PAGINA BIOGRAFIA
+========================== */
+
+
+.pagina-biografia{
+
+    overflow-y:auto;
+
+}
+
+
+/* CONTENIDO BIOGRAFIA */
+
+.biografia{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin-left:10%;
+
+    margin-right:auto;
+
+    text-align:left;
+
+    padding-top:140px;
+
+    padding-bottom:120px;
+
+}
+
+
+
+.biografia h1{
+
+    text-align:left;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(60px,8vw,110px);
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+.texto-biografia{
+
+    max-width:720px;
+
+    text-align:left;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:15px;
+
+    font-weight:300;
+
+    line-height:1.9;
+
+    letter-spacing:.3px;
+
+    color:#202020;
+
+}
+
+
+
+.texto-biografia p{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.texto-biografia em{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
