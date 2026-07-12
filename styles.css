@@ -285,7 +285,7 @@ body{
 
     background-image:url("fondo-web-index-movil.png");
     background-size:cover;
-    background-position:center bottom;
+    background-position:50% 100%;
     background-repeat:no-repeat;
     background-color:#efefef;
 
@@ -382,13 +382,17 @@ body{
 
     top:12%;
 
-    left:0;
+    left:50%;
+
+    transform:translate(-50%,0);
 
     width:100%;
 
+    max-width:500px;
+
     margin-left:0;
 
-    padding:0 24px;
+    padding:0 25px;
 
     text-align:center;
 
@@ -396,22 +400,26 @@ body{
 
 h1{
 
+    font-family:"Cormorant Garamond",serif;
+
     font-size:56px;
 
-    line-height:.95;
+    line-height:.92;
+
+    letter-spacing:1px;
 
 }
-
+    
 .subtitulo{
 
-    margin-top:16px;
+    margin-top:14px;
 
     font-size:11px;
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
 }
-
+    
 /* Footer */
 
 .footer{
