@@ -1,28 +1,31 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Billy Pagán - Sitio Oficial");
+    console.log("Billy Pagán · Sitio Oficial");
 
     const hamburguesa = document.getElementById("hamburguesa");
     const menuMovil = document.getElementById("menuMovil");
 
-    if(hamburguesa && menuMovil){
+    if (!hamburguesa || !menuMovil) return;
 
-        hamburguesa.addEventListener("click", function(){
+    hamburguesa.addEventListener("click", () => {
 
-            menuMovil.classList.toggle("abierto");
+        menuMovil.classList.toggle("abierto");
 
-            if(menuMovil.classList.contains("abierto")){
+        hamburguesa.textContent =
+            menuMovil.classList.contains("abierto") ? "✕" : "☰";
 
-                hamburguesa.innerHTML = "✕";
+    });
 
-            }else{
+    menuMovil.querySelectorAll("a").forEach(enlace => {
 
-                hamburguesa.innerHTML = "☰";
+        enlace.addEventListener("click", () => {
 
-            }
+            menuMovil.classList.remove("abierto");
+
+            hamburguesa.textContent = "☰";
 
         });
 
-    }
+    });
 
 });
