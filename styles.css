@@ -383,13 +383,21 @@ body{
 
 .contenido{
 
-    margin-left:0;
+    position:absolute;
+
+    top:22%;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
     width:100%;
 
-    padding:0 20px;
+    padding:0 25px;
 
     text-align:center;
+
+    margin-left:0;
 
 }
 
