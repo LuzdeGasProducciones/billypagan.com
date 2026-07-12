@@ -801,3 +801,32 @@ h1{
 
 
 }
+
+/* ==========================
+   AJUSTE FINAL BIOGRAFIA MOVIL
+========================== */
+
+
+@media (max-width:700px){
+
+
+    .pagina-biografia{
+
+        background-attachment:fixed;
+
+    }
+
+
+
+    .texto-biografia{
+
+        background:rgba(255,255,255,.40);
+
+        backdrop-filter:blur(3px);
+
+        -webkit-backdrop-filter:blur(3px);
+
+    }
+
+
+}
