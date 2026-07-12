@@ -455,7 +455,7 @@ h1{
 
 
 
-/* CONTENIDO */
+/* CONTENIDO ESCRITORIO */
 
 .biografia{
 
@@ -467,7 +467,7 @@ h1{
 
     margin-left:52%;
 
-    padding-top:260px;
+    padding-top:290px;
 
     padding-bottom:120px;
 
@@ -493,7 +493,7 @@ h1{
 
     line-height:1;
 
-    margin:0 0 40px 0;
+    margin:0 0 45px 0;
 
 }
 
@@ -538,5 +538,72 @@ h1{
     font-size:18px;
 
     font-weight:600;
+
+}
+
+
+
+/* ==========================
+   MOVIL BIOGRAFIA
+========================== */
+
+
+@media (max-width:700px){
+
+
+    .pagina-biografia{
+
+        background-position:left top;
+
+        overflow-y:auto;
+
+    }
+
+
+
+    .biografia{
+
+        width:auto;
+
+        margin:0;
+
+        padding:130px 30px 100px 30px;
+
+        text-align:left;
+
+    }
+
+
+
+    .biografia h1{
+
+        text-align:left;
+
+        font-size:52px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .texto-biografia{
+
+        max-width:none;
+
+        font-size:14px;
+
+        line-height:1.9;
+
+    }
+
+
+
+    .texto-biografia p{
+
+        margin-bottom:28px;
+
+    }
+
 
 }
