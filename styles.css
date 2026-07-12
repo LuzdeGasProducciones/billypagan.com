@@ -553,9 +553,11 @@ h1{
 
     .pagina-biografia{
 
-        background-position:left top;
+        background-position:left bottom;
 
         overflow-y:auto;
+
+        min-height:100vh;
 
     }
 
@@ -567,7 +569,7 @@ h1{
 
         margin:0;
 
-        padding:130px 30px 100px 30px;
+        padding:220px 30px 220px 30px;
 
         text-align:left;
 
@@ -583,6 +585,8 @@ h1{
 
         margin-bottom:35px;
 
+        line-height:1;
+
     }
 
 
@@ -595,13 +599,19 @@ h1{
 
         line-height:1.9;
 
+        background:rgba(255,255,255,.25);
+
+        padding:25px;
+
+        border-radius:2px;
+
     }
 
 
 
     .texto-biografia p{
 
-        margin-bottom:28px;
+        margin-bottom:30px;
 
     }
 
