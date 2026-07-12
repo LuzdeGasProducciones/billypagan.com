@@ -851,3 +851,150 @@ h1{
 
 
 }
+
+/* ======================================================
+   CONCIERTOS
+====================================================== */
+
+
+.pagina-conciertos{
+
+    background-image:url("fondo-web-index.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+
+
+
+.pagina-conciertos .conciertos{
+
+    position:relative;
+
+    z-index:5;
+
+    width:50%;
+
+    margin-left:45%;
+
+    padding-top:360px;
+
+    padding-bottom:200px;
+
+    text-align:left;
+
+}
+
+
+
+
+.conciertos h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(45px,6vw,75px);
+
+    margin-bottom:45px;
+
+    text-align:left;
+
+}
+
+
+
+
+.texto-conciertos{
+
+    max-width:600px;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(5px);
+
+    -webkit-backdrop-filter:blur(5px);
+
+    border-radius:12px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:15px;
+
+    font-weight:300;
+
+    line-height:2;
+
+    color:#202020;
+
+}
+
+
+
+
+.texto-conciertos p{
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .pagina-conciertos{
+
+        background-image:url("fondo-web-index-movil.png");
+
+        background-size:cover;
+
+        background-position:left bottom;
+
+        background-repeat:no-repeat;
+
+    }
+
+
+
+    .pagina-conciertos .conciertos{
+
+        width:auto;
+
+        margin:0;
+
+        padding:170px 25px 380px;
+
+    }
+
+
+
+    .conciertos h1{
+
+        font-size:52px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .texto-conciertos{
+
+        padding:28px;
+
+        font-size:14px;
+
+        background:rgba(255,255,255,.65);
+
+    }
+
+
+}
