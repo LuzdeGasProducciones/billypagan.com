@@ -467,7 +467,7 @@ h1{
 
     margin-left:52%;
 
-    padding-top:200px;
+    padding-top:260px;
 
     padding-bottom:120px;
 
@@ -485,7 +485,7 @@ h1{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:clamp(45px,5vw,70px);
+    font-size:clamp(42px,5vw,65px);
 
     font-weight:600;
 
@@ -493,7 +493,7 @@ h1{
 
     line-height:1;
 
-    margin-bottom:45px;
+    margin:0 0 40px 0;
 
 }
 
