@@ -551,13 +551,26 @@ h1{
 @media (max-width:700px){
 
 
+    html,
+    body{
+
+        overflow:auto;
+
+    }
+
+
+
     .pagina-biografia{
+
+        height:auto;
+
+        min-height:100vh;
+
+        overflow:visible;
 
         background-position:left bottom;
 
-        overflow-y:auto;
-
-        min-height:100vh;
+        padding-bottom:120px;
 
     }
 
@@ -569,7 +582,7 @@ h1{
 
         margin:0;
 
-        padding:220px 30px 220px 30px;
+        padding:170px 30px 260px 30px;
 
         text-align:left;
 
@@ -583,7 +596,7 @@ h1{
 
         font-size:52px;
 
-        margin-bottom:35px;
+        margin-bottom:40px;
 
         line-height:1;
 
@@ -599,11 +612,9 @@ h1{
 
         line-height:1.9;
 
-        background:rgba(255,255,255,.25);
+        padding:0;
 
-        padding:25px;
-
-        border-radius:2px;
+        background:none;
 
     }
 
@@ -612,6 +623,20 @@ h1{
     .texto-biografia p{
 
         margin-bottom:30px;
+
+    }
+
+
+
+    .footer{
+
+        position:relative;
+
+        bottom:auto;
+
+        margin-top:0;
+
+        padding-bottom:30px;
 
     }
 
