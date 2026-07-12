@@ -1255,3 +1255,150 @@ h1{
 
 }
 
+/* ======================================================
+   GALERIA
+====================================================== */
+
+
+.pagina-galeria{
+
+    background-image:url("fondo-web-index.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+
+
+.pagina-galeria .galeria{
+
+    position:relative;
+
+    z-index:5;
+
+    width:70%;
+
+    margin-left:25%;
+
+    padding-top:250px;
+
+    padding-bottom:200px;
+
+    text-align:left;
+
+}
+
+
+
+.galeria h1{
+
+    font-size:clamp(45px,6vw,75px);
+
+    margin-bottom:45px;
+
+}
+
+
+
+.galeria-contenedor{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.foto-galeria{
+
+    height:260px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(5px);
+
+    -webkit-backdrop-filter:blur(5px);
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+    .pagina-galeria{
+
+        background-image:url("fondo-web-index-movil.png");
+
+        background-size:cover;
+
+        background-position:left bottom;
+
+    }
+
+
+
+    .pagina-galeria .galeria{
+
+        width:auto;
+
+        margin:0;
+
+        padding:170px 25px 380px;
+
+    }
+
+
+
+    .galeria h1{
+
+        font-size:52px;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    .galeria-contenedor{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+
+    .foto-galeria{
+
+        height:220px;
+
+    }
+
+
+}
