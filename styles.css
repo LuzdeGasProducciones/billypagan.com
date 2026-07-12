@@ -451,12 +451,13 @@ h1{
 
     margin-left:52%;
 
-    padding-top:360px;
+    padding-top:430px;
 
-    padding-bottom:180px;
+    padding-bottom:140px;
+
+    text-align:left;
 
 }
-
 
 /* ======================================================
    TÍTULO
@@ -684,25 +685,27 @@ h1{
 
     }
 
-    .texto-biografia{
+.texto-biografia{
 
-        max-width:none;
+    max-width:none;
 
-        padding:26px;
+    padding:28px;
 
-        background:rgba(255,255,255,.22);
+    background:rgba(255,255,255,.78);
 
-        backdrop-filter:blur(4px);
+    border-radius:12px;
 
-        -webkit-backdrop-filter:blur(4px);
+    backdrop-filter:blur(8px);
 
-        border-radius:10px;
+    -webkit-backdrop-filter:blur(8px);
 
-        font-size:14px;
+    font-size:14px;
 
-        line-height:1.9;
+    line-height:1.9;
 
-    }
+    color:#202020;
+
+}
 
     .texto-biografia p{
 
