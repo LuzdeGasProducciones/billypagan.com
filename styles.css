@@ -644,7 +644,7 @@ h1{
 }
 
 /* ==========================
-   FONDO FIJO BIOGRAFIA
+   AJUSTE FINAL BIOGRAFIA
 ========================== */
 
 
@@ -652,7 +652,29 @@ h1{
 
 .pagina-biografia{
 
-    background-attachment:fixed;
+    overflow-y:auto;
+
+}
+
+
+
+.biografia{
+
+    padding-top:290px;
+
+}
+
+
+
+.texto-biografia{
+
+    background:rgba(255,255,255,.35);
+
+    padding:30px 35px;
+
+    backdrop-filter:blur(3px);
+
+    -webkit-backdrop-filter:blur(3px);
 
 }
 
@@ -660,30 +682,15 @@ h1{
 
 
 
-/* MOVIL */
+/* ==========================
+   MOVIL
+========================== */
+
 
 @media (max-width:700px){
 
 
     .pagina-biografia{
-
-        background-image:none;
-
-        position:relative;
-
-        min-height:100vh;
-
-    }
-
-
-
-    .pagina-biografia::after{
-
-        content:"";
-
-        position:fixed;
-
-        inset:0;
 
         background-image:url("fondo-web-index-movil.png");
 
@@ -693,42 +700,33 @@ h1{
 
         background-repeat:no-repeat;
 
-        z-index:-1;
+        background-attachment:fixed;
+
+        min-height:100vh;
+
+        height:auto;
 
     }
 
 
-}
-
-/* ==========================
-   CAJA TEXTO BIOGRAFIA
-========================== */
-
-
-.texto-biografia{
-
-    background:rgba(255,255,255,.55);
-
-    padding:35px 40px;
-
-    backdrop-filter:blur(4px);
-
-    -webkit-backdrop-filter:blur(4px);
-
-    border-radius:2px;
-
-}
-
-
-
-
-
-@media (max-width:700px){
-
 
     .biografia{
 
-        padding-bottom:320px;
+        width:auto;
+
+        margin:0;
+
+        padding:170px 25px 260px 25px;
+
+    }
+
+
+
+    .biografia h1{
+
+        font-size:52px;
+
+        margin-bottom:35px;
 
     }
 
@@ -736,7 +734,7 @@ h1{
 
     .texto-biografia{
 
-        background:rgba(255,255,255,.65);
+        background:rgba(255,255,255,.55);
 
         padding:30px 25px;
 
@@ -749,6 +747,20 @@ h1{
     .texto-biografia p{
 
         margin-bottom:35px;
+
+    }
+
+
+
+    .footer{
+
+        position:relative;
+
+        bottom:auto;
+
+        margin-top:0;
+
+        padding-bottom:30px;
 
     }
 
