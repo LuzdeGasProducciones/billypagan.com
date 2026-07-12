@@ -382,17 +382,15 @@ body{
 
     top:12%;
 
-    left:50%;
+    left:0;
 
-    transform:translateX(-50%);
+    right:0;
 
-    width:100%;
+    margin:0 auto;
 
-    max-width:430px;
+    width:auto;
 
-    margin:0;
-
-    padding:0 20px;
+    padding:0;
 
     text-align:center;
 
