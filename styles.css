@@ -1402,3 +1402,160 @@ h1{
 
 
 }
+
+/* ======================================================
+   CONTACTO
+====================================================== */
+
+
+.pagina-contacto{
+
+    background-image:url("fondo-web-index.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+
+
+.pagina-contacto .contacto{
+
+
+    position:relative;
+
+    z-index:5;
+
+    width:45%;
+
+    margin-left:50%;
+
+    padding-top:330px;
+
+    padding-bottom:180px;
+
+    text-align:left;
+
+}
+
+
+
+.contacto h1{
+
+    font-size:clamp(45px,6vw,75px);
+
+    margin-bottom:45px;
+
+}
+
+
+
+.texto-contacto{
+
+    padding:35px;
+
+    background:rgba(255,255,255,.40);
+
+    backdrop-filter:blur(5px);
+
+    -webkit-backdrop-filter:blur(5px);
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    line-height:2;
+
+}
+
+
+
+.texto-contacto strong{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+}
+
+
+
+.boton-contacto{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 25px;
+
+    border:1px solid #202020;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+
+}
+
+
+
+.boton-contacto:hover{
+
+    opacity:.6;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.pagina-contacto{
+
+    background-image:url("fondo-web-index-movil.png");
+
+    background-position:left bottom;
+
+}
+
+
+
+.pagina-contacto .contacto{
+
+    width:auto;
+
+    margin:0;
+
+    padding:170px 25px 380px;
+
+}
+
+
+
+.contacto h1{
+
+    font-size:52px;
+
+}
+
+
+
+.texto-contacto{
+
+    padding:28px;
+
+    background:rgba(255,255,255,.55);
+
+}
+
+
+
+}
