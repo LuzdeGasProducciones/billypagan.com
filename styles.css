@@ -634,15 +634,23 @@ em{
 
     .pagina-biografia{
 
-        background-image:none;
+        background-image:url("fondo-web-index-movil.png");
 
-        position:relative;
+        background-size:cover;
+
+        background-position:left bottom;
+
+        background-repeat:no-repeat;
+
+        background-attachment:scroll;
 
         min-height:100vh;
 
         overflow-y:auto;
 
     }
+
+}
 
     .pagina-biografia::before{
 
@@ -684,23 +692,19 @@ em{
 
     }
 
-    .texto-biografia{
+.texto-biografia{
 
-        max-width:none;
+    background:rgba(255,255,255,.30);
 
-        padding:30px 25px;
+    padding:28px;
 
-        font-size:14px;
+    border-radius:8px;
 
-        line-height:1.95;
+    backdrop-filter:blur(4px);
 
-        background:rgba(255,255,255,.40);
+    -webkit-backdrop-filter:blur(4px);
 
-        backdrop-filter:blur(3px);
-
-        -webkit-backdrop-filter:blur(3px);
-
-    }
+}
 
     .texto-biografia p{
 
