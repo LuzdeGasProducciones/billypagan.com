@@ -207,9 +207,7 @@ h1{
 
 .footer{
 
-    position:fixed;
-
-    bottom:15px;
+    bottom:35px;
 
     left:0;
 
@@ -217,13 +215,11 @@ h1{
 
     text-align:center;
 
-    font-size:11px;
+    font-size:9px;
 
-    font-weight:300;
+    letter-spacing:1px;
 
-    letter-spacing:2px;
-
-    color:#444;
+    color:#666;
 
     z-index:20;
 
@@ -280,6 +276,19 @@ body{
 
     overflow:hidden;
 
+    .contenido{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:0 20px;
+
+    text-align:center;
+
+    transform:translateY(-120px);
+
+}
 }
 
 .hero{
