@@ -699,3 +699,58 @@ h1{
 
 
 }
+
+/* ==========================
+   CAJA TEXTO BIOGRAFIA
+========================== */
+
+
+.texto-biografia{
+
+    background:rgba(255,255,255,.55);
+
+    padding:35px 40px;
+
+    backdrop-filter:blur(4px);
+
+    -webkit-backdrop-filter:blur(4px);
+
+    border-radius:2px;
+
+}
+
+
+
+
+
+@media (max-width:700px){
+
+
+    .biografia{
+
+        padding-bottom:320px;
+
+    }
+
+
+
+    .texto-biografia{
+
+        background:rgba(255,255,255,.65);
+
+        padding:30px 25px;
+
+        line-height:1.95;
+
+    }
+
+
+
+    .texto-biografia p{
+
+        margin-bottom:35px;
+
+    }
+
+
+}
