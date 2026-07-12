@@ -766,3 +766,38 @@ h1{
 
 
 }
+
+/* ==========================
+   AJUSTE BIOGRAFIA ESCRITORIO
+========================== */
+
+
+@media (min-width:701px){
+
+
+    .pagina-biografia .biografia{
+
+        padding-top:380px;
+
+    }
+
+
+
+    .pagina-biografia .biografia h1{
+
+        margin-top:0;
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    .pagina-biografia .texto-biografia{
+
+        margin-top:0;
+
+    }
+
+
+}
