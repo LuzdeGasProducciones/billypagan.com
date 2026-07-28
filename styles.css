@@ -1560,3 +1560,143 @@ h1{
     }
 
 }
+/* ======================================================
+   HISTÓRICO DE CONCIERTOS
+====================================================== */
+
+.pagina-historico{
+
+    overflow-y:auto;
+
+}
+
+.historico{
+
+    position:relative;
+    z-index:5;
+
+    width:min(760px,90%);
+    margin:0 auto;
+
+    padding-top:170px;
+    padding-bottom:180px;
+
+    text-align:center;
+
+}
+
+.historico h1{
+
+    font-size:clamp(42px,5vw,62px);
+
+    margin-bottom:35px;
+
+    line-height:1;
+
+    letter-spacing:2px;
+
+}
+
+.texto-historico{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.30);
+
+    backdrop-filter:blur(4px);
+
+    -webkit-backdrop-filter:blur(4px);
+
+    border-radius:10px;
+
+}
+
+.texto-historico p{
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+.lista-anos{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.lista-anos a{
+
+    display:block;
+
+    padding:16px 20px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:34px;
+
+    letter-spacing:1px;
+
+    color:var(--texto);
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.lista-anos a:hover{
+
+    background:rgba(255,255,255,.45);
+
+    transform:translateX(8px);
+
+}
+
+@media (max-width:700px){
+
+    .historico{
+
+        width:92%;
+
+        padding-top:150px;
+
+        padding-bottom:170px;
+
+    }
+
+    .historico h1{
+
+        font-size:42px;
+
+    }
+
+    .texto-historico{
+
+        padding:26px;
+
+    }
+
+    .lista-anos a{
+
+        font-size:28px;
+
+        padding:14px;
+
+    }
+
+}
