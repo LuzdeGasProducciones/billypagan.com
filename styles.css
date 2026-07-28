@@ -1790,3 +1790,71 @@ h1{
     box-shadow:0 10px 20px rgba(0,0,0,.12);
 
 }
+/* ======================================================
+   BOTÓN HISTÓRICO DE CONCIERTOS
+====================================================== */
+
+.botones-conciertos{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+.boton-historico{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:340px;
+
+    max-width:100%;
+
+    height:56px;
+
+    margin:0 auto;
+
+    background:rgba(255,255,255,.28);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:10px;
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    color:#202020;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:12px;
+
+    font-weight:400;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    transition:all .30s ease;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.boton-historico:hover{
+
+    background:rgba(255,255,255,.50);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.15);
+
+}
+   
