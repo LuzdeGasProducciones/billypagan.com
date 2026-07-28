@@ -1127,104 +1127,40 @@ h1{
 }
 
 /* ======================================================
-   GALERÍA DE VÍDEOS
+   VÍDEOS
 ====================================================== */
 
-.galeria-videos{
+.lista-videos{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
-    gap:40px;
-
-    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:70px;
 
 }
 
 .video-item{
 
-    text-align:center;
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
 
 }
 
-.video-miniatura{
-
-    display:block;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:12px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
-
-    transition:.35s;
-
-}
-
-.video-miniatura:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 25px 60px rgba(0,0,0,.28);
-
-}
-
-.video-miniatura img{
-
-    display:block;
+.video-principal{
 
     width:100%;
-
     aspect-ratio:16/9;
-
-    object-fit:cover;
-
-    transition:.35s;
-
-}
-
-.video-miniatura:hover img{
-
-    transform:scale(1.05);
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,.20);
 
 }
 
-.play-icono{
+.video-principal iframe{
 
-    position:absolute;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:82px;
-
-    height:82px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.92);
-
-    color:#202020;
-
-    font-size:34px;
-
-    line-height:82px;
-
-    text-align:center;
-
-    transition:.35s;
-
-}
-
-.video-miniatura:hover .play-icono{
-
-    transform:translate(-50%,-50%) scale(1.12);
+    width:100%;
+    height:100%;
+    border:0;
 
 }
 
@@ -1240,49 +1176,23 @@ h1{
 
     letter-spacing:1px;
 
-    color:var(--texto);
-
 }
 
 @media (max-width:700px){
 
-    .galeria-videos{
+    .lista-videos{
 
-        grid-template-columns:1fr;
-
-        gap:30px;
+        gap:45px;
 
     }
 
     .video-item h2{
 
-        font-size:24px;
+        font-size:22px;
 
     }
 
 }
-
-    font-size:40px;
-
-    margin-bottom:40px;
-
-}
-
-
-
-    .texto-videos{
-
-        padding:28px;
-
-        font-size:14px;
-
-        background:rgba(255,255,255,.65);
-
-    }
-
-
-}
-
 /* ======================================================
    GALERIA
 ====================================================== */
