@@ -1676,3 +1676,71 @@ h1{
     }
 
 }
+/* ======================================================
+   HISTÓRICO DE CONCIERTOS
+====================================================== */
+
+
+.historico{
+
+    max-height:none;
+
+}
+
+
+
+.concierto-item{
+
+    margin-bottom:35px;
+
+    padding-bottom:25px;
+
+    border-bottom:1px solid rgba(0,0,0,.12);
+
+}
+
+
+
+.concierto-item strong{
+
+    display:block;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:26px;
+
+    font-weight:600;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.concierto-item span{
+
+    display:block;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.concierto-item p{
+
+    margin-top:8px;
+
+    margin-bottom:0;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:14px;
+
+}
