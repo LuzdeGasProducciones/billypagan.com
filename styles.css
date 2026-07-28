@@ -1700,3 +1700,42 @@ h1{
     }
 
 }
+/* BOTÓN HISTÓRICO DE CONCIERTOS */
+
+.boton-historico{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:14px 34px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:8px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(4px);
+
+    -webkit-backdrop-filter:blur(4px);
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+
+}
+
+.boton-historico:hover{
+
+    background:rgba(255,255,255,.35);
+
+    transform:translateY(-2px);
+
+}
