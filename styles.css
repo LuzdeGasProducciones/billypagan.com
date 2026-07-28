@@ -1559,3 +1559,66 @@ h1{
 
 
 }
+/* ======================================================
+   VIDEO YOUTUBE
+====================================================== */
+
+.video-principal{
+
+    width:100%;
+
+    max-width:900px;
+
+    aspect-ratio:16/9;
+
+    margin-bottom:40px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.20);
+
+}
+
+.video-principal iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+}
+
+.texto-videos{
+
+    max-width:900px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.30);
+
+    backdrop-filter:blur(4px);
+
+    -webkit-backdrop-filter:blur(4px);
+
+    border-radius:10px;
+
+}
+
+@media(max-width:700px){
+
+    .video-principal{
+
+        margin-bottom:30px;
+
+    }
+
+    .texto-videos{
+
+        padding:24px;
+
+    }
+
+}
