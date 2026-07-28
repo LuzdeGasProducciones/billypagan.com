@@ -1018,67 +1018,166 @@ h1{
    VÍDEOS
 ====================================================== */
 
-.lista-videos{
 
-    display:flex;
-    flex-direction:column;
-    gap:70px;
+.pagina-videos .videos{
+
+    position:relative;
+
+    z-index:5;
+
+    width:50%;
+
+    margin-left:45%;
+
+    padding-top:360px;
+
+    padding-bottom:200px;
 
 }
+
+
+
+.videos h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(45px,6vw,75px);
+
+    margin-bottom:45px;
+
+}
+
+
+
+.lista-videos{
+
+    max-width:650px;
+
+}
+
+
 
 .video-item{
 
-    width:100%;
-    max-width:900px;
-    margin:0 auto;
+    margin-bottom:50px;
 
 }
+
+
 
 .video-principal{
 
+    position:relative;
+
     width:100%;
-    aspect-ratio:16/9;
+
+    aspect-ratio:16 / 9;
+
     overflow:hidden;
+
     border-radius:12px;
-    box-shadow:0 15px 40px rgba(0,0,0,.20);
+
+    background:#000;
 
 }
 
+
+
 .video-principal iframe{
 
+    position:absolute;
+
     width:100%;
+
     height:100%;
+
+    top:0;
+
+    left:0;
+
     border:0;
 
 }
 
-.video-item h2{
 
-    margin-top:18px;
+
+.video-item h2{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:28px;
+    font-size:32px;
 
-    font-weight:600;
+    font-weight:500;
 
-    letter-spacing:1px;
+    margin-top:20px;
 
 }
 
-@media (max-width:700px){
+
+
+
+
+@media(max-width:700px){
+
+
+    .pagina-videos .videos{
+
+        width:auto;
+
+        margin:0;
+
+        padding:170px 25px 350px;
+
+    }
+
+
+
+    .videos h1{
+
+        font-size:52px;
+
+        margin-bottom:35px;
+
+    }
+
+
 
     .lista-videos{
 
-        gap:45px;
+        width:100%;
 
     }
+
+
+
+    .video-item{
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    .video-principal{
+
+        width:100%;
+
+        aspect-ratio:16 / 9;
+
+        border-radius:10px;
+
+    }
+
+
 
     .video-item h2{
 
-        font-size:22px;
+        font-size:28px;
+
+        margin-top:15px;
 
     }
+
 
 }
 /* ======================================================
