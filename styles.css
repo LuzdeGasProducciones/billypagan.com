@@ -1167,9 +1167,11 @@ h1{
 
 .videos h1{
 
-    font-size:clamp(45px,6vw,75px);
+    font-size:clamp(34px,4vw,52px);
 
-    margin-bottom:45px;
+    margin-bottom:60px;
+
+    letter-spacing:2px;
 
 }
 
@@ -1234,11 +1236,13 @@ h1{
 
 
 
-    .videos h1{
+.videos h1{
 
-        font-size:52px;
+    font-size:40px;
 
-    }
+    margin-bottom:40px;
+
+}
 
 
 
