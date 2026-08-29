@@ -24,10 +24,6 @@
     }
 
 
-    /* ----------------------------------------------
-       PÁGINAS LEGALES
-    ---------------------------------------------- */
-
     body.pagina-legal {
 
         background-image:
@@ -58,20 +54,10 @@
     }
 
 
-    /* ----------------------------------------------
-       PÁGINAS LEGALES · MÓVIL
-    ---------------------------------------------- */
-
     body.pagina-legal {
 
         background-image:
             url("../images/fondos/mobile/fondo-legal-movil.jpg");
-
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        background-attachment: scroll;
 
     }
 
@@ -84,13 +70,7 @@
 
 @media (min-width: 1600px) {
 
-    body {
-
-        background-position: center center;
-
-    }
-
-
+    body,
     body.pagina-legal {
 
         background-position: center center;
@@ -120,7 +100,6 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
 
     }
 
