@@ -1,7 +1,8 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    styles.css
-   ESTILOS GENERALES DEL SITIO
+
+   ESTILOS BASE DEL SITIO
 ====================================================== */
 
 
@@ -27,30 +28,28 @@
     box-sizing: border-box;
 }
 
-
 html {
-
     margin: 0;
     padding: 0;
-
 }
 
-
 body {
-
     margin: 0;
     padding: 0;
-
 }
 
 
 /* ======================================================
-   03. FONDO GENERAL
+   03. BASE
 ====================================================== */
 
 body {
 
     min-height: 100vh;
+
+    color: #f2f2f2;
+
+    font-family: var(--fuente-texto);
 
     background-image:
         url("../images/fondos/desktop/fondo-general-desktop.jpg");
@@ -58,14 +57,27 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
     background-attachment: fixed;
 
 }
 
 
 /* ======================================================
-   04. FONDO PÁGINAS LEGALES
+   04. PÁGINA DE INICIO · SIN SCROLL
+====================================================== */
+
+body.pagina-inicio {
+
+    height: 100vh;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+/* ======================================================
+   05. PÁGINAS LEGALES
 ====================================================== */
 
 body.pagina-legal {
@@ -77,18 +89,16 @@ body.pagina-legal {
 
 
 /* ======================================================
-   05. ELEMENTOS GENERALES
+   06. ELEMENTOS GENERALES
 ====================================================== */
 
 img {
 
     display: block;
-
     max-width: 100%;
     height: auto;
 
 }
-
 
 a {
 
@@ -96,7 +106,6 @@ a {
     text-decoration: none;
 
 }
-
 
 button,
 input,
@@ -109,7 +118,7 @@ select {
 
 
 /* ======================================================
-   06. ACCESIBILIDAD
+   07. ACCESIBILIDAD
 ====================================================== */
 
 button,
