@@ -26,9 +26,6 @@
 
         overflow: hidden;
 
-        background-image:
-            url("../images/fondos/mobile/fondo-general-movil.jpg");
-
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -126,6 +123,10 @@
     }
 
 
+    /* --------------------------------------------------
+       MENÚ MÓVIL · ABIERTO
+    -------------------------------------------------- */
+
     .menu-movil.abierto {
 
         opacity: 1;
@@ -212,37 +213,6 @@
         line-height: 1.2;
 
         letter-spacing: 0.32em;
-
-    }
-
-
-    /* --------------------------------------------------
-       FOOTER · MÓVIL
-    -------------------------------------------------- */
-
-    .pagina-inicio .footer {
-
-        padding: 0 1rem 1rem;
-
-        font-size: 0.58rem;
-
-        letter-spacing: 0.055em;
-
-    }
-
-
-    .pagina-inicio .footer-contenido {
-
-        flex-direction: column;
-
-        gap: 0.45rem;
-
-    }
-
-
-    .pagina-inicio .footer-terminos {
-
-        margin-left: 0;
 
     }
 
