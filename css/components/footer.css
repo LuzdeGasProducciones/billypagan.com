@@ -1,3 +1,4 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
@@ -121,82 +122,7 @@
 }
 
 
-/* --------------------------------------------------
-   FOOTER · MÓVIL
--------------------------------------------------- */
-
-.pagina-inicio .footer {
-
-    position: fixed;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    z-index: 30;
-
-    width: 100%;
-
-    padding: 0 1rem 1rem;
-
-    font-size: 0.56rem;
-
-    line-height: 1.5;
-
-    letter-spacing: 0.06em;
-
-    text-align: center;
-}
-
-
-.pagina-inicio .footer-contenido {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 0.2rem;
-
-    width: 100%;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-
-.pagina-inicio .footer-copy {
-
-    display: block;
-
-    width: 100%;
-
-    margin: 0;
-
-    white-space: nowrap;
-
-    text-align: center;
-}
-
-
-.pagina-inicio .footer-terminos {
-
-    display: block;
-
-    width: 100%;
-
-    margin: 0;
-
-    white-space: nowrap;
-
-    text-align: center;
-}
-
-
 /* ======================================================
    FIN · footer.css
 ====================================================== */
+```
