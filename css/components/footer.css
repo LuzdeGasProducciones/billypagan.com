@@ -1,1 +1,146 @@
+/* ======================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   footer.css
+   PIE DE PÁGINA
+====================================================== */
 
+
+/* ======================================================
+   01. FOOTER · BASE
+====================================================== */
+
+.footer {
+
+    width: 100%;
+
+    color: rgba(32, 32, 32, 0.88);
+
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.07em;
+
+    text-align: center;
+}
+
+
+/* ======================================================
+   02. FOOTER · PORTADA
+====================================================== */
+
+.pagina-inicio .footer {
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 30;
+
+    width: 100%;
+
+    padding: 0 1.25rem 1.35rem;
+}
+
+
+/* ======================================================
+   03. CONTENIDO
+====================================================== */
+
+.pagina-inicio .footer-contenido {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ======================================================
+   04. COPYRIGHT
+====================================================== */
+
+.pagina-inicio .footer-copy {
+
+    display: inline-block;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+
+/* ======================================================
+   05. ENLACES
+====================================================== */
+
+.pagina-inicio .footer a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.pagina-inicio .footer a:hover {
+
+    opacity: 0.55;
+}
+
+.pagina-inicio .footer a:focus-visible {
+
+    outline: 1px solid rgba(32, 32, 32, 0.65);
+
+    outline-offset: 0.25rem;
+}
+
+
+/* ======================================================
+   06. TÉRMINOS
+====================================================== */
+
+.pagina-inicio .footer-terminos {
+
+    display: inline-block;
+
+    margin-left: 1.4rem;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+
+/* ======================================================
+   07. PÁGINAS INTERIORES
+====================================================== */
+
+body:not(.pagina-inicio) .footer {
+
+    position: relative;
+
+    margin-top: 3rem;
+}
+
+
+/* ======================================================
+   FIN · footer.css
+====================================================== */
