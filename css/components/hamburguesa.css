@@ -1,110 +1,168 @@
-/* ====================================================== 
-   BILLY PAGÁN · SITIO OFICIAL 
-   hamburguesa.css 
-   COMPONENTE · MENÚ HAMBURGUESA ANIMADO PREMIUM
-   ====================================================== */
+/* ======================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   hamburguesa.css
+   COMPONENTE · MENÚ HAMBURGUESA ANIMADO
+====================================================== */
 
-/* ====================================================== 
-   01. HAMBURGUESA · BASE 
-   ====================================================== */
+
+/* ======================================================
+   01. HAMBURGUESA · BASE
+====================================================== */
+
 .hamburguesa {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  top: 1.5rem; 
-  right: 1.5rem;
-  z-index: 50;
-  width: 30px; 
-  height: 20px;
-  margin: 0; 
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  /* Curva de aceleración premium (suave al inicio, rápida al final) */
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: absolute;
+
+    top: 1.5rem;
+    right: 1.5rem;
+
+    z-index: 50;
+
+    width: 30px;
+    height: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transform-origin: center;
+
 }
 
-/* ====================================================== 
-   02. ANIMACIÓN AL PASAR EL MOUSE (HOVER) 
-   ====================================================== */
-.hamburguesa:hover {
-  transform: scale(1.05); /* Micro-expansión elegante */
-}
 
-/* Las líneas reaccionan al hover general del botón */
-.hamburguesa:hover span:nth-child(1) {
-  transform: translateY(-1px); /* La línea superior sube un píxel */
-}
+/* ======================================================
+   02. LÍNEAS
+====================================================== */
 
-.hamburguesa:hover span:nth-child(3) {
-  transform: translateY(1px); /* La línea inferior baja un píxel */
-  width: 100%; /* La línea de abajo se expande por completo */
-}
-
-/* ====================================================== 
-   03. LÍNEAS INTERNAS Y CONFIGURACIÓN DE ORIGEN 
-   ====================================================== */
 .hamburguesa span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #111111;
-  border-radius: 4px;
-  /* Transición fluida para cada propiedad modificada */
-  transition: 
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s ease,
-    width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  /* Punto de anclaje exacto en el centro para una rotación perfecta */
-  transform-origin: center; 
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #111111;
+
+    border-radius: 4px;
+
+    transform-origin: center;
+
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.3s ease,
+        width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Detalle asimétrico inicial */
-.hamburguesa span:nth-child(2) {
-  width: 70%;
-  align-self: flex-end;
+
+/* ======================================================
+   03. DISEÑO ASIMÉTRICO · ESTADO CERRADO
+====================================================== */
+
+.hamburguesa span:nth-child(1) {
+
+    width: 100%;
+
 }
+
+
+.hamburguesa span:nth-child(2) {
+
+    width: 70%;
+
+    align-self: flex-end;
+
+}
+
 
 .hamburguesa span:nth-child(3) {
-  width: 40%;
-  align-self: flex-end;
+
+    width: 40%;
+
+    align-self: flex-end;
+
 }
 
-/* ====================================================== 
-   04. TRANSFORMACIÓN ACTIVA (Efecto "X" coreografiado) 
-   ====================================================== */
 
-/* Cuando tiene la clase .abierta, desactivamos el efecto hover previo */
-.hamburguesa.abierta:hover {
-  transform: rotate(90deg); /* El botón entero gira 90 grados al estar abierto si se pasa el mouse */
-}
+/* ======================================================
+   04. MENÚ ABIERTO · TRANSFORMACIÓN
+====================================================== */
 
-/* Línea superior: Baja al centro y rota 45 grados */
 .hamburguesa.abierta span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-  width: 100%;
+
+    width: 100%;
+
+    transform:
+        translateY(9px)
+        rotate(45deg);
+
 }
 
-/* Línea del medio: Se desvanece y se desplaza hacia la derecha */
+
 .hamburguesa.abierta span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(15px);
+
+    width: 70%;
+
+    opacity: 0;
+
+    transform:
+        translateX(15px);
+
 }
 
-/* Línea inferior: Sube al centro y rota -45 grados creando la cruz perfecta */
+
 .hamburguesa.abierta span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-  width: 100%;
+
+    width: 100%;
+
+    transform:
+        translateY(-9px)
+        rotate(-45deg);
+
 }
 
-/* ====================================================== 
-   05. ACCESIBILIDAD 
-   ====================================================== */
+
+/* ======================================================
+   05. FOCO · ACCESIBILIDAD
+====================================================== */
+
 .hamburguesa:focus-visible {
-  outline: 2px solid #111111;
-  outline-offset: 0.5rem;
+
+    outline: 2px solid rgba(17, 17, 17, 0.7);
+
+    outline-offset: 0.5rem;
+
 }
+
+
+/* ======================================================
+   06. REDUCCIÓN DE MOVIMIENTO
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hamburguesa span {
+
+        transition: none;
+
+    }
+
+}
+
+
+/* ======================================================
+   FIN · hamburguesa.css
+====================================================== */
