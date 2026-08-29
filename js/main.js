@@ -1,14 +1,14 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   main.js
-   FUNCIONES GENERALES
+   menu.js
+   MENÚ MÓVIL · HAMBURGUESA
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       MENÚ MÓVIL
+       ELEMENTOS
     ================================================== */
 
     const hamburguesa =
@@ -37,19 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
             menuMovil.classList.toggle("abierto");
 
 
-        /* ----------------------------------------------
-           ANIMACIÓN DE LA HAMBURGUESA
-        ---------------------------------------------- */
-
         hamburguesa.classList.toggle(
             "abierta",
             abierto
         );
 
-
-        /* ----------------------------------------------
-           ACCESIBILIDAD
-        ---------------------------------------------- */
 
         hamburguesa.setAttribute(
             "aria-expanded",
@@ -68,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       CERRAR MENÚ AL NAVEGAR
+       CERRAR AL NAVEGAR
     ================================================== */
 
     menuMovil
@@ -97,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       CERRAR MENÚ CON ESC
+       CERRAR CON ESC
     ================================================== */
 
     document.addEventListener("keydown", event => {
