@@ -76,7 +76,7 @@
 
     .hamburguesa {
 
-        display: block;
+        display: flex;
 
     }
 
