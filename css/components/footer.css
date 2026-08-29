@@ -1,4 +1,3 @@
-```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
@@ -66,8 +65,6 @@
 
     align-items: center;
 
-    flex-wrap: wrap;
-
     width: 100%;
 
     margin: 0 auto;
@@ -82,7 +79,7 @@
 
 .footer-copy {
 
-    display: inline-block;
+    display: inline;
 
     white-space: nowrap;
 }
@@ -122,9 +119,9 @@
 
 .footer-terminos {
 
-    display: inline-block;
+    display: inline;
 
-    margin-left: 0.8rem;
+    margin-left: 0.35rem;
 
     white-space: nowrap;
 }
