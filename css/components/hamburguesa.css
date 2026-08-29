@@ -1,1 +1,65 @@
+/* ======================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   hamburguesa.css
+   COMPONENTE · MENÚ HAMBURGUESA
+====================================================== */
 
+
+/* ======================================================
+   01. HAMBURGUESA · BASE
+====================================================== */
+
+.hamburguesa {
+
+    display: none;
+
+    position: absolute;
+
+    top: 1.25rem;
+    right: 1.25rem;
+
+    z-index: 50;
+
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #202020;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+}
+
+
+/* ======================================================
+   02. HAMBURGUESA · FOCO
+====================================================== */
+
+.hamburguesa:focus-visible {
+
+    outline: 1px solid rgba(32, 32, 32, 0.7);
+
+    outline-offset: 0.35rem;
+}
+
+
+/* ======================================================
+   FIN · hamburguesa.css
+====================================================== */
