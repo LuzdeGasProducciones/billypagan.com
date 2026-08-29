@@ -1,10 +1,15 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    main.js
-   PORTADA
+   FUNCIONES GENERALES · PORTADA
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* ==================================================
+       MENÚ MÓVIL
+    ================================================== */
 
     const hamburguesa =
         document.getElementById("hamburguesa");
@@ -13,27 +18,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("menuMovil");
 
 
+    /* ==================================================
+       COMPROBACIÓN
+    ================================================== */
+
     if (!hamburguesa || !menuMovil) {
         return;
     }
 
 
-    /* ----------------------------------------------
+    /* ==================================================
        ABRIR / CERRAR MENÚ
-    ---------------------------------------------- */
+    ================================================== */
 
     hamburguesa.addEventListener("click", () => {
 
         const abierto =
             menuMovil.classList.toggle("abierto");
 
-        hamburguesa.textContent =
-            abierto ? "✕" : "☰";
 
         hamburguesa.setAttribute(
             "aria-expanded",
-            abierto
+            abierto ? "true" : "false"
         );
+
 
         hamburguesa.setAttribute(
             "aria-label",
@@ -42,20 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 : "Abrir menú"
         );
 
+
+        hamburguesa.textContent =
+            abierto ? "✕" : "☰";
+
     });
 
 
-    /* ----------------------------------------------
-       CERRAR AL SELECCIONAR UNA OPCIÓN
-    ---------------------------------------------- */
+    /* ==================================================
+       CERRAR MENÚ AL NAVEGAR
+    ================================================== */
 
-    menuMovil.querySelectorAll("a").forEach(enlace => {
+    const enlaces =
+        menuMovil.querySelectorAll("a");
+
+
+    enlaces.forEach(enlace => {
 
         enlace.addEventListener("click", () => {
 
             menuMovil.classList.remove("abierto");
-
-            hamburguesa.textContent = "☰";
 
             hamburguesa.setAttribute(
                 "aria-expanded",
@@ -67,7 +81,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Abrir menú"
             );
 
+            hamburguesa.textContent = "☰";
+
         });
+
+    });
+
+
+    /* ==================================================
+       CERRAR MENÚ CON ESC
+    ================================================== */
+
+    document.addEventListener("keydown", event => {
+
+        if (
+            event.key === "Escape" &&
+            menuMovil.classList.contains("abierto")
+        ) {
+
+            menuMovil.classList.remove("abierto");
+
+            hamburguesa.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            hamburguesa.setAttribute(
+                "aria-label",
+                "Abrir menú"
+            );
+
+            hamburguesa.textContent = "☰";
+
+        }
 
     });
 
