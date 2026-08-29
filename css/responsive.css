@@ -1,3 +1,4 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    responsive.css
@@ -223,54 +224,6 @@
 
     }
 
-
-    /* --------------------------------------------------
-       FOOTER · MÓVIL
-    -------------------------------------------------- */
-
-    .pagina-inicio .footer {
-
-        padding: 0 0.5rem 1rem;
-
-        font-size: 0.48rem;
-
-        letter-spacing: 0.045em;
-
-    }
-
-
-    .pagina-inicio .footer-contenido {
-
-        display: block;
-
-        width: 100%;
-
-        text-align: center;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-copy {
-
-        display: inline;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-terminos {
-
-        display: inline;
-
-        margin-left: 0.25rem;
-
-        white-space: nowrap;
-
-    }
-
 }
 
 
@@ -376,54 +329,6 @@
 
     }
 
-
-    /* --------------------------------------------------
-       FOOTER · TABLET
-    -------------------------------------------------- */
-
-    .pagina-inicio .footer {
-
-        padding: 0 1rem 1.15rem;
-
-        font-size: 0.55rem;
-
-        letter-spacing: 0.07em;
-
-    }
-
-
-    .pagina-inicio .footer-contenido {
-
-        display: block;
-
-        width: 100%;
-
-        text-align: center;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-copy {
-
-        display: inline;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-terminos {
-
-        display: inline;
-
-        margin-left: 0.3rem;
-
-        white-space: nowrap;
-
-    }
-
 }
 
 
@@ -466,50 +371,6 @@
             9vw,
             8rem
         );
-
-    }
-
-
-    /* --------------------------------------------------
-       FOOTER · ESCRITORIO
-    -------------------------------------------------- */
-
-    .pagina-inicio .footer {
-
-        padding: 0 1.5rem 1.5rem;
-
-    }
-
-
-    .pagina-inicio .footer-contenido {
-
-        display: block;
-
-        width: 100%;
-
-        text-align: center;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-copy {
-
-        display: inline;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-terminos {
-
-        display: inline;
-
-        margin-left: 0.35rem;
-
-        white-space: nowrap;
 
     }
 
