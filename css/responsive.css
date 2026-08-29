@@ -1,3 +1,4 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    responsive.css
@@ -19,6 +20,8 @@
 
     .pagina-inicio {
 
+        width: 100%;
+
         height: 100svh;
 
         min-height: 100svh;
@@ -33,6 +36,10 @@
     -------------------------------------------------- */
 
     .hero {
+
+        position: relative;
+
+        width: 100%;
 
         height: 100svh;
 
@@ -83,6 +90,7 @@
         position: fixed;
 
         top: 0;
+
         left: 0;
 
         z-index: 40;
@@ -123,7 +131,63 @@
 
 
     /* --------------------------------------------------
-       CONTENIDO
+       MENÚ MÓVIL · ABIERTO
+    -------------------------------------------------- */
+
+    .menu-movil.abierto {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+    }
+
+
+    /* --------------------------------------------------
+       ENLACES MENÚ MÓVIL
+    -------------------------------------------------- */
+
+    .menu-movil a {
+
+        display: block;
+
+        color: #202020;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 0.82rem;
+
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.2em;
+
+        text-align: center;
+
+        transition: opacity 0.3s ease;
+
+    }
+
+
+    .menu-movil a:hover {
+
+        opacity: 0.55;
+
+    }
+
+
+    .menu-movil a.activo {
+
+        opacity: 1;
+
+    }
+
+
+    /* --------------------------------------------------
+       CONTENIDO CENTRAL
     -------------------------------------------------- */
 
     .contenido {
@@ -131,6 +195,7 @@
         width: 92%;
 
     }
+
 
     .contenido h1 {
 
@@ -146,6 +211,7 @@
 
     }
 
+
     .subtitulo {
 
         margin-top: 1rem;
@@ -160,7 +226,7 @@
 
 
     /* --------------------------------------------------
-       FOOTER
+       FOOTER · MÓVIL
     -------------------------------------------------- */
 
     .pagina-inicio .footer {
@@ -172,6 +238,7 @@
         letter-spacing: 0.055em;
 
     }
+
 
     .pagina-inicio .footer-contenido {
 
@@ -193,6 +260,7 @@
 
     }
 
+
     .pagina-inicio .footer-copy {
 
         display: block;
@@ -204,6 +272,7 @@
         text-align: center;
 
     }
+
 
     .pagina-inicio .footer-terminos {
 
@@ -236,6 +305,8 @@
 
     .pagina-inicio {
 
+        width: 100%;
+
         height: 100vh;
 
         min-height: 100vh;
@@ -250,6 +321,10 @@
     -------------------------------------------------- */
 
     .hero {
+
+        position: relative;
+
+        width: 100%;
 
         height: 100vh;
 
@@ -278,6 +353,7 @@
 
     }
 
+
     .menu a {
 
         font-size: 0.65rem;
@@ -297,6 +373,7 @@
 
     }
 
+
     .contenido h1 {
 
         font-size: clamp(
@@ -306,6 +383,7 @@
         );
 
     }
+
 
     .subtitulo {
 
@@ -339,6 +417,10 @@
 @media (min-width: 1200px) {
 
 
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
+
     .menu ul {
 
         gap: 2.5rem;
@@ -347,11 +429,17 @@
 
     }
 
+
     .menu a {
 
         font-size: 0.72rem;
 
     }
+
+
+    /* --------------------------------------------------
+       CONTENIDO
+    -------------------------------------------------- */
 
     .contenido h1 {
 
@@ -374,11 +462,20 @@
 @media (min-width: 1600px) {
 
 
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
+
     .menu ul {
 
         gap: 3rem;
 
     }
+
+
+    /* --------------------------------------------------
+       TÍTULO
+    -------------------------------------------------- */
 
     .contenido h1 {
 
@@ -415,3 +512,4 @@
 /* ======================================================
    FIN · responsive.css
 ====================================================== */
+```
