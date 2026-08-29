@@ -1,41 +1,14 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    responsive.css
-   DISEÑO RESPONSIVE
+
+   ADAPTACIÓN RESPONSIVE
    MÓVIL · TABLET · ESCRITORIO
 ====================================================== */
 
 
 /* ======================================================
-   01. TABLET
-====================================================== */
-
-@media (min-width: 768px) and (max-width: 1199px) {
-
-    body {
-
-        background-image:
-            url("../images/fondos/desktop/fondo-general-desktop.jpg");
-
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-    }
-
-
-    body.pagina-legal {
-
-        background-image:
-            url("../images/fondos/desktop/fondo-legal-desktop.jpg");
-
-    }
-
-}
-
-
-/* ======================================================
-   02. MÓVIL
+   01. MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -45,14 +18,14 @@
         background-image:
             url("../images/fondos/mobile/fondo-general-movil.jpg");
 
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-
         background-attachment: scroll;
 
     }
 
+
+    /* ----------------------------------------------
+       PÁGINAS LEGALES
+    ---------------------------------------------- */
 
     body.pagina-legal {
 
@@ -61,19 +34,17 @@
 
     }
 
-}
 
+    /* ----------------------------------------------
+       PORTADA
+    ---------------------------------------------- */
 
-/* ======================================================
-   03. PANTALLAS GRANDES
-====================================================== */
+    body.pagina-inicio {
 
-@media (min-width: 1600px) {
+        height: 100svh;
+        min-height: 100svh;
 
-    body,
-    body.pagina-legal {
-
-        background-position: center center;
+        overflow: hidden;
 
     }
 
@@ -81,7 +52,7 @@
 
 
 /* ======================================================
-   04. ACCESIBILIDAD · REDUCIR MOVIMIENTO
+   02. ACCESIBILIDAD · REDUCIR MOVIMIENTO
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -100,6 +71,7 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
 
     }
 
