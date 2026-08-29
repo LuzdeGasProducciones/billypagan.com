@@ -1,7 +1,8 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    styles.css
-   ESTRUCTURA GLOBAL · PORTADA
+   ESTRUCTURA GLOBAL · BASE
 ====================================================== */
 
 
@@ -15,17 +16,21 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     width: 100%;
     min-height: 100%;
+
     margin: 0;
     padding: 0;
 }
 
+
 html {
     font-size: 16px;
 }
+
 
 body {
     margin: 0;
@@ -56,8 +61,12 @@ a {
     position: relative;
 
     width: 100%;
+
     height: 100vh;
     min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
 
     overflow: hidden;
 
@@ -74,8 +83,12 @@ a {
     position: relative;
 
     width: 100%;
+
     height: 100vh;
     min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
 
     background-image:
         url("../images/fondo/desktop/fondo-general-desktop.jpg");
@@ -105,8 +118,12 @@ a {
 
     width: 90%;
 
+    margin: 0;
+    padding: 0;
+
     text-align: center;
 }
+
 
 .contenido h1 {
 
@@ -124,6 +141,7 @@ a {
 
     letter-spacing: 0.01em;
 }
+
 
 .subtitulo {
 
@@ -156,3 +174,4 @@ body:not(.pagina-inicio) {
 /* ======================================================
    FIN · styles.css
 ====================================================== */
+```
