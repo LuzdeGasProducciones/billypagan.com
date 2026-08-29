@@ -1,4 +1,3 @@
-```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    responsive.css
@@ -20,13 +19,24 @@
 
     .pagina-inicio {
 
-        width: 100%;
-
         height: 100svh;
 
         min-height: 100svh;
 
         overflow: hidden;
+
+    }
+
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+
+        height: 100svh;
+
+        min-height: 100svh;
 
         background-image:
             url("../images/fondo/mobile/fondo-general-movil.jpg");
@@ -43,24 +53,7 @@
 
 
     /* --------------------------------------------------
-       HERO
-    -------------------------------------------------- */
-
-    .hero {
-
-        position: relative;
-
-        width: 100%;
-
-        height: 100svh;
-
-        min-height: 100svh;
-
-    }
-
-
-    /* --------------------------------------------------
-       MENÚ DE ESCRITORIO
+       MENÚ ESCRITORIO
     -------------------------------------------------- */
 
     .menu {
@@ -71,48 +64,12 @@
 
 
     /* --------------------------------------------------
-       BOTÓN HAMBURGUESA
+       HAMBURGUESA
     -------------------------------------------------- */
 
     .hamburguesa {
 
         display: block;
-
-        position: absolute;
-
-        top: 1.25rem;
-
-        right: 1.25rem;
-
-        z-index: 50;
-
-        width: auto;
-
-        height: auto;
-
-        margin: 0;
-
-        padding: 0;
-
-        border: 0;
-
-        background: transparent;
-
-        color: #202020;
-
-        font-family: Arial, sans-serif;
-
-        font-size: 1.75rem;
-
-        font-weight: 400;
-
-        line-height: 1;
-
-        cursor: pointer;
-
-        appearance: none;
-
-        -webkit-appearance: none;
 
     }
 
@@ -126,7 +83,6 @@
         position: fixed;
 
         top: 0;
-
         left: 0;
 
         z-index: 40;
@@ -167,63 +123,7 @@
 
 
     /* --------------------------------------------------
-       MENÚ MÓVIL · ABIERTO
-    -------------------------------------------------- */
-
-    .menu-movil.abierto {
-
-        opacity: 1;
-
-        visibility: visible;
-
-        pointer-events: auto;
-
-    }
-
-
-    /* --------------------------------------------------
-       ENLACES MENÚ MÓVIL
-    -------------------------------------------------- */
-
-    .menu-movil a {
-
-        display: block;
-
-        color: #202020;
-
-        font-family: "Montserrat", sans-serif;
-
-        font-size: 0.82rem;
-
-        font-weight: 400;
-
-        line-height: 1.2;
-
-        letter-spacing: 0.2em;
-
-        text-align: center;
-
-        transition: opacity 0.3s ease;
-
-    }
-
-
-    .menu-movil a:hover {
-
-        opacity: 0.55;
-
-    }
-
-
-    .menu-movil a.activo {
-
-        opacity: 1;
-
-    }
-
-
-    /* --------------------------------------------------
-       CONTENIDO CENTRAL
+       CONTENIDO
     -------------------------------------------------- */
 
     .contenido {
@@ -231,7 +131,6 @@
         width: 92%;
 
     }
-
 
     .contenido h1 {
 
@@ -247,7 +146,6 @@
 
     }
 
-
     .subtitulo {
 
         margin-top: 1rem;
@@ -262,7 +160,7 @@
 
 
     /* --------------------------------------------------
-       FOOTER · MÓVIL
+       FOOTER
     -------------------------------------------------- */
 
     .pagina-inicio .footer {
@@ -274,7 +172,6 @@
         letter-spacing: 0.055em;
 
     }
-
 
     .pagina-inicio .footer-contenido {
 
@@ -296,7 +193,6 @@
 
     }
 
-
     .pagina-inicio .footer-copy {
 
         display: block;
@@ -308,7 +204,6 @@
         text-align: center;
 
     }
-
 
     .pagina-inicio .footer-terminos {
 
@@ -341,21 +236,11 @@
 
     .pagina-inicio {
 
-        width: 100%;
-
         height: 100vh;
 
         min-height: 100vh;
 
         overflow: hidden;
-
-        background-size: cover;
-
-        background-position: center center;
-
-        background-repeat: no-repeat;
-
-        background-attachment: fixed;
 
     }
 
@@ -366,13 +251,17 @@
 
     .hero {
 
-        position: relative;
-
-        width: 100%;
-
         height: 100vh;
 
         min-height: 100vh;
+
+        background-size: cover;
+
+        background-position: center center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
 
     }
 
@@ -388,7 +277,6 @@
         padding: 1.75rem 1rem;
 
     }
-
 
     .menu a {
 
@@ -409,7 +297,6 @@
 
     }
 
-
     .contenido h1 {
 
         font-size: clamp(
@@ -419,7 +306,6 @@
         );
 
     }
-
 
     .subtitulo {
 
@@ -453,10 +339,6 @@
 @media (min-width: 1200px) {
 
 
-    /* --------------------------------------------------
-       MENÚ
-    -------------------------------------------------- */
-
     .menu ul {
 
         gap: 2.5rem;
@@ -465,17 +347,11 @@
 
     }
 
-
     .menu a {
 
         font-size: 0.72rem;
 
     }
-
-
-    /* --------------------------------------------------
-       CONTENIDO
-    -------------------------------------------------- */
 
     .contenido h1 {
 
@@ -498,20 +374,11 @@
 @media (min-width: 1600px) {
 
 
-    /* --------------------------------------------------
-       MENÚ
-    -------------------------------------------------- */
-
     .menu ul {
 
         gap: 3rem;
 
     }
-
-
-    /* --------------------------------------------------
-       TÍTULO
-    -------------------------------------------------- */
 
     .contenido h1 {
 
@@ -548,4 +415,3 @@
 /* ======================================================
    FIN · responsive.css
 ====================================================== */
-```
