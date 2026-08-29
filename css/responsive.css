@@ -27,6 +27,12 @@
 
         overflow: hidden;
 
+        /*
+         * IMPORTANTE:
+         * La imagen de fondo se mantiene aquí para móvil.
+         * La ruta parte de css/ hacia images/.
+         */
+
         background-image:
             url("../images/fondos/mobile/fondo-general-movil.jpg");
 
@@ -47,6 +53,8 @@
 
     .hero {
 
+        position: relative;
+
         width: 100%;
 
         height: 100svh;
@@ -57,7 +65,7 @@
 
 
     /* --------------------------------------------------
-       MENÚ DESKTOP
+       MENÚ DE ESCRITORIO
     -------------------------------------------------- */
 
     .menu {
@@ -75,7 +83,25 @@
 
         display: block;
 
+        position: absolute;
+
+        top: 1.25rem;
+
+        right: 1.25rem;
+
+        z-index: 50;
+
         color: #202020;
+
+        font-family: Arial, sans-serif;
+
+        font-size: 1.75rem;
+
+        font-weight: 400;
+
+        line-height: 1;
+
+        cursor: pointer;
 
     }
 
@@ -128,6 +154,10 @@
 
     }
 
+
+    /* --------------------------------------------------
+       MENÚ MÓVIL · ABIERTO
+    -------------------------------------------------- */
 
     .menu-movil.abierto {
 
@@ -219,6 +249,70 @@
 
     }
 
+
+    /* --------------------------------------------------
+       FOOTER · MÓVIL
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer {
+
+        padding: 0 0.75rem 1rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.055em;
+
+    }
+
+
+    .pagina-inicio .footer-contenido {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 0.35rem;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-inicio .footer-copy {
+
+        display: block;
+
+        width: 100%;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-inicio .footer-terminos {
+
+        display: block;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
 }
 
 
@@ -236,15 +330,41 @@
 
     .pagina-inicio {
 
+        width: 100%;
+
         height: 100vh;
 
         min-height: 100vh;
 
         overflow: hidden;
 
+        /*
+         * En tablet utilizamos el fondo de escritorio.
+         * No se cambia la imagen aquí para evitar conflictos.
+         */
+
         background-size: cover;
 
         background-position: center center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+    }
+
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+
+        width: 100%;
+
+        height: 100vh;
+
+        min-height: 100vh;
 
     }
 
@@ -301,16 +421,33 @@
 
     }
 
+
+    /* --------------------------------------------------
+       FOOTER
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer {
+
+        padding-bottom: 1.15rem;
+
+        font-size: 0.62rem;
+
+    }
+
 }
 
 
 /* ======================================================
-   03. ESCRITORIO GRANDE
+   03. ESCRITORIO
    Desde 1200px
 ====================================================== */
 
 @media (min-width: 1200px) {
 
+
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
 
     .menu ul {
 
@@ -327,6 +464,10 @@
 
     }
 
+
+    /* --------------------------------------------------
+       CONTENIDO
+    -------------------------------------------------- */
 
     .contenido h1 {
 
@@ -349,12 +490,20 @@
 @media (min-width: 1600px) {
 
 
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
+
     .menu ul {
 
         gap: 3rem;
 
     }
 
+
+    /* --------------------------------------------------
+       TÍTULO
+    -------------------------------------------------- */
 
     .contenido h1 {
 
