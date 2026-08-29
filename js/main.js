@@ -1,13 +1,14 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    main.js
-   FUNCIONES GENERALES
+   FUNCIONES GENERALES · MENÚ
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
     /* ==================================================
-       MENÚ MÓVIL
+       ELEMENTOS DEL MENÚ MÓVIL
     ================================================== */
 
     const hamburguesa =
@@ -30,7 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
        ABRIR / CERRAR MENÚ
     ================================================== */
 
-    hamburguesa.addEventListener("click", () => {
+    const cerrarMenu = () => {
+
+        menuMovil.classList.remove("abierto");
+
+        hamburguesa.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        hamburguesa.setAttribute(
+            "aria-label",
+            "Abrir menú"
+        );
+
+        hamburguesa.textContent = "☰";
+
+    };
+
+
+    const alternarMenu = () => {
 
         const abierto =
             menuMovil.classList.toggle("abierto");
@@ -53,65 +73,53 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburguesa.textContent =
             abierto ? "✕" : "☰";
 
-    });
+    };
 
 
     /* ==================================================
-       CERRAR MENÚ AL NAVEGAR
+       BOTÓN HAMBURGUESA
+    ================================================== */
+
+    hamburguesa.addEventListener(
+        "click",
+        alternarMenu
+    );
+
+
+    /* ==================================================
+       CERRAR AL SELECCIONAR UNA PÁGINA
     ================================================== */
 
     menuMovil
         .querySelectorAll("a")
         .forEach(enlace => {
 
-            enlace.addEventListener("click", () => {
-
-                menuMovil.classList.remove("abierto");
-
-                hamburguesa.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                hamburguesa.setAttribute(
-                    "aria-label",
-                    "Abrir menú"
-                );
-
-                hamburguesa.textContent = "☰";
-
-            });
+            enlace.addEventListener(
+                "click",
+                cerrarMenu
+            );
 
         });
 
 
     /* ==================================================
-       CERRAR MENÚ CON ESC
+       CERRAR CON ESC
     ================================================== */
 
-    document.addEventListener("keydown", event => {
+    document.addEventListener(
+        "keydown",
+        event => {
 
-        if (
-            event.key === "Escape" &&
-            menuMovil.classList.contains("abierto")
-        ) {
+            if (
+                event.key === "Escape" &&
+                menuMovil.classList.contains("abierto")
+            ) {
 
-            menuMovil.classList.remove("abierto");
+                cerrarMenu();
 
-            hamburguesa.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            hamburguesa.setAttribute(
-                "aria-label",
-                "Abrir menú"
-            );
-
-            hamburguesa.textContent = "☰";
+            }
 
         }
-
-    });
+    );
 
 });
