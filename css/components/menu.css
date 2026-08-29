@@ -77,58 +77,7 @@
 
 
 /* ======================================================
-   02. BOTÓN HAMBURGUESA
-====================================================== */
-
-.hamburguesa {
-
-    display: none;
-
-    position: absolute;
-
-    top: 1.25rem;
-    right: 1.25rem;
-
-    z-index: 50;
-
-    width: auto;
-    height: auto;
-
-    margin: 0;
-    padding: 0;
-
-    border: 0;
-
-    background: transparent;
-
-    color: #202020;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 1.75rem;
-
-    font-weight: 400;
-
-    line-height: 1;
-
-    cursor: pointer;
-
-    appearance: none;
-
-    -webkit-appearance: none;
-}
-
-
-.hamburguesa:focus-visible {
-
-    outline: 1px solid rgba(32, 32, 32, 0.7);
-
-    outline-offset: 0.35rem;
-}
-
-
-/* ======================================================
-   03. MENÚ MÓVIL
+   02. MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil {
@@ -139,7 +88,7 @@
 
 
 /* ======================================================
-   04. MENÚ MÓVIL · ABIERTO
+   03. MENÚ MÓVIL · ABIERTO
 ====================================================== */
 
 .menu-movil.abierto {
@@ -153,7 +102,7 @@
 
 
 /* ======================================================
-   05. ENLACES MENÚ MÓVIL
+   04. ENLACES MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil a {
