@@ -1,25 +1,12 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    styles.css
-
-   ESTILOS BASE DEL SITIO
+   PORTADA
 ====================================================== */
 
 
 /* ======================================================
-   01. VARIABLES
-====================================================== */
-
-:root {
-
-    --fuente-titulos: "Cormorant Garamond", serif;
-    --fuente-texto: "Montserrat", sans-serif;
-
-}
-
-
-/* ======================================================
-   02. RESET
+   01. RESET
 ====================================================== */
 
 *,
@@ -28,28 +15,35 @@
     box-sizing: border-box;
 }
 
-html {
-    margin: 0;
-    padding: 0;
-}
-
+html,
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 
 /* ======================================================
-   03. BASE
+   02. BASE
 ====================================================== */
 
 body {
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+}
 
+
+/* ======================================================
+   03. PORTADA
+====================================================== */
+
+.pagina-inicio {
+    width: 100%;
+    height: 100vh;
     min-height: 100vh;
 
-    color: #f2f2f2;
-
-    font-family: var(--fuente-texto);
+    overflow: hidden;
 
     background-image:
         url("../images/fondos/desktop/fondo-general-desktop.jpg");
@@ -57,74 +51,198 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 
+    background-attachment: fixed;
 }
 
 
 /* ======================================================
-   04. PÁGINA DE INICIO · SIN SCROLL
+   04. HERO
 ====================================================== */
 
-body.pagina-inicio {
+.hero {
+    position: relative;
 
+    width: 100%;
     height: 100vh;
     min-height: 100vh;
-
-    overflow: hidden;
-
 }
 
 
 /* ======================================================
-   05. PÁGINAS LEGALES
+   05. MENÚ SUPERIOR
 ====================================================== */
 
-body.pagina-legal {
+.menu {
+    position: absolute;
 
-    background-image:
-        url("../images/fondos/desktop/fondo-legal-desktop.jpg");
+    top: 0;
+    left: 0;
 
+    width: 100%;
+
+    z-index: 20;
 }
 
+.menu nav {
+    width: 100%;
+}
 
-/* ======================================================
-   06. ELEMENTOS GENERALES
-====================================================== */
+.menu ul {
+    display: flex;
 
-img {
+    justify-content: center;
+    align-items: center;
 
+    gap: 2.5rem;
+
+    margin: 0;
+    padding: 2rem 2rem;
+
+    list-style: none;
+}
+
+.menu a {
     display: block;
-    max-width: 100%;
-    height: auto;
+
+    color: #f2f2f2;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+
+    letter-spacing: 0.18em;
+
+    transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+    opacity: 0.65;
+}
+
+.menu a.activo {
+    opacity: 1;
+}
+
+
+/* ======================================================
+   06. MENÚ MÓVIL
+====================================================== */
+
+.hamburguesa {
+    display: none;
+
+    position: absolute;
+
+    top: 1.25rem;
+    right: 1.25rem;
+
+    z-index: 50;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #f2f2f2;
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.menu-movil {
+    display: none;
+}
+
+
+/* ======================================================
+   07. CONTENIDO CENTRAL
+====================================================== */
+
+.contenido {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
 
 }
 
-a {
+.contenido h1 {
 
-    color: inherit;
-    text-decoration: none;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: 0.01em;
 
 }
 
-button,
-input,
-textarea,
-select {
+.subtitulo {
 
-    font: inherit;
+    margin-top: 1.25rem;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+
+    font-weight: 300;
+
+    letter-spacing: 0.45em;
 
 }
 
 
 /* ======================================================
-   07. ACCESIBILIDAD
+   08. FOOTER
 ====================================================== */
 
-button,
-a {
+.footer {
 
-    -webkit-tap-highlight-color: transparent;
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    z-index: 30;
+
+    width: 100%;
+
+    padding: 0.7rem 1rem;
+
+    color: rgba(242, 242, 242, 0.8);
+
+    background: rgba(36, 36, 36, 0.38);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.62rem;
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-align: center;
 
 }
 
