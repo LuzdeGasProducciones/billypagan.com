@@ -1,1 +1,149 @@
+/* ======================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   styles.css
+   ESTILOS GENERALES DEL SITIO
+====================================================== */
 
+
+/* ======================================================
+   01. VARIABLES
+====================================================== */
+
+:root {
+
+    /* --------------------------------------------------
+       COLORES
+    -------------------------------------------------- */
+
+    --color-fondo: #242424;
+    --color-texto: #f2f2f2;
+    --color-texto-suave: #d0d0d0;
+
+
+    /* --------------------------------------------------
+       TIPOGRAFÍAS
+    -------------------------------------------------- */
+
+    --fuente-titulos: "Cormorant Garamond", serif;
+    --fuente-texto: "Montserrat", sans-serif;
+
+}
+
+
+/* ======================================================
+   02. RESET
+====================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* ======================================================
+   03. BASE GENERAL
+====================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-texto);
+
+    background-image:
+        url("../images/fondos/desktop/fondo-general-desktop.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+/* ======================================================
+   04. PÁGINAS LEGALES
+====================================================== */
+
+/*
+   Las páginas legales deben utilizar:
+
+   <body class="pagina-legal">
+*/
+
+body.pagina-legal {
+
+    background-image:
+        url("../images/fondos/desktop/fondo-legal-desktop.jpg");
+
+}
+
+
+/* ======================================================
+   05. ELEMENTOS GENERALES
+====================================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+/* ======================================================
+   06. ACCESIBILIDAD
+====================================================== */
+
+button,
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+
+/* ======================================================
+   FIN · styles.css
+====================================================== */
