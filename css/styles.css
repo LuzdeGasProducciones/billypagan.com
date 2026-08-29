@@ -11,19 +11,6 @@
 
 :root {
 
-    /* --------------------------------------------------
-       COLORES
-    -------------------------------------------------- */
-
-    --color-fondo: #242424;
-    --color-texto: #f2f2f2;
-    --color-texto-suave: #d0d0d0;
-
-
-    /* --------------------------------------------------
-       TIPOGRAFÍAS
-    -------------------------------------------------- */
-
     --fuente-titulos: "Cormorant Garamond", serif;
     --fuente-texto: "Montserrat", sans-serif;
 
@@ -58,16 +45,12 @@ body {
 
 
 /* ======================================================
-   03. BASE GENERAL
+   03. FONDO GENERAL
 ====================================================== */
 
 body {
 
     min-height: 100vh;
-
-    color: var(--color-texto);
-
-    font-family: var(--fuente-texto);
 
     background-image:
         url("../images/fondos/desktop/fondo-general-desktop.jpg");
@@ -82,14 +65,8 @@ body {
 
 
 /* ======================================================
-   04. PÁGINAS LEGALES
+   04. FONDO PÁGINAS LEGALES
 ====================================================== */
-
-/*
-   Las páginas legales deben utilizar:
-
-   <body class="pagina-legal">
-*/
 
 body.pagina-legal {
 
@@ -116,7 +93,6 @@ img {
 a {
 
     color: inherit;
-
     text-decoration: none;
 
 }
