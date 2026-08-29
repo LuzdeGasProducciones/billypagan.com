@@ -3,73 +3,117 @@
 
 <head>
 
+    <!-- ==================================================
+         CONFIGURACIÓN GENERAL
+    ================================================== -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Billy Pagán | Sitio Oficial</title>
 
+
+    <!-- ==================================================
+         TIPOGRAFÍAS
+    ================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
 
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- ==================================================
+         CSS
+    ================================================== -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
-<body>
+
+<body class="pagina-inicio">
+
+
+    <!-- ==================================================
+         PORTADA
+    ================================================== -->
 
     <section class="hero">
 
-        <!-- BOTÓN HAMBURGUESA -->
 
-        <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <!-- ==================================================
+             BOTÓN HAMBURGUESA · MÓVIL
+        ================================================== -->
+
+        <button
+            class="hamburguesa"
+            id="hamburguesa"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menuMovil"
+        >
             ☰
         </button>
 
-        <!-- MENÚ MÓVIL -->
 
-        <nav class="menu-movil" id="menuMovil">
+        <!-- ==================================================
+             MENÚ MÓVIL
+        ================================================== -->
+
+        <nav
+            class="menu-movil"
+            id="menuMovil"
+            aria-label="Menú principal"
+        >
 
             <a href="index.html" class="activo">
                 INICIO
             </a>
 
-            <a href="biografia.html">
+            <a href="paginas/biografia.html">
                 BIOGRAFÍA
             </a>
 
-            <a href="musica.html">
+            <a href="paginas/musica.html">
                 MÚSICA
             </a>
 
-            <a href="videos.html">
+            <a href="paginas/videos.html">
                 VÍDEOS
             </a>
 
-            <a href="conciertos.html">
+            <a href="paginas/conciertos/conciertos.html">
                 CONCIERTOS
             </a>
 
-            <a href="galeria.html">
+            <a href="paginas/galeria.html">
                 GALERÍA
             </a>
 
-            <a href="https://payhip.com/LuzdeGasRecords" target="_blank">
+            <a href="paginas/tienda.html">
                 TIENDA
             </a>
 
-            <a href="contacto.html">
+            <a href="paginas/contacto.html">
                 CONTACTO
             </a>
 
         </nav>
 
-        <!-- MENÚ SUPERIOR -->
+
+        <!-- ==================================================
+             MENÚ SUPERIOR · ESCRITORIO
+        ================================================== -->
 
         <header class="menu">
 
-            <nav>
+            <nav aria-label="Menú principal">
 
                 <ul>
 
@@ -80,43 +124,43 @@
                     </li>
 
                     <li>
-                        <a href="biografia.html">
+                        <a href="paginas/biografia.html">
                             BIOGRAFÍA
                         </a>
                     </li>
 
                     <li>
-                        <a href="musica.html">
+                        <a href="paginas/musica.html">
                             MÚSICA
                         </a>
                     </li>
 
                     <li>
-                        <a href="videos.html">
+                        <a href="paginas/videos.html">
                             VÍDEOS
                         </a>
                     </li>
 
                     <li>
-                        <a href="conciertos.html">
+                        <a href="paginas/conciertos/conciertos.html">
                             CONCIERTOS
                         </a>
                     </li>
 
                     <li>
-                        <a href="galeria.html">
+                        <a href="paginas/galeria.html">
                             GALERÍA
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://payhip.com/LuzdeGasRecords" target="_blank">
+                        <a href="paginas/tienda.html">
                             TIENDA
                         </a>
                     </li>
 
                     <li>
-                        <a href="contacto.html">
+                        <a href="paginas/contacto.html">
                             CONTACTO
                         </a>
                     </li>
@@ -127,9 +171,12 @@
 
         </header>
 
-        <!-- TEXTO PRINCIPAL -->
 
-        <div class="contenido">
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="contenido">
 
             <h1>
                 Billy Pagán
@@ -139,9 +186,15 @@
                 SITIO OFICIAL
             </div>
 
-        </div>
+        </main>
+
 
     </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
 
     <footer class="footer">
 
@@ -149,7 +202,13 @@
 
     </footer>
 
-    <script src="script.js"></script>
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/components/menu.js"></script>
 
 </body>
 
