@@ -4,11 +4,12 @@
    COMPONENTE · MENÚ MÓVIL + HAMBURGUESA
 ====================================================== */
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       ELEMENTOS
+       01. ELEMENTOS
     ================================================== */
 
     const hamburguesa =
@@ -19,16 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       COMPROBACIÓN
+       02. COMPROBACIÓN
     ================================================== */
 
     if (!hamburguesa || !menuMovil) {
+
         return;
+
     }
 
 
     /* ==================================================
-       ABRIR / CERRAR MENÚ
+       03. ABRIR / CERRAR MENÚ
     ================================================== */
 
     hamburguesa.addEventListener("click", () => {
@@ -37,11 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
             menuMovil.classList.toggle("abierto");
 
 
+        /* ----------------------------------------------
+           ESTADO VISUAL DE LA HAMBURGUESA
+        ---------------------------------------------- */
+
         hamburguesa.classList.toggle(
             "abierta",
             abierto
         );
 
+
+        /* ----------------------------------------------
+           ACCESIBILIDAD
+        ---------------------------------------------- */
 
         hamburguesa.setAttribute(
             "aria-expanded",
@@ -60,36 +71,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       CERRAR MENÚ AL NAVEGAR
+       04. CERRAR AL SELECCIONAR UNA OPCIÓN
     ================================================== */
 
-    menuMovil
-        .querySelectorAll("a")
-        .forEach(enlace => {
+    const enlaces =
+        menuMovil.querySelectorAll("a");
 
-            enlace.addEventListener("click", () => {
 
-                menuMovil.classList.remove("abierto");
+    enlaces.forEach(enlace => {
 
-                hamburguesa.classList.remove("abierta");
+        enlace.addEventListener("click", () => {
 
-                hamburguesa.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+            menuMovil.classList.remove(
+                "abierto"
+            );
 
-                hamburguesa.setAttribute(
-                    "aria-label",
-                    "Abrir menú"
-                );
 
-            });
+            hamburguesa.classList.remove(
+                "abierta"
+            );
+
+
+            hamburguesa.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            hamburguesa.setAttribute(
+                "aria-label",
+                "Abrir menú"
+            );
 
         });
 
+    });
+
 
     /* ==================================================
-       CERRAR MENÚ CON ESC
+       05. CERRAR CON ESC
     ================================================== */
 
     document.addEventListener("keydown", event => {
@@ -99,14 +119,21 @@ document.addEventListener("DOMContentLoaded", () => {
             menuMovil.classList.contains("abierto")
         ) {
 
-            menuMovil.classList.remove("abierto");
+            menuMovil.classList.remove(
+                "abierto"
+            );
 
-            hamburguesa.classList.remove("abierta");
+
+            hamburguesa.classList.remove(
+                "abierta"
+            );
+
 
             hamburguesa.setAttribute(
                 "aria-expanded",
                 "false"
             );
+
 
             hamburguesa.setAttribute(
                 "aria-label",
@@ -116,5 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+
 
 });
