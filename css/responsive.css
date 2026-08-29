@@ -1,17 +1,25 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    responsive.css
-   PORTADA RESPONSIVE
+   RESPONSIVE · MÓVIL · TABLET · ESCRITORIO
 ====================================================== */
 
 
 /* ======================================================
    01. MÓVIL
+   Hasta 767px
 ====================================================== */
 
 @media (max-width: 767px) {
 
+
+    /* --------------------------------------------------
+       PORTADA
+    -------------------------------------------------- */
+
     .pagina-inicio {
+
+        width: 100%;
 
         height: 100svh;
         min-height: 100svh;
@@ -30,29 +38,52 @@
     }
 
 
-    /* ----------------------------------------------
-       MENÚ DESKTOP
-    ---------------------------------------------- */
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
 
-    .menu {
-        display: none;
+    .hero {
+
+        width: 100%;
+
+        height: 100svh;
+        min-height: 100svh;
+
     }
 
 
-    /* ----------------------------------------------
+    /* --------------------------------------------------
+       MENÚ SUPERIOR · ESCRITORIO
+    -------------------------------------------------- */
+
+    .menu {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
        BOTÓN HAMBURGUESA
-    ---------------------------------------------- */
+    -------------------------------------------------- */
 
     .hamburguesa {
 
         display: block;
 
+        top: 1.25rem;
+        right: 1.25rem;
+
+        color: #f2f2f2;
+
+        font-size: 1.75rem;
+
     }
 
 
-    /* ----------------------------------------------
+    /* --------------------------------------------------
        MENÚ MÓVIL
-    ---------------------------------------------- */
+    -------------------------------------------------- */
 
     .menu-movil {
 
@@ -77,12 +108,13 @@
 
         padding: 5rem 2rem;
 
-        background: rgba(20, 20, 20, 0.92);
+        background: rgba(20, 20, 20, 0.94);
 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
         opacity: 0;
+
         visibility: hidden;
 
         pointer-events: none;
@@ -97,6 +129,7 @@
     .menu-movil.abierto {
 
         opacity: 1;
+
         visibility: visible;
 
         pointer-events: auto;
@@ -104,23 +137,49 @@
     }
 
 
+    /* --------------------------------------------------
+       ENLACES DEL MENÚ MÓVIL
+    -------------------------------------------------- */
+
     .menu-movil a {
+
+        display: block;
 
         color: #f2f2f2;
 
         font-family: "Montserrat", sans-serif;
 
-        font-size: 0.8rem;
+        font-size: 0.82rem;
         font-weight: 400;
 
+        line-height: 1.2;
+
         letter-spacing: 0.2em;
+
+        text-align: center;
+
+        transition: opacity 0.3s ease;
 
     }
 
 
-    /* ----------------------------------------------
-       CONTENIDO
-    ---------------------------------------------- */
+    .menu-movil a:hover {
+
+        opacity: 0.65;
+
+    }
+
+
+    .menu-movil a.activo {
+
+        opacity: 1;
+
+    }
+
+
+    /* --------------------------------------------------
+       CONTENIDO CENTRAL
+    -------------------------------------------------- */
 
     .contenido {
 
@@ -131,9 +190,15 @@
 
     .contenido h1 {
 
-        font-size: clamp(3.4rem, 15vw, 5.5rem);
+        font-size: clamp(
+            3.4rem,
+            15vw,
+            5.5rem
+        );
 
         line-height: 0.9;
+
+        letter-spacing: 0.01em;
 
     }
 
@@ -144,22 +209,40 @@
 
         font-size: 0.6rem;
 
+        line-height: 1.2;
+
         letter-spacing: 0.32em;
 
     }
 
 
-    /* ----------------------------------------------
-       FOOTER
-    ---------------------------------------------- */
+    /* --------------------------------------------------
+       FOOTER · MÓVIL
+    -------------------------------------------------- */
 
-    .footer {
+    .pagina-inicio .footer {
 
-        padding: 0.65rem 0.75rem;
+        padding: 0 1rem 1rem;
 
-        font-size: 0.55rem;
+        font-size: 0.58rem;
 
-        letter-spacing: 0.05em;
+        letter-spacing: 0.055em;
+
+    }
+
+
+    .pagina-inicio .footer-contenido {
+
+        flex-direction: column;
+
+        gap: 0.45rem;
+
+    }
+
+
+    .pagina-inicio .footer-terminos {
+
+        margin-left: 0;
 
     }
 
@@ -168,16 +251,39 @@
 
 /* ======================================================
    02. TABLET
+   768px — 1199px
 ====================================================== */
 
 @media (min-width: 768px) and (max-width: 1199px) {
+
+
+    /* --------------------------------------------------
+       PORTADA
+    -------------------------------------------------- */
+
+    .pagina-inicio {
+
+        height: 100vh;
+        min-height: 100vh;
+
+        overflow: hidden;
+
+        background-size: cover;
+
+        background-position: center center;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
 
     .menu ul {
 
         gap: 1.5rem;
 
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1.75rem 1rem;
 
     }
 
@@ -186,13 +292,120 @@
 
         font-size: 0.65rem;
 
+        letter-spacing: 0.15em;
+
+    }
+
+
+    /* --------------------------------------------------
+       CONTENIDO
+    -------------------------------------------------- */
+
+    .contenido {
+
+        width: 90%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+            4rem,
+            10vw,
+            7rem
+        );
+
+    }
+
+
+    .subtitulo {
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.38em;
+
+    }
+
+
+    /* --------------------------------------------------
+       FOOTER
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer {
+
+        padding-bottom: 1.15rem;
+
+        font-size: 0.62rem;
+
     }
 
 }
 
 
 /* ======================================================
-   03. ACCESIBILIDAD
+   03. ESCRITORIO GRANDE
+   Desde 1200px
+====================================================== */
+
+@media (min-width: 1200px) {
+
+
+    .menu ul {
+
+        gap: 2.5rem;
+
+        padding: 2rem;
+
+    }
+
+
+    .menu a {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+            4rem,
+            9vw,
+            8rem
+        );
+
+    }
+
+}
+
+
+/* ======================================================
+   04. PANTALLAS MUY GRANDES
+   Desde 1600px
+====================================================== */
+
+@media (min-width: 1600px) {
+
+
+    .menu ul {
+
+        gap: 3rem;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: 8rem;
+
+    }
+
+}
+
+
+/* ======================================================
+   05. ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -204,6 +417,7 @@
         scroll-behavior: auto !important;
 
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
 
         transition-duration: 0.01ms !important;
