@@ -475,5 +475,69 @@ margin-top: 3rem;
 }
 
 /* ======================================================
+   16. FOOTER · MÓVIL
+====================================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-inicio .footer {
+
+        padding: 0 0.75rem 1rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.055em;
+
+    }
+
+
+    .pagina-inicio .footer-contenido {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 0.35rem;
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-inicio .footer-copy {
+
+        display: block;
+
+        width: 100%;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-inicio .footer-terminos {
+
+        display: block;
+
+        margin-left: 0;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ======================================================
 FIN · styles.css
 ====================================================== */
