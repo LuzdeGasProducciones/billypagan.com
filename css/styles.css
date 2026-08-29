@@ -1,478 +1,420 @@
 /* ======================================================
-BILLY PAGÁN · SITIO OFICIAL
-styles.css
-ESTRUCTURA BASE · PORTADA
+   BILLY PAGÁN · SITIO OFICIAL
+   styles.css
+   ESTRUCTURA BASE · PORTADA
 ====================================================== */
 
+
 /* ======================================================
-01. RESET
+   01. RESET
 ====================================================== */
 
 *,
 *::before,
 *::after {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-width: 100%;
-min-height: 100%;
-margin: 0;
-padding: 0;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-margin: 0;
+    margin: 0;
 
-```
-color: #202020;
+    color: #202020;
 
-font-family: "Montserrat", sans-serif;
-```
-
+    font-family: "Montserrat", sans-serif;
 }
 
+
 /* ======================================================
-02. ENLACES
+   02. ENLACES
 ====================================================== */
 
 a {
-color: inherit;
+    color: inherit;
 
-```
-text-decoration: none;
-```
-
+    text-decoration: none;
 }
 
+
 /* ======================================================
-03. PORTADA
+   03. PORTADA
 ====================================================== */
 
 .pagina-inicio {
 
-```
-width: 100%;
+    width: 100%;
 
-height: 100vh;
-min-height: 100vh;
+    height: 100vh;
+    min-height: 100vh;
 
-overflow: hidden;
+    overflow: hidden;
 
-background-image:
-    url("../images/fondos/desktop/fondo-general-desktop.jpg");
+    background-image:
+        url("../images/fondos/desktop/fondo-general-desktop.jpg");
 
-background-size: cover;
+    background-size: cover;
 
-background-position: center center;
+    background-position: center center;
 
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
-background-attachment: fixed;
-```
-
+    background-attachment: fixed;
 }
 
+
 /* ======================================================
-04. HERO
+   04. HERO
 ====================================================== */
 
 .hero {
 
-```
-position: relative;
+    position: relative;
 
-width: 100%;
+    width: 100%;
 
-height: 100vh;
-min-height: 100vh;
-```
-
+    height: 100vh;
+    min-height: 100vh;
 }
 
+
 /* ======================================================
-05. MENÚ SUPERIOR · ESCRITORIO
+   05. MENÚ SUPERIOR · ESCRITORIO
 ====================================================== */
 
 .menu {
 
-```
-position: absolute;
+    position: absolute;
 
-top: 0;
-left: 0;
+    top: 0;
+    left: 0;
 
-z-index: 20;
+    z-index: 20;
 
-width: 100%;
-```
-
+    width: 100%;
 }
 
 .menu nav {
 
-```
-width: 100%;
-```
-
+    width: 100%;
 }
 
 .menu ul {
 
-```
-display: flex;
+    display: flex;
 
-justify-content: center;
+    justify-content: center;
 
-align-items: center;
+    align-items: center;
 
-gap: 2.5rem;
+    gap: 2.5rem;
 
-margin: 0;
+    margin: 0;
 
-padding: 2rem;
+    padding: 2rem;
 
-list-style: none;
-```
-
+    list-style: none;
 }
 
 .menu a {
 
-```
-display: block;
+    display: block;
 
-color: #202020;
+    color: #202020;
 
-font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-font-size: 0.72rem;
+    font-size: 0.72rem;
 
-font-weight: 400;
+    font-weight: 400;
 
-letter-spacing: 0.18em;
+    letter-spacing: 0.18em;
 
-transition:
-    opacity 0.3s ease,
-    color 0.3s ease;
-```
-
+    transition:
+        opacity 0.3s ease,
+        color 0.3s ease;
 }
 
 .menu a:hover {
 
-```
-opacity: 0.55;
-```
-
+    opacity: 0.55;
 }
 
 .menu a.activo {
 
-```
-opacity: 1;
-```
-
+    opacity: 1;
 }
 
+
 /* ======================================================
-06. BOTÓN HAMBURGUESA
+   06. BOTÓN HAMBURGUESA
 ====================================================== */
 
 .hamburguesa {
 
-```
-display: none;
+    display: none;
 
-position: absolute;
+    position: absolute;
 
-top: 1.25rem;
+    top: 1.25rem;
 
-right: 1.25rem;
+    right: 1.25rem;
 
-z-index: 50;
+    z-index: 50;
 
-width: auto;
+    width: auto;
 
-height: auto;
+    height: auto;
 
-margin: 0;
+    margin: 0;
 
-padding: 0;
+    padding: 0;
 
-border: 0;
+    border: 0;
 
-background: transparent;
+    background: transparent;
 
-color: #202020;
+    color: #202020;
 
-font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 
-font-size: 1.75rem;
+    font-size: 1.75rem;
 
-font-weight: 400;
+    font-weight: 400;
 
-line-height: 1;
+    line-height: 1;
 
-cursor: pointer;
+    cursor: pointer;
 
-appearance: none;
+    appearance: none;
 
--webkit-appearance: none;
-```
-
+    -webkit-appearance: none;
 }
 
 .hamburguesa:focus-visible {
 
-```
-outline: 1px solid rgba(32, 32, 32, 0.7);
+    outline: 1px solid rgba(32, 32, 32, 0.7);
 
-outline-offset: 0.35rem;
-```
-
+    outline-offset: 0.35rem;
 }
 
+
 /* ======================================================
-07. MENÚ MÓVIL
+   07. MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil {
 
-```
-display: none;
-```
-
+    display: none;
 }
 
+
 /* ======================================================
-08. CONTENIDO CENTRAL
+   08. CONTENIDO CENTRAL
 ====================================================== */
 
 .contenido {
 
-```
-position: absolute;
+    position: absolute;
 
-top: 50%;
+    top: 50%;
 
-left: 50%;
+    left: 50%;
 
-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-width: 90%;
+    width: 90%;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
 .contenido h1 {
 
-```
-margin: 0;
+    margin: 0;
 
-color: #202020;
+    color: #202020;
 
-font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
-font-size: clamp(4rem, 9vw, 8rem);
+    font-size: clamp(4rem, 9vw, 8rem);
 
-font-weight: 500;
+    font-weight: 500;
 
-line-height: 0.9;
+    line-height: 0.9;
 
-letter-spacing: 0.01em;
-```
-
+    letter-spacing: 0.01em;
 }
 
 .subtitulo {
 
-```
-margin-top: 1.25rem;
+    margin-top: 1.25rem;
 
-color: #202020;
+    color: #202020;
 
-font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-font-size: clamp(0.65rem, 1vw, 0.85rem);
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
 
-font-weight: 300;
+    font-weight: 300;
 
-line-height: 1.2;
+    line-height: 1.2;
 
-letter-spacing: 0.45em;
-```
-
+    letter-spacing: 0.45em;
 }
 
+
 /* ======================================================
-09. FOOTER · BASE
+   09. FOOTER · BASE
 ====================================================== */
 
 .footer {
 
-```
-width: 100%;
+    width: 100%;
 
-color: rgba(32, 32, 32, 0.88);
+    color: rgba(32, 32, 32, 0.88);
 
-background: transparent;
+    background: transparent;
 
-font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-font-size: 0.68rem;
+    font-size: 0.68rem;
 
-font-weight: 400;
+    font-weight: 400;
 
-line-height: 1.5;
+    line-height: 1.5;
 
-letter-spacing: 0.07em;
+    letter-spacing: 0.07em;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
+
 /* ======================================================
-10. FOOTER · PORTADA
+   10. FOOTER · PORTADA
 ====================================================== */
 
 .pagina-inicio .footer {
 
-```
-position: fixed;
+    position: fixed;
 
-left: 0;
+    left: 0;
 
-right: 0;
+    right: 0;
 
-bottom: 0;
+    bottom: 0;
 
-z-index: 30;
+    z-index: 30;
 
-width: 100%;
+    width: 100%;
 
-padding: 0 1.25rem 1.35rem;
-```
-
+    padding: 0 1.25rem 1.35rem;
 }
 
+
 /* ======================================================
-11. FOOTER · CONTENIDO
+   11. FOOTER · CONTENIDO
 ====================================================== */
 
 .pagina-inicio .footer-contenido {
 
-```
-display: flex;
+    display: flex;
 
-justify-content: center;
+    justify-content: center;
 
-align-items: center;
+    align-items: center;
 
-flex-wrap: wrap;
+    flex-wrap: wrap;
 
-width: 100%;
+    width: 100%;
 
-margin: 0 auto;
+    margin: 0 auto;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
+
 /* ======================================================
-12. FOOTER · COPYRIGHT
+   12. FOOTER · COPYRIGHT
 ====================================================== */
 
 .pagina-inicio .footer-copy {
 
-```
-display: inline-block;
+    display: inline-block;
 
-white-space: nowrap;
-```
+    white-space: nowrap;
 
+    text-align: center;
 }
 
+
 /* ======================================================
-13. FOOTER · ENLACES
+   13. FOOTER · ENLACES
 ====================================================== */
 
 .pagina-inicio .footer a {
 
-```
-color: inherit;
+    color: inherit;
 
-text-decoration: none;
+    text-decoration: none;
 
-transition: opacity 0.3s ease;
-```
-
+    transition: opacity 0.3s ease;
 }
 
 .pagina-inicio .footer a:hover {
 
-```
-opacity: 0.55;
-```
-
+    opacity: 0.55;
 }
 
 .pagina-inicio .footer a:focus-visible {
 
-```
-outline: 1px solid rgba(32, 32, 32, 0.65);
+    outline: 1px solid rgba(32, 32, 32, 0.65);
 
-outline-offset: 0.25rem;
-```
-
+    outline-offset: 0.25rem;
 }
 
+
 /* ======================================================
-14. FOOTER · TÉRMINOS
+   14. FOOTER · TÉRMINOS
 ====================================================== */
 
 .pagina-inicio .footer-terminos {
 
-```
-display: inline-block;
+    display: inline-block;
 
-margin-left: 1.4rem;
+    margin-left: 1.4rem;
 
-white-space: nowrap;
-```
+    white-space: nowrap;
 
+    text-align: center;
 }
 
+
 /* ======================================================
-15. PÁGINAS INTERIORES
+   15. PÁGINAS INTERIORES
 ====================================================== */
 
 body:not(.pagina-inicio) {
 
-```
-min-height: 100vh;
-```
-
+    min-height: 100vh;
 }
 
 body:not(.pagina-inicio) .footer {
 
-```
-position: relative;
+    position: relative;
 
-margin-top: 3rem;
-```
-
+    margin-top: 3rem;
 }
+
 
 /* ======================================================
    16. FOOTER · MÓVIL
@@ -487,9 +429,12 @@ margin-top: 3rem;
         font-size: 0.58rem;
 
         letter-spacing: 0.055em;
-
     }
 
+
+    /* ----------------------------------------------
+       CONTENEDOR
+    ---------------------------------------------- */
 
     .pagina-inicio .footer-contenido {
 
@@ -505,10 +450,15 @@ margin-top: 3rem;
 
         width: 100%;
 
-        text-align: center;
+        margin: 0 auto;
 
+        text-align: center;
     }
 
+
+    /* ----------------------------------------------
+       COPYRIGHT · UNA SOLA LÍNEA
+    ---------------------------------------------- */
 
     .pagina-inicio .footer-copy {
 
@@ -519,25 +469,29 @@ margin-top: 3rem;
         white-space: nowrap;
 
         text-align: center;
-
     }
 
+
+    /* ----------------------------------------------
+       TÉRMINOS · SEGUNDA LÍNEA
+    ---------------------------------------------- */
 
     .pagina-inicio .footer-terminos {
 
         display: block;
+
+        width: 100%;
 
         margin-left: 0;
 
         white-space: nowrap;
 
         text-align: center;
-
     }
 
 }
 
 
 /* ======================================================
-FIN · styles.css
+   FIN · styles.css
 ====================================================== */
