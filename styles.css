@@ -1,1845 +1,219 @@
-/* ======================================================
-   BILLY PAGÁN · SITIO OFICIAL
-   styles.css
-====================================================== */
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
 
-/* ======================================================
-   RESET
-====================================================== */
+    <meta charset="UTF-8">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <meta
+        name="description"
+        content="Billy Pagán · Sitio Oficial"
+    >
 
-/* ======================================================
-   VARIABLES
-====================================================== */
+    <title>Billy Pagán | Sitio Oficial</title>
 
-:root{
 
-    --texto:#202020;
-    --texto-secundario:#666666;
-    --menu:#242424;
+    <!-- ==================================================
+         TIPOGRAFÍAS
+    ================================================== -->
 
-    --capa:rgba(255,255,255,.15);
-    --caja:rgba(255,255,255,.28);
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
 
 
-/* ======================================================
-   BASE
-====================================================== */
+    <!-- ==================================================
+         CSS
+    ================================================== -->
 
-html,
-body{
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-    width:100%;
-    height:100%;
+</head>
 
-    font-family:"Montserrat",sans-serif;
 
-    color:var(--texto);
+<body class="pagina-inicio">
 
-    background:#ffffff;
 
-}
+    <!-- ==================================================
+         PORTADA
+    ================================================== -->
 
+    <main class="hero">
 
-a{
 
-    color:inherit;
+        <!-- ==================================================
+             MENÚ DESKTOP
+        ================================================== -->
 
-    text-decoration:none;
+        <header class="menu">
 
-}
+            <nav aria-label="Menú principal">
 
+                <ul>
 
-em{
+                    <li>
+                        <a href="#" class="activo">
+                            INICIO
+                        </a>
+                    </li>
 
-    font-style:italic;
+                    <li>
+                        <a href="#">
+                            BIOGRAFÍA
+                        </a>
+                    </li>
 
-}
+                    <li>
+                        <a href="#">
+                            MÚSICA
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="#">
+                            VÍDEOS
+                        </a>
+                    </li>
 
-/* ======================================================
-   TITULOS
-====================================================== */
+                    <li>
+                        <a href="#">
+                            CONCIERTOS
+                        </a>
+                    </li>
 
-h1{
+                    <li>
+                        <a href="#">
+                            GALERÍA
+                        </a>
+                    </li>
 
-    margin:0;
+                    <li>
+                        <a href="#">
+                            TIENDA
+                        </a>
+                    </li>
 
-    font-family:"Cormorant Garamond",serif;
+                    <li>
+                        <a href="#">
+                            CONTACTO
+                        </a>
+                    </li>
 
-    font-weight:600;
+                </ul>
 
-    line-height:.9;
+            </nav>
 
-    letter-spacing:3px;
+        </header>
 
-    color:var(--texto);
 
-    text-shadow:0 4px 25px rgba(255,255,255,.8);
+        <!-- ==================================================
+             BOTÓN MENÚ MÓVIL
+        ================================================== -->
 
-}
+        <button
+            class="hamburguesa"
+            id="hamburguesa"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menuMovil"
+        >
+            ☰
+        </button>
 
 
-/* ======================================================
-   HERO
-====================================================== */
+        <!-- ==================================================
+             MENÚ MÓVIL
+        ================================================== -->
 
-.hero{
+        <nav
+            class="menu-movil"
+            id="menuMovil"
+            aria-label="Menú principal"
+        >
 
-    position:relative;
+            <a href="#" class="activo">
+                INICIO
+            </a>
 
-    width:100%;
+            <a href="#">
+                BIOGRAFÍA
+            </a>
 
-    height:100vh;
+            <a href="#">
+                MÚSICA
+            </a>
 
-    display:flex;
+            <a href="#">
+                VÍDEOS
+            </a>
 
-    justify-content:center;
+            <a href="#">
+                CONCIERTOS
+            </a>
 
-    align-items:center;
+            <a href="#">
+                GALERÍA
+            </a>
 
-    overflow:hidden;
+            <a href="#">
+                TIENDA
+            </a>
 
-    background-image:url("fondo-web-index.png");
+            <a href="#">
+                CONTACTO
+            </a>
 
-    background-size:cover;
+        </nav>
 
-    background-position:center;
 
-    background-repeat:no-repeat;
+        <!-- ==================================================
+             IDENTIDAD
+        ================================================== -->
 
-    animation:zoomFoto 20s ease-in-out infinite alternate;
+        <div class="contenido">
 
-}
+            <h1>
+                Billy Pagán
+            </h1>
 
+            <div class="subtitulo">
+                SITIO OFICIAL
+            </div>
 
-.hero::before{
+        </div>
 
-    content:"";
 
-    position:absolute;
+    </main>
 
-    inset:0;
 
-    background:var(--capa);
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
 
-}
+    <footer class="footer">
 
+        © Billy Pagán · Sitio Oficial · Todos los derechos reservados
 
-/* ======================================================
-   ANIMACIONES
-====================================================== */
+    </footer>
 
-@keyframes zoomFoto{
 
-    from{
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
 
-        background-size:100%;
+    <script src="js/main.js"></script>
 
-    }
+</body>
 
-    to{
-
-        background-size:112%;
-
-    }
-
-}
-
-
-@keyframes entradaTexto{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px);
-
-        filter:blur(8px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-        filter:blur(0);
-
-    }
-
-}
-
-/* ======================================================
-   MENÚ ESCRITORIO
-====================================================== */
-
-.menu{
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    padding-top:35px;
-
-    z-index:100;
-
-}
-
-
-.menu nav{
-
-    width:100%;
-
-}
-
-
-.menu ul{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:30px;
-
-    list-style:none;
-
-}
-
-
-.menu li{
-
-    white-space:nowrap;
-
-}
-
-
-.menu a{
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:11px;
-
-    font-weight:300;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    color:var(--menu);
-
-    text-shadow:0 1px 8px rgba(255,255,255,.5);
-
-    transition:.35s;
-
-}
-
-
-.menu a:hover{
-
-    opacity:.65;
-
-    letter-spacing:4px;
-
-}
-
-
-/* ======================================================
-   BOTÓN HAMBURGUESA
-====================================================== */
-
-.hamburguesa{
-
-    display:none;
-
-    position:absolute;
-
-    top:22px;
-
-    right:22px;
-
-    z-index:1000;
-
-    background:none;
-
-    border:none;
-
-    color:var(--menu);
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    text-shadow:0 1px 8px rgba(255,255,255,.5);
-
-}
-
-
-/* ======================================================
-   MENÚ MÓVIL
-====================================================== */
-
-.menu-movil{
-
-    display:none;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    position:fixed;
-
-    top:0;
-
-    right:-100%;
-
-    width:100%;
-
-    height:100vh;
-
-    background:rgba(255,255,255,.96);
-
-    backdrop-filter:blur(12px);
-
-    -webkit-backdrop-filter:blur(12px);
-
-    transition:right .35s ease;
-
-    z-index:999;
-
-}
-
-
-.menu-movil.abierto{
-
-    right:0;
-
-}
-
-
-.menu-movil a{
-
-    margin:18px 0;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:18px;
-
-    font-weight:300;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    color:var(--menu);
-
-}
-
-
-/* ======================================================
-   FOOTER
-====================================================== */
-
-.footer{
-
-    position:fixed;
-
-    left:0;
-
-    bottom:35px;
-
-    width:100%;
-
-    text-align:center;
-
-    font-size:9px;
-
-    font-weight:300;
-
-    letter-spacing:1px;
-
-    color:var(--texto-secundario);
-
-    z-index:100;
-
-}
-
-/* ======================================================
-   PORTADA
-====================================================== */
-
-.hero .contenido{
-
-    position:relative;
-
-    z-index:5;
-
-    margin-left:38%;
-
-    text-align:center;
-
-    opacity:0;
-
-    animation:entradaTexto 2s ease forwards;
-
-    animation-delay:1s;
-
-}
-
-
-.hero .contenido h1{
-
-    font-size:clamp(70px,10vw,130px);
-
-}
-
-
-.subtitulo{
-
-    margin-top:30px;
-
-    font-size:14px;
-
-    font-weight:300;
-
-    letter-spacing:10px;
-
-    color:var(--texto);
-
-}
-
-/* ======================================================
-   BIOGRAFÍA
-====================================================== */
-
-.pagina-biografia{
-
-    overflow-y:auto;
-
-}
-
-
-/* ======================================================
-   CONTENIDO
-====================================================== */
-
-.biografia{
-
-    position:relative;
-
-    z-index:5;
-
-    width:45%;
-
-    margin-left:52%;
-
-    padding-top:430px;
-
-    padding-bottom:140px;
-
-    text-align:left;
-
-}
-
-/* ======================================================
-   TÍTULO
-====================================================== */
-
-.biografia h1{
-
-    text-align:left;
-
-    font-size:clamp(42px,5vw,65px);
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-weight:600;
-
-    line-height:1;
-
-    letter-spacing:2px;
-
-    margin-bottom:45px;
-
-}
-
-
-/* ======================================================
-   TEXTO
-====================================================== */
-
-.texto-biografia{
-
-    max-width:650px;
-
-    padding:34px 38px;
-
-    margin-bottom:40px;
-
-    background:linear-gradient(
-        to bottom,
-        rgba(255,255,255,.78),
-        rgba(255,255,255,.62)
-    );
-
-    backdrop-filter:blur(6px);
-
-    -webkit-backdrop-filter:blur(6px);
-
-    border-radius:12px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:15px;
-
-    font-weight:300;
-
-    line-height:2;
-
-    letter-spacing:.3px;
-
-    color:var(--texto);
-
-    text-align:left;
-
-}
-
-.texto-biografia p{
-
-    margin-bottom:32px;
-
-}
-
-
-.texto-biografia p:last-child{
-
-    margin-bottom:0;
-
-}
-
-
-.texto-biografia em{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:18px;
-
-    font-weight:600;
-
-}
-
-
-/* ======================================================
-   FOOTER BIOGRAFÍA
-====================================================== */
-
-.pagina-biografia + .footer{
-
-    position:fixed;
-
-    bottom:35px;
-
-}
-
-/* ======================================================
-   RESPONSIVE
-====================================================== */
-
-@media (max-width:700px){
-
-    /* BASE */
-
-    html,
-    body{
-
-        overflow:hidden;
-
-    }
-
-    /* HERO */
-
-    .hero{
-
-        background-image:url("fondo-web-index-movil.png");
-
-        background-size:cover;
-
-        background-position:left bottom;
-
-        background-repeat:no-repeat;
-
-        animation:none;
-
-    }
-
-    /* MENÚ */
-
-    .menu{
-
-        display:none;
-
-    }
-
-    .hamburguesa{
-
-        display:block;
-
-        top:24px;
-
-        right:24px;
-
-    }
-
-    .menu-movil{
-
-        display:flex;
-
-    }
-
-    /* PORTADA */
-
-    .hero .contenido{
-
-        position:absolute;
-
-        top:12%;
-
-        left:0;
-
-        right:0;
-
-        margin:0 auto;
-
-        padding:0;
-
-        text-align:center;
-
-    }
-
-    .hero .contenido h1{
-
-        font-size:54px;
-
-        letter-spacing:1px;
-
-        line-height:.92;
-
-    }
-
-    .subtitulo{
-
-        margin-top:14px;
-
-        font-size:11px;
-
-        letter-spacing:6px;
-
-    }
-
-    /* BIOGRAFÍA */
-
-    .pagina-biografia{
-
-        overflow-y:auto;
-
-        overflow-x:hidden;
-
-    }
-
-    .pagina-biografia .hero{
-
-        height:auto;
-
-        min-height:100vh;
-
-    }
-
-    .biografia{
-
-        width:auto;
-
-        margin:0;
-
-        padding:170px 25px 420px;
-
-    }
-
-    .biografia h1{
-
-        font-size:52px;
-
-        margin-bottom:35px;
-
-    }
-
-.texto-biografia{
-
-    max-width:none;
-
-    padding:28px;
-
-    margin-bottom:90px;
-
-    background:linear-gradient(
-        to bottom,
-        rgba(255,255,255,.82),
-        rgba(255,255,255,.60)
-    );
-
-    border-radius:12px;
-
-    backdrop-filter:blur(8px);
-
-    -webkit-backdrop-filter:blur(8px);
-
-    box-shadow:0 8px 25px rgba(0,0,0,.10);
-
-    font-size:14px;
-
-    line-height:1.9;
-
-    color:#202020;
-
-}
-
-    .texto-biografia p{
-
-        margin-bottom:28px;
-
-    }
-
-    /* FOOTER */
-
-    .footer{
-
-    position:fixed;
-
-    left:0;
-
-    bottom:8px;
-
-    width:100%;
-
-    text-align:center;
-
-    font-size:9px;
-
-    letter-spacing:1px;
-
-    z-index:100;
-
-}
-
-/* ======================================================
-   CONCIERTOS
-====================================================== */
-
-
-.pagina-conciertos{
-
-    background-image:url("fondo-web-index.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-}
-
-
-
-.pagina-conciertos .conciertos{
-
-    position:relative;
-
-    z-index:5;
-
-    width:50%;
-
-    margin-left:45%;
-
-    padding-top:360px;
-
-    padding-bottom:200px;
-
-    text-align:left;
-
-}
-
-
-
-.conciertos h1{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:clamp(45px,6vw,75px);
-
-    margin-bottom:45px;
-
-    text-align:left;
-
-}
-
-
-
-.texto-conciertos{
-
-    max-width:600px;
-
-    padding:35px;
-
-    background:rgba(255,255,255,.45);
-
-    backdrop-filter:blur(5px);
-
-    -webkit-backdrop-filter:blur(5px);
-
-    border-radius:12px;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:15px;
-
-    font-weight:300;
-
-    line-height:2;
-
-    color:#202020;
-
-}
-
-
-
-.texto-conciertos p{
-
-    margin-bottom:25px;
-
-}
-
-
-
-@media(max-width:700px){
-
-
-    .pagina-conciertos{
-
-        background-image:url("fondo-web-index-movil.png");
-
-        background-size:cover;
-
-        background-position:left bottom;
-
-        background-repeat:no-repeat;
-
-    }
-
-
-
-    .pagina-conciertos .conciertos{
-
-        width:auto;
-
-        margin:0;
-
-        padding:170px 25px 380px;
-
-    }
-
-
-
-    .conciertos h1{
-
-        font-size:52px;
-
-        margin-bottom:35px;
-
-    }
-
-
-
-    .texto-conciertos{
-
-        padding:28px;
-
-        font-size:14px;
-
-        background:rgba(255,255,255,.65);
-
-    }
-
-
-}
-/* ======================================================
-   MUSICA
-====================================================== */
-
-
-.pagina-musica{
-
-    background-image:url("fondo-web-index.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-
-
-.pagina-musica .musica{
-
-    position:relative;
-
-    z-index:5;
-
-    width:50%;
-
-    margin-left:45%;
-
-    padding-top:360px;
-
-    padding-bottom:200px;
-
-    text-align:left;
-
-}
-
-
-
-.musica h1{
-
-    font-size:clamp(45px,6vw,75px);
-
-    margin-bottom:45px;
-
-}
-
-
-
-.texto-musica{
-
-    max-width:600px;
-
-    padding:35px;
-
-    background:rgba(255,255,255,.45);
-
-    backdrop-filter:blur(5px);
-
-    -webkit-backdrop-filter:blur(5px);
-
-    border-radius:12px;
-
-    font-size:15px;
-
-    line-height:2;
-
-}
-
-
-
-.texto-musica p{
-
-    margin-bottom:25px;
-
-}
-
-
-
-@media(max-width:700px){
-
-
-    .pagina-musica{
-
-        background-image:url("fondo-web-index-movil.png");
-
-        background-size:cover;
-
-        background-position:left bottom;
-
-    }
-
-
-
-    .pagina-musica .musica{
-
-        width:auto;
-
-        margin:0;
-
-        padding:170px 25px 380px;
-
-    }
-
-
-
-    .musica h1{
-
-        font-size:52px;
-
-    }
-
-
-
-    .texto-musica{
-
-        padding:28px;
-
-        font-size:14px;
-
-        background:rgba(255,255,255,.65);
-
-    }
-
-
-}
-
-/* ======================================================
-   VÍDEOS
-====================================================== */
-
-
-.pagina-videos .videos{
-
-    position:relative;
-
-    z-index:5;
-
-    width:50%;
-
-    margin-left:45%;
-
-    padding-top:360px;
-
-    padding-bottom:200px;
-
-}
-
-
-
-.videos h1{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:clamp(45px,6vw,75px);
-
-    margin-bottom:45px;
-
-}
-
-
-
-.lista-videos{
-
-    max-width:650px;
-
-}
-
-
-
-.video-item{
-
-    margin-bottom:50px;
-
-}
-
-
-
-.video-principal{
-
-    position:relative;
-
-    width:100%;
-
-    aspect-ratio:16 / 9;
-
-    overflow:hidden;
-
-    border-radius:12px;
-
-    background:#000;
-
-}
-
-
-
-.video-principal iframe{
-
-    position:absolute;
-
-    width:100%;
-
-    height:100%;
-
-    top:0;
-
-    left:0;
-
-    border:0;
-
-}
-
-
-
-.video-item h2{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:32px;
-
-    font-weight:500;
-
-    margin-top:20px;
-
-}
-
-
-
-
-
-@media(max-width:700px){
-
-
-    .pagina-videos .videos{
-
-        width:auto;
-
-        margin:0;
-
-        padding:170px 25px 350px;
-
-    }
-
-
-
-    .videos h1{
-
-        font-size:52px;
-
-        margin-bottom:35px;
-
-    }
-
-
-
-    .lista-videos{
-
-        width:100%;
-
-    }
-
-
-
-    .video-item{
-
-        margin-bottom:45px;
-
-    }
-
-
-
-    .video-principal{
-
-        width:100%;
-
-        aspect-ratio:16 / 9;
-
-        border-radius:10px;
-
-    }
-
-
-
-    .video-item h2{
-
-        font-size:28px;
-
-        margin-top:15px;
-
-    }
-
-
-}
-/* ======================================================
-   GALERIA
-====================================================== */
-
-
-.pagina-galeria{
-
-    background-image:url("fondo-web-index.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-
-
-.pagina-galeria .galeria{
-
-    position:relative;
-
-    z-index:5;
-
-    width:70%;
-
-    margin-left:25%;
-
-    padding-top:250px;
-
-    padding-bottom:200px;
-
-    text-align:left;
-
-}
-
-
-
-.galeria h1{
-
-    font-size:clamp(45px,6vw,75px);
-
-    margin-bottom:45px;
-
-}
-
-
-
-.galeria-contenedor{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
-}
-
-
-
-.foto-galeria{
-
-    height:260px;
-
-    background:rgba(255,255,255,.45);
-
-    backdrop-filter:blur(5px);
-
-    -webkit-backdrop-filter:blur(5px);
-
-    border-radius:12px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:12px;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-}
-
-
-
-
-@media(max-width:700px){
-
-
-    .pagina-galeria{
-
-        background-image:url("fondo-web-index-movil.png");
-
-        background-size:cover;
-
-        background-position:left bottom;
-
-    }
-
-
-
-    .pagina-galeria .galeria{
-
-        width:auto;
-
-        margin:0;
-
-        padding:170px 25px 380px;
-
-    }
-
-
-
-    .galeria h1{
-
-        font-size:52px;
-
-        margin-bottom:35px;
-
-    }
-
-
-
-    .galeria-contenedor{
-
-        grid-template-columns:1fr;
-
-        gap:20px;
-
-    }
-
-
-
-    .foto-galeria{
-
-        height:220px;
-
-    }
-
-
-}
-
-/* ======================================================
-   CONTACTO
-====================================================== */
-
-
-.pagina-contacto{
-
-    background-image:url("fondo-web-index.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-
-
-.pagina-contacto .contacto{
-
-
-    position:relative;
-
-    z-index:5;
-
-    width:45%;
-
-    margin-left:50%;
-
-    padding-top:330px;
-
-    padding-bottom:180px;
-
-    text-align:left;
-
-}
-
-
-
-.contacto h1{
-
-    font-size:clamp(45px,6vw,75px);
-
-    margin-bottom:45px;
-
-}
-
-
-
-.texto-contacto{
-
-    padding:35px;
-
-    background:rgba(255,255,255,.40);
-
-    backdrop-filter:blur(5px);
-
-    -webkit-backdrop-filter:blur(5px);
-
-    border-radius:12px;
-
-    font-size:15px;
-
-    line-height:2;
-
-}
-
-
-
-.texto-contacto strong{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:28px;
-
-}
-
-
-
-.boton-contacto{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 25px;
-
-    border:1px solid #202020;
-
-    font-size:11px;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    transition:.3s;
-
-}
-
-
-
-.boton-contacto:hover{
-
-    opacity:.6;
-
-}
-
-
-
-
-
-@media(max-width:700px){
-
-
-.pagina-contacto{
-
-    background-image:url("fondo-web-index-movil.png");
-
-    background-position:left bottom;
-
-}
-
-
-
-.pagina-contacto .contacto{
-
-    width:auto;
-
-    margin:0;
-
-    padding:170px 25px 380px;
-
-}
-
-
-
-.contacto h1{
-
-    font-size:52px;
-
-}
-
-
-
-.texto-contacto{
-
-    padding:28px;
-
-    background:rgba(255,255,255,.55);
-
-}
-
-
-
-}
-/* ======================================================
-   VIDEO YOUTUBE
-====================================================== */
-
-.video-principal{
-
-    width:100%;
-
-    max-width:900px;
-
-    aspect-ratio:16/9;
-
-    margin-bottom:40px;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.20);
-
-}
-
-.video-principal iframe{
-
-    width:100%;
-
-    height:100%;
-
-    border:0;
-
-}
-
-.texto-videos{
-
-    max-width:900px;
-
-    padding:30px;
-
-    background:rgba(255,255,255,.30);
-
-    backdrop-filter:blur(4px);
-
-    -webkit-backdrop-filter:blur(4px);
-
-    border-radius:10px;
-
-}
-
-@media(max-width:700px){
-
-    .video-principal{
-
-        margin-bottom:30px;
-
-    }
-
-    .texto-videos{
-
-        padding:24px;
-
-    }
-
-}
-/* ======================================================
-   HISTÓRICO DE CONCIERTOS
-====================================================== */
-
-.pagina-historico{
-
-    overflow-y:auto;
-
-}
-
-.historico{
-
-    position:relative;
-    z-index:5;
-
-    width:min(760px,90%);
-    margin:0 auto;
-
-    padding-top:170px;
-    padding-bottom:180px;
-
-    text-align:center;
-
-}
-
-.historico h1{
-
-    font-size:clamp(42px,5vw,62px);
-
-    margin-bottom:35px;
-
-    line-height:1;
-
-    letter-spacing:2px;
-
-}
-
-.texto-historico{
-
-    max-width:650px;
-
-    margin:0 auto;
-
-    padding:35px;
-
-    background:rgba(255,255,255,.30);
-
-    backdrop-filter:blur(4px);
-
-    -webkit-backdrop-filter:blur(4px);
-
-    border-radius:10px;
-
-}
-
-.texto-historico p{
-
-    margin-bottom:18px;
-
-    font-size:15px;
-
-    line-height:1.9;
-
-}
-
-.lista-anos{
-
-    margin-top:45px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-}
-
-.lista-anos a{
-
-    display:block;
-
-    padding:16px 20px;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:34px;
-
-    letter-spacing:1px;
-
-    color:var(--texto);
-
-    background:rgba(255,255,255,.18);
-
-    border-radius:8px;
-
-    transition:.25s;
-
-}
-
-.lista-anos a:hover{
-
-    background:rgba(255,255,255,.45);
-
-    transform:translateX(8px);
-
-}
-
-@media (max-width:700px){
-
-    .historico{
-
-        width:92%;
-
-        padding-top:150px;
-
-        padding-bottom:170px;
-
-    }
-
-    .historico h1{
-
-        font-size:42px;
-
-    }
-
-    .texto-historico{
-
-        padding:26px;
-
-    }
-
-    .lista-anos a{
-
-        font-size:28px;
-
-        padding:14px;
-
-    }
-
-}
-
-/* ======================================================
-   BOTÓN HISTÓRICO DE CONCIERTOS
-====================================================== */
-
-.botones-conciertos{
-
-    margin-top:45px;
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:20;
-
-}
-
-
-
-.boton-historico{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    width:340px;
-
-    height:56px;
-
-    background:rgba(255,255,255,.75);
-
-    border:1px solid rgba(0,0,0,.15);
-
-    border-radius:8px;
-
-    color:#202020;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:12px;
-
-    font-weight:400;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    text-decoration:none;
-
-    backdrop-filter:blur(8px);
-
-    -webkit-backdrop-filter:blur(8px);
-
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-
-    transition:.3s ease;
-
-}
-
-
-
-.boton-historico:hover{
-
-    background:rgba(255,255,255,.95);
-
-    transform:translateY(-3px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
-
-}
-
-
-
-@media(max-width:700px){
-
-    .boton-historico{
-
-        width:100%;
-
-        height:54px;
-
-        font-size:11px;
-
-    }
-
-}
-/* ======================================================
-   HISTÓRICO DE CONCIERTOS
-====================================================== */
-
-
-.historico{
-
-    max-height:none;
-
-}
-
-
-
-.concierto-item{
-
-    margin-bottom:35px;
-
-    padding-bottom:25px;
-
-    border-bottom:1px solid rgba(0,0,0,.12);
-
-}
-
-
-
-.concierto-item strong{
-
-    display:block;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:26px;
-
-    font-weight:600;
-
-    margin-bottom:5px;
-
-}
-
-
-
-.concierto-item span{
-
-    display:block;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:13px;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-}
-
-
-
-.concierto-item p{
-
-    margin-top:8px;
-
-    margin-bottom:0;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:14px;
-
-}
+</html>
