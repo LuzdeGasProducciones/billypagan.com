@@ -6,11 +6,11 @@
 
 
 /* ======================================================
-   01. MÓVIL
-   Hasta 767px
+   01. MÓVIL · VERTICAL
+   Hasta 767px · Portrait
 ====================================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
 
 
     /* --------------------------------------------------
@@ -59,7 +59,8 @@
 
 
     /* --------------------------------------------------
-       MENÚ ESCRITORIO
+       MENÚ PRINCIPAL
+       Oculto en móvil vertical
     -------------------------------------------------- */
 
     .menu {
@@ -166,6 +167,8 @@
 
         text-align: center;
 
+        white-space: nowrap;
+
         transition: opacity 0.3s ease;
 
     }
@@ -227,7 +230,187 @@
 
 
 /* ======================================================
-   02. TABLET
+   02. MÓVIL · HORIZONTAL
+   Hasta 767px · Landscape
+====================================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+
+    /* --------------------------------------------------
+       PORTADA
+    -------------------------------------------------- */
+
+    .pagina-inicio {
+
+        width: 100%;
+
+        height: 100svh;
+
+        min-height: 100svh;
+
+        overflow: hidden;
+
+    }
+
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+
+        position: relative;
+
+        width: 100%;
+
+        height: 100svh;
+
+        min-height: 100svh;
+
+        background-image:
+            url("../images/fondo/mobile/fondo-general-movil.jpg");
+
+        background-size: cover;
+
+        background-position: center center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: scroll;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ PRINCIPAL · HORIZONTAL
+    -------------------------------------------------- */
+
+    .menu {
+
+        display: block;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .menu::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .menu ul {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 1.15rem;
+
+        width: max-content;
+
+        min-width: 100%;
+
+        margin: 0;
+
+        padding: 1.25rem 1rem;
+
+        list-style: none;
+
+    }
+
+
+    .menu a {
+
+        display: block;
+
+        font-size: 0.55rem;
+
+        letter-spacing: 0.11em;
+
+        line-height: 1.2;
+
+        white-space: nowrap;
+
+    }
+
+
+    /* --------------------------------------------------
+       HAMBURGUESA
+       Oculta en horizontal
+    -------------------------------------------------- */
+
+    .hamburguesa {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ MÓVIL
+       No se utiliza en horizontal
+    -------------------------------------------------- */
+
+    .menu-movil {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
+       CONTENIDO CENTRAL
+    -------------------------------------------------- */
+
+    .contenido {
+
+        width: 90%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+            3.5rem,
+            10vw,
+            5.5rem
+        );
+
+        line-height: 0.9;
+
+    }
+
+
+    .subtitulo {
+
+        margin-top: 0.8rem;
+
+        font-size: 0.55rem;
+
+        letter-spacing: 0.28em;
+
+    }
+
+}
+
+
+/* ======================================================
+   03. TABLET
    768px — 1199px
 ====================================================== */
 
@@ -280,6 +463,13 @@
        MENÚ
     -------------------------------------------------- */
 
+    .menu {
+
+        display: block;
+
+    }
+
+
     .menu ul {
 
         gap: 1.5rem;
@@ -294,6 +484,28 @@
         font-size: 0.65rem;
 
         letter-spacing: 0.15em;
+
+    }
+
+
+    /* --------------------------------------------------
+       HAMBURGUESA
+    -------------------------------------------------- */
+
+    .hamburguesa {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ MÓVIL
+    -------------------------------------------------- */
+
+    .menu-movil {
+
+        display: none;
 
     }
 
@@ -332,7 +544,7 @@
 
 
 /* ======================================================
-   03. ESCRITORIO
+   04. ESCRITORIO
    Desde 1200px
 ====================================================== */
 
@@ -342,6 +554,13 @@
     /* --------------------------------------------------
        MENÚ
     -------------------------------------------------- */
+
+    .menu {
+
+        display: block;
+
+    }
+
 
     .menu ul {
 
@@ -355,6 +574,28 @@
     .menu a {
 
         font-size: 0.72rem;
+
+    }
+
+
+    /* --------------------------------------------------
+       HAMBURGUESA
+    -------------------------------------------------- */
+
+    .hamburguesa {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ MÓVIL
+    -------------------------------------------------- */
+
+    .menu-movil {
+
+        display: none;
 
     }
 
@@ -377,7 +618,7 @@
 
 
 /* ======================================================
-   04. PANTALLAS MUY GRANDES
+   05. PANTALLAS MUY GRANDES
    Desde 1600px
 ====================================================== */
 
@@ -409,7 +650,7 @@
 
 
 /* ======================================================
-   05. ACCESIBILIDAD
+   06. ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
