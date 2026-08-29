@@ -1,11 +1,10 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    main.js
-   FUNCIONES GENERALES · PORTADA
+   FUNCIONES GENERALES
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
 
     /* ==================================================
        MENÚ MÓVIL
@@ -61,31 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
        CERRAR MENÚ AL NAVEGAR
     ================================================== */
 
-    const enlaces =
-        menuMovil.querySelectorAll("a");
+    menuMovil
+        .querySelectorAll("a")
+        .forEach(enlace => {
 
+            enlace.addEventListener("click", () => {
 
-    enlaces.forEach(enlace => {
+                menuMovil.classList.remove("abierto");
 
-        enlace.addEventListener("click", () => {
+                hamburguesa.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-            menuMovil.classList.remove("abierto");
+                hamburguesa.setAttribute(
+                    "aria-label",
+                    "Abrir menú"
+                );
 
-            hamburguesa.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+                hamburguesa.textContent = "☰";
 
-            hamburguesa.setAttribute(
-                "aria-label",
-                "Abrir menú"
-            );
-
-            hamburguesa.textContent = "☰";
+            });
 
         });
-
-    });
 
 
     /* ==================================================
