@@ -6,8 +6,19 @@
 
 
 /* ======================================================
-   01. MENÚ ESCRITORIO
+   01. MENÚ PRINCIPAL · BASE
 ====================================================== */
+
+.menu {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
 
 .menu ul {
 
@@ -19,12 +30,15 @@
 
     gap: 2.5rem;
 
+    width: 100%;
+
     margin: 0;
 
     padding: 2rem;
 
     list-style: none;
 }
+
 
 .menu a {
 
@@ -38,17 +52,23 @@
 
     font-weight: 400;
 
+    line-height: 1.2;
+
     letter-spacing: 0.18em;
+
+    white-space: nowrap;
 
     transition:
         opacity 0.3s ease,
         color 0.3s ease;
 }
 
+
 .menu a:hover {
 
     opacity: 0.55;
 }
+
 
 .menu a.activo {
 
@@ -98,6 +118,7 @@
     -webkit-appearance: none;
 }
 
+
 .hamburguesa:focus-visible {
 
     outline: 1px solid rgba(32, 32, 32, 0.7);
@@ -113,6 +134,7 @@
 .menu-movil {
 
     display: none;
+
 }
 
 
@@ -152,15 +174,24 @@
 
     text-align: center;
 
+    white-space: nowrap;
+
     transition: opacity 0.3s ease;
 }
+
 
 .menu-movil a:hover {
 
     opacity: 0.55;
 }
 
+
 .menu-movil a.activo {
 
     opacity: 1;
 }
+
+
+/* ======================================================
+   FIN · menu.css
+====================================================== */
