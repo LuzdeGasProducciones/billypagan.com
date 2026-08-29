@@ -371,7 +371,14 @@ body:not(.pagina-inicio) .footer {
 
 @media (max-width: 767px) {
 
+    /* ----------------------------------------------
+       PORTADA
+    ---------------------------------------------- */
+
     .pagina-inicio {
+        height: 100svh;
+        min-height: 100svh;
+
         background-image:
             url("../images/fondos/mobile/fondo-general-movil.jpg");
 
@@ -379,24 +386,63 @@ body:not(.pagina-inicio) .footer {
     }
 
 
+    /* ----------------------------------------------
+       FOOTER · PORTADA
+    ---------------------------------------------- */
+
     .pagina-inicio .footer {
-        padding: 0 1rem 1rem;
+        padding: 0 0.6rem 1rem;
 
         font-size: 0.58rem;
 
-        letter-spacing: 0.055em;
+        letter-spacing: 0.045em;
+
+        line-height: 1.4;
     }
 
+
+    /* ----------------------------------------------
+       CONTENEDOR DEL FOOTER
+    ---------------------------------------------- */
 
     .pagina-inicio .footer-contenido {
-        flex-direction: column;
+        display: block;
 
-        gap: 0.45rem;
+        width: 100%;
+
+        margin: 0 auto;
+
+        text-align: center;
     }
 
 
+    /* ----------------------------------------------
+       COPYRIGHT · UNA SOLA LÍNEA
+    ---------------------------------------------- */
+
+    .pagina-inicio .footer-copy {
+        display: block;
+
+        width: 100%;
+
+        white-space: nowrap;
+
+        text-align: center;
+    }
+
+
+    /* ----------------------------------------------
+       TÉRMINOS · SEGUNDA LÍNEA
+    ---------------------------------------------- */
+
     .pagina-inicio .footer-terminos {
-        margin-left: 0;
+        display: block;
+
+        width: 100%;
+
+        margin: 0.4rem 0 0;
+
+        text-align: center;
     }
 
 }
