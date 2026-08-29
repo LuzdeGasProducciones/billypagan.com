@@ -1,410 +1,407 @@
 /* ======================================================
-BILLY PAGÁN · SITIO OFICIAL
-styles.css
-ESTRUCTURA BASE · PORTADA
+   BILLY PAGÁN · SITIO OFICIAL
+   styles.css
+   ESTRUCTURA BASE · PORTADA
 ====================================================== */
 
+
 /* ======================================================
-01. RESET
+   01. RESET
 ====================================================== */
 
 *,
 *::before,
 *::after {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-width: 100%;
-min-height: 100%;
-margin: 0;
-padding: 0;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-margin: 0;
-color: #f2f2f2;
-font-family: "Montserrat", sans-serif;
+    margin: 0;
+    color: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
 }
 
+
 /* ======================================================
-02. ENLACES
+   02. ENLACES
 ====================================================== */
 
 a {
-color: inherit;
-text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
+
 /* ======================================================
-03. PORTADA
+   03. PORTADA
 ====================================================== */
 
 .pagina-inicio {
-width: 100%;
-height: 100vh;
-min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
 
-```
-overflow: hidden;
+    overflow: hidden;
 
-background-image:
-    url("../images/fondos/desktop/fondo-general-desktop.jpg");
+    background-image:
+        url("../images/fondos/desktop/fondo-general-desktop.jpg");
 
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
-background-attachment: fixed;
-```
-
+    background-attachment: fixed;
 }
 
+
 /* ======================================================
-04. HERO
+   04. HERO
 ====================================================== */
 
 .hero {
-position: relative;
+    position: relative;
 
-```
-width: 100%;
-height: 100vh;
-min-height: 100vh;
-```
-
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
 }
 
+
 /* ======================================================
-05. MENÚ SUPERIOR · ESCRITORIO
+   05. MENÚ SUPERIOR · ESCRITORIO
 ====================================================== */
 
 .menu {
-position: absolute;
+    position: absolute;
 
-```
-top: 0;
-left: 0;
+    top: 0;
+    left: 0;
 
-z-index: 20;
+    z-index: 20;
 
-width: 100%;
-```
-
+    width: 100%;
 }
 
 .menu nav {
-width: 100%;
+    width: 100%;
 }
 
 .menu ul {
-display: flex;
+    display: flex;
 
-```
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
-gap: 2.5rem;
+    gap: 2.5rem;
 
-margin: 0;
-padding: 2rem;
+    margin: 0;
+    padding: 2rem;
 
-list-style: none;
-```
-
+    list-style: none;
 }
 
 .menu a {
-display: block;
+    display: block;
 
-```
-color: #f2f2f2;
+    color: #f2f2f2;
 
-font-family: "Montserrat", sans-serif;
-font-size: 0.72rem;
-font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
 
-letter-spacing: 0.18em;
+    letter-spacing: 0.18em;
 
-transition:
-    opacity 0.3s ease,
-    color 0.3s ease;
-```
-
+    transition:
+        opacity 0.3s ease,
+        color 0.3s ease;
 }
 
 .menu a:hover {
-opacity: 0.65;
+    opacity: 0.65;
 }
 
 .menu a.activo {
-opacity: 1;
+    opacity: 1;
 }
 
+
 /* ======================================================
-06. MENÚ MÓVIL · BASE
+   06. MENÚ MÓVIL · BASE
 ====================================================== */
 
 .hamburguesa {
-display: none;
+    display: none;
 
-```
-position: absolute;
+    position: absolute;
 
-top: 1.25rem;
-right: 1.25rem;
+    top: 1.25rem;
+    right: 1.25rem;
 
-z-index: 50;
+    z-index: 50;
 
-width: auto;
-height: auto;
+    width: auto;
+    height: auto;
 
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 
-border: 0;
+    border: 0;
 
-background: transparent;
+    background: transparent;
 
-color: #f2f2f2;
+    color: #f2f2f2;
 
-font-family: Arial, sans-serif;
-font-size: 1.8rem;
-font-weight: 400;
+    font-family: Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
 
-line-height: 1;
+    line-height: 1;
 
-cursor: pointer;
+    cursor: pointer;
 
-appearance: none;
--webkit-appearance: none;
-```
-
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .hamburguesa:focus-visible {
-outline: 1px solid rgba(242, 242, 242, 0.8);
-outline-offset: 0.35rem;
+    outline: 1px solid rgba(242, 242, 242, 0.8);
+    outline-offset: 0.35rem;
 }
 
+
 /* ======================================================
-07. MENÚ MÓVIL
+   07. MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil {
-display: none;
+    display: none;
 }
 
+
 /* ======================================================
-08. CONTENIDO CENTRAL
+   08. CONTENIDO CENTRAL
 ====================================================== */
 
 .contenido {
-position: absolute;
+    position: absolute;
 
-```
-top: 50%;
-left: 50%;
+    top: 50%;
+    left: 50%;
 
-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-width: 90%;
+    width: 90%;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
 .contenido h1 {
-margin: 0;
+    margin: 0;
 
-```
-font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
-font-size: clamp(4rem, 9vw, 8rem);
-font-weight: 500;
+    font-size: clamp(4rem, 9vw, 8rem);
+    font-weight: 500;
 
-line-height: 0.9;
+    line-height: 0.9;
 
-letter-spacing: 0.01em;
-```
-
+    letter-spacing: 0.01em;
 }
 
 .subtitulo {
-margin-top: 1.25rem;
+    margin-top: 1.25rem;
 
-```
-font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-font-size: clamp(0.65rem, 1vw, 0.85rem);
-font-weight: 300;
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    font-weight: 300;
 
-line-height: 1.2;
+    line-height: 1.2;
 
-letter-spacing: 0.45em;
-```
-
+    letter-spacing: 0.45em;
 }
 
+
 /* ======================================================
-09. FOOTER · BASE
+   09. FOOTER · BASE
 ====================================================== */
 
 .footer {
-width: 100%;
+    width: 100%;
 
-```
-color: rgba(25, 25, 25, 0.72);
+    color: rgba(35, 35, 35, 0.82);
 
-background: transparent;
+    background: transparent;
 
-font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
-font-size: 0.58rem;
-font-weight: 400;
+    font-size: 0.68rem;
+    font-weight: 400;
 
-line-height: 1.4;
+    line-height: 1.5;
 
-letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
 
-text-align: center;
-```
-
+    text-align: center;
 }
 
+
 /* ======================================================
-10. FOOTER · PORTADA
+   10. FOOTER · PORTADA
 ====================================================== */
 
 .pagina-inicio .footer {
-position: fixed;
+    position: fixed;
 
-```
-left: 0;
-bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-z-index: 30;
+    z-index: 30;
 
-width: 100%;
+    width: 100%;
 
-padding: 0 1.5rem 1.2rem;
-```
-
+    padding: 0 1.25rem 1.35rem;
 }
 
+
 /* ======================================================
-11. FOOTER · CONTENIDO
+   11. FOOTER · CONTENIDO
 ====================================================== */
 
-.footer-contenido {
-display: flex;
+.pagina-inicio .footer-contenido {
+    display: flex;
 
-```
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
-flex-wrap: wrap;
+    flex-wrap: wrap;
 
-gap: 0.35rem 1.25rem;
+    width: 100%;
+    max-width: 100%;
 
-width: 100%;
-```
+    margin: 0 auto;
 
+    text-align: center;
 }
 
+
 /* ======================================================
-12. FOOTER · ENLACES
+   12. FOOTER · COPYRIGHT
 ====================================================== */
 
-.footer a {
-color: inherit;
+.pagina-inicio .footer-copy {
+    display: inline-block;
 
-```
-text-decoration: none;
-
-transition:
-    opacity 0.3s ease,
-    color 0.3s ease;
-```
-
+    text-align: center;
 }
 
-.footer a:hover {
-opacity: 0.55;
-}
-
-.footer a:focus-visible {
-outline: 1px solid rgba(25, 25, 25, 0.6);
-outline-offset: 0.25rem;
-}
 
 /* ======================================================
-13. PÁGINAS INTERIORES
+   13. FOOTER · ENLACES
+====================================================== */
+
+.pagina-inicio .footer a {
+    color: rgba(35, 35, 35, 0.88);
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.3s ease,
+        color 0.3s ease;
+}
+
+.pagina-inicio .footer a:hover {
+    opacity: 0.55;
+}
+
+.pagina-inicio .footer a:focus-visible {
+    outline: 1px solid rgba(35, 35, 35, 0.6);
+    outline-offset: 0.25rem;
+}
+
+
+/* ======================================================
+   14. FOOTER · TÉRMINOS
+====================================================== */
+
+.pagina-inicio .footer-terminos {
+    display: inline-block;
+
+    margin-left: 1.4rem;
+}
+
+
+/* ======================================================
+   15. PÁGINAS INTERIORES
 ====================================================== */
 
 /*
-Las páginas interiores tendrán scroll.
-En ellas el footer formará parte normal
-del flujo del documento.
+   Las páginas interiores tendrán scroll.
+   En ellas el footer forma parte normal
+   del flujo del documento.
 */
 
 body:not(.pagina-inicio) {
-min-height: 100vh;
+    min-height: 100vh;
 }
 
 body:not(.pagina-inicio) .footer {
-position: relative;
+    position: relative;
 
-```
-margin-top: 3rem;
-```
-
+    margin-top: 3rem;
 }
 
+
 /* ======================================================
-14. MÓVIL
+   16. MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
 
-```
-.pagina-inicio {
-    background-image:
-        url("../images/fondos/mobile/fondo-general-movil.jpg");
+    .pagina-inicio {
+        background-image:
+            url("../images/fondos/mobile/fondo-general-movil.jpg");
 
-    background-attachment: scroll;
-}
-
-
-.footer {
-    font-size: 0.50rem;
-
-    letter-spacing: 0.06em;
-}
+        background-attachment: scroll;
+    }
 
 
-.pagina-inicio .footer {
-    padding: 0 1rem 1rem;
-}
+    .pagina-inicio .footer {
+        padding: 0 1rem 1rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.055em;
+    }
 
 
-.footer-contenido {
-    flex-direction: column;
+    .pagina-inicio .footer-contenido {
+        flex-direction: column;
 
-    gap: 0.35rem;
+        gap: 0.45rem;
+    }
 
-    text-align: center;
-}
-```
+
+    .pagina-inicio .footer-terminos {
+        margin-left: 0;
+    }
 
 }
+
 
 /* ======================================================
-FIN · styles.css
+   FIN · styles.css
 ====================================================== */
