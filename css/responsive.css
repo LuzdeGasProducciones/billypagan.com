@@ -1,453 +1,395 @@
+```css
 /* ======================================================
-BILLY PAGÁN · SITIO OFICIAL
-responsive.css
-RESPONSIVE · MÓVIL · TABLET · ESCRITORIO
+   BILLY PAGÁN · SITIO OFICIAL
+   responsive.css
+   RESPONSIVE · MÓVIL · TABLET · ESCRITORIO
 ====================================================== */
 
+
 /* ======================================================
-01. MÓVIL
-Hasta 767px
+   01. MÓVIL
+   Hasta 767px
 ====================================================== */
 
 @media (max-width: 767px) {
 
-```
-/* --------------------------------------------------
-   PORTADA
--------------------------------------------------- */
 
-.pagina-inicio {
+    /* --------------------------------------------------
+       PORTADA
+    -------------------------------------------------- */
 
-    width: 100%;
+    .pagina-inicio {
 
-    height: 100svh;
+        width: 100%;
 
-    min-height: 100svh;
+        height: 100svh;
 
-    overflow: hidden;
+        min-height: 100svh;
 
-    background-image:
-        url("../images/fondos/mobile/fondo-general-movil.jpg");
+        overflow: hidden;
 
-    background-size: cover;
+        background-image:
+            url("../images/fondos/mobile/fondo-general-movil.jpg");
 
-    background-position: center center;
+        background-size: cover;
 
-    background-repeat: no-repeat;
+        background-position: center center;
 
-    background-attachment: scroll;
+        background-repeat: no-repeat;
+
+        background-attachment: scroll;
+
+    }
+
+
+    /* --------------------------------------------------
+       HERO
+    -------------------------------------------------- */
+
+    .hero {
+
+        width: 100%;
+
+        height: 100svh;
+
+        min-height: 100svh;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ DESKTOP
+    -------------------------------------------------- */
+
+    .menu {
+
+        display: none;
+
+    }
+
+
+    /* --------------------------------------------------
+       BOTÓN HAMBURGUESA
+    -------------------------------------------------- */
+
+    .hamburguesa {
+
+        display: block;
+
+        color: #202020;
+
+    }
+
+
+    /* --------------------------------------------------
+       MENÚ MÓVIL
+    -------------------------------------------------- */
+
+    .menu-movil {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        z-index: 40;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 1.8rem;
+
+        width: 100%;
+
+        height: 100svh;
+
+        padding: 5rem 2rem;
+
+        background: rgba(245, 245, 245, 0.94);
+
+        backdrop-filter: blur(10px);
+
+        -webkit-backdrop-filter: blur(10px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+    }
+
+
+    .menu-movil.abierto {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+    }
+
+
+    /* --------------------------------------------------
+       ENLACES MENÚ MÓVIL
+    -------------------------------------------------- */
+
+    .menu-movil a {
+
+        display: block;
+
+        color: #202020;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 0.82rem;
+
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.2em;
+
+        text-align: center;
+
+        transition: opacity 0.3s ease;
+
+    }
+
+
+    .menu-movil a:hover {
+
+        opacity: 0.55;
+
+    }
+
+
+    .menu-movil a.activo {
+
+        opacity: 1;
+
+    }
+
+
+    /* --------------------------------------------------
+       CONTENIDO CENTRAL
+    -------------------------------------------------- */
+
+    .contenido {
+
+        width: 92%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+            3.4rem,
+            15vw,
+            5.5rem
+        );
+
+        line-height: 0.9;
+
+        letter-spacing: 0.01em;
+
+    }
+
+
+    .subtitulo {
+
+        margin-top: 1rem;
+
+        font-size: 0.6rem;
+
+        line-height: 1.2;
+
+        letter-spacing: 0.32em;
+
+    }
 
 }
 
-
-/* --------------------------------------------------
-   HERO
--------------------------------------------------- */
-
-.hero {
-
-    width: 100%;
-
-    height: 100svh;
-
-    min-height: 100svh;
-
-}
-
-
-/* --------------------------------------------------
-   MENÚ DESKTOP
--------------------------------------------------- */
-
-.menu {
-
-    display: none;
-
-}
-
-
-/* --------------------------------------------------
-   BOTÓN HAMBURGUESA
--------------------------------------------------- */
-
-.hamburguesa {
-
-    display: block;
-
-    color: #202020;
-
-}
-
-
-/* --------------------------------------------------
-   MENÚ MÓVIL
--------------------------------------------------- */
-
-.menu-movil {
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    z-index: 40;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 1.8rem;
-
-    width: 100%;
-
-    height: 100svh;
-
-    padding: 5rem 2rem;
-
-    background: rgba(245, 245, 245, 0.94);
-
-    backdrop-filter: blur(10px);
-
-    -webkit-backdrop-filter: blur(10px);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
-
-}
-
-
-.menu-movil.abierto {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-
-}
-
-
-/* --------------------------------------------------
-   ENLACES MENÚ MÓVIL
--------------------------------------------------- */
-
-.menu-movil a {
-
-    display: block;
-
-    color: #202020;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.82rem;
-
-    font-weight: 400;
-
-    line-height: 1.2;
-
-    letter-spacing: 0.2em;
-
-    text-align: center;
-
-    transition: opacity 0.3s ease;
-
-}
-
-
-.menu-movil a:hover {
-
-    opacity: 0.55;
-
-}
-
-
-/* --------------------------------------------------
-   CONTENIDO CENTRAL
--------------------------------------------------- */
-
-.contenido {
-
-    width: 92%;
-
-}
-
-
-.contenido h1 {
-
-    font-size: clamp(
-        3.4rem,
-        15vw,
-        5.5rem
-    );
-
-    line-height: 0.9;
-
-}
-
-
-.subtitulo {
-
-    margin-top: 1rem;
-
-    font-size: 0.6rem;
-
-    line-height: 1.2;
-
-    letter-spacing: 0.32em;
-
-}
-
-
-/* --------------------------------------------------
-   FOOTER · MÓVIL
--------------------------------------------------- */
-
-.pagina-inicio .footer {
-
-    padding: 0 0.75rem 0.9rem;
-
-    font-size: 0.56rem;
-
-    letter-spacing: 0.045em;
-
-}
-
-
-.pagina-inicio .footer-contenido {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 0.35rem;
-
-    width: 100%;
-
-    text-align: center;
-
-}
-
-
-.pagina-inicio .footer-copy {
-
-    display: block;
-
-    width: 100%;
-
-    white-space: nowrap;
-
-}
-
-
-.pagina-inicio .footer-terminos {
-
-    display: block;
-
-    margin-left: 0;
-
-    white-space: nowrap;
-
-}
-```
-
-}
 
 /* ======================================================
-02. TABLET
-768px — 1199px
+   02. TABLET
+   768px — 1199px
 ====================================================== */
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
-```
-/* --------------------------------------------------
-   PORTADA
--------------------------------------------------- */
 
-.pagina-inicio {
+    /* --------------------------------------------------
+       PORTADA
+    -------------------------------------------------- */
 
-    height: 100vh;
+    .pagina-inicio {
 
-    min-height: 100vh;
+        height: 100vh;
 
-    overflow: hidden;
+        min-height: 100vh;
 
-    background-size: cover;
+        overflow: hidden;
 
-    background-position: center center;
+        background-size: cover;
 
-}
+        background-position: center center;
 
-
-/* --------------------------------------------------
-   MENÚ
--------------------------------------------------- */
-
-.menu ul {
-
-    gap: 1.5rem;
-
-    padding: 1.75rem 1rem;
-
-}
+    }
 
 
-.menu a {
+    /* --------------------------------------------------
+       MENÚ
+    -------------------------------------------------- */
 
-    font-size: 0.65rem;
+    .menu ul {
 
-    letter-spacing: 0.15em;
+        gap: 1.5rem;
 
-}
+        padding: 1.75rem 1rem;
 
-
-/* --------------------------------------------------
-   CONTENIDO
--------------------------------------------------- */
-
-.contenido {
-
-    width: 90%;
-
-}
+    }
 
 
-.contenido h1 {
+    .menu a {
 
-    font-size: clamp(
-        4rem,
-        10vw,
-        7rem
-    );
+        font-size: 0.65rem;
 
-}
+        letter-spacing: 0.15em;
+
+    }
 
 
-.subtitulo {
+    /* --------------------------------------------------
+       CONTENIDO
+    -------------------------------------------------- */
 
-    font-size: 0.7rem;
+    .contenido {
 
-    letter-spacing: 0.38em;
+        width: 90%;
 
-}
+    }
 
 
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
+    .contenido h1 {
 
-.pagina-inicio .footer {
+        font-size: clamp(
+            4rem,
+            10vw,
+            7rem
+        );
 
-    padding-bottom: 1.15rem;
+    }
 
-    font-size: 0.62rem;
+
+    .subtitulo {
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.38em;
+
+    }
 
 }
-```
 
-}
 
 /* ======================================================
-03. ESCRITORIO GRANDE
-Desde 1200px
+   03. ESCRITORIO GRANDE
+   Desde 1200px
 ====================================================== */
 
 @media (min-width: 1200px) {
 
-```
-.menu ul {
 
-    gap: 2.5rem;
+    .menu ul {
 
-    padding: 2rem;
+        gap: 2.5rem;
+
+        padding: 2rem;
+
+    }
+
+
+    .menu a {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+            4rem,
+            9vw,
+            8rem
+        );
+
+    }
 
 }
 
-
-.menu a {
-
-    font-size: 0.72rem;
-
-}
-
-
-.contenido h1 {
-
-    font-size: clamp(
-        4rem,
-        9vw,
-        8rem
-    );
-
-}
-```
-
-}
 
 /* ======================================================
-04. PANTALLAS MUY GRANDES
-Desde 1600px
+   04. PANTALLAS MUY GRANDES
+   Desde 1600px
 ====================================================== */
 
 @media (min-width: 1600px) {
 
-```
-.menu ul {
 
-    gap: 3rem;
+    .menu ul {
+
+        gap: 3rem;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: 8rem;
+
+    }
 
 }
 
-
-.contenido h1 {
-
-    font-size: 8rem;
-
-}
-```
-
-}
 
 /* ======================================================
-05. ACCESIBILIDAD
+   05. ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-```
-*,
-*::before,
-*::after {
+    *,
+    *::before,
+    *::after {
 
-    scroll-behavior: auto !important;
+        scroll-behavior: auto !important;
 
-    animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
 
-    animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
 
-    transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-FIN · responsive.css
+   FIN · responsive.css
 ====================================================== */
+```
