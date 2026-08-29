@@ -1,80 +1,136 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   footer.css - PIE DE PÁGINA REFINADO
-   ====================================================== */
+   footer.css
+   COMPONENTE GLOBAL · PIE DE PÁGINA
+====================================================== */
+
 
 /* ======================================================
-   01. FOOTER · BASE (Ultra-discreto y limpio)
-   ====================================================== */
+   01. FOOTER · BASE
+====================================================== */
+
 .footer {
-  width: 100%;
-  color: rgba(32, 32, 32, 0.45); /* Color más suave y traslúcido sobre fondo claro */
-  background: transparent;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.62rem;            /* Ligeramente más pequeño para mayor elegancia */
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.12em;        /* Más tracking (espaciado) para un look premium */
-  text-transform: uppercase;     /* El formato mayúscula mejora la estética minimalista */
-  text-align: center;
+
+    width: 100%;
+
+    color: rgba(32, 32, 32, 0.45);
+
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    text-align: center;
 }
 
+
 /* ======================================================
-   02. FOOTER · PORTADA (Fijo sin saltos visuales)
-   ====================================================== */
+   02. FOOTER · PORTADA
+====================================================== */
+
 .pagina-inicio .footer {
-  position: fixed;
-  left: 0; 
-  right: 0; 
-  bottom: 0;
-  z-index: 30;
-  width: 100%;
-  padding: 0 1.5rem 1.5rem;      /* Un aire extra de separación inferior */
-  pointer-events: none;          /* Evita bloquear clics en el fondo */
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 30;
+
+    width: 100%;
+
+    padding: 0 1.5rem 1.5rem;
 }
+
 
 /* ======================================================
-   03. CONTENIDO (Separadores invisibles con CSS)
-   ====================================================== */
-.pagina-inicio .footer-contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;                   /* Separación limpia por aire, sin barras verticales */
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  pointer-events: auto;          /* Reactiva los clics solo en los textos/enlaces */
+   03. FOOTER · CONTENIDO
+====================================================== */
+
+.footer-contenido {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
 }
+
 
 /* ======================================================
-   04. COPYRIGHT & ENLACES (Interacción sofisticada)
-   ====================================================== */
-.pagina-inicio .footer-copy {
-  display: inline-block;
-  white-space: nowrap;
+   04. FOOTER · COPYRIGHT
+====================================================== */
+
+.footer-copy {
+
+    display: inline-block;
+
+    white-space: nowrap;
 }
 
-.pagina-inicio .footer a {
-  color: rgba(32, 32, 32, 0.55); /* Enlaces sutiles */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.pagina-inicio .footer a:hover {
-  color: rgba(32, 32, 32, 0.95); /* En vez de opacidad, sube la intensidad al pasar el cursor */
-}
-
-.pagina-inicio .footer a:focus-visible {
-  outline: 1px auto rgba(32, 32, 32, 0.3);
-  outline-offset: 0.2rem;
-}
 
 /* ======================================================
-   05. TÉRMINOS Y COMPLEMENTOS (Cierre limpio de estructura)
-   ====================================================== */
-.pagina-inicio .footer-terminos {
-  display: inline-block;
-  white-space: nowrap;
+   05. FOOTER · ENLACES
+====================================================== */
+
+.footer a {
+
+    color: rgba(32, 32, 32, 0.55);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
+
+
+.footer a:hover {
+
+    color: rgba(32, 32, 32, 0.95);
+}
+
+
+.footer a:focus-visible {
+
+    outline: 1px solid rgba(32, 32, 32, 0.3);
+
+    outline-offset: 0.2rem;
+}
+
+
+/* ======================================================
+   06. FOOTER · TÉRMINOS
+====================================================== */
+
+.footer-terminos {
+
+    display: inline-block;
+
+    white-space: nowrap;
+}
+
+
+/* ======================================================
+   FIN · footer.css
+====================================================== */
+```
