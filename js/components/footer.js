@@ -2,19 +2,16 @@
    BILLY PAGÁN · SITIO OFICIAL
    footer.js
    COMPONENTE · FOOTER GLOBAL
-   ====================================================== */
+   ELEGANT MINIMAL · LIGHT SWEEP
+====================================================== */
 
-
-/* ======================================================
-   INICIALIZACIÓN
-   ====================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
        ENLACES DEL FOOTER
-       ================================================== */
+    ================================================== */
 
     const enlacesFooter = document.querySelectorAll(
         ".footer-artista, .footer-terminos"
@@ -22,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       INTERACCIÓN DE LOS ENLACES
-       ================================================== */
+       BARRIDO DE LUZ AL HACER CLIC
+    ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
 
@@ -40,15 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Evitamos la navegación inmediata
-             * para permitir que la microinteracción
-             * sea perceptible.
+             * para que el barrido pueda verse completo.
              */
 
             event.preventDefault();
 
 
             /*
-             * Evitamos dobles activaciones.
+             * Evitamos múltiples clics mientras
+             * la animación está ejecutándose.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -59,25 +56,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Activamos el estado visual.
+             * Reiniciamos la animación.
+             */
+
+            enlace.classList.remove("barrido");
+
+
+            /*
+             * Forzamos un nuevo cálculo de layout
+             * para permitir que la animación vuelva a empezar.
+             */
+
+            void enlace.offsetWidth;
+
+
+            /*
+             * Activamos el barrido.
              */
 
             enlace.classList.add("barrido");
 
 
             /*
-             * Navegamos rápidamente después
-             * de mostrar el pequeño efecto.
+             * Navegamos cuando termina la animación.
              *
-             * La interacción es deliberadamente
-             * breve para mantener la elegancia.
+             * Duración CSS:
+             * 0.95 segundos
              */
 
             setTimeout(function () {
 
                 window.location.href = destino;
 
-            }, 180);
+            }, 950);
 
 
         });
