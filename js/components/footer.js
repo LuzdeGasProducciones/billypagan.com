@@ -9,16 +9,29 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+    /* ==================================================
+       ENLACES DEL FOOTER
+    ================================================== */
+
     const enlacesFooter = document.querySelectorAll(
         ".footer-artista, .footer-terminos"
     );
 
+
+    /* ==================================================
+       BARRIDO AL HACER CLIC
+    ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
 
 
         enlace.addEventListener("click", function (event) {
 
+
+            /*
+             * Si el enlace ya está ejecutando
+             * el barrido, no permitimos otro clic.
+             */
 
             if (enlace.classList.contains("barrido")) {
 
@@ -29,45 +42,73 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
+            /*
+             * Guardamos el destino original.
+             */
+
             const destino = enlace.href;
 
+
+            /*
+             * Detenemos temporalmente la navegación
+             * para mostrar el destello.
+             */
 
             event.preventDefault();
 
 
+            /*
+             * Activamos el barrido.
+             */
+
             enlace.classList.add("barrido");
 
 
-            const finalizar = function () {
+            /* ==================================================
+               FINAL DE LA ANIMACIÓN
+            ================================================== */
+
+            const finalizarNavegacion = function (evento) {
+
+
+                /*
+                 * Solo reaccionamos a nuestra animación.
+                 */
+
+                if (evento.animationName !== "footerSweep") {
+
+                    return;
+
+                }
+
+
+                /*
+                 * Eliminamos el listener.
+                 */
 
                 enlace.removeEventListener(
                     "animationend",
-                    finalizar
+                    finalizarNavegacion
                 );
+
+
+                /*
+                 * Navegación inmediata.
+                 */
 
                 window.location.href = destino;
 
             };
 
 
-            enlace.addEventListener(
-                "animationend",
-                finalizar,
-                { once: true }
-            );
-
-
             /*
-             * Seguridad:
-             * si animationend no se dispara,
-             * navegamos igualmente.
+             * Escuchamos el final real de la animación.
              */
 
-            setTimeout(function () {
-
-                window.location.href = destino;
-
-            }, 450);
+            enlace.addEventListener(
+                "animationend",
+                finalizarNavegacion
+            );
 
 
         });
