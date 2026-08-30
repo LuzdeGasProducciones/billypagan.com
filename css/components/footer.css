@@ -123,53 +123,54 @@
 
 /* ======================================================
    07. DESTELLO
-   Solo dispositivos con hover real
+   Se activa SOLO mediante JavaScript al hacer clic
 ====================================================== */
 
-@media (hover: hover) and (pointer: fine) {
+.footer a.destello-activo {
 
-    .footer a {
+    background: linear-gradient(
+        to right,
+        rgba(32, 32, 32, 0.55) 0%,
+        rgba(32, 32, 32, 0.55) 42%,
+        rgba(32, 32, 32, 0.68) 47%,
+        rgba(32, 32, 32, 0.78) 50%,
+        rgba(32, 32, 32, 0.68) 53%,
+        rgba(32, 32, 32, 0.55) 58%,
+        rgba(32, 32, 32, 0.55) 100%
+    );
 
-        background: linear-gradient(
-            to right,
-            rgba(32, 32, 32, 0.55) 0%,
-            rgba(32, 32, 32, 0.55) 42%,
-            rgba(32, 32, 32, 0.70) 47%,
-            rgba(32, 32, 32, 0.82) 50%,
-            rgba(32, 32, 32, 0.70) 53%,
-            rgba(32, 32, 32, 0.55) 58%,
-            rgba(32, 32, 32, 0.55) 100%
-        );
+    background-size: 200% auto;
 
-        background-size: 200% auto;
+    background-position: 0% center;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: destelloFooter 0.7s
+        cubic-bezier(0.16, 1, 0.3, 1)
+        forwards;
+
+}
+
+
+/* ======================================================
+   08. ANIMACIÓN DEL DESTELLO
+====================================================== */
+
+@keyframes destelloFooter {
+
+    0% {
 
         background-position: 0% center;
 
-        -webkit-background-clip: text;
-
-        background-clip: text;
-
-        -webkit-text-fill-color: transparent;
-
-        transition:
-            transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-            letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-            background-position 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-
-        will-change:
-            transform,
-            background-position;
-
     }
 
-
-    .footer a:hover {
+    100% {
 
         background-position: -200% center;
-
-        transform: scale(1.02);
-
-        letter-spacing: 0.14em;
 
     }
 
@@ -177,7 +178,7 @@
 
 
 /* ======================================================
-   08. ACCESIBILIDAD
+   09. ACCESIBILIDAD
 ====================================================== */
 
 .footer a:focus-visible {
@@ -190,7 +191,7 @@
 
 
 /* ======================================================
-   09. TÉRMINOS
+   10. TÉRMINOS
 ====================================================== */
 
 .footer-terminos {
