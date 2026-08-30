@@ -5,46 +5,80 @@
 ====================================================== */
 
 
-/* ======================================================
-   01. DESTELLO · SOLO AL HACER CLIC
-====================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
 
+
+    /* ==================================================
+       ELEMENTOS
+    ================================================== */
 
     const enlacesFooter =
         document.querySelectorAll(".footer a");
 
 
+    /* ==================================================
+       COMPROBACIÓN
+    ================================================== */
+
+    if (!enlacesFooter.length) {
+
+        return;
+
+    }
+
+
+    /* ==================================================
+       DESTELLO AL HACER CLIC / TOCAR
+    ================================================== */
+
     enlacesFooter.forEach(enlace => {
 
 
-        enlace.addEventListener("click", () => {
+        enlace.addEventListener("click", event => {
 
 
             /* ------------------------------------------
-               Elimina una animación anterior
+               EVITAR DOBLE CLIC DURANTE EL EFECTO
             ------------------------------------------ */
 
-            enlace.classList.remove(
-                "destello-activo"
-            );
+            if (
+                enlace.classList.contains("destello")
+            ) {
+
+                event.preventDefault();
+
+                return;
+
+            }
 
 
             /* ------------------------------------------
-               Fuerza el reinicio de la animación
+               AÑADIR DESTELLO
             ------------------------------------------ */
 
-            void enlace.offsetWidth;
+            enlace.classList.add("destello");
 
 
             /* ------------------------------------------
-               Activa el destello
+               GUARDAR DESTINO
             ------------------------------------------ */
 
-            enlace.classList.add(
-                "destello-activo"
-            );
+            const destino =
+                enlace.href;
+
+
+            /* ------------------------------------------
+               DEJAR QUE EL DESTELLO TERMINE
+            ------------------------------------------ */
+
+            event.preventDefault();
+
+
+            setTimeout(() => {
+
+                window.location.href = destino;
+
+            }, 650);
 
 
         });
@@ -54,8 +88,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
-
-
-/* ======================================================
-   FIN · footer.js
-====================================================== */
