@@ -1,14 +1,14 @@
-/* ======================================================
+/* ==========================================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE · FOOTER GLOBAL
-   ELEGANT MINIMAL · EDITORIAL LIGHT SWEEP
-====================================================== */
+   COMPONENTE GLOBAL · ELEGANT MINIMAL
+   EDITORIAL LIGHT SWEEP
+   ========================================================================== */
 
 
-/* ======================================================
-   01 · FOOTER GENERAL
-====================================================== */
+/* ==========================================================================
+   01 · CONTENEDOR PRINCIPAL
+   ========================================================================== */
 
 .footer {
 
@@ -23,9 +23,9 @@
 }
 
 
-/* ======================================================
-   02 · CONTENIDO
-====================================================== */
+/* ==========================================================================
+   02 · ESTRUCTURA DE CONTENIDO
+   ========================================================================== */
 
 .footer-contenido {
 
@@ -39,8 +39,7 @@
 
     margin: 0 auto;
 
-    padding:
-        1.8rem 2rem 2.5rem;
+    padding: 1.8rem 2rem 2.5rem;
 
     box-sizing: border-box;
 
@@ -49,10 +48,9 @@
 }
 
 
-/* ======================================================
-   03 · LÍNEA PRINCIPAL
-   CONTENEDOR TIPOGRÁFICO MAESTRO
-====================================================== */
+/* ==========================================================================
+   03 · TIPOGRAFÍA MAESTRA
+   ========================================================================== */
 
 .footer-copy {
 
@@ -62,41 +60,32 @@
 
     padding: 0;
 
-    color:
-        rgba(44, 44, 44, 0.45);
+    color: rgba(44, 44, 44, 0.45);
 
     font-family:
         "Montserrat",
         sans-serif;
 
-    font-size:
-        0.55rem;
+    font-size: 0.55rem;
 
-    font-weight:
-        300;
+    font-weight: 300;
 
-    line-height:
-        1.5;
+    line-height: 1.5;
 
-    letter-spacing:
-        0.16em;
+    letter-spacing: 0.16em;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 
-    white-space:
-        nowrap;
+    white-space: nowrap;
 
-    user-select:
-        none;
+    user-select: none;
 
 }
 
 
-/* ======================================================
-   04 · ENLACES CLICABLES
-   MISMA TIPOGRAFÍA Y TAMAÑO
-====================================================== */
+/* ==========================================================================
+   04 · ENLACES INTERACTIVOS
+   ========================================================================== */
 
 .footer-artista,
 .footer-terminos {
@@ -107,330 +96,133 @@
 
     vertical-align: baseline;
 
-    color:
-        rgba(44, 44, 44, 0.45);
+    font: inherit;
 
-    font-family:
-        inherit;
+    letter-spacing: inherit;
 
-    font-size:
-        inherit;
+    text-transform: inherit;
 
-    font-weight:
-        inherit;
+    text-decoration: none;
 
-    line-height:
-        inherit;
-
-    letter-spacing:
-        inherit;
-
-    text-transform:
-        inherit;
-
-    text-decoration:
-        none;
-
-    cursor:
-        pointer;
+    cursor: pointer;
 
     /*
-     * La interacción se produce mediante una transición
-     * lenta y controlada, sin alterar de forma brusca
-     * la composición del footer.
+     * El texto conserva su mismo tono base.
+     * El degradado permite que el reflejo luminoso
+     * atraviese únicamente las letras.
      */
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(44, 44, 44, 0.45) 0%,
+            rgba(44, 44, 44, 0.45) 42%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(44, 44, 44, 0.45) 58%,
+            rgba(44, 44, 44, 0.45) 100%
+        );
+
+    background-size: 200% auto;
+
+    background-position: 200% center;
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
 
     transition:
         transform
-        0.5s
-        cubic-bezier(0.25, 1, 0.5, 1),
-
-        color
-        0.5s
-        cubic-bezier(0.25, 1, 0.5, 1),
-
-        letter-spacing
         0.5s
         cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
 
-/* ======================================================
-   05 · ESTADO HOVER
-   DESTACADO SUTIL Y ELEGANTE
-====================================================== */
+/* ==========================================================================
+   05 · HOVER
+   MICRO-INTERACCIÓN ELEGANTE
+   ========================================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    /*
-     * El enlace gana presencia sin parecer
-     * que cambia de tamaño de forma evidente.
-     */
-
-    color:
-        rgba(44, 44, 44, 0.72);
-
     transform:
-        scale(1.025);
-
-    /*
-     * Ligera apertura tipográfica.
-     * El cambio es deliberadamente mínimo.
-     */
-
-    letter-spacing:
-        0.165em;
-
-}
-
-
-/* ======================================================
-   06 · ESTADO ACTIVO
-   RESPUESTA AL CLIC
-====================================================== */
-
-.footer-artista:active,
-.footer-terminos:active {
-
-    color:
-        rgba(44, 44, 44, 0.78);
-
-}
-
-
-/* ======================================================
-   07 · BARRIDO DE LUZ
-   PREPARACIÓN DEL EFECTO
-====================================================== */
-
-.footer-artista::before,
-.footer-terminos::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        -20%;
-
-    left:
-        -160%;
-
-    width:
-        45%;
-
-    height:
-        140%;
-
-    /*
-     * Haz de luz extremadamente suave.
-     * No genera fondo ni recuadro.
-     */
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.025) 25%,
-            rgba(255, 255, 255, 0.11) 50%,
-            rgba(255, 255, 255, 0.025) 75%,
-            rgba(255, 255, 255, 0) 100%
-        );
-
-    transform:
-        skewX(-25deg);
-
-    pointer-events:
-        none;
-
-    opacity:
-        0;
-
-}
-
-
-/* ======================================================
-   08 · ACTIVACIÓN DEL BARRIDO
-====================================================== */
-
-.footer-artista.barrido::before,
-.footer-terminos.barrido::before {
-
-    opacity:
-        1;
+        translateY(-1px);
 
     animation:
-        footerSweep
-        0.95s
-        cubic-bezier(0.22, 1, 0.36, 1)
+        editorialSweep
+        1.2s
+        cubic-bezier(0.25, 1, 0.5, 1)
         forwards;
 
 }
 
 
-/* ======================================================
-   09 · RECORRIDO DE LA LUZ
-   IZQUIERDA → DERECHA
-====================================================== */
+/* ==========================================================================
+   06 · ACTIVACIÓN MEDIANTE JAVASCRIPT
+   ========================================================================== */
 
-@keyframes footerSweep {
+.footer-artista.barrido,
+.footer-terminos.barrido {
+
+    transform:
+        translateY(-1px);
+
+    animation:
+        editorialSweep
+        1.2s
+        cubic-bezier(0.25, 1, 0.5, 1)
+        forwards;
+
+}
+
+
+/* ==========================================================================
+   07 · ANIMACIÓN MATEMÁTICA DEL DESTELLO
+   ========================================================================== */
+
+@keyframes editorialSweep {
 
     0% {
 
-        left:
-            -160%;
+        background-position:
+            200% center;
 
     }
 
     100% {
 
-        left:
-            160%;
+        background-position:
+            -200% center;
 
     }
 
 }
 
 
-/* ======================================================
-   10 · ESTADO DURANTE EL BARRIDO
-====================================================== */
+/* ==========================================================================
+   08 · ACCESIBILIDAD
+   ========================================================================== */
 
-.footer-artista.barrido,
-.footer-terminos.barrido {
+@media (prefers-reduced-motion: reduce) {
 
-    color:
-        rgba(44, 44, 44, 0.74);
+    .footer-artista,
+    .footer-terminos {
 
-}
+        transition: none;
 
+        animation: none;
 
-/* ======================================================
-   11 · PÁGINA DE INICIO
-====================================================== */
-
-body.pagina-inicio .footer {
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    bottom:
-        0;
-
-    width:
-        100%;
+    }
 
 }
 
 
-/* ======================================================
-   12 · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer {
-
-    position:
-        relative;
-
-    width:
-        100%;
-
-    margin-top:
-        0;
-
-}
-
-
-/* ======================================================
-   13 · FOOTER SOBRE FONDO OSCURO
-====================================================== */
-
-body.pagina-legal .footer-copy {
-
-    color:
-        rgba(255, 255, 255, 0.48);
-
-}
-
-
-body.pagina-legal .footer-artista,
-body.pagina-legal .footer-terminos {
-
-    color:
-        rgba(255, 255, 255, 0.48);
-
-}
-
-
-/* ======================================================
-   14 · HOVER · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer-artista:hover,
-body.pagina-legal .footer-terminos:hover {
-
-    color:
-        rgba(255, 255, 255, 0.72);
-
-}
-
-
-/* ======================================================
-   15 · ESTADO ACTIVO · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer-artista:active,
-body.pagina-legal .footer-terminos:active {
-
-    color:
-        rgba(255, 255, 255, 0.78);
-
-}
-
-
-/* ======================================================
-   16 · BARRIDO · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer-artista::before,
-body.pagina-legal .footer-terminos::before {
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.025) 25%,
-            rgba(255, 255, 255, 0.10) 50%,
-            rgba(255, 255, 255, 0.025) 75%,
-            rgba(255, 255, 255, 0) 100%
-        );
-
-}
-
-
-/* ======================================================
-   17 · BARRIDO ACTIVO · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer-artista.barrido,
-body.pagina-legal .footer-terminos.barrido {
-
-    color:
-        rgba(255, 255, 255, 0.78);
-
-}
-
-
-/* ======================================================
-   18 · MÓVIL
-====================================================== */
+/* ==========================================================================
+   09 · MÓVIL
+   ========================================================================== */
 
 @media (max-width: 767px) {
 
@@ -450,59 +242,12 @@ body.pagina-legal .footer-terminos.barrido {
         letter-spacing:
             0.10em;
 
-        white-space:
-            nowrap;
-
-    }
-
-
-    .footer-artista:hover,
-    .footer-terminos:hover {
-
-        /*
-         * En móvil no existe hover real.
-         * Evitamos que la interacción táctil
-         * produzca transformaciones innecesarias.
-         */
-
-        transform:
-            none;
-
-        letter-spacing:
-            inherit;
-
     }
 
 }
 
 
-/* ======================================================
-   19 · ACCESIBILIDAD
-====================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .footer-artista,
-    .footer-terminos {
-
-        transition:
-            none;
-
-    }
-
-
-    .footer-artista::before,
-    .footer-terminos::before {
-
-        display:
-            none;
-
-    }
-
-}
-
-
-/* ======================================================
+/* ==========================================================================
    FIN · footer.css
-====================================================== */
+   ========================================================================== */
 
