@@ -249,6 +249,39 @@ a {
 
 
 /* ======================================================
+   IMAGEN BILLY · POSICIÓN ESCRITORIO
+====================================================== */
+
+@media (min-width: 768px) {
+
+    .imagen-billy-portada {
+
+        position: absolute !important;
+
+        top: 50% !important;
+
+        left: -100px !important;
+
+        width: auto !important;
+
+        height: 105% !important;
+
+        max-width: none !important;
+
+        max-height: none !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        transform: translateY(-50%) !important;
+
+    }
+
+}
+
+
+/* ======================================================
    FIN · styles.css
 ====================================================== */
 
