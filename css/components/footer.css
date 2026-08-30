@@ -7,7 +7,7 @@
 
 
 /* ==========================================================================
-   01 · CONTENEDOR PRINCIPAL
+   01 · FOOTER GENERAL
    ========================================================================== */
 
 .footer {
@@ -24,7 +24,7 @@
 
 
 /* ==========================================================================
-   02 · ESTRUCTURA DE CONTENIDO
+   02 · CONTENIDO
    ========================================================================== */
 
 .footer-contenido {
@@ -49,7 +49,8 @@
 
 
 /* ==========================================================================
-   03 · TIPOGRAFÍA MAESTRA
+   03 · LÍNEA PRINCIPAL
+   CONTENEDOR TIPOGRÁFICO MAESTRO
    ========================================================================== */
 
 .footer-copy {
@@ -84,8 +85,8 @@
 
 
 /* ==========================================================================
-   04 · ENLACES INTERACTIVOS
-   MISMA TIPOGRAFÍA · MISMO TAMAÑO · MISMO PESO
+   04 · ENLACES CLICABLES
+   MISMA TIPOGRAFÍA · MISMO TAMAÑO
    ========================================================================== */
 
 .footer-artista,
@@ -97,7 +98,11 @@
 
     vertical-align: baseline;
 
-    color: inherit;
+    margin: 0;
+
+    padding: 0;
+
+    color: rgba(44, 44, 44, 0.45);
 
     font-family: inherit;
 
@@ -115,62 +120,155 @@
 
     cursor: pointer;
 
-    outline: none;
+    /*
+     * Evita el recuadro de selección táctil
+     * en navegadores móviles.
+     */
 
     -webkit-tap-highlight-color: transparent;
 
+    /*
+     * Evita contornos automáticos de foco.
+
+     */
+
+    outline: none;
+
+    /*
+     * Microinteracción elegante:
+     * el enlace aumenta ligeramente de tamaño.
+     */
+
     transition:
-        color 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
 
 /* ==========================================================================
-   05 · SEPARADORES
-   PUNTO EDITORIAL · DISCRETO
+   05 · BARRIDO EDITORIAL
+   EL DESTELLO QUEDA CONFINADO AL ENLACE
    ========================================================================== */
 
-.footer-separador {
+.footer-artista::after,
+.footer-terminos::after {
 
-    display: inline-block;
+    content: "";
 
-    vertical-align: baseline;
+    position: absolute;
 
-    margin: 0 0.42em;
+    top: 0;
 
-    color: rgba(44, 44, 44, 0.25);
+    left: -140%;
 
-    font-family: inherit;
+    width: 80%;
 
-    font-size: inherit;
+    height: 100%;
 
-    font-weight: inherit;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.03) 35%,
+            rgba(255, 255, 255, 0.18) 50%,
+            rgba(255, 255, 255, 0.03) 65%,
+            rgba(255, 255, 255, 0) 100%
+        );
 
-    line-height: inherit;
+    transform: skewX(-25deg);
 
-    letter-spacing: inherit;
+    pointer-events: none;
 
-    user-select: none;
+    opacity: 0;
 
 }
 
 
 /* ==========================================================================
-   06 · HOVER
-   REALCE MUY SUTIL
+   06 · HOVER · ESCRITORIO
+   AMPLIACIÓN MUY SUTIL
    ========================================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color: rgba(44, 44, 44, 0.78);
+    color: rgba(44, 44, 44, 0.72);
+
+    transform: scale(1.03);
 
 }
 
 
 /* ==========================================================================
-   07 · FOCO
-   EVITA RECUADROS DEL NAVEGADOR
+   07 · BARRIDO AL HACER CLIC
+   ========================================================================== */
+
+.footer-artista.barrido::after,
+.footer-terminos.barrido::after {
+
+    opacity: 1;
+
+    animation:
+        footerSweep
+        0.95s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+}
+
+
+@keyframes footerSweep {
+
+    0% {
+
+        left: -140%;
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    85% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        left: 140%;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   08 · ESTADO DURANTE EL CLIC
+   TAMBIÉN FUNCIONA EN MÓVIL
+   ========================================================================== */
+
+.footer-artista.barrido,
+.footer-terminos.barrido {
+
+    color: rgba(44, 44, 44, 0.78);
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================================================
+   09 · FOCO
+   SIN RECTÁNGULOS DEL NAVEGADOR
    ========================================================================== */
 
 .footer-artista:focus,
@@ -190,87 +288,35 @@
 
 
 /* ==========================================================================
-   08 · EFECTO DE DESTELLO
-   SOLO SOBRE EL TEXTO
+   10 · SEPARADORES EDITORIALES
    ========================================================================== */
 
-.footer-artista::before,
-.footer-terminos::before {
+.footer-separador {
 
-    content: "";
+    display: inline-block;
 
-    position: absolute;
+    vertical-align: baseline;
 
-    top: 0;
+    margin:
+        0 0.42em;
 
-    left: -150%;
+    padding: 0;
 
-    width: 100%;
+    color: rgba(44, 44, 44, 0.24);
 
-    height: 100%;
+    font-family:
+        "Montserrat",
+        sans-serif;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.03) 35%,
-            rgba(255, 255, 255, 0.14) 50%,
-            rgba(255, 255, 255, 0.03) 65%,
-            rgba(255, 255, 255, 0) 100%
-        );
+    font-size: inherit;
 
-    transform: skewX(-25deg);
+    font-weight: 300;
 
-    pointer-events: none;
+    line-height: inherit;
 
-    opacity: 0;
+    letter-spacing: 0;
 
-}
-
-
-/* ==========================================================================
-   09 · ANIMACIÓN DEL DESTELLO
-   ========================================================================== */
-
-.footer-artista.barrido::before,
-.footer-terminos.barrido::before {
-
-    opacity: 1;
-
-    animation:
-        footerSweep
-        0.95s
-        cubic-bezier(0.22, 1, 0.36, 1)
-        forwards;
-
-}
-
-
-@keyframes footerSweep {
-
-    0% {
-
-        left: -150%;
-
-    }
-
-    100% {
-
-        left: 150%;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   10 · ESTADO DURANTE EL CLIC
-   ========================================================================== */
-
-.footer-artista.barrido,
-.footer-terminos.barrido {
-
-    color: rgba(44, 44, 44, 0.78);
+    user-select: none;
 
 }
 
@@ -342,22 +388,24 @@ body.pagina-legal .footer-terminos:hover {
 
     color: rgba(255, 255, 255, 0.72);
 
+    transform: scale(1.03);
+
 }
 
 
 /* ==========================================================================
-   15 · DESTELLO EN PÁGINA LEGAL
+   15 · BARRIDO EN PÁGINA LEGAL
    ========================================================================== */
 
-body.pagina-legal .footer-artista::before,
-body.pagina-legal .footer-terminos::before {
+body.pagina-legal .footer-artista::after,
+body.pagina-legal .footer-terminos::after {
 
     background:
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.02) 35%,
-            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.10) 50%,
             rgba(255, 255, 255, 0.02) 65%,
             rgba(255, 255, 255, 0) 100%
         );
@@ -372,7 +420,9 @@ body.pagina-legal .footer-terminos::before {
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
 
-    color: rgba(255, 255, 255, 0.76);
+    color: rgba(255, 255, 255, 0.78);
+
+    transform: scale(1.03);
 
 }
 
@@ -386,7 +436,7 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-contenido {
 
         padding:
-            1.5rem 1rem 2rem;
+            1.5rem 0.75rem 2rem;
 
     }
 
@@ -402,30 +452,40 @@ body.pagina-legal .footer-terminos.barrido {
     }
 
 
+    .footer-separador {
+
+        margin:
+            0 0.32em;
+
+    }
+
+
+    /*
+     * En móvil el toque activa la misma
+     * microampliación elegante.
+     */
+
+    .footer-artista:active,
+    .footer-terminos:active {
+
+        color: rgba(44, 44, 44, 0.72);
+
+        transform: scale(1.03);
+
+    }
+
+
+    /*
+     * El navegador móvil no debe mostrar
+     * ningún resaltado táctil.
+     */
+
     .footer-artista,
     .footer-terminos {
 
-        transform: none;
+        -webkit-tap-highlight-color: transparent;
 
-        transition:
-            color 0.35s ease;
-
-    }
-
-
-    .footer-artista:hover,
-    .footer-terminos:hover {
-
-        transform: none;
-
-    }
-
-
-    .footer-separador {
-
-        margin-left: 0.32em;
-
-        margin-right: 0.32em;
+        outline: none;
 
     }
 
@@ -446,8 +506,8 @@ body.pagina-legal .footer-terminos.barrido {
     }
 
 
-    .footer-artista::before,
-    .footer-terminos::before {
+    .footer-artista::after,
+    .footer-terminos::after {
 
         display: none;
 
