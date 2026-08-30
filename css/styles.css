@@ -1,12 +1,52 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    styles.css
-   ESTRUCTURA GLOBAL · BASE Y PORTADA
+   PORTADA · DISEÑO EDITORIAL
 ====================================================== */
 
 
 /* ======================================================
-   01 · RESET
+   01 · VARIABLES
+====================================================== */
+
+:root {
+
+    /* COLORES */
+
+    --color-fondo: #e8e6e1;
+
+    --color-texto: #202020;
+
+    --color-texto-suave: #5f5f5c;
+
+
+    /* TIPOGRAFÍA */
+
+    --fuente-titulo:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    --fuente-sans:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+
+    /* ESPACIADO */
+
+    --espacio-subtitulo: 0.42em;
+
+
+    /* ANIMACIÓN */
+
+    --duracion-imagen: 28s;
+
+}
+
+
+/* ======================================================
+   02 · RESET
 ====================================================== */
 
 *,
@@ -18,7 +58,25 @@
 }
 
 
-html,
+html {
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-size: 16px;
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+
 body {
 
     width: 100%;
@@ -29,23 +87,11 @@ body {
 
     padding: 0;
 
-}
+    color: var(--color-texto);
 
+    background: var(--color-fondo);
 
-html {
-
-    font-size: 16px;
-
-}
-
-
-body {
-
-    color: #202020;
-
-    font-family:
-        "Montserrat",
-        sans-serif;
+    font-family: var(--fuente-sans);
 
     overflow: hidden;
 
@@ -53,7 +99,7 @@ body {
 
 
 /* ======================================================
-   02 · ENLACES
+   03 · ENLACES
 ====================================================== */
 
 a {
@@ -66,7 +112,7 @@ a {
 
 
 /* ======================================================
-   03 · PORTADA
+   04 · PORTADA
 ====================================================== */
 
 .pagina-inicio {
@@ -77,7 +123,7 @@ a {
 
     height: 100vh;
 
-    min-height: 100vh;
+    min-height: 100svh;
 
     margin: 0;
 
@@ -85,17 +131,56 @@ a {
 
     overflow: hidden;
 
+    isolation: isolate;
+
     background:
+
         url("../images/fondos/escritorio/fondo-general-desktop.jpg")
+
         center center
+
         / cover
+
         no-repeat;
 
 }
 
 
 /* ======================================================
-   04 · HERO
+   05 · CAPA DE ATMÓSFERA
+====================================================== */
+
+.pagina-inicio::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,0.04) 0%,
+
+            rgba(255,255,255,0) 45%,
+
+            rgba(0,0,0,0.025) 100%
+
+        );
+
+}
+
+
+/* ======================================================
+   06 · HERO
 ====================================================== */
 
 .hero {
@@ -106,7 +191,7 @@ a {
 
     height: 100%;
 
-    min-height: 100vh;
+    min-height: 100svh;
 
     margin: 0;
 
@@ -114,14 +199,12 @@ a {
 
     overflow: hidden;
 
-    background: transparent;
-
 }
 
 
 /* ======================================================
-   05 · IMAGEN DE BILLY · MARCA DE AGUA
-   ESCRITORIO
+   07 · IMAGEN DE BILLY
+   PRESENCIA FOTOGRÁFICA
 ====================================================== */
 
 .imagen-billy-portada {
@@ -149,17 +232,64 @@ a {
     padding: 0;
 
     transform:
-        translateY(-50%);
+
+        translateY(-50%)
+
+        scale(1.015);
+
+    transform-origin: center center;
 
     pointer-events: none;
 
     user-select: none;
 
+    -webkit-user-drag: none;
+
+    will-change: transform;
+
+    animation:
+
+        presenciaBilly var(--duracion-imagen)
+
+        ease-in-out
+
+        infinite alternate;
+
 }
 
 
 /* ======================================================
-   06 · CONTENIDO CENTRAL
+   08 · ANIMACIÓN FOTOGRÁFICA
+   MUY SUTIL
+====================================================== */
+
+@keyframes presenciaBilly {
+
+    from {
+
+        transform:
+
+            translateY(-50%)
+
+            scale(1.015);
+
+    }
+
+    to {
+
+        transform:
+
+            translateY(-50%)
+
+            scale(1.035);
+
+    }
+
+}
+
+
+/* ======================================================
+   09 · CONTENIDO CENTRAL
 ====================================================== */
 
 .contenido {
@@ -172,7 +302,7 @@ a {
 
     z-index: 5;
 
-    width: 90%;
+    width: min(90%, 1200px);
 
     margin: 0;
 
@@ -181,62 +311,200 @@ a {
     text-align: center;
 
     transform:
+
         translate(-50%, -50%);
 
 }
 
 
+/* ======================================================
+   10 · NOMBRE
+====================================================== */
+
 .contenido h1 {
 
     margin: 0;
 
-    color: #202020;
+    padding: 0;
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulo);
 
     font-size:
-        clamp(4rem, 9vw, 8rem);
+
+        clamp(
+
+            4.2rem,
+
+            10vw,
+
+            9rem
+
+        );
 
     font-weight: 500;
 
-    line-height: 0.9;
+    line-height: 0.82;
 
-    letter-spacing: 0.01em;
+    letter-spacing: -0.025em;
 
-}
-
-
-.subtitulo {
-
-    margin-top: 1.25rem;
-
-    color: #202020;
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size:
-        clamp(0.65rem, 1vw, 0.85rem);
-
-    font-weight: 300;
-
-    line-height: 1.2;
-
-    letter-spacing: 0.45em;
+    text-rendering: optimizeLegibility;
 
 }
 
 
 /* ======================================================
-   07 · MÓVIL
-   La portada móvil se mantiene centrada.
-   La rediseñaremos después.
+   11 · SUBTÍTULO
+====================================================== */
+
+.subtitulo {
+
+    margin:
+
+        1.7rem
+
+        0
+
+        0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size:
+
+        clamp(
+
+            0.58rem,
+
+            0.85vw,
+
+            0.78rem
+
+        );
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    letter-spacing: var(--espacio-subtitulo);
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+/* ======================================================
+   12 · REDUCCIÓN DE MOVIMIENTO
+   ACCESIBILIDAD
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .imagen-billy-portada {
+
+        animation: none;
+
+    }
+
+}
+
+
+/* ======================================================
+   13 · PANTALLAS GRANDES
+====================================================== */
+
+@media (min-width: 1600px) {
+
+    .imagen-billy-portada {
+
+        left: -150px;
+
+        height: 108%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size: clamp(
+
+            7rem,
+
+            9vw,
+
+            10rem
+
+        );
+
+    }
+
+}
+
+
+/* ======================================================
+   14 · TABLET
+====================================================== */
+
+@media (min-width: 768px)
+       and (max-width: 1199px) {
+
+    .imagen-billy-portada {
+
+        left: -230px;
+
+        height: 105%;
+
+    }
+
+
+    .contenido {
+
+        width: 92%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size:
+
+            clamp(
+
+                4.5rem,
+
+                10vw,
+
+                7rem
+
+            );
+
+    }
+
+}
+
+
+/* ======================================================
+   15 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
+
+    .pagina-inicio {
+
+        min-height: 100svh;
+
+        background-position:
+
+            center center;
+
+    }
+
 
     .imagen-billy-portada {
 
@@ -253,7 +521,108 @@ a {
         max-height: none;
 
         transform:
-            translate(-50%, -50%);
+
+            translate(-50%, -50%)
+
+            scale(1.015);
+
+        animation-name: presenciaBillyMovil;
+
+    }
+
+
+    .contenido {
+
+        top: 50%;
+
+        width: 90%;
+
+    }
+
+
+    .contenido h1 {
+
+        font-size:
+
+            clamp(
+
+                3.6rem,
+
+                17vw,
+
+                5.5rem
+
+            );
+
+        line-height: 0.84;
+
+        letter-spacing: -0.025em;
+
+    }
+
+
+    .subtitulo {
+
+        margin-top: 1.35rem;
+
+        font-size: 0.55rem;
+
+        letter-spacing: 0.32em;
+
+        white-space: normal;
+
+    }
+
+}
+
+
+/* ======================================================
+   16 · ANIMACIÓN MÓVIL
+====================================================== */
+
+@keyframes presenciaBillyMovil {
+
+    from {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.015);
+
+    }
+
+    to {
+
+        transform:
+
+            translate(-50%, -50%)
+
+            scale(1.035);
+
+    }
+
+}
+
+
+/* ======================================================
+   17 · MÓVILES MUY PEQUEÑOS
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .contenido h1 {
+
+        font-size: 3.35rem;
+
+    }
+
+
+    .subtitulo {
+
+        font-size: 0.5rem;
+
+        letter-spacing: 0.28em;
 
     }
 
@@ -263,5 +632,3 @@ a {
 /* ======================================================
    FIN · styles.css
 ====================================================== */
-
-
