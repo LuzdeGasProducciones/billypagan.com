@@ -1,7 +1,7 @@
-```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   styles.css · ESTRUCTURA GLOBAL
+   styles.css
+   ESTRUCTURA GLOBAL · BASE Y PORTADA
 ====================================================== */
 
 
@@ -15,6 +15,7 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     width: 100%;
@@ -23,9 +24,11 @@ body {
     padding: 0;
 }
 
+
 html {
     font-size: 16px;
 }
+
 
 body {
     color: #202020;
@@ -52,10 +55,8 @@ a {
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background: #f5f5f5;
 }
 
 
@@ -68,9 +69,12 @@ a {
     width: 100%;
     height: 100vh;
     min-height: 100vh;
-    background-image: url("../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-image:
+        url("../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-position: center;
     background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -87,13 +91,18 @@ a {
     width: 90%;
     margin: 0;
     padding: 0;
+
     text-align: center;
+
     transform: translate(-50%, -50%);
 }
 
+
 .contenido h1 {
     margin: 0;
+
     color: #202020;
+
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(4rem, 9vw, 8rem);
     font-weight: 500;
@@ -101,9 +110,12 @@ a {
     letter-spacing: 0.01em;
 }
 
+
 .subtitulo {
     margin-top: 1.25rem;
+
     color: #202020;
+
     font-family: "Montserrat", sans-serif;
     font-size: clamp(0.65rem, 1vw, 0.85rem);
     font-weight: 300;
@@ -113,15 +125,7 @@ a {
 
 
 /* ======================================================
-   06 · PÁGINAS INTERIORES
-====================================================== */
-
-body:not(.pagina-inicio) {
-    min-height: 100vh;
-}
-
-
-/* ======================================================
    FIN · styles.css
 ====================================================== */
-```
+
+
