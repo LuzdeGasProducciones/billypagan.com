@@ -1,7 +1,8 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE · FOOTER GLOBAL (Premium Slow Sweep Light)
+   COMPONENTE · FOOTER GLOBAL
+   PREMIUM MINIMAL INTERACTION
 ====================================================== */
 
 
@@ -95,7 +96,15 @@
 
     vertical-align: baseline;
 
-    font: inherit;
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: inherit;
+
+    font-weight: 300;
+
+    line-height: inherit;
 
     letter-spacing: inherit;
 
@@ -108,51 +117,49 @@
     cursor: pointer;
 
     transition:
-        color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
 
 /* ======================================================
-   05 · NOMBRE DEL ARTISTA
+   05 · ESTADO NORMAL
 ====================================================== */
 
-.footer-artista {
+/*
+   Todos los elementos parten exactamente
+   del mismo tratamiento tipográfico.
+*/
 
-    color: rgba(44, 44, 44, 0.80);
-
-    font-weight: 300;
-
-}
-
-
-/* ======================================================
-   06 · TÉRMINOS
-====================================================== */
-
+.footer-artista,
 .footer-terminos {
 
-    color: rgba(44, 44, 44, 0.45);
-
-    font-weight: 300;
+    color:
+        rgba(44, 44, 44, 0.45);
 
 }
 
 
 /* ======================================================
-   07 · REALCE AL PASAR EL RATÓN
+   06 · REALCE MÍNIMO AL PASAR EL CURSOR
 ====================================================== */
+
+/*
+   El cambio debe sentirse más que verse:
+   apenas aumenta la definición del texto.
+*/
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color: #111111;
+    color:
+        rgba(44, 44, 44, 0.68);
 
 }
 
 
 /* ======================================================
-   08 · BARRIDO DE LUZ
+   07 · BARRIDO DE LUZ
 ====================================================== */
 
 .footer-artista::before,
@@ -173,13 +180,14 @@
     background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.12) 20%,
-        rgba(255, 255, 255, 0.40) 50%,
-        rgba(255, 255, 255, 0.12) 80%,
+        rgba(255, 255, 255, 0.08) 20%,
+        rgba(255, 255, 255, 0.28) 50%,
+        rgba(255, 255, 255, 0.08) 80%,
         rgba(255, 255, 255, 0) 100%
     );
 
-    transform: skewX(-30deg);
+    transform:
+        skewX(-30deg);
 
     pointer-events: none;
 
@@ -189,7 +197,7 @@
 
 
 /* ======================================================
-   09 · ANIMACIÓN DE BARRIDO EDITORIAL
+   08 · ANIMACIÓN DEL BARRIDO
 ====================================================== */
 
 .footer-artista.barrido::before,
@@ -224,19 +232,20 @@
 
 
 /* ======================================================
-   10 · RESPUESTA DURANTE EL CLIC
+   09 · ESTADO DURANTE EL CLIC
 ====================================================== */
 
 .footer-artista.barrido,
 .footer-terminos.barrido {
 
-    color: #000000;
+    color:
+        rgba(20, 20, 20, 0.78);
 
 }
 
 
 /* ======================================================
-   11 · PÁGINA DE INICIO
+   10 · PÁGINA DE INICIO
 ====================================================== */
 
 body.pagina-inicio .footer {
@@ -253,7 +262,7 @@ body.pagina-inicio .footer {
 
 
 /* ======================================================
-   12 · PÁGINA LEGAL
+   11 · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer {
@@ -268,7 +277,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   13 · FOOTER · PÁGINA LEGAL · FONDO OSCURO
+   12 · FOOTER LEGAL · FONDO OSCURO
 ====================================================== */
 
 body.pagina-legal .footer-copy {
@@ -279,14 +288,7 @@ body.pagina-legal .footer-copy {
 }
 
 
-body.pagina-legal .footer-artista {
-
-    color:
-        rgba(255, 255, 255, 0.82);
-
-}
-
-
+body.pagina-legal .footer-artista,
 body.pagina-legal .footer-terminos {
 
     color:
@@ -296,20 +298,20 @@ body.pagina-legal .footer-terminos {
 
 
 /* ======================================================
-   14 · REALCE · PÁGINA LEGAL
+   13 · REALCE MÍNIMO · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista:hover,
 body.pagina-legal .footer-terminos:hover {
 
     color:
-        #ffffff;
+        rgba(255, 255, 255, 0.72);
 
 }
 
 
 /* ======================================================
-   15 · BARRIDO · PÁGINA LEGAL
+   14 · BARRIDO · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista::before,
@@ -318,9 +320,9 @@ body.pagina-legal .footer-terminos::before {
     background: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.10) 20%,
-        rgba(255, 255, 255, 0.35) 50%,
-        rgba(255, 255, 255, 0.10) 80%,
+        rgba(255, 255, 255, 0.07) 20%,
+        rgba(255, 255, 255, 0.24) 50%,
+        rgba(255, 255, 255, 0.07) 80%,
         rgba(255, 255, 255, 0) 100%
     );
 
@@ -328,20 +330,20 @@ body.pagina-legal .footer-terminos::before {
 
 
 /* ======================================================
-   16 · RESPUESTA DURANTE EL CLIC · LEGAL
+   15 · CLIC · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
 
     color:
-        #ffffff;
+        rgba(255, 255, 255, 0.82);
 
 }
 
 
 /* ======================================================
-   17 · MÓVIL
+   16 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -371,7 +373,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ======================================================
-   18 · ACCESIBILIDAD
+   17 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
