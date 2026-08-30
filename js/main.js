@@ -1,4 +1,3 @@
-```javascript
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    menu.js
@@ -147,4 +146,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
-```
