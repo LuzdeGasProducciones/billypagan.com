@@ -21,14 +21,17 @@
 
     padding: 1.2rem 2.5rem;
 
-    background: rgba(36, 36, 36, 0.38);
+    background:
+        rgba(36, 36, 36, 0.38);
 
-    backdrop-filter: blur(8px);
+    backdrop-filter:
+        blur(8px);
 
-    -webkit-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter:
+        blur(8px);
 
-    color: rgba(255, 255, 255, 0.72);
-
+    color:
+        rgba(255, 255, 255, 0.72);
 }
 
 
@@ -51,7 +54,6 @@
     margin: 0 auto;
 
     box-sizing: border-box;
-
 }
 
 
@@ -67,18 +69,23 @@
         "Montserrat",
         sans-serif;
 
-    font-size: 0.55rem;
+    font-size:
+        0.55rem;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
-    letter-spacing: 0.12em;
+    letter-spacing:
+        0.12em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    color: rgba(255, 255, 255, 0.62);
-
+    color:
+        rgba(255, 255, 255, 0.62);
 }
 
 
@@ -91,9 +98,11 @@
     color:
         rgba(255, 255, 255, 0.82);
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    font-weight: 400;
+    font-weight:
+        400;
 
     transition:
         opacity 0.3s ease;
@@ -102,7 +111,8 @@
 
 .footer-artista:hover {
 
-    opacity: 0.65;
+    opacity:
+        0.65;
 }
 
 
@@ -115,19 +125,24 @@
     color:
         rgba(255, 255, 255, 0.62);
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
     font-family:
         "Montserrat",
         sans-serif;
 
-    font-size: 0.55rem;
+    font-size:
+        0.55rem;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    letter-spacing: 0.12em;
+    letter-spacing:
+        0.12em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
     transition:
         opacity 0.3s ease;
@@ -136,7 +151,8 @@
 
 .footer-terminos:hover {
 
-    opacity: 0.65;
+    opacity:
+        0.65;
 }
 
 
@@ -145,20 +161,28 @@
 ====================================================== */
 
 /*
-   En la portada el footer queda después
-   del contenido principal.
+   La portada ocupa exactamente una pantalla.
 
-   No es fixed.
-   No es sticky.
+   El footer permanece visible en la parte inferior
+   sin generar scroll y sin modificar la composición
+   del hero.
+
+   NO es sticky.
 */
 
 body.pagina-inicio .footer {
 
-    position: relative;
+    position: fixed;
+
+    left: 0;
+
+    bottom: 0;
 
     width: 100%;
 
-    margin-top: 0;
+    margin: 0;
+
+    z-index: 30;
 }
 
 
@@ -167,11 +191,10 @@ body.pagina-inicio .footer {
 ====================================================== */
 
 /*
-   En términos y condiciones el footer forma
-   parte del documento.
+   En términos y condiciones el footer forma parte
+   normal del documento.
 
-   Aparece únicamente después de todo
-   el contenido legal.
+   Aparece después de todo el contenido legal.
 
    NO es fixed.
    NO es sticky.
@@ -181,9 +204,15 @@ body.pagina-legal .footer {
 
     position: relative;
 
+    left: auto;
+
+    bottom: auto;
+
     width: 100%;
 
     margin-top: 0;
+
+    z-index: 20;
 
     background:
         rgba(36, 36, 36, 0.42);
@@ -194,7 +223,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   08 · ASEGURAR VISIBILIDAD
+   08 · VISIBILIDAD
 ====================================================== */
 
 body.pagina-inicio .footer,
