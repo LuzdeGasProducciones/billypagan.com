@@ -31,10 +31,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       03. ABRIR / CERRAR MENÚ
+       03. FUNCIÓN · CERRAR MENÚ
+    ================================================== */
+
+    const cerrarMenu = () => {
+
+        menuMovil.classList.remove(
+            "abierto"
+        );
+
+
+        hamburguesa.classList.remove(
+            "abierta"
+        );
+
+
+        hamburguesa.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        hamburguesa.setAttribute(
+            "aria-label",
+            "Abrir menú"
+        );
+
+    };
+
+
+    /* ==================================================
+       04. ABRIR / CERRAR MENÚ
     ================================================== */
 
     hamburguesa.addEventListener("click", () => {
+
 
         const abierto =
             menuMovil.classList.toggle("abierto");
@@ -71,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       04. CERRAR AL SELECCIONAR UNA OPCIÓN
+       05. CERRAR AL SELECCIONAR UNA OPCIÓN
     ================================================== */
 
     const enlaces =
@@ -82,26 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         enlace.addEventListener("click", () => {
 
-            menuMovil.classList.remove(
-                "abierto"
-            );
-
-
-            hamburguesa.classList.remove(
-                "abierta"
-            );
-
-
-            hamburguesa.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-
-            hamburguesa.setAttribute(
-                "aria-label",
-                "Abrir menú"
-            );
+            cerrarMenu();
 
         });
 
@@ -109,40 +121,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       05. CERRAR CON ESC
+       06. CERRAR CON ESC
     ================================================== */
 
     document.addEventListener("keydown", event => {
+
 
         if (
             event.key === "Escape" &&
             menuMovil.classList.contains("abierto")
         ) {
 
-            menuMovil.classList.remove(
-                "abierto"
-            );
-
-
-            hamburguesa.classList.remove(
-                "abierta"
-            );
-
-
-            hamburguesa.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-
-            hamburguesa.setAttribute(
-                "aria-label",
-                "Abrir menú"
-            );
+            cerrarMenu();
 
         }
 
     });
+
+
+    /* ==================================================
+       07. CERRAR AL CAMBIAR A HORIZONTAL
+    ================================================== */
+
+    const comprobarOrientacion = () => {
+
+
+        if (
+            window.innerWidth <= 767 &&
+            window.matchMedia("(orientation: landscape)").matches
+        ) {
+
+            cerrarMenu();
+
+        }
+
+
+        if (window.innerWidth >= 768) {
+
+            cerrarMenu();
+
+        }
+
+    };
+
+
+    /* ==================================================
+       08. CAMBIO DE TAMAÑO / ORIENTACIÓN
+    ================================================== */
+
+    window.addEventListener(
+        "resize",
+        comprobarOrientacion
+    );
 
 
 });
