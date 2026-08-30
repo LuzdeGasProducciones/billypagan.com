@@ -28,7 +28,7 @@
 
 
 /* ======================================================
-   02 · FOOTER GENERAL
+   02 · FOOTER
 ====================================================== */
 
 .footer {
@@ -73,10 +73,10 @@
         100%;
 
     margin:
-        0 auto;
+        0;
 
     padding:
-        2rem 2rem 3rem;
+        1.5rem 2rem 2.5rem;
 
     box-sizing:
         border-box;
@@ -88,7 +88,7 @@
 
 
 /* ======================================================
-   04 · COPYRIGHT
+   04 · TEXTO
 ====================================================== */
 
 .footer-copy {
@@ -121,7 +121,7 @@
         0.16em;
 
     text-transform:
-        uppercase;
+        none;
 
     white-space:
         nowrap;
@@ -139,15 +139,6 @@
 .footer-artista,
 .footer-terminos {
 
-    display:
-        inline;
-
-    margin:
-        0;
-
-    padding:
-        0;
-
     color:
         var(--footer-color);
 
@@ -164,9 +155,6 @@
         inherit;
 
     letter-spacing:
-        inherit;
-
-    text-transform:
         inherit;
 
     text-decoration:
@@ -271,7 +259,7 @@
 
 
 /* ======================================================
-   09 · PÁGINA DE INICIO
+   09 · PORTADA
 ====================================================== */
 
 body.pagina-inicio .footer {
@@ -318,7 +306,7 @@ body.pagina-legal .footer {
     .footer-contenido {
 
         padding:
-            1.5rem 1rem 2rem;
+            1.2rem 1rem 2rem;
 
     }
 
@@ -329,7 +317,7 @@ body.pagina-legal .footer {
             0.48rem;
 
         letter-spacing:
-            0.12em;
+            0.10em;
 
         white-space:
             normal;
