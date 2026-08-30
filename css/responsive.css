@@ -226,6 +226,97 @@
 
     }
 
+
+    /* --------------------------------------------------
+       FOOTER · MÓVIL VERTICAL
+       Dos líneas centradas
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer {
+
+        padding: 0 0.75rem 1rem;
+
+        font-size: 0.48rem;
+
+        line-height: 1.5;
+
+        letter-spacing: 0.045em;
+
+    }
+
+
+    .pagina-inicio .footer-contenido {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 0.2rem;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+        white-space: normal;
+
+    }
+
+
+    .pagina-inicio .footer-copy {
+
+        display: block;
+
+        width: 100%;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
+
+    .pagina-inicio .footer-terminos {
+
+        display: block;
+
+        width: 100%;
+
+        margin: 0;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+    }
+
+
+    /* --------------------------------------------------
+       FOOTER · ENLACES TÁCTILES
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer a:hover {
+
+        color: rgba(32, 32, 32, 0.55);
+
+        letter-spacing: 0.045em;
+
+    }
+
+
+    .pagina-inicio .footer a::after {
+
+        display: none;
+
+    }
+
 }
 
 
@@ -429,7 +520,15 @@
 
     .pagina-inicio .footer-contenido {
 
-        display: block;
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-wrap: nowrap;
 
         width: 100%;
 
@@ -461,9 +560,29 @@
 
         width: auto;
 
-        margin-left: 0.35rem;
+        margin: 0 0 0 0.35rem;
 
         white-space: nowrap;
+
+    }
+
+
+    /* --------------------------------------------------
+       FOOTER · ENLACES TÁCTILES
+    -------------------------------------------------- */
+
+    .pagina-inicio .footer a:hover {
+
+        color: rgba(32, 32, 32, 0.55);
+
+        letter-spacing: 0.045em;
+
+    }
+
+
+    .pagina-inicio .footer a::after {
+
+        display: none;
 
     }
 
