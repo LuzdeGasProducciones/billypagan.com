@@ -98,6 +98,8 @@ a {
 
     min-height: 100vh;
 
+    overflow: hidden;
+
     background-image:
         url("../images/fondos/escritorio/fondo-general-desktop.jpg");
 
@@ -113,12 +115,54 @@ a {
 
 
 /* ======================================================
-   05 · CONTENIDO CENTRAL
+   05 · IMAGEN DE BILLY · MARCA DE AGUA
+====================================================== */
+
+.imagen-billy-portada {
+
+    position: absolute;
+
+    z-index: 1;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: auto;
+
+    height: 100%;
+
+    max-width: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: block;
+
+    transform:
+        translate(-50%, -50%);
+
+    object-fit: contain;
+
+    object-position: center center;
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+
+/* ======================================================
+   06 · CONTENIDO CENTRAL
 ====================================================== */
 
 .contenido {
 
     position: absolute;
+
+    z-index: 5;
 
     top: 50%;
 
@@ -185,3 +229,4 @@ a {
 /* ======================================================
    FIN · styles.css
 ====================================================== */
+
