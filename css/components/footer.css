@@ -305,5 +305,31 @@
 
 
 /* ======================================================
+   10. MÓVIL · ELIMINAR SOMBRA DE PULSACIÓN
+====================================================== */
+
+.footer a {
+
+    -webkit-tap-highlight-color: transparent;
+
+    tap-highlight-color: transparent;
+
+    outline: none;
+
+}
+
+
+.footer a:active {
+
+    outline: none;
+
+    background-color: transparent;
+
+    box-shadow: none;
+
+}
+
+
+/* ======================================================
    FIN · footer.css
 ====================================================== */
