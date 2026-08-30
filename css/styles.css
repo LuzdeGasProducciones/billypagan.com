@@ -170,6 +170,67 @@ body:not(.pagina-inicio) {
 }
 
 
+/* --------------------------------------------------
+   FOOTER · MÓVIL HORIZONTAL
+   Una sola línea como escritorio
+-------------------------------------------------- */
+
+.pagina-inicio .footer {
+
+    padding: 0 1rem 1rem;
+
+    font-size: 0.48rem;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.045em;
+
+    text-align: center;
+
+}
+
+
+.pagina-inicio .footer-contenido {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+
+.pagina-inicio .footer-copy {
+
+    display: inline;
+
+    width: auto;
+
+    margin: 0;
+
+    white-space: nowrap;
+
+}
+
+
+.pagina-inicio .footer-terminos {
+
+    display: inline;
+
+    width: auto;
+
+    margin-left: 0.35rem;
+
+    white-space: nowrap;
+
+}
+
+
 /* ======================================================
    FIN · styles.css
 ====================================================== */
