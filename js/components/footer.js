@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       BARRIDO AL HACER CLIC
+       BARRIDO EDITORIAL AL HACER CLIC
     ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Si el enlace ya está ejecutando
-             * el barrido, ignoramos el nuevo clic.
+             * el efecto, evitamos nuevos clics.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -50,14 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Detenemos temporalmente la navegación.
+             * Detenemos temporalmente la navegación
+             * para permitir que el destello termine.
              */
 
             event.preventDefault();
 
 
             /*
-             * Reiniciamos la animación.
+             * Reiniciamos cualquier animación anterior.
              */
 
             enlace.classList.remove("barrido");
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Forzamos un nuevo cálculo de layout
-             * para reiniciar correctamente el efecto.
+             * para garantizar el reinicio de la animación.
              */
 
             void enlace.offsetWidth;
@@ -86,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Nos aseguramos de reaccionar únicamente
-                 * a nuestra animación footerSweep.
+                 * Solo reaccionamos a la animación
+                 * específica del barrido editorial.
                  */
 
                 if (evento.animationName !== "footerSweep") {
@@ -98,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Eliminamos el listener.
+                 * Eliminamos el listener para evitar
+                 * ejecuciones posteriores.
                  */
 
                 enlace.removeEventListener(
@@ -108,7 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Navegamos al destino.
+                 * Limpiamos el estado visual.
+
+                 * La navegación se produce inmediatamente
+                 * después de terminar el efecto.
+                 */
+
+                enlace.classList.remove("barrido");
+
+
+                /*
+                 * Navegamos al destino original.
                  */
 
                 window.location.href = destino;
@@ -117,7 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Esperamos al final real de la animación.
+             * Escuchamos la finalización real
+             * de la animación CSS.
              */
 
             enlace.addEventListener(
@@ -133,3 +146,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
