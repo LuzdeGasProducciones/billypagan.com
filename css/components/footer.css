@@ -121,8 +121,16 @@
     cursor: pointer;
 
     /*
-     * Elimina el rectángulo de selección táctil
-     * que aparece en algunos navegadores móviles.
+     * MUY IMPORTANTE:
+     * recorta el destello exactamente al área
+     * de cada enlace.
+     */
+
+    overflow: hidden;
+
+    /*
+     * Evita el recuadro táctil en móviles.
+
      */
 
     -webkit-tap-highlight-color: transparent;
@@ -130,8 +138,8 @@
     outline: none;
 
     /*
-     * La ampliación se produce únicamente
-     * mediante una microinteracción.
+     * Microampliación elegante.
+
      */
 
     transition:
@@ -142,7 +150,8 @@
 
 
 /* ==========================================================================
-   05 · DESTELLO SOBRE LAS LETRAS
+   05 · DESTELLO
+   EXCLUSIVAMENTE DENTRO DE CADA ENLACE
    ========================================================================== */
 
 .footer-artista::after,
@@ -154,17 +163,11 @@
 
     top: 0;
 
-    left: -160%;
+    left: -120%;
 
-    width: 100%;
+    width: 55%;
 
     height: 100%;
-
-    /*
-     * Banda de luz muy estrecha.
-     * El overflow del propio enlace hace que
-     * el efecto permanezca dentro de la palabra.
-     */
 
     background:
         linear-gradient(
@@ -187,7 +190,6 @@
 
 /* ==========================================================================
    06 · HOVER · ESCRITORIO
-   AMPLIACIÓN MUY SUTIL
    ========================================================================== */
 
 .footer-artista:hover,
@@ -201,7 +203,7 @@
 
 
 /* ==========================================================================
-   07 · BARRIDO AL HACER CLIC
+   07 · BARRIDO
    ========================================================================== */
 
 .footer-artista.barrido::after,
@@ -222,13 +224,13 @@
 
     0% {
 
-        left: -160%;
+        left: -120%;
 
         opacity: 0;
 
     }
 
-    12% {
+    10% {
 
         opacity: 1;
 
@@ -240,7 +242,7 @@
 
     }
 
-    88% {
+    90% {
 
         opacity: 1;
 
@@ -248,7 +250,7 @@
 
     100% {
 
-        left: 160%;
+        left: 120%;
 
         opacity: 0;
 
@@ -466,8 +468,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * En móvil conservamos la ampliación
-     * durante el toque.
+     * Mantiene la ampliación al tocar.
      */
 
     .footer-artista:active,
@@ -481,8 +482,8 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * Elimina completamente el resaltado
-     * táctil del navegador.
+     * Sin resaltado táctil del navegador.
+
      */
 
     .footer-artista,
