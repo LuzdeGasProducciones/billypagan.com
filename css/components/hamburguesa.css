@@ -1,7 +1,8 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    hamburguesa.css
-   COMPONENTE · MENÚ HAMBURGUESA ANIMADO
+   COMPONENTE · MENÚ HAMBURGUESA
 ====================================================== */
 
 
@@ -11,14 +12,15 @@
 
 .hamburguesa {
 
+    /* Oculta por defecto */
     display: none;
 
-    position: absolute;
+    position: fixed;
 
     top: 1.5rem;
     right: 1.5rem;
 
-    z-index: 50;
+    z-index: 100;
 
     width: 30px;
     height: 20px;
@@ -38,9 +40,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-
-    transition:
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
@@ -96,7 +95,7 @@
 
 
 /* ======================================================
-   04. ESTADO ABIERTO · TRANSFORMACIÓN
+   04. ESTADO ABIERTO
 ====================================================== */
 
 .hamburguesa.abierta span:nth-child(1) {
@@ -132,18 +131,7 @@
 
 
 /* ======================================================
-   05. ESTADO ABIERTO · BOTÓN
-====================================================== */
-
-.hamburguesa.abierta {
-
-    transform: rotate(0deg);
-
-}
-
-
-/* ======================================================
-   06. ACCESIBILIDAD
+   05. ACCESIBILIDAD
 ====================================================== */
 
 .hamburguesa:focus-visible {
@@ -158,3 +146,4 @@
 /* ======================================================
    FIN · hamburguesa.css
 ====================================================== */
+```
