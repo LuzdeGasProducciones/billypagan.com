@@ -59,7 +59,7 @@
 
     padding: 0;
 
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(44, 44, 44, 0.45);
 
     font-family:
         "Montserrat",
@@ -88,7 +88,11 @@
 
 .footer-artista {
 
-    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+
+    display: inline-block;
+
+    color: rgba(44, 44, 44, 0.80);
 
     font: inherit;
 
@@ -101,10 +105,7 @@
     text-decoration: none;
 
     transition:
-        color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-        text-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.15s ease,
-        transform 0.2s ease;
+        color 0.35s ease;
 
 }
 
@@ -115,7 +116,11 @@
 
 .footer-terminos {
 
-    color: rgba(255, 255, 255, 0.45);
+    position: relative;
+
+    display: inline-block;
+
+    color: rgba(44, 44, 44, 0.45);
 
     font: inherit;
 
@@ -128,10 +133,7 @@
     text-decoration: none;
 
     transition:
-        color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-        text-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-        filter 0.15s ease,
-        transform 0.2s ease;
+        color 0.35s ease;
 
 }
 
@@ -146,85 +148,85 @@
 
     margin: 0 0.45em;
 
-    color: rgba(255, 255, 255, 0.25);
+    color: rgba(44, 44, 44, 0.20);
 
 }
 
 
 /* ======================================================
-   07 · REALCE AL PASAR EL RATÓN
+   07 · LÍNEA EDITORIAL
+====================================================== */
+
+.footer-artista::after,
+.footer-terminos::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -3px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        #111111;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    transition:
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+
+/* ======================================================
+   08 · REALCE AL PASAR EL RATÓN
 ====================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color: rgba(255, 255, 255, 0.95);
+    color:
+        #111111;
 
-    text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.4);
+    cursor:
+        pointer;
 
-    cursor: pointer;
+}
+
+
+.footer-artista:hover::after,
+.footer-terminos:hover::after {
+
+    transform:
+        scaleX(1);
 
 }
 
 
 /* ======================================================
-   08 · DESTELLO AL PULSAR
+   09 · RESPUESTA AL CLIC
 ====================================================== */
 
 .footer-artista:active,
 .footer-terminos:active {
 
-    animation:
-        flash-footer 0.45s ease-out forwards;
-
-    transform:
-        scale(0.98);
-
-}
-
-
-@keyframes flash-footer {
-
-    0% {
-
-        filter: brightness(1);
-
-        color: rgba(255, 255, 255, 0.45);
-
-        text-shadow:
-            0 0 0 rgba(255, 255, 255, 0);
-
-    }
-
-    15% {
-
-        filter: brightness(3);
-
-        color: #ffffff;
-
-        text-shadow:
-            0 0 12px rgba(255, 255, 255, 0.9),
-            0 0 20px rgba(255, 255, 255, 0.4);
-
-    }
-
-    100% {
-
-        filter: brightness(1);
-
-        color: rgba(255, 255, 255, 0.95);
-
-        text-shadow:
-            0 0 10px rgba(255, 255, 255, 0.4);
-
-    }
+    color:
+        #000000;
 
 }
 
 
 /* ======================================================
-   09 · PÁGINA DE INICIO
+   10 · PÁGINA DE INICIO
 ====================================================== */
 
 body.pagina-inicio .footer {
@@ -241,7 +243,7 @@ body.pagina-inicio .footer {
 
 
 /* ======================================================
-   10 · PÁGINA LEGAL
+   11 · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer {
@@ -256,7 +258,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   11 · MÓVIL
+   12 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -264,7 +266,7 @@ body.pagina-legal .footer {
     .footer-contenido {
 
         padding:
-            1.5rem 1rem 2rem;
+            1.5rem 0.75rem 2rem;
 
     }
 
@@ -272,13 +274,13 @@ body.pagina-legal .footer {
     .footer-copy {
 
         font-size:
-            0.48rem;
+            0.46rem;
 
         letter-spacing:
-            0.12em;
+            0.10em;
 
         white-space:
-            normal;
+            nowrap;
 
     }
 
@@ -294,7 +296,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   12 · ACCESIBILIDAD
+   13 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -305,13 +307,13 @@ body.pagina-legal .footer {
         transition:
             none;
 
-        animation:
-            none;
+    }
 
-        transform:
-            none;
 
-        text-shadow:
+    .footer-artista::after,
+    .footer-terminos::after {
+
+        transition:
             none;
 
     }
