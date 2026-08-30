@@ -1,237 +1,198 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE GLOBAL · PIE DE PÁGINA
+   COMPONENTE · FOOTER GLOBAL
 ====================================================== */
 
 
 /* ======================================================
-   01. BASE
+   01 · FOOTER
 ====================================================== */
 
 .footer {
 
-    width: 100%;
-    margin: 0;
-    padding: 0 1.5rem 1.5rem;
+    position:
+        relative;
 
-    color: rgba(32, 32, 32, 0.45);
+    z-index:
+        10;
 
-    background: transparent;
+    width:
+        100%;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.62rem;
-    font-weight: 400;
-    line-height: 1.6;
-
-    letter-spacing: 0.12em;
-    text-align: center;
-    text-transform: uppercase;
-
+    box-sizing:
+        border-box;
 }
 
 
 /* ======================================================
-   02. PORTADA
-====================================================== */
-
-.pagina-inicio .footer {
-
-    position: fixed;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    z-index: 30;
-
-}
-
-
-/* ======================================================
-   03. CONTENIDO
+   02 · CONTENIDO
 ====================================================== */
 
 .footer-contenido {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
-    align-items: center;
+    justify-content:
+        space-between;
 
-    width: 100%;
-    margin: 0 auto;
+    align-items:
+        center;
 
-    text-align: center;
-    white-space: nowrap;
+    width:
+        100%;
 
+    box-sizing:
+        border-box;
 }
 
 
 /* ======================================================
-   04. ELEMENTOS
+   03 · TEXTO COPYRIGHT
 ====================================================== */
 
-.footer-copy,
-.footer-artista,
+.footer-copy {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        0.55rem;
+
+    font-weight:
+        300;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* ======================================================
+   04 · NOMBRE DEL ARTISTA
+====================================================== */
+
+.footer-artista {
+
+    text-decoration:
+        none;
+
+    font-weight:
+        400;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.footer-artista:hover {
+
+    opacity:
+        0.65;
+}
+
+
+/* ======================================================
+   05 · TÉRMINOS
+====================================================== */
+
 .footer-terminos {
 
-    display: inline;
+    text-decoration:
+        none;
 
-    margin: 0;
+    font-family:
+        "Montserrat",
+        sans-serif;
 
+    font-size:
+        0.55rem;
+
+    font-weight:
+        300;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        opacity 0.3s ease;
 }
 
 
-.footer-terminos {
+.footer-terminos:hover {
 
-    margin-left: 0.35rem;
-
-}
-
-
-/* ======================================================
-   05. ENLACES
-====================================================== */
-
-.footer a {
-
-    display: inline-block;
-
-    color: rgba(32, 32, 32, 0.55);
-
-    text-decoration: none;
-
-    transform-origin: center;
-
-    -webkit-tap-highlight-color: transparent;
-
-}
-
-
-/* ======================================================
-   06. INTERACCIÓN
-====================================================== */
-
-@media (hover: hover) and (pointer: fine) {
-
-    .footer a {
-
-        transition:
-            transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-
-    }
-
-
-    .footer a:hover {
-
-        transform: scale(1.04);
-
-    }
-
+    opacity:
+        0.65;
 }
 
 
 /* ======================================================
-   07. TOQUE
+   06 · PÁGINA LEGAL
 ====================================================== */
 
-@media (hover: none) and (pointer: coarse) {
+/*
+   En la página de términos el footer forma parte
+   normal del documento.
 
-    .footer a:active {
+   NO es fixed.
+   NO es sticky.
 
-        transform: scale(1.04);
+   Aparece únicamente al llegar al final del scroll.
+*/
 
-    }
+body.pagina-legal .footer {
 
+    position:
+        relative;
+
+    margin-top:
+        0;
 }
 
 
 /* ======================================================
-   08. DESTELLO
+   07 · MÓVIL
 ====================================================== */
 
-.footer a.destello {
+@media (max-width: 767px) {
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(32, 32, 32, 0.55) 0%,
-            rgba(32, 32, 32, 0.55) 35%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(32, 32, 32, 0.55) 65%,
-            rgba(32, 32, 32, 0.55) 100%
-        );
+    .footer-contenido {
 
-    background-size: 250% 100%;
-    background-position: 100% center;
+        flex-direction:
+            column;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+        justify-content:
+            center;
 
-    -webkit-text-fill-color: transparent;
+        gap:
+            0.8rem;
 
-    animation:
-        footerDestello
-        0.65s
-        ease-out
-        forwards;
-
-}
-
-
-/* ======================================================
-   09. ANIMACIÓN
-====================================================== */
-
-@keyframes footerDestello {
-
-    from {
-
-        background-position: 100% center;
-
+        text-align:
+            center;
     }
 
-    to {
+    .footer-copy,
+    .footer-terminos {
 
-        background-position: 0% center;
+        font-size:
+            0.48rem;
 
+        letter-spacing:
+            0.10em;
     }
-
-}
-
-
-/* ======================================================
-   10. ACCESIBILIDAD
-====================================================== */
-
-.footer a:focus-visible {
-
-    outline: 1px solid rgba(32, 32, 32, 0.3);
-    outline-offset: 0.2rem;
-
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-
-    .footer a {
-
-        transition: none;
-
-    }
-
-
-    .footer a.destello {
-
-        animation: none;
-
-    }
-
 }
 
 
 /* ======================================================
    FIN · footer.css
 ====================================================== */
-
