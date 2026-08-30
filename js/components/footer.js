@@ -19,14 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       DURACIÓN DEL DESTELLO
-    ================================================== */
-
-    const DURACION_DESTELLO = 480;
-
-
-    /* ==================================================
-       INTERACCIÓN
+       BARRIDO Y NAVEGACIÓN
     ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
@@ -36,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Si el enlace ya está ejecutando
-             * el efecto, no permitimos otro clic.
+             * Si ya está ejecutándose el efecto,
+             * evitamos nuevos clics.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -57,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Evitamos la navegación inmediata.
+             * Detenemos temporalmente la navegación.
              */
 
             event.preventDefault();
@@ -67,32 +60,54 @@ document.addEventListener("DOMContentLoaded", function () {
              * Activamos el barrido.
              */
 
-            enlace.classList.remove("barrido");
-
-
-            /*
-             * Forzamos el reinicio de la animación.
-             */
-
-            void enlace.offsetWidth;
-
-
-            /*
-             * Iniciamos el destello.
-             */
-
             enlace.classList.add("barrido");
 
 
-            /*
-             * Navegación rápida después del destello.
-             */
+            /* ==================================================
+               FINAL DE LA ANIMACIÓN
+            ================================================== */
 
-            setTimeout(function () {
+            const finalizarNavegacion = function (evento) {
+
+
+                /*
+                 * Solo respondemos a nuestra animación.
+                 */
+
+                if (evento.animationName !== "footerSweep") {
+
+                    return;
+
+                }
+
+
+                /*
+                 * Eliminamos el listener.
+                 */
+
+                enlace.removeEventListener(
+                    "animationend",
+                    finalizarNavegacion
+                );
+
+
+                /*
+                 * Navegación inmediata.
+                 */
 
                 window.location.href = destino;
 
-            }, DURACION_DESTELLO);
+            };
+
+
+            /*
+             * Escuchamos el final real del CSS.
+             */
+
+            enlace.addEventListener(
+                "animationend",
+                finalizarNavegacion
+            );
 
 
         });
@@ -102,4 +117,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
-
