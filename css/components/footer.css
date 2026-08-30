@@ -34,12 +34,12 @@
     text-transform: uppercase;
 
     text-align: center;
+
 }
 
 
 /* ======================================================
    02. FOOTER · PORTADA
-   En la portada queda fijo al fondo.
 ====================================================== */
 
 .pagina-inicio .footer {
@@ -47,10 +47,13 @@
     position: fixed;
 
     left: 0;
+
     right: 0;
+
     bottom: 0;
 
     z-index: 30;
+
 }
 
 
@@ -73,6 +76,7 @@
     margin: 0 auto;
 
     text-align: center;
+
 }
 
 
@@ -87,6 +91,7 @@
     margin: 0;
 
     white-space: nowrap;
+
 }
 
 
@@ -97,6 +102,7 @@
 .footer-artista {
 
     display: inline;
+
 }
 
 
@@ -106,31 +112,81 @@
 
 .footer a {
 
+    position: relative;
+
+    display: inline-block;
+
     color: rgba(32, 32, 32, 0.55);
 
     text-decoration: none;
 
     transition:
-        color 0.3s ease;
+        color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 
 .footer a:hover {
 
     color: rgba(32, 32, 32, 0.95);
+
+    letter-spacing: 0.16em;
+
 }
 
+
+/* ======================================================
+   07. SUBRAYADO ANIMADO
+====================================================== */
+
+.footer a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -2px;
+
+    left: 50%;
+
+    width: 0;
+
+    height: 1px;
+
+    background-color: rgba(32, 32, 32, 0.85);
+
+    transition:
+        width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+.footer a:hover::after {
+
+    width: 100%;
+
+    left: 0;
+
+}
+
+
+/* ======================================================
+   08. ACCESIBILIDAD
+====================================================== */
 
 .footer a:focus-visible {
 
     outline: 1px solid rgba(32, 32, 32, 0.3);
 
     outline-offset: 0.2rem;
+
 }
 
 
 /* ======================================================
-   07. FOOTER · TÉRMINOS
+   09. TÉRMINOS
 ====================================================== */
 
 .footer-terminos {
@@ -140,72 +196,6 @@
     margin: 0 0 0 0.35rem;
 
     white-space: nowrap;
-}
-
-
-/* ======================================================
-   08. FOOTER · MÓVIL
-   Dos líneas centradas.
-====================================================== */
-
-@media (max-width: 767px) {
-
-    .footer {
-
-        padding: 0 0.75rem 1rem;
-
-        font-size: 0.48rem;
-
-        line-height: 1.5;
-
-        letter-spacing: 0.045em;
-    }
-
-
-    .footer-contenido {
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        align-items: center;
-
-        gap: 0.2rem;
-
-        width: 100%;
-
-        text-align: center;
-    }
-
-
-    .footer-copy {
-
-        display: block;
-
-        width: 100%;
-
-        margin: 0;
-
-        white-space: nowrap;
-
-        text-align: center;
-    }
-
-
-    .footer-terminos {
-
-        display: block;
-
-        width: 100%;
-
-        margin: 0;
-
-        white-space: nowrap;
-
-        text-align: center;
-    }
 
 }
 
