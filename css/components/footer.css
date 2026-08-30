@@ -6,22 +6,20 @@
 
 
 /* ======================================================
-   01 · FOOTER
+   01 · FOOTER GLOBAL
 ====================================================== */
 
 .footer {
 
     position: relative;
 
-    z-index: 10;
+    z-index: 20;
 
     width: 100%;
 
     box-sizing: border-box;
 
-    margin: 0;
-
-    padding: 1.5rem 2.5rem;
+    padding: 1.2rem 2.5rem;
 
 }
 
@@ -50,6 +48,8 @@
 ====================================================== */
 
 .footer-copy {
+
+    margin: 0;
 
     font-family:
         "Montserrat",
@@ -106,6 +106,8 @@
 
     font-weight: 300;
 
+    line-height: 1.5;
+
     letter-spacing: 0.12em;
 
     text-transform: uppercase;
@@ -123,30 +125,47 @@
 
 
 /* ======================================================
-   06 · PÁGINA LEGAL
+   06 · PÁGINA DE INICIO
 ====================================================== */
 
 /*
-   El footer legal utiliza exactamente
-   el mismo componente global.
+   El footer pertenece al documento.
+   No se fija a la pantalla.
+*/
 
-   Forma parte del flujo normal del documento.
+body.pagina-inicio .footer {
 
-   Aparece después del contenido completo,
-   únicamente al llegar al final del scroll.
+    position: relative;
+
+    display: block;
+
+}
+
+
+/* ======================================================
+   07 · PÁGINA LEGAL
+====================================================== */
+
+/*
+   En la página legal el footer también pertenece
+   al flujo normal del documento.
+
+   Aparece al terminar todo el contenido legal.
 */
 
 body.pagina-legal .footer {
 
     position: relative;
 
-    margin: 0;
+    display: block;
+
+    margin-top: 0;
 
 }
 
 
 /* ======================================================
-   07 · MÓVIL
+   08 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -154,7 +173,9 @@ body.pagina-legal .footer {
     .footer {
 
         padding:
-            1.5rem 1.25rem 2rem;
+            1.2rem
+            1.5rem
+            1.5rem;
 
     }
 
