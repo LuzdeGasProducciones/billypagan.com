@@ -142,9 +142,11 @@ a {
 
     width: auto;
 
-    height: 100vh;
+    height: 105%;
 
     max-width: none;
+
+    max-height: none;
 
     margin: 0;
 
