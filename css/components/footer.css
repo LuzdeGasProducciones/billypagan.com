@@ -6,32 +6,22 @@
 
 
 /* ======================================================
-   01 · FOOTER GLOBAL
+   01 · FOOTER
 ====================================================== */
 
 .footer {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 20;
+    z-index:
+        10;
 
-    width: 100%;
+    width:
+        100%;
 
-    box-sizing: border-box;
-
-    padding: 1.2rem 2.5rem;
-
-    background:
-        rgba(36, 36, 36, 0.38);
-
-    backdrop-filter:
-        blur(8px);
-
-    -webkit-backdrop-filter:
-        blur(8px);
-
-    color:
-        rgba(255, 255, 255, 0.72);
+    box-sizing:
+        border-box;
 }
 
 
@@ -41,19 +31,20 @@
 
 .footer-contenido {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    align-items: center;
+    align-items:
+        center;
 
-    width: 100%;
+    width:
+        100%;
 
-    max-width: 1400px;
-
-    margin: 0 auto;
-
-    box-sizing: border-box;
+    box-sizing:
+        border-box;
 }
 
 
@@ -62,8 +53,6 @@
 ====================================================== */
 
 .footer-copy {
-
-    display: block;
 
     font-family:
         "Montserrat",
@@ -83,9 +72,6 @@
 
     text-transform:
         uppercase;
-
-    color:
-        rgba(255, 255, 255, 0.62);
 }
 
 
@@ -94,9 +80,6 @@
 ====================================================== */
 
 .footer-artista {
-
-    color:
-        rgba(255, 255, 255, 0.82);
 
     text-decoration:
         none;
@@ -121,9 +104,6 @@
 ====================================================== */
 
 .footer-terminos {
-
-    color:
-        rgba(255, 255, 255, 0.62);
 
     text-decoration:
         none;
@@ -161,28 +141,30 @@
 ====================================================== */
 
 /*
-   La portada ocupa exactamente una pantalla.
+   El footer se mantiene dentro de la composición
+   de la portada.
 
-   El footer permanece visible en la parte inferior
-   sin generar scroll y sin modificar la composición
-   del hero.
-
-   NO es sticky.
+   No añade fondo.
+   No crea una banda.
+   No altera el diseño del hero.
 */
 
 body.pagina-inicio .footer {
 
-    position: fixed;
+    position:
+        fixed;
 
-    left: 0;
+    left:
+        0;
 
-    bottom: 0;
+    bottom:
+        0;
 
-    width: 100%;
+    width:
+        100%;
 
-    margin: 0;
-
-    z-index: 30;
+    z-index:
+        30;
 }
 
 
@@ -191,64 +173,36 @@ body.pagina-inicio .footer {
 ====================================================== */
 
 /*
-   En términos y condiciones el footer forma parte
-   normal del documento.
+   En términos y condiciones el footer pertenece
+   al flujo normal del documento.
 
-   Aparece después de todo el contenido legal.
-
-   NO es fixed.
-   NO es sticky.
+   Aparece al terminar todo el contenido legal.
 */
 
 body.pagina-legal .footer {
 
-    position: relative;
+    position:
+        relative;
 
-    left: auto;
+    left:
+        auto;
 
-    bottom: auto;
+    bottom:
+        auto;
 
-    width: 100%;
+    width:
+        100%;
 
-    margin-top: 0;
-
-    z-index: 20;
-
-    background:
-        rgba(36, 36, 36, 0.42);
-
-    color:
-        rgba(255, 255, 255, 0.72);
+    margin-top:
+        0;
 }
 
 
 /* ======================================================
-   08 · VISIBILIDAD
-====================================================== */
-
-body.pagina-inicio .footer,
-body.pagina-legal .footer {
-
-    display: block;
-
-    visibility: visible;
-
-    opacity: 1;
-}
-
-
-/* ======================================================
-   09 · MÓVIL
+   08 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
-
-    .footer {
-
-        padding:
-            1.2rem 1.5rem;
-    }
-
 
     .footer-contenido {
 
@@ -256,9 +210,6 @@ body.pagina-legal .footer {
             column;
 
         justify-content:
-            center;
-
-        align-items:
             center;
 
         gap:
@@ -283,7 +234,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   10 · ACCESIBILIDAD
+   09 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
