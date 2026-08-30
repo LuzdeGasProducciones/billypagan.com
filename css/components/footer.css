@@ -1,14 +1,13 @@
-```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE · FOOTER GLOBAL (Elegant Minimal)
-====================================================== */
+   COMPONENTE · FOOTER GLOBAL (Ultra-Elegant Minimal)
+   ====================================================== */
 
 
 /* ======================================================
    01 · FOOTER GENERAL
-====================================================== */
+   ====================================================== */
 
 .footer {
 
@@ -20,12 +19,14 @@
 
     box-sizing: border-box;
 
+    background-color: transparent;
+
 }
 
 
 /* ======================================================
    02 · CONTENIDO
-====================================================== */
+   ====================================================== */
 
 .footer-contenido {
 
@@ -51,7 +52,7 @@
 /* ======================================================
    03 · LÍNEA PRINCIPAL
    CONTENEDOR TIPOGRÁFICO MAESTRO
-====================================================== */
+   ====================================================== */
 
 .footer-copy {
 
@@ -67,89 +68,194 @@
         "Montserrat",
         sans-serif;
 
-    font-size: 0.55rem;
+    font-size:
+        0.55rem;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
-    letter-spacing: 0.16em;
+    letter-spacing:
+        0.16em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 
-    user-select: none;
+    user-select:
+        none;
 
 }
 
 
 /* ======================================================
-   04 · ENLACES
-   MISMA TIPOGRAFÍA Y MISMO TAMAÑO
-====================================================== */
+   04 · ENLACES INTERACTIVOS
+   MISMO TAMAÑO Y MISMO PESO TIPOGRÁFICO
+   ====================================================== */
 
 .footer-artista,
 .footer-terminos {
 
-    position: relative;
+    position:
+        relative;
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    vertical-align: baseline;
+    vertical-align:
+        baseline;
 
-    color: inherit;
+    color:
+        rgba(44, 44, 44, 0.55);
 
-    font-family: inherit;
+    font-family:
+        inherit;
 
-    font-size: inherit;
+    font-size:
+        inherit;
 
-    font-weight: inherit;
+    font-weight:
+        inherit;
 
-    line-height: inherit;
+    line-height:
+        inherit;
 
-    letter-spacing: inherit;
+    letter-spacing:
+        inherit;
 
-    text-transform: inherit;
+    text-transform:
+        inherit;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
-}
-
-
-/* ======================================================
-   05 · NOMBRE DEL ARTISTA
-====================================================== */
-
-.footer-artista {
-
-    color: rgba(44, 44, 44, 0.58);
-
-}
-
-
-/* ======================================================
-   06 · TÉRMINOS
-====================================================== */
-
-.footer-terminos {
-
-    color: rgba(44, 44, 44, 0.45);
+    transition:
+        color 0.45s cubic-bezier(0.25, 0.8, 0.25, 1),
+        text-shadow 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 }
 
 
 /* ======================================================
-   07 · SEPARADOR EDITORIAL
-====================================================== */
+   05 · REALCE AMBIENTAL
+   MUY SUTIL Y DELIMITADO
+   ====================================================== */
+
+.footer-artista::after,
+.footer-terminos::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -3px;
+
+    left:
+        -5px;
+
+    right:
+        -5px;
+
+    bottom:
+        -3px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(44, 44, 44, 0.055) 0%,
+            rgba(44, 44, 44, 0) 72%
+        );
+
+    border-radius:
+        4px;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+
+    transition:
+        opacity 0.45s ease;
+
+}
+
+
+/* ======================================================
+   06 · HOVER
+   REALCE EDITORIAL MÍNIMO
+   ====================================================== */
+
+.footer-artista:hover,
+.footer-terminos:hover {
+
+    color:
+        rgba(44, 44, 44, 0.72);
+
+}
+
+
+/* ======================================================
+   07 · ACTIVE
+   RESPUESTA MUY SUTIL AL CLIC
+   ====================================================== */
+
+.footer-artista:active,
+.footer-terminos:active {
+
+    color:
+        rgba(44, 44, 44, 0.82);
+
+    text-shadow:
+        0 0 3px rgba(44, 44, 44, 0.10);
+
+    transition:
+        color 0s,
+        text-shadow 0s;
+
+}
+
+
+/* ======================================================
+   08 · REALCE AMBIENTAL AL CLIC
+   ====================================================== */
+
+.footer-artista:active::after,
+.footer-terminos:active::after {
+
+    opacity:
+        1;
+
+    transition:
+        opacity 0s;
+
+}
+
+
+/* ======================================================
+   09 · SEPARADOR EDITORIAL
+   ====================================================== */
 
 .footer-separador {
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    vertical-align: baseline;
+    vertical-align:
+        baseline;
 
     margin:
         0 0.65em;
@@ -158,8 +264,7 @@
         rgba(44, 44, 44, 0.25);
 
     font-family:
-        "Montserrat",
-        sans-serif;
+        inherit;
 
     font-size:
         inherit;
@@ -180,114 +285,8 @@
 
 
 /* ======================================================
-   08 · REALCE MUY SUTIL AL PASAR EL CURSOR
-====================================================== */
-
-.footer-artista:hover,
-.footer-terminos:hover {
-
-    color:
-        rgba(17, 17, 17, 0.68);
-
-}
-
-
-/* ======================================================
-   09 · BARRIDO DE LUZ
-   MUY SUTIL · SOLO DURANTE EL CLIC
-====================================================== */
-
-.footer-artista::before,
-.footer-terminos::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: -160%;
-
-    width: 100%;
-
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.04) 30%,
-            rgba(255, 255, 255, 0.12) 50%,
-            rgba(255, 255, 255, 0.04) 70%,
-            rgba(255, 255, 255, 0) 100%
-        );
-
-    transform:
-        skewX(-30deg);
-
-    pointer-events:
-        none;
-
-    opacity:
-        0;
-
-}
-
-
-/* ======================================================
-   10 · ANIMACIÓN DEL BARRIDO
-====================================================== */
-
-.footer-artista.barrido::before,
-.footer-terminos.barrido::before {
-
-    opacity:
-        1;
-
-    animation:
-        footerSweep
-        0.95s
-        cubic-bezier(0.22, 1, 0.36, 1)
-        forwards;
-
-}
-
-
-@keyframes footerSweep {
-
-    0% {
-
-        left:
-            -160%;
-
-    }
-
-    100% {
-
-        left:
-            160%;
-
-    }
-
-}
-
-
-/* ======================================================
-   11 · ESTADO DURANTE EL BARRIDO
-====================================================== */
-
-.footer-artista.barrido,
-.footer-terminos.barrido {
-
-    color:
-        rgba(17, 17, 17, 0.78);
-
-}
-
-
-/* ======================================================
-   12 · PÁGINA DE INICIO
-====================================================== */
+   10 · PÁGINA DE INICIO
+   ====================================================== */
 
 body.pagina-inicio .footer {
 
@@ -307,8 +306,8 @@ body.pagina-inicio .footer {
 
 
 /* ======================================================
-   13 · PÁGINA LEGAL
-====================================================== */
+   11 · PÁGINA LEGAL
+   ====================================================== */
 
 body.pagina-legal .footer {
 
@@ -325,8 +324,8 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   14 · FOOTER EN PÁGINA LEGAL
-====================================================== */
+   12 · FOOTER EN PÁGINA LEGAL
+   ====================================================== */
 
 body.pagina-legal .footer-copy {
 
@@ -336,18 +335,11 @@ body.pagina-legal .footer-copy {
 }
 
 
-body.pagina-legal .footer-artista {
-
-    color:
-        rgba(255, 255, 255, 0.62);
-
-}
-
-
+body.pagina-legal .footer-artista,
 body.pagina-legal .footer-terminos {
 
     color:
-        rgba(255, 255, 255, 0.48);
+        rgba(255, 255, 255, 0.52);
 
 }
 
@@ -361,54 +353,54 @@ body.pagina-legal .footer-separador {
 
 
 /* ======================================================
-   15 · REALCE EN PÁGINA LEGAL
-====================================================== */
+   13 · HOVER EN PÁGINA LEGAL
+   ====================================================== */
 
 body.pagina-legal .footer-artista:hover,
 body.pagina-legal .footer-terminos:hover {
 
     color:
-        rgba(255, 255, 255, 0.68);
+        rgba(255, 255, 255, 0.72);
 
 }
 
 
 /* ======================================================
-   16 · BARRIDO EN PÁGINA LEGAL
-====================================================== */
+   14 · ACTIVE EN PÁGINA LEGAL
+   ====================================================== */
 
-body.pagina-legal .footer-artista::before,
-body.pagina-legal .footer-terminos::before {
+body.pagina-legal .footer-artista:active,
+body.pagina-legal .footer-terminos:active {
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    text-shadow:
+        0 0 3px rgba(255, 255, 255, 0.10);
+
+}
+
+
+/* ======================================================
+   15 · REALCE EN PÁGINA LEGAL
+   ====================================================== */
+
+body.pagina-legal .footer-artista::after,
+body.pagina-legal .footer-terminos::after {
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.03) 30%,
-            rgba(255, 255, 255, 0.09) 50%,
-            rgba(255, 255, 255, 0.03) 70%,
-            rgba(255, 255, 255, 0) 100%
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.045) 0%,
+            rgba(255, 255, 255, 0) 72%
         );
 
 }
 
 
 /* ======================================================
-   17 · ESTADO ACTIVO EN PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer-artista.barrido,
-body.pagina-legal .footer-terminos.barrido {
-
-    color:
-        rgba(255, 255, 255, 0.76);
-
-}
-
-
-/* ======================================================
-   18 · MÓVIL
-====================================================== */
+   16 · MÓVIL
+   ====================================================== */
 
 @media (max-width: 767px) {
 
@@ -445,15 +437,24 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ======================================================
-   19 · ACCESIBILIDAD
-====================================================== */
+   17 · ACCESIBILIDAD
+   ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .footer-artista::before,
-    .footer-terminos::before {
+    .footer-artista,
+    .footer-terminos {
 
-        display:
+        transition:
+            none;
+
+    }
+
+
+    .footer-artista::after,
+    .footer-terminos::after {
+
+        transition:
             none;
 
     }
@@ -463,5 +464,4 @@ body.pagina-legal .footer-terminos.barrido {
 
 /* ======================================================
    FIN · footer.css
-====================================================== */
-```
+   ====================================================== */
