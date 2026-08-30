@@ -6,26 +6,17 @@
 
 
 /* ======================================================
-   01. BASE · PÁGINA LEGAL
+   01. BASE
 ====================================================== */
-
-html {
-
-    min-height: 100%;
-
-}
-
 
 body.pagina-legal {
 
     position: relative;
 
     width: 100%;
-
     min-height: 100vh;
 
     margin: 0;
-
     padding: 0;
 
     color: #202020;
@@ -38,7 +29,7 @@ body.pagina-legal {
 
 
 /* ======================================================
-   02. CONTENEDOR PRINCIPAL
+   02. CONTENEDOR LEGAL
 ====================================================== */
 
 body.pagina-legal .legal {
@@ -46,18 +37,16 @@ body.pagina-legal .legal {
     position: relative;
 
     width: 100%;
-
     min-height: 100vh;
 
     margin: 0;
-
     padding: 0;
 
 }
 
 
 /* ======================================================
-   03. FONDO LEGAL · ESCRITORIO
+   03. FONDO LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-fondo {
@@ -74,8 +63,7 @@ body.pagina-legal .legal-fondo {
 
     z-index: 0;
 
-    background-image:
-        url("../../images/fondo/desktop/fondo-legal-desktop.jpg");
+    background-image: url("/images/fondo/desktop/fondo-legal-desktop.jpg");
 
     background-size: cover;
 
@@ -101,7 +89,7 @@ body.pagina-legal .legal-fondo::after {
     bottom: 0;
     left: 0;
 
-    background: rgba(245, 245, 245, 0.12);
+    background: rgba(245, 245, 245, 0.16);
 
 }
 
@@ -126,7 +114,7 @@ body.pagina-legal .legal-cabecera {
 
 
 /* ======================================================
-   06. ENLACE · VOLVER
+   06. VOLVER
 ====================================================== */
 
 body.pagina-legal .legal-volver {
@@ -193,6 +181,10 @@ body.pagina-legal .legal-titulo {
 }
 
 
+/* ======================================================
+   09. ETIQUETA
+====================================================== */
+
 body.pagina-legal .legal-etiqueta {
 
     display: block;
@@ -216,6 +208,10 @@ body.pagina-legal .legal-etiqueta {
 }
 
 
+/* ======================================================
+   10. TÍTULO PRINCIPAL
+====================================================== */
+
 body.pagina-legal .legal-titulo h1 {
 
     margin: 0;
@@ -234,6 +230,10 @@ body.pagina-legal .legal-titulo h1 {
 
 }
 
+
+/* ======================================================
+   11. FECHA
+====================================================== */
 
 body.pagina-legal .legal-fecha {
 
@@ -257,7 +257,7 @@ body.pagina-legal .legal-fecha {
 
 
 /* ======================================================
-   09. SECCIONES
+   12. SECCIONES
 ====================================================== */
 
 body.pagina-legal .legal-seccion {
@@ -278,7 +278,7 @@ body.pagina-legal .legal-seccion {
 
 
 /* ======================================================
-   10. TÍTULOS DE SECCIÓN
+   13. TÍTULOS DE SECCIÓN
 ====================================================== */
 
 body.pagina-legal .legal-seccion h2 {
@@ -307,7 +307,7 @@ body.pagina-legal .legal-seccion h2 {
 
 
 /* ======================================================
-   11. TEXTO
+   14. TEXTO
 ====================================================== */
 
 body.pagina-legal .legal-seccion p {
@@ -336,6 +336,10 @@ body.pagina-legal .legal-seccion p:last-child {
 }
 
 
+/* ======================================================
+   15. TEXTO DESTACADO
+====================================================== */
+
 body.pagina-legal .legal-seccion strong {
 
     color: #202020;
@@ -346,7 +350,7 @@ body.pagina-legal .legal-seccion strong {
 
 
 /* ======================================================
-   12. ENLACES
+   16. ENLACES
 ====================================================== */
 
 body.pagina-legal .legal-seccion a {
@@ -374,7 +378,7 @@ body.pagina-legal .legal-seccion a:hover {
 
 
 /* ======================================================
-   13. ÚLTIMA SECCIÓN
+   17. ÚLTIMA SECCIÓN
 ====================================================== */
 
 body.pagina-legal .legal-final {
@@ -387,7 +391,7 @@ body.pagina-legal .legal-final {
 
 
 /* ======================================================
-   14. PIE
+   18. PIE LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-pie {
@@ -433,6 +437,8 @@ body.pagina-legal .legal-pie a {
 
     text-decoration: none;
 
+    transition: color 0.3s ease;
+
 }
 
 
@@ -444,29 +450,24 @@ body.pagina-legal .legal-pie a:hover {
 
 
 /* ======================================================
-   15. MÓVIL
+   19. MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
 
-
     body.pagina-legal .legal-fondo {
 
         background-image:
-            url("../../images/fondo/mobile/fondo-legal-movil.jpg");
-
-        background-size: cover;
+            url("/images/fondo/mobile/fondo-legal-movil.jpg");
 
         background-position: center center;
-
-        background-repeat: no-repeat;
 
     }
 
 
     body.pagina-legal .legal-fondo::after {
 
-        background: rgba(245, 245, 245, 0.16);
+        background: rgba(245, 245, 245, 0.20);
 
     }
 
@@ -518,8 +519,6 @@ body.pagina-legal .legal-pie a:hover {
 
         font-size: clamp(2.7rem, 12vw, 4rem);
 
-        line-height: 0.95;
-
     }
 
 
@@ -540,7 +539,7 @@ body.pagina-legal .legal-pie a:hover {
 
         padding: 1.8rem 1.25rem;
 
-        background: rgba(245, 245, 245, 0.82);
+        background: rgba(245, 245, 245, 0.84);
 
         backdrop-filter: blur(6px);
 
@@ -566,6 +565,8 @@ body.pagina-legal .legal-pie a:hover {
 
         line-height: 1.85;
 
+        letter-spacing: 0.01em;
+
     }
 
 
@@ -587,7 +588,7 @@ body.pagina-legal .legal-pie a:hover {
 
 
 /* ======================================================
-   16. ACCESIBILIDAD
+   20. ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
