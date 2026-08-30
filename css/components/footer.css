@@ -268,7 +268,80 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   13 · MÓVIL
+   13 · FOOTER · PÁGINA LEGAL · FONDO OSCURO
+====================================================== */
+
+body.pagina-legal .footer-copy {
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+}
+
+
+body.pagina-legal .footer-artista {
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+}
+
+
+body.pagina-legal .footer-terminos {
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+}
+
+
+/* ======================================================
+   14 · REALCE · PÁGINA LEGAL
+====================================================== */
+
+body.pagina-legal .footer-artista:hover,
+body.pagina-legal .footer-terminos:hover {
+
+    color:
+        #ffffff;
+
+}
+
+
+/* ======================================================
+   15 · BARRIDO · PÁGINA LEGAL
+====================================================== */
+
+body.pagina-legal .footer-artista::before,
+body.pagina-legal .footer-terminos::before {
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.10) 20%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0.10) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+
+}
+
+
+/* ======================================================
+   16 · RESPUESTA DURANTE EL CLIC · LEGAL
+====================================================== */
+
+body.pagina-legal .footer-artista.barrido,
+body.pagina-legal .footer-terminos.barrido {
+
+    color:
+        #ffffff;
+
+}
+
+
+/* ======================================================
+   17 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -298,7 +371,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   14 · ACCESIBILIDAD
+   18 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
