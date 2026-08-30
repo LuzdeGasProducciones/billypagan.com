@@ -1,101 +1,84 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
 
+    <meta charset="UTF-8">
 
-<!-- ==================================================
-     CONFIGURACIÓN GENERAL
-================================================== -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta charset="UTF-8">
+    <meta
+        name="description"
+        content="Billy Pagán · Sitio Oficial"
+    >
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<meta
-    name="description"
-    content="Billy Pagán · Sitio Oficial"
->
-
-<title>Billy Pagán | Sitio Oficial</title>
+    <title>Billy Pagán | Sitio Oficial</title>
 
 
-<!-- ==================================================
-     TIPOGRAFÍAS
-================================================== -->
+    <!-- TIPOGRAFÍAS -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap"
-    rel="stylesheet"
->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet"
+    >
 
 
-<!-- ==================================================
-     CSS · ESTRUCTURA GLOBAL
-================================================== -->
+    <!-- CSS GLOBAL -->
 
-<link
-    rel="stylesheet"
-    href="css/styles.css"
->
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
 
+    <!-- COMPONENTES -->
 
-<!-- ==================================================
-     CSS · COMPONENTES
-================================================== -->
+    <link
+        rel="stylesheet"
+        href="css/components/header.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/header.css"
->
+    <link
+        rel="stylesheet"
+        href="css/components/menu.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/menu.css"
->
+    <link
+        rel="stylesheet"
+        href="css/components/hamburguesa.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/hamburguesa.css"
->
+    <link
+        rel="stylesheet"
+        href="css/components/buttons.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/buttons.css"
->
+    <link
+        rel="stylesheet"
+        href="css/components/cards.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/cards.css"
->
+    <link
+        rel="stylesheet"
+        href="css/components/footer.css"
+    >
 
-<link
-    rel="stylesheet"
-    href="css/components/footer.css"
->
+    <!-- RESPONSIVE -->
 
-
-<!-- ==================================================
-     CSS · RESPONSIVE
-================================================== -->
-
-<link
-    rel="stylesheet"
-    href="css/responsive.css"
->
-
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
 
 </head>
 
@@ -103,226 +86,202 @@
 <body class="pagina-inicio">
 
 
-<!-- ==================================================
-     PORTADA
-================================================== -->
-
-<main class="hero">
+    <main class="hero">
 
 
-    <!-- ==================================================
-         BOTÓN HAMBURGUESA · MÓVIL
-    ================================================== -->
+        <!-- MENÚ MÓVIL -->
 
-    <button
-        class="hamburguesa"
-        id="hamburguesa"
-        type="button"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="menuMovil"
-    >
-
-        <span aria-hidden="true"></span>
-
-        <span aria-hidden="true"></span>
-
-        <span aria-hidden="true"></span>
-
-    </button>
-
-
-    <!-- ==================================================
-         MENÚ MÓVIL
-    ================================================== -->
-
-    <nav
-        class="menu-movil"
-        id="menuMovil"
-        aria-label="Menú principal"
-    >
-
-        <a
-            href="index.html"
-            class="activo"
+        <nav
+            class="menu-movil"
+            id="menuMovil"
+            aria-label="Menú principal"
         >
-            INICIO
-        </a>
-
-        <a href="#">
-            BIOGRAFÍA
-        </a>
-
-        <a href="#">
-            MÚSICA
-        </a>
-
-        <a href="#">
-            VÍDEOS
-        </a>
-
-        <a href="#">
-            CONCIERTOS
-        </a>
-
-        <a href="#">
-            GALERÍA
-        </a>
-
-        <a href="#">
-            TIENDA
-        </a>
-
-        <a href="#">
-            CONTACTO
-        </a>
-
-    </nav>
-
-
-    <!-- ==================================================
-         MENÚ SUPERIOR · ESCRITORIO
-    ================================================== -->
-
-    <header class="menu">
-
-        <nav aria-label="Menú principal">
-
-            <ul>
-
-                <li>
-                    <a
-                        href="index.html"
-                        class="activo"
-                    >
-                        INICIO
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        BIOGRAFÍA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        MÚSICA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        VÍDEOS
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        CONCIERTOS
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        GALERÍA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        TIENDA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        CONTACTO
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ==================================================
-         CONTENIDO CENTRAL
-    ================================================== -->
-
-    <div class="contenido">
-
-        <h1>
-            Billy Pagán
-        </h1>
-
-        <div class="subtitulo">
-            SITIO OFICIAL
-        </div>
-
-    </div>
-
-
-</main>
-
-
-<!-- ==================================================
-     FOOTER · COMPONENTE GLOBAL
-================================================== -->
-
-<footer class="footer">
-
-    <div class="footer-contenido">
-
-        <span class="footer-copy">
-
-            © 2026
 
             <a
                 href="index.html"
-                class="footer-artista"
-                aria-label="Billy Pagán · Página de inicio"
+                class="activo"
             >
-                BILLY PAGÁN
+                INICIO
             </a>
 
-            . TODOS LOS DERECHOS RESERVADOS.
+            <a href="paginas/biografia.html">
+                BIOGRAFÍA
+            </a>
 
-        </span>
+            <a href="paginas/musica.html">
+                MÚSICA
+            </a>
+
+            <a href="paginas/videos.html">
+                VÍDEOS
+            </a>
+
+            <a href="paginas/conciertos/conciertos.html">
+                CONCIERTOS
+            </a>
+
+            <a href="paginas/galeria.html">
+                GALERÍA
+            </a>
+
+            <a href="paginas/tienda.html">
+                TIENDA
+            </a>
+
+            <a href="paginas/contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
 
 
-        <a
-            href="legal/terminos-y-condiciones.html"
-            class="footer-terminos"
+        <!-- MENÚ PRINCIPAL -->
+
+        <header class="menu">
+
+            <nav aria-label="Menú principal">
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="activo"
+                        >
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/biografia.html">
+                            BIOGRAFÍA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/musica.html">
+                            MÚSICA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/videos.html">
+                            VÍDEOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/conciertos/conciertos.html">
+                            CONCIERTOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/galeria.html">
+                            GALERÍA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/tienda.html">
+                            TIENDA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="paginas/contacto.html">
+                            CONTACTO
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+        <!-- BOTÓN HAMBURGUESA -->
+
+        <button
+            class="hamburguesa"
+            id="hamburguesa"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menuMovil"
         >
-            TÉRMINOS Y CONDICIONES
-        </a>
 
-    </div>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
 
-</footer>
-
-
-<!-- ==================================================
-     JAVASCRIPT · COMPONENTES
-================================================== -->
-
-<script src="js/components/menu.js"></script>
-
-<script src="js/components/navigation.js"></script>
-
-<script src="js/components/footer.js"></script>
+        </button>
 
 
-<!-- ==================================================
-     JAVASCRIPT · COORDINADOR PRINCIPAL
-================================================== -->
+        <!-- CONTENIDO CENTRAL -->
 
-<script src="js/main.js"></script>
+        <div class="contenido">
+
+            <h1>Billy Pagán</h1>
+
+            <div class="subtitulo">
+                SITIO OFICIAL
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <span class="footer-copy">
+
+                © 2026
+
+                <a
+                    href="index.html"
+                    class="footer-artista"
+                    aria-label="Billy Pagán · Página de inicio"
+                >
+                    BILLY PAGÁN
+                </a>
+
+                . TODOS LOS DERECHOS RESERVADOS.
+
+            </span>
+
+            <a
+                href="legal/terminos-y-condiciones.html"
+                class="footer-terminos"
+            >
+                TÉRMINOS Y CONDICIONES
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/components/menu.js"></script>
+
+    <script src="js/components/navigation.js"></script>
+
+    <script src="js/components/footer.js"></script>
+
+    <script src="js/main.js"></script>
 
 
 </body>
 
 </html>
+
+
