@@ -1,12 +1,12 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    menu.css
-   MENÚ · ESCRITORIO · MÓVIL
+   MENÚ · PRINCIPAL Y MÓVIL
 ====================================================== */
 
 
 /* ======================================================
-   01. MENÚ PRINCIPAL · BASE
+   01. MENÚ PRINCIPAL
 ====================================================== */
 
 .menu {
@@ -14,9 +14,9 @@
     display: block;
 
     width: 100%;
-
     margin: 0;
     padding: 0;
+
 }
 
 
@@ -25,18 +25,17 @@
     display: flex;
 
     justify-content: center;
-
     align-items: center;
-
-    gap: 2.5rem;
 
     width: 100%;
 
     margin: 0;
-
     padding: 2rem;
 
+    gap: 2.5rem;
+
     list-style: none;
+
 }
 
 
@@ -49,7 +48,6 @@
     font-family: "Montserrat", sans-serif;
 
     font-size: 0.72rem;
-
     font-weight: 400;
 
     line-height: 1.2;
@@ -61,23 +59,30 @@
     transition:
         opacity 0.3s ease,
         color 0.3s ease;
+
 }
 
 
 .menu a:hover {
 
     opacity: 0.55;
-}
 
-
-.menu a.activo {
-
-    opacity: 1;
 }
 
 
 /* ======================================================
-   02. MENÚ MÓVIL
+   02. ESTADO ACTIVO
+====================================================== */
+
+.menu a.activo {
+
+    opacity: 1;
+
+}
+
+
+/* ======================================================
+   03. MENÚ MÓVIL
 ====================================================== */
 
 .menu-movil {
@@ -86,24 +91,6 @@
 
 }
 
-
-/* ======================================================
-   03. MENÚ MÓVIL · ABIERTO
-====================================================== */
-
-.menu-movil.abierto {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-}
-
-
-/* ======================================================
-   04. ENLACES MENÚ MÓVIL
-====================================================== */
 
 .menu-movil a {
 
@@ -114,7 +101,6 @@
     font-family: "Montserrat", sans-serif;
 
     font-size: 0.82rem;
-
     font-weight: 400;
 
     line-height: 1.2;
@@ -126,21 +112,38 @@
     white-space: nowrap;
 
     transition: opacity 0.3s ease;
+
 }
 
 
 .menu-movil a:hover {
 
     opacity: 0.55;
+
 }
 
 
 .menu-movil a.activo {
 
     opacity: 1;
+
+}
+
+
+/* ======================================================
+   04. MENÚ MÓVIL · ESTADO ABIERTO
+====================================================== */
+
+.menu-movil.abierto {
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
 }
 
 
 /* ======================================================
    FIN · menu.css
 ====================================================== */
+
