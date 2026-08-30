@@ -11,17 +11,14 @@
 
 .footer {
 
-    position:
-        relative;
+    position: relative;
 
-    z-index:
-        10;
+    z-index: 20;
 
-    width:
-        100%;
+    width: 100%;
 
-    box-sizing:
-        border-box;
+    box-sizing: border-box;
+
 }
 
 
@@ -31,47 +28,53 @@
 
 .footer-contenido {
 
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: center;
 
-    align-items:
-        center;
+    align-items: center;
 
-    width:
-        100%;
+    width: 100%;
 
-    box-sizing:
-        border-box;
+    margin: 0 auto;
+
+    padding: 1.5rem 2rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
 }
 
 
 /* ======================================================
-   03 · TEXTO COPYRIGHT
+   03 · COPYRIGHT
 ====================================================== */
 
 .footer-copy {
+
+    display: block;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
 
     font-family:
         "Montserrat",
         sans-serif;
 
-    font-size:
-        0.55rem;
+    font-size: 0.55rem;
 
-    font-weight:
-        300;
+    font-weight: 300;
 
-    line-height:
-        1.5;
+    line-height: 1.5;
 
-    letter-spacing:
-        0.12em;
+    letter-spacing: 0.12em;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
 }
 
 
@@ -81,11 +84,12 @@
 
 .footer-artista {
 
-    text-decoration:
-        none;
+    color:
+        rgba(255, 255, 255, 0.88);
 
-    font-weight:
-        400;
+    text-decoration: none;
+
+    font-weight: 400;
 
     transition:
         opacity 0.3s ease;
@@ -94,35 +98,20 @@
 
 .footer-artista:hover {
 
-    opacity:
-        0.65;
+    opacity: 0.65;
 }
 
 
 /* ======================================================
-   05 · TÉRMINOS
+   05 · ENLACE · TÉRMINOS
 ====================================================== */
 
 .footer-terminos {
 
-    text-decoration:
-        none;
+    color:
+        rgba(255, 255, 255, 0.68);
 
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size:
-        0.55rem;
-
-    font-weight:
-        300;
-
-    letter-spacing:
-        0.12em;
-
-    text-transform:
-        uppercase;
+    text-decoration: none;
 
     transition:
         opacity 0.3s ease;
@@ -131,8 +120,7 @@
 
 .footer-terminos:hover {
 
-    opacity:
-        0.65;
+    opacity: 0.65;
 }
 
 
@@ -140,31 +128,16 @@
    06 · PÁGINA DE INICIO
 ====================================================== */
 
-/*
-   El footer se mantiene dentro de la composición
-   de la portada.
-
-   No añade fondo.
-   No crea una banda.
-   No altera el diseño del hero.
-*/
-
 body.pagina-inicio .footer {
 
-    position:
-        fixed;
+    position: absolute;
 
-    left:
-        0;
+    left: 0;
 
-    bottom:
-        0;
+    bottom: 0;
 
-    width:
-        100%;
+    width: 100%;
 
-    z-index:
-        30;
 }
 
 
@@ -172,69 +145,74 @@ body.pagina-inicio .footer {
    07 · PÁGINA LEGAL
 ====================================================== */
 
-/*
-   En términos y condiciones el footer pertenece
-   al flujo normal del documento.
-
-   Aparece al terminar todo el contenido legal.
-*/
-
 body.pagina-legal .footer {
 
-    position:
-        relative;
+    position: relative;
 
-    left:
-        auto;
+    width: 100%;
 
-    bottom:
-        auto;
+    margin-top: 0;
 
-    width:
-        100%;
-
-    margin-top:
-        0;
 }
 
 
 /* ======================================================
-   08 · MÓVIL
+   08 · DESTELLO / REALCE AL PASAR Y PINCHAR
+====================================================== */
+
+.footer-artista,
+.footer-terminos {
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.footer-artista:hover,
+.footer-terminos:hover {
+
+    opacity: 1;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.35);
+
+}
+
+
+/* ======================================================
+   09 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
 
     .footer-contenido {
 
-        flex-direction:
-            column;
+        padding:
+            1.2rem 1rem;
 
-        justify-content:
-            center;
-
-        gap:
-            0.8rem;
-
-        text-align:
-            center;
     }
 
 
-    .footer-copy,
-    .footer-terminos {
+    .footer-copy {
 
         font-size:
             0.48rem;
 
         letter-spacing:
-            0.10em;
+            0.09em;
+
+        white-space:
+            nowrap;
+
     }
 
 }
 
 
 /* ======================================================
-   09 · ACCESIBILIDAD
+   10 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -244,6 +222,10 @@ body.pagina-legal .footer {
 
         transition:
             none;
+
+        text-shadow:
+            none;
+
     }
 
 }
