@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       INTERACCIÓN DEL FOOTER
+       BARRIDO AL HACER CLIC
     ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Si el efecto ya está ejecutándose,
-             * evitamos un segundo clic.
+             * Si el enlace ya está ejecutando
+             * el barrido, ignoramos el nuevo clic.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -50,15 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Detenemos temporalmente la navegación
-             * para permitir que se vea el barrido.
+             * Detenemos temporalmente la navegación.
              */
 
             event.preventDefault();
 
 
             /*
-             * Reiniciamos cualquier estado anterior.
+             * Reiniciamos la animación.
              */
 
             enlace.classList.remove("barrido");
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Forzamos un nuevo cálculo de layout
-             * para reiniciar correctamente la animación.
+             * para reiniciar correctamente el efecto.
              */
 
             void enlace.offsetWidth;
@@ -80,15 +79,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /* ==================================================
-               NAVEGACIÓN AL TERMINAR LA ANIMACIÓN
+               FINAL DE LA ANIMACIÓN
             ================================================== */
 
             const finalizarNavegacion = function (evento) {
 
 
                 /*
-                 * Solo reaccionamos a la animación
-                 * del pseudo-elemento ::after.
+                 * Nos aseguramos de reaccionar únicamente
+                 * a nuestra animación footerSweep.
                  */
 
                 if (evento.animationName !== "footerSweep") {
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Navegamos al destino original.
+                 * Navegamos al destino.
                  */
 
                 window.location.href = destino;
@@ -118,8 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Esperamos la finalización real
-             * de la animación CSS.
+             * Esperamos al final real de la animación.
              */
 
             enlace.addEventListener(
