@@ -51,12 +51,25 @@ a {
 ====================================================== */
 
 .pagina-inicio {
+
     position: relative;
+
     width: 100%;
-    height: 100vh;
+
     min-height: 100vh;
-    overflow: hidden;
-    background: #f5f5f5;
+
+    margin: 0;
+
+    padding: 0;
+
+    /*
+       IMPORTANTE:
+       No utilizamos height: 100vh ni
+       overflow: hidden aquí.
+
+       El footer forma parte del documento
+       y debe poder aparecer después del hero.
+    */
 }
 
 
@@ -65,17 +78,24 @@ a {
 ====================================================== */
 
 .hero {
+
     position: relative;
+
     width: 100%;
+
     height: 100vh;
+
     min-height: 100vh;
 
     background-image:
         url("../images/fondos/escritorio/fondo-general-desktop.jpg");
 
     background-position: center;
+
     background-size: cover;
+
     background-repeat: no-repeat;
+
     background-attachment: fixed;
 }
 
@@ -85,47 +105,149 @@ a {
 ====================================================== */
 
 .contenido {
+
     position: absolute;
+
     top: 50%;
+
     left: 50%;
+
     width: 90%;
+
     margin: 0;
+
     padding: 0;
 
     text-align: center;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 }
 
 
 .contenido h1 {
+
     margin: 0;
 
     color: #202020;
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4rem, 9vw, 8rem);
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(4rem, 9vw, 8rem);
+
     font-weight: 500;
+
     line-height: 0.9;
+
     letter-spacing: 0.01em;
 }
 
 
 .subtitulo {
+
     margin-top: 1.25rem;
 
     color: #202020;
 
-    font-family: "Montserrat", sans-serif;
-    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        clamp(0.65rem, 1vw, 0.85rem);
+
     font-weight: 300;
+
     line-height: 1.2;
+
     letter-spacing: 0.45em;
+}
+
+
+/* ======================================================
+   06 · FOOTER EN PORTADA
+====================================================== */
+
+/*
+   El hero ocupa exactamente una pantalla.
+
+   El footer queda inmediatamente después
+   del hero y, por tanto, aparece en la parte
+   inferior de la primera pantalla.
+
+   Al no existir overflow:hidden en el body,
+   el documento puede desplazarse normalmente.
+*/
+
+body.pagina-inicio .footer {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+}
+
+
+/* ======================================================
+   07 · RESPONSIVE
+====================================================== */
+
+@media (max-width: 767px) {
+
+    .hero {
+
+        background-attachment:
+            scroll;
+
+        background-image:
+            url("../images/fondos/movil/fondo-general-movil.jpg");
+    }
+
+
+    .contenido {
+
+        width: 92%;
+    }
+
+
+    .contenido h1 {
+
+        font-size:
+            clamp(3.5rem, 15vw, 6rem);
+    }
+
+
+    .subtitulo {
+
+        font-size:
+            0.6rem;
+
+        letter-spacing:
+            0.30em;
+    }
+
+}
+
+
+/* ======================================================
+   08 · ACCESIBILIDAD
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contenido {
+
+        transform:
+            translate(-50%, -50%);
+    }
+
 }
 
 
 /* ======================================================
    FIN · styles.css
 ====================================================== */
-
-
