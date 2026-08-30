@@ -121,7 +121,7 @@ a {
 
 /* ======================================================
    05 · IMAGEN DE BILLY · MARCA DE AGUA
-   ESCRITORIO · ALINEADA A LA IZQUIERDA
+   ESCRITORIO · DESPLAZADA HACIA LA IZQUIERDA
 ====================================================== */
 
 .imagen-billy-portada {
@@ -149,13 +149,14 @@ a {
     padding: 0;
 
     transform:
-        translateY(-50%);
+        translate(-80px, -50%);
 
     pointer-events: none;
 
     user-select: none;
 
 }
+
 
 
 /* ======================================================
