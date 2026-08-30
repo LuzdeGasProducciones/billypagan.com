@@ -1,91 +1,6 @@
 /* ==========================================================================
-   BILLY PAGÁN · SITIO OFICIAL
-   footer.css
-   COMPONENTE · FOOTER GLOBAL
-   ELEGANT MINIMAL · EDITORIAL LIGHT SWEEP
-   ========================================================================== */
-
-
-/* ==========================================================================
-   01 · FOOTER GENERAL
-   ========================================================================== */
-
-.footer {
-
-    position: relative;
-
-    z-index: 20;
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-}
-
-
-/* ==========================================================================
-   02 · CONTENIDO
-   ========================================================================== */
-
-.footer-contenido {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    width: 100%;
-
-    margin: 0 auto;
-
-    padding: 1.8rem 2rem 2.5rem;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
-}
-
-
-/* ==========================================================================
-   03 · LÍNEA PRINCIPAL
-   ========================================================================== */
-
-.footer-copy {
-
-    display: block;
-
-    margin: 0;
-
-    padding: 0;
-
-    color: rgba(44, 44, 44, 0.45);
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size: 0.55rem;
-
-    font-weight: 300;
-
-    line-height: 1.5;
-
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
-
-    white-space: nowrap;
-
-    user-select: none;
-
-}
-
-
-/* ==========================================================================
    04 · ENLACES
-   ALINEACIÓN EXACTA
+   ALINEACIÓN TIPOGRÁFICA EXACTA
    ========================================================================== */
 
 .footer-artista,
@@ -93,9 +8,7 @@
 
     position: relative;
 
-    display: inline-block;
-
-    vertical-align: baseline;
+    display: inline;
 
     margin: 0;
 
@@ -120,15 +33,15 @@
     cursor: pointer;
 
     /*
-     * El destello queda encerrado
-     * exclusivamente dentro del enlace.
+     * El destello queda completamente
+     * contenido dentro del texto.
      */
 
     overflow: hidden;
 
     /*
-     * Elimina el resaltado rectangular
-     * de dispositivos táctiles.
+     * Elimina el recuadro táctil
+     * de iOS y Android.
      */
 
     -webkit-tap-highlight-color: transparent;
@@ -136,7 +49,7 @@
     outline: none;
 
     /*
-     * Evita desplazamientos visuales.
+     * La transformación se mantiene centrada.
      */
 
     transform-origin: center center;
@@ -150,7 +63,6 @@
 
 /* ==========================================================================
    05 · DESTELLO
-   BARRIDO MUY ESTRECHO Y EXCLUSIVO DEL TEXTO
    ========================================================================== */
 
 .footer-artista::after,
@@ -178,8 +90,7 @@
             rgba(255, 255, 255, 0) 100%
         );
 
-    transform:
-        skewX(-18deg);
+    transform: skewX(-18deg);
 
     pointer-events: none;
 
@@ -190,14 +101,13 @@
 
 /* ==========================================================================
    06 · HOVER
+   AMPLIACIÓN SUTIL SIN ALTERAR LA LÍNEA
    ========================================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
     color: rgba(44, 44, 44, 0.72);
-
-    transform: scale(1.03);
 
 }
 
@@ -262,245 +172,6 @@
 
     color: rgba(44, 44, 44, 0.78);
 
-    transform: scale(1.03);
-
 }
-
-
-/* ==========================================================================
-   09 · SEPARADORES
-   ========================================================================== */
-
-.footer-separador {
-
-    display: inline-block;
-
-    vertical-align: baseline;
-
-    margin:
-        0 0.42em;
-
-    padding: 0;
-
-    color: rgba(44, 44, 44, 0.24);
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size: inherit;
-
-    font-weight: 300;
-
-    line-height: inherit;
-
-    letter-spacing: 0;
-
-    user-select: none;
-
-}
-
-
-/* ==========================================================================
-   10 · FOCO
-   ========================================================================== */
-
-.footer-artista:focus,
-.footer-terminos:focus {
-
-    outline: none;
-
-}
-
-
-.footer-artista:focus-visible,
-.footer-terminos:focus-visible {
-
-    outline: none;
-
-}
-
-
-/* ==========================================================================
-   11 · PÁGINA DE INICIO
-   ========================================================================== */
-
-body.pagina-inicio .footer {
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 100%;
-
-}
-
-
-/* ==========================================================================
-   12 · PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer {
-
-    position: relative;
-
-    width: 100%;
-
-    margin-top: 0;
-
-}
-
-
-/* ==========================================================================
-   13 · FOOTER LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-copy {
-
-    color: rgba(255, 255, 255, 0.48);
-
-}
-
-
-body.pagina-legal .footer-artista,
-body.pagina-legal .footer-terminos {
-
-    color: rgba(255, 255, 255, 0.48);
-
-}
-
-
-/* ==========================================================================
-   14 · HOVER PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-artista:hover,
-body.pagina-legal .footer-terminos:hover {
-
-    color: rgba(255, 255, 255, 0.72);
-
-    transform: scale(1.03);
-
-}
-
-
-/* ==========================================================================
-   15 · DESTELLO PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-artista::after,
-body.pagina-legal .footer-terminos::after {
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.02) 35%,
-            rgba(255, 255, 255, 0.14) 50%,
-            rgba(255, 255, 255, 0.02) 65%,
-            rgba(255, 255, 255, 0) 100%
-        );
-
-}
-
-
-/* ==========================================================================
-   16 · ESTADO ACTIVO PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-artista.barrido,
-body.pagina-legal .footer-terminos.barrido {
-
-    color: rgba(255, 255, 255, 0.78);
-
-    transform: scale(1.03);
-
-}
-
-
-/* ==========================================================================
-   17 · MÓVIL
-   ========================================================================== */
-
-@media (max-width: 767px) {
-
-    .footer-contenido {
-
-        padding:
-            1.5rem 0.75rem 2rem;
-
-    }
-
-
-    .footer-copy {
-
-        font-size: 0.46rem;
-
-        letter-spacing: 0.10em;
-
-        white-space: nowrap;
-
-    }
-
-
-    .footer-separador {
-
-        margin:
-            0 0.32em;
-
-    }
-
-
-    .footer-artista:active,
-    .footer-terminos:active {
-
-        color: rgba(44, 44, 44, 0.72);
-
-        transform: scale(1.03);
-
-    }
-
-
-    .footer-artista,
-    .footer-terminos {
-
-        -webkit-tap-highlight-color: transparent;
-
-        outline: none;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   18 · ACCESIBILIDAD
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .footer-artista,
-    .footer-terminos {
-
-        transition: none;
-
-    }
-
-
-    .footer-artista::after,
-    .footer-terminos::after {
-
-        display: none;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   FIN · footer.css
-   ========================================================================== */
 
 
