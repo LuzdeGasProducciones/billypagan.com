@@ -6,7 +6,7 @@
 
 
 /* ======================================================
-   DESTELLO · ACTIVACIÓN AL HACER CLIC
+   01. DESTELLO · SOLO AL HACER CLIC
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /* ------------------------------------------
-               Reinicia el efecto si se pulsa de nuevo
+               Elimina una animación anterior
             ------------------------------------------ */
 
             enlace.classList.remove(
