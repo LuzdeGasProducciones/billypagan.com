@@ -1,8 +1,7 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE · FOOTER GLOBAL
-   PREMIUM MINIMAL INTERACTION
+   COMPONENTE · FOOTER GLOBAL (Elegant Minimal)
 ====================================================== */
 
 
@@ -84,7 +83,7 @@
 
 
 /* ======================================================
-   04 · ENLACES EDITORIALES
+   04 · ENLACES
 ====================================================== */
 
 .footer-artista,
@@ -102,7 +101,7 @@
 
     font-size: inherit;
 
-    font-weight: 300;
+    font-weight: inherit;
 
     line-height: inherit;
 
@@ -111,8 +110,6 @@
     text-transform: inherit;
 
     text-decoration: none;
-
-    overflow: hidden;
 
     cursor: pointer;
 
@@ -123,43 +120,41 @@
 
 
 /* ======================================================
-   05 · ESTADO NORMAL
+   05 · NOMBRE DEL ARTISTA
 ====================================================== */
 
-/*
-   Todos los elementos parten exactamente
-   del mismo tratamiento tipográfico.
-*/
+.footer-artista {
 
-.footer-artista,
-.footer-terminos {
-
-    color:
-        rgba(44, 44, 44, 0.45);
+    color: rgba(44, 44, 44, 0.58);
 
 }
 
 
 /* ======================================================
-   06 · REALCE MÍNIMO AL PASAR EL CURSOR
+   06 · TÉRMINOS
 ====================================================== */
 
-/*
-   El cambio debe sentirse más que verse:
-   apenas aumenta la definición del texto.
-*/
+.footer-terminos {
+
+    color: rgba(44, 44, 44, 0.45);
+
+}
+
+
+/* ======================================================
+   07 · REALCE MUY SUTIL AL PASAR EL CURSOR
+====================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color:
-        rgba(44, 44, 44, 0.68);
+    color: rgba(17, 17, 17, 0.78);
 
 }
 
 
 /* ======================================================
-   07 · BARRIDO DE LUZ
+   08 · BARRIDO DE LUZ
 ====================================================== */
 
 .footer-artista::before,
@@ -177,17 +172,17 @@
 
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.08) 20%,
-        rgba(255, 255, 255, 0.28) 50%,
-        rgba(255, 255, 255, 0.08) 80%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.06) 30%,
+            rgba(255, 255, 255, 0.16) 50%,
+            rgba(255, 255, 255, 0.06) 70%,
+            rgba(255, 255, 255, 0) 100%
+        );
 
-    transform:
-        skewX(-30deg);
+    transform: skewX(-30deg);
 
     pointer-events: none;
 
@@ -197,7 +192,7 @@
 
 
 /* ======================================================
-   08 · ANIMACIÓN DEL BARRIDO
+   09 · ANIMACIÓN DEL BARRIDO
 ====================================================== */
 
 .footer-artista.barrido::before,
@@ -232,20 +227,19 @@
 
 
 /* ======================================================
-   09 · ESTADO DURANTE EL CLIC
+   10 · ESTADO DURANTE EL CLIC
 ====================================================== */
 
 .footer-artista.barrido,
 .footer-terminos.barrido {
 
-    color:
-        rgba(20, 20, 20, 0.78);
+    color: #111111;
 
 }
 
 
 /* ======================================================
-   10 · PÁGINA DE INICIO
+   11 · PÁGINA DE INICIO
 ====================================================== */
 
 body.pagina-inicio .footer {
@@ -262,7 +256,7 @@ body.pagina-inicio .footer {
 
 
 /* ======================================================
-   11 · PÁGINA LEGAL
+   12 · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer {
@@ -277,73 +271,76 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   12 · FOOTER LEGAL · FONDO OSCURO
+   13 · FOOTER EN PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-copy {
 
-    color:
-        rgba(255, 255, 255, 0.48);
+    color: rgba(255, 255, 255, 0.48);
 
 }
 
 
-body.pagina-legal .footer-artista,
+body.pagina-legal .footer-artista {
+
+    color: rgba(255, 255, 255, 0.62);
+
+}
+
+
 body.pagina-legal .footer-terminos {
 
-    color:
-        rgba(255, 255, 255, 0.48);
+    color: rgba(255, 255, 255, 0.48);
 
 }
 
 
 /* ======================================================
-   13 · REALCE MÍNIMO · PÁGINA LEGAL
+   14 · REALCE EN PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista:hover,
 body.pagina-legal .footer-terminos:hover {
 
-    color:
-        rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.82);
 
 }
 
 
 /* ======================================================
-   14 · BARRIDO · PÁGINA LEGAL
+   15 · BARRIDO EN PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista::before,
 body.pagina-legal .footer-terminos::before {
 
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.07) 20%,
-        rgba(255, 255, 255, 0.24) 50%,
-        rgba(255, 255, 255, 0.07) 80%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.04) 30%,
+            rgba(255, 255, 255, 0.12) 50%,
+            rgba(255, 255, 255, 0.04) 70%,
+            rgba(255, 255, 255, 0) 100%
+        );
 
 }
 
 
 /* ======================================================
-   15 · CLIC · PÁGINA LEGAL
+   16 · ESTADO ACTIVO EN PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
 
-    color:
-        rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.90);
 
 }
 
 
 /* ======================================================
-   16 · MÓVIL
+   17 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -358,14 +355,11 @@ body.pagina-legal .footer-terminos.barrido {
 
     .footer-copy {
 
-        font-size:
-            0.46rem;
+        font-size: 0.46rem;
 
-        letter-spacing:
-            0.10em;
+        letter-spacing: 0.10em;
 
-        white-space:
-            nowrap;
+        white-space: nowrap;
 
     }
 
@@ -373,7 +367,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ======================================================
-   17 · ACCESIBILIDAD
+   18 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
