@@ -14,7 +14,7 @@
 
     position: relative;
 
-    z-index: 30;
+    z-index: 20;
 
     width: 100%;
 
@@ -56,6 +56,8 @@
 
     display: block;
 
+    width: 100%;
+
     margin: 0;
 
     padding: 0;
@@ -85,7 +87,7 @@
 
 /* ==========================================================================
    04 · ENLACES
-   ALINEACIÓN EXACTA CON EL RESTO DE LA LÍNEA
+   ALINEACIÓN TIPOGRÁFICA
    ========================================================================== */
 
 .footer-artista,
@@ -120,41 +122,43 @@
     cursor: pointer;
 
     /*
-     * El efecto queda completamente encerrado
-     * dentro de cada palabra/enlace.
+     * El enlace conserva exactamente su posición
+     * dentro de la línea de texto.
+     */
+
+    transform: none;
+
+    /*
+     * El destello queda completamente contenido
+     * dentro del propio enlace.
      */
 
     overflow: hidden;
 
     /*
-     * Evita el rectángulo azul/negro al tocar
-     * en navegadores móviles.
+     * Elimina el resaltado rectangular táctil
+     * de Safari / iOS / Android.
      */
 
     -webkit-tap-highlight-color: transparent;
 
-    /*
-     * Evita cualquier desplazamiento del elemento
-     * respecto a la línea de texto.
-     */
+    -webkit-touch-callout: none;
 
-    transform-origin: center center;
+    outline: none;
 
     /*
-     * Solo animamos la ampliación.
-     * El destello tiene su propia animación.
+     * Transición exclusivamente visual.
      */
 
     transition:
-        transform 0.28s cubic-bezier(0.25, 1, 0.5, 1),
-        color 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.3s ease;
 
 }
 
 
 /* ==========================================================================
    05 · DESTELLO
-   EXCLUSIVAMENTE DENTRO DEL ENLACE
+   EXCLUSIVAMENTE DENTRO DEL TEXTO CLICABLE
    ========================================================================== */
 
 .footer-artista::after,
@@ -166,9 +170,9 @@
 
     top: 0;
 
-    left: -45%;
+    left: -100%;
 
-    width: 28%;
+    width: 42%;
 
     height: 100%;
 
@@ -176,9 +180,9 @@
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.04) 25%,
+            rgba(255, 255, 255, 0.03) 25%,
             rgba(255, 255, 255, 0.30) 50%,
-            rgba(255, 255, 255, 0.04) 75%,
+            rgba(255, 255, 255, 0.03) 75%,
             rgba(255, 255, 255, 0) 100%
         );
 
@@ -193,8 +197,8 @@
 
 
 /* ==========================================================================
-   06 · HOVER · ESCRITORIO
-   AMPLIACIÓN SUTIL
+   06 · AMPLIACIÓN AL PASAR EL RATÓN
+   SIN ALTERAR LA ALINEACIÓN DEL TEXTO
    ========================================================================== */
 
 .footer-artista:hover,
@@ -202,7 +206,22 @@
 
     color: rgba(44, 44, 44, 0.72);
 
-    transform: scale(1.03);
+}
+
+
+/*
+ * La ampliación visual se realiza mediante text-shadow.
+ *
+ * No usamos transform: scale() en el enlace porque puede
+ * hacer que el texto parezca desplazado verticalmente
+ * respecto al resto de la línea.
+ */
+
+.footer-artista:hover,
+.footer-terminos:hover {
+
+    text-shadow:
+        0 0 0.01px currentColor;
 
 }
 
@@ -218,8 +237,8 @@
 
     animation:
         footerSweep
-        0.48s
-        cubic-bezier(0.22, 1, 0.36, 1)
+        0.42s
+        cubic-bezier(0.4, 0, 0.2, 1)
         forwards;
 
 }
@@ -227,14 +246,13 @@
 
 /* ==========================================================================
    08 · ANIMACIÓN DEL DESTELLO
-   RECORRIDO CORTO Y RÁPIDO
    ========================================================================== */
 
 @keyframes footerSweep {
 
     0% {
 
-        left: -45%;
+        left: -55%;
 
         opacity: 0;
 
@@ -260,7 +278,7 @@
 
     100% {
 
-        left: 125%;
+        left: 115%;
 
         opacity: 0;
 
@@ -270,15 +288,13 @@
 
 
 /* ==========================================================================
-   09 · ESTADO DURANTE LA NAVEGACIÓN
+   09 · ESTADO DURANTE EL DESTELLO
    ========================================================================== */
 
 .footer-artista.barrido,
 .footer-terminos.barrido {
 
     color: rgba(44, 44, 44, 0.78);
-
-    transform: scale(1.03);
 
 }
 
@@ -289,9 +305,7 @@
 
 .footer-separador {
 
-    display: inline-block;
-
-    vertical-align: baseline;
+    display: inline;
 
     margin:
         0 0.42em;
@@ -338,21 +352,18 @@
 
 
 /* ==========================================================================
-   12 · PORTADA
-   FOOTER SIEMPRE VISIBLE AL PIE
+   12 · PÁGINA DE INICIO
    ========================================================================== */
 
 body.pagina-inicio .footer {
 
-    position: fixed;
+    position: absolute;
 
     left: 0;
 
     bottom: 0;
 
     width: 100%;
-
-    z-index: 30;
 
 }
 
@@ -373,7 +384,7 @@ body.pagina-legal .footer {
 
 
 /* ==========================================================================
-   14 · FOOTER SOBRE FONDO OSCURO · PÁGINA LEGAL
+   14 · FOOTER PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-copy {
@@ -399,7 +410,7 @@ body.pagina-legal .footer-separador {
 
 
 /* ==========================================================================
-   15 · HOVER · PÁGINA LEGAL
+   15 · HOVER PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista:hover,
@@ -407,13 +418,11 @@ body.pagina-legal .footer-terminos:hover {
 
     color: rgba(255, 255, 255, 0.72);
 
-    transform: scale(1.03);
-
 }
 
 
 /* ==========================================================================
-   16 · DESTELLO · PÁGINA LEGAL
+   16 · DESTELLO PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista::after,
@@ -432,26 +441,19 @@ body.pagina-legal .footer-terminos::after {
 }
 
 
-/* ==========================================================================
-   17 · ESTADO ACTIVO · PÁGINA LEGAL
-   ========================================================================== */
-
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
 
     color: rgba(255, 255, 255, 0.78);
 
-    transform: scale(1.03);
-
 }
 
 
 /* ==========================================================================
-   18 · MÓVIL
+   17 · MÓVIL
    ========================================================================== */
 
 @media (max-width: 767px) {
-
 
     .footer-contenido {
 
@@ -481,8 +483,8 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * En móvil también existe la ampliación,
-     * pero no hay resaltado rectangular.
+     * En móvil no modificamos la geometría
+     * del enlace al tocarlo.
      */
 
     .footer-artista:active,
@@ -490,15 +492,20 @@ body.pagina-legal .footer-terminos.barrido {
 
         color: rgba(44, 44, 44, 0.72);
 
-        transform: scale(1.03);
-
     }
 
+
+    /*
+     * Eliminación completa del resaltado
+     * rectangular del navegador.
+     */
 
     .footer-artista,
     .footer-terminos {
 
         -webkit-tap-highlight-color: transparent;
+
+        -webkit-touch-callout: none;
 
         outline: none;
 
@@ -508,7 +515,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   19 · MOVIMIENTO REDUCIDO
+   18 · ACCESIBILIDAD
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
