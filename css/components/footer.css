@@ -1,3 +1,4 @@
+```css
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
@@ -39,7 +40,8 @@
 
     margin: 0 auto;
 
-    padding: 1.8rem 2rem 2.5rem;
+    padding:
+        1.8rem 2rem 2.5rem;
 
     box-sizing: border-box;
 
@@ -61,32 +63,40 @@
 
     padding: 0;
 
-    color: rgba(44, 44, 44, 0.45);
+    color:
+        rgba(44, 44, 44, 0.45);
 
     font-family:
         "Montserrat",
         sans-serif;
 
-    font-size: 0.55rem;
+    font-size:
+        0.55rem;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
-    letter-spacing: 0.16em;
+    letter-spacing:
+        0.16em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 
-    user-select: none;
+    user-select:
+        none;
 
 }
 
 
 /* ======================================================
    04 · ENLACES CLICABLES
-   MISMO TAMAÑO Y MISMA LÍNEA TIPOGRÁFICA
+   MISMA TIPOGRAFÍA Y TAMAÑO
 ====================================================== */
 
 .footer-artista,
@@ -98,126 +108,161 @@
 
     vertical-align: baseline;
 
-    color: inherit;
+    color:
+        rgba(44, 44, 44, 0.45);
 
-    font-family: inherit;
+    font-family:
+        inherit;
 
-    font-size: inherit;
+    font-size:
+        inherit;
 
-    font-weight: inherit;
+    font-weight:
+        inherit;
 
-    line-height: inherit;
+    line-height:
+        inherit;
 
-    letter-spacing: inherit;
+    letter-spacing:
+        inherit;
 
-    text-transform: inherit;
+    text-transform:
+        inherit;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     /*
-     * IMPORTANTE:
-     * El overflow recorta exclusivamente el barrido
-     * dentro del área de la palabra.
+     * La interacción se produce mediante una transición
+     * lenta y controlada, sin alterar de forma brusca
+     * la composición del footer.
      */
 
-    overflow: hidden;
-
     transition:
-        color 0.35s ease;
+        transform
+        0.5s
+        cubic-bezier(0.25, 1, 0.5, 1),
+
+        color
+        0.5s
+        cubic-bezier(0.25, 1, 0.5, 1),
+
+        letter-spacing
+        0.5s
+        cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
 
 /* ======================================================
-   05 · NOMBRE DEL ARTISTA
-====================================================== */
-
-.footer-artista {
-
-    color: rgba(44, 44, 44, 0.55);
-
-}
-
-
-/* ======================================================
-   06 · TÉRMINOS Y CONDICIONES
-====================================================== */
-
-.footer-terminos {
-
-    color: rgba(44, 44, 44, 0.45);
-
-}
-
-
-/* ======================================================
-   07 · REALCE MUY SUTIL AL PASAR EL CURSOR
+   05 · ESTADO HOVER
+   DESTACADO SUTIL Y ELEGANTE
 ====================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color: rgba(44, 44, 44, 0.68);
+    /*
+     * El enlace gana presencia sin parecer
+     * que cambia de tamaño de forma evidente.
+     */
+
+    color:
+        rgba(44, 44, 44, 0.72);
+
+    transform:
+        scale(1.025);
+
+    /*
+     * Ligera apertura tipográfica.
+     * El cambio es deliberadamente mínimo.
+     */
+
+    letter-spacing:
+        0.165em;
 
 }
 
 
 /* ======================================================
-   08 · LUZ DEL BARRIDO
-   SIN FONDO · SIN SOMBRA · SIN RECUADRO
+   06 · ESTADO ACTIVO
+   RESPUESTA AL CLIC
+====================================================== */
+
+.footer-artista:active,
+.footer-terminos:active {
+
+    color:
+        rgba(44, 44, 44, 0.78);
+
+}
+
+
+/* ======================================================
+   07 · BARRIDO DE LUZ
+   PREPARACIÓN DEL EFECTO
 ====================================================== */
 
 .footer-artista::before,
 .footer-terminos::before {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    top: -20%;
+    top:
+        -20%;
 
-    left: -160%;
+    left:
+        -160%;
 
-    width: 55%;
+    width:
+        45%;
 
-    height: 140%;
+    height:
+        140%;
 
     /*
-     * Haz de luz estrecho y suave.
-     * No genera ningún fondo alrededor
-     * de la palabra.
+     * Haz de luz extremadamente suave.
+     * No genera fondo ni recuadro.
      */
 
     background:
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.04) 25%,
-            rgba(255, 255, 255, 0.16) 50%,
-            rgba(255, 255, 255, 0.04) 75%,
+            rgba(255, 255, 255, 0.025) 25%,
+            rgba(255, 255, 255, 0.11) 50%,
+            rgba(255, 255, 255, 0.025) 75%,
             rgba(255, 255, 255, 0) 100%
         );
 
     transform:
         skewX(-25deg);
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
-    opacity: 0;
+    opacity:
+        0;
 
 }
 
 
 /* ======================================================
-   09 · ACTIVACIÓN DEL BARRIDO
+   08 · ACTIVACIÓN DEL BARRIDO
 ====================================================== */
 
 .footer-artista.barrido::before,
 .footer-terminos.barrido::before {
 
-    opacity: 1;
+    opacity:
+        1;
 
     animation:
         footerSweep
@@ -229,20 +274,23 @@
 
 
 /* ======================================================
-   10 · RECORRIDO DE IZQUIERDA A DERECHA
+   09 · RECORRIDO DE LA LUZ
+   IZQUIERDA → DERECHA
 ====================================================== */
 
 @keyframes footerSweep {
 
     0% {
 
-        left: -160%;
+        left:
+            -160%;
 
     }
 
     100% {
 
-        left: 160%;
+        left:
+            160%;
 
     }
 
@@ -250,83 +298,100 @@
 
 
 /* ======================================================
-   11 · ESTADO DURANTE EL BARRIDO
-   SOLO UN LIGERO REALCE TIPOGRÁFICO
+   10 · ESTADO DURANTE EL BARRIDO
 ====================================================== */
 
 .footer-artista.barrido,
 .footer-terminos.barrido {
 
-    color: rgba(44, 44, 44, 0.74);
+    color:
+        rgba(44, 44, 44, 0.74);
 
 }
 
 
 /* ======================================================
-   12 · PÁGINA DE INICIO
+   11 · PÁGINA DE INICIO
 ====================================================== */
 
 body.pagina-inicio .footer {
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 0;
+    left:
+        0;
 
-    bottom: 0;
+    bottom:
+        0;
 
-    width: 100%;
+    width:
+        100%;
 
 }
 
 
 /* ======================================================
-   13 · PÁGINA LEGAL
+   12 · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    margin-top: 0;
+    margin-top:
+        0;
 
 }
 
 
 /* ======================================================
-   14 · FOOTER SOBRE FONDO OSCURO
+   13 · FOOTER SOBRE FONDO OSCURO
 ====================================================== */
 
 body.pagina-legal .footer-copy {
 
-    color: rgba(255, 255, 255, 0.48);
+    color:
+        rgba(255, 255, 255, 0.48);
 
 }
 
 
-body.pagina-legal .footer-artista {
-
-    color: rgba(255, 255, 255, 0.62);
-
-}
-
-
+body.pagina-legal .footer-artista,
 body.pagina-legal .footer-terminos {
 
-    color: rgba(255, 255, 255, 0.48);
+    color:
+        rgba(255, 255, 255, 0.48);
 
 }
 
 
 /* ======================================================
-   15 · HOVER · PÁGINA LEGAL
+   14 · HOVER · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer-artista:hover,
 body.pagina-legal .footer-terminos:hover {
 
-    color: rgba(255, 255, 255, 0.72);
+    color:
+        rgba(255, 255, 255, 0.72);
+
+}
+
+
+/* ======================================================
+   15 · ESTADO ACTIVO · PÁGINA LEGAL
+====================================================== */
+
+body.pagina-legal .footer-artista:active,
+body.pagina-legal .footer-terminos:active {
+
+    color:
+        rgba(255, 255, 255, 0.78);
 
 }
 
@@ -342,9 +407,9 @@ body.pagina-legal .footer-terminos::before {
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.03) 25%,
-            rgba(255, 255, 255, 0.12) 50%,
-            rgba(255, 255, 255, 0.03) 75%,
+            rgba(255, 255, 255, 0.025) 25%,
+            rgba(255, 255, 255, 0.10) 50%,
+            rgba(255, 255, 255, 0.025) 75%,
             rgba(255, 255, 255, 0) 100%
         );
 
@@ -358,7 +423,8 @@ body.pagina-legal .footer-terminos::before {
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
 
-    color: rgba(255, 255, 255, 0.76);
+    color:
+        rgba(255, 255, 255, 0.78);
 
 }
 
@@ -379,11 +445,32 @@ body.pagina-legal .footer-terminos.barrido {
 
     .footer-copy {
 
-        font-size: 0.46rem;
+        font-size:
+            0.46rem;
 
-        letter-spacing: 0.10em;
+        letter-spacing:
+            0.10em;
 
-        white-space: nowrap;
+        white-space:
+            nowrap;
+
+    }
+
+
+    .footer-artista:hover,
+    .footer-terminos:hover {
+
+        /*
+         * En móvil no existe hover real.
+         * Evitamos que la interacción táctil
+         * produzca transformaciones innecesarias.
+         */
+
+        transform:
+            none;
+
+        letter-spacing:
+            inherit;
 
     }
 
@@ -396,10 +483,20 @@ body.pagina-legal .footer-terminos.barrido {
 
 @media (prefers-reduced-motion: reduce) {
 
+    .footer-artista,
+    .footer-terminos {
+
+        transition:
+            none;
+
+    }
+
+
     .footer-artista::before,
     .footer-terminos::before {
 
-        display: none;
+        display:
+            none;
 
     }
 
@@ -409,5 +506,4 @@ body.pagina-legal .footer-terminos.barrido {
 /* ======================================================
    FIN · footer.css
 ====================================================== */
-
-
+```
