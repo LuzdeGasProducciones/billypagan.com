@@ -36,8 +36,13 @@ body.pagina-legal {
 
 
 /* ======================================================
-   02 · CAPA DE LECTURA
+   02 · CAPA GENERAL DE LECTURA
 ====================================================== */
+
+/*
+   La fotografía continúa siendo protagonista.
+   Esta capa únicamente suaviza ligeramente el fondo.
+*/
 
 body.pagina-legal::before {
 
@@ -51,12 +56,7 @@ body.pagina-legal::before {
 
     pointer-events: none;
 
-    /*
-       Capa muy ligera.
-       La fotografía debe seguir siendo claramente visible.
-    */
-
-    background: rgba(245, 245, 245, 0.12);
+    background: rgba(245, 245, 245, 0.06);
 }
 
 
@@ -98,7 +98,7 @@ body.pagina-legal .legal-volver {
 
     display: inline-block;
 
-    color: rgba(32, 32, 32, 0.72);
+    color: rgba(32, 32, 32, 0.78);
 
     font-family: "Montserrat", sans-serif;
 
@@ -129,8 +129,15 @@ body.pagina-legal .legal-volver:hover {
 
 
 /* ======================================================
-   05 · CONTENIDO
+   05 · SUPERFICIE ÚNICA DE LECTURA
 ====================================================== */
+
+/*
+   No existen tarjetas independientes.
+
+   Todo el contenido legal se presenta como
+   un único documento editorial sobre el fondo.
+*/
 
 body.pagina-legal .legal-contenido {
 
@@ -138,21 +145,27 @@ body.pagina-legal .legal-contenido {
 
     z-index: 2;
 
-    width: min(820px, 88%);
+    width: min(900px, 90%);
 
     margin: 0 auto;
 
-    padding: 4.5rem 0 6rem;
+    padding: 4.8rem 4.5rem 6rem;
+
+    background: rgba(248, 248, 245, 0.90);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
 }
 
 
 /* ======================================================
-   06 · TÍTULO
+   06 · TÍTULO PRINCIPAL
 ====================================================== */
 
 body.pagina-legal .legal-titulo {
 
-    margin: 0 0 4.5rem;
+    margin: 0 0 4.8rem;
 
     text-align: center;
 }
@@ -164,7 +177,7 @@ body.pagina-legal .legal-etiqueta {
 
     margin-bottom: 1rem;
 
-    color: rgba(32, 32, 32, 0.58);
+    color: rgba(32, 32, 32, 0.52);
 
     font-family: "Montserrat", sans-serif;
 
@@ -206,21 +219,24 @@ body.pagina-legal .legal-titulo h1 {
 ====================================================== */
 
 /*
-   No utilizamos tarjetas.
+   Cada sección forma parte del mismo documento.
 
-   Cada apartado forma parte de un único
-   documento editorial continuo.
+   No hay fondos individuales,
+   ni cajas,
+   ni sombras.
 */
 
 body.pagina-legal .legal-seccion {
 
     margin: 0;
 
-    padding: 0 0 3rem;
+    padding: 0 0 3.2rem;
 
     background: transparent;
 
     border: 0;
+
+    box-shadow: none;
 
     backdrop-filter: none;
 
@@ -229,15 +245,16 @@ body.pagina-legal .legal-seccion {
 
 
 /*
-   Separación elegante entre apartados.
+   Separación entre apartados mediante
+   una línea editorial muy discreta.
 */
 
 body.pagina-legal .legal-seccion + .legal-seccion {
 
-    padding-top: 3rem;
+    padding-top: 3.2rem;
 
     border-top:
-        1px solid rgba(32, 32, 32, 0.16);
+        1px solid rgba(32, 32, 32, 0.13);
 }
 
 
@@ -253,7 +270,7 @@ body.pagina-legal .legal-seccion h2 {
 
     gap: 1.1rem;
 
-    margin: 0 0 1.35rem;
+    margin: 0 0 1.4rem;
 
     color: #202020;
 
@@ -262,7 +279,7 @@ body.pagina-legal .legal-seccion h2 {
         Georgia,
         serif;
 
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 
     font-weight: 500;
 
@@ -272,30 +289,19 @@ body.pagina-legal .legal-seccion h2 {
 }
 
 
-/*
-   El número de sección queda ligeramente
-   más discreto que el título.
-*/
-
-body.pagina-legal .legal-seccion h2 {
-
-    color: #202020;
-}
-
-
 /* ======================================================
    09 · TEXTO LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-seccion p {
 
-    margin: 0 0 1.35rem;
+    margin: 0 0 1.4rem;
 
-    color: rgba(32, 32, 32, 0.86);
+    color: rgba(32, 32, 32, 0.88);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.92rem;
+    font-size: 0.94rem;
 
     font-weight: 300;
 
@@ -315,7 +321,7 @@ body.pagina-legal .legal-seccion p:last-child {
 
 body.pagina-legal .legal-seccion strong {
 
-    color: #202020;
+    color: #181818;
 
     font-weight: 400;
 }
@@ -379,9 +385,9 @@ body.pagina-legal .legal-pie {
 
     width: 100%;
 
-    padding: 0 2rem 3rem;
+    padding: 2rem 2rem 3rem;
 
-    color: rgba(32, 32, 32, 0.52);
+    color: rgba(32, 32, 32, 0.58);
 
     font-family: "Montserrat", sans-serif;
 
@@ -401,9 +407,10 @@ body.pagina-legal .legal-pie {
 
 body.pagina-legal .legal-pie a {
 
-    color: rgba(32, 32, 32, 0.68);
+    color: rgba(32, 32, 32, 0.72);
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease;
 }
 
 
@@ -421,7 +428,7 @@ body.pagina-legal .legal-pie a:hover {
 
 
     /* --------------------------------------------------
-       FONDO
+       FONDO MÓVIL
     -------------------------------------------------- */
 
     body.pagina-legal {
@@ -441,7 +448,7 @@ body.pagina-legal .legal-pie a:hover {
 
     body.pagina-legal::before {
 
-        background: rgba(245, 245, 245, 0.14);
+        background: rgba(245, 245, 245, 0.08);
     }
 
 
@@ -464,14 +471,22 @@ body.pagina-legal .legal-pie a:hover {
 
 
     /* --------------------------------------------------
-       CONTENIDO
+       SUPERFICIE DE LECTURA
     -------------------------------------------------- */
 
     body.pagina-legal .legal-contenido {
 
-        width: 88%;
+        width: 92%;
 
-        padding: 3.8rem 0 4rem;
+        margin: 0 auto;
+
+        padding: 3.8rem 1.5rem 4rem;
+
+        background: rgba(248, 248, 245, 0.91);
+
+        backdrop-filter: blur(8px);
+
+        -webkit-backdrop-filter: blur(8px);
     }
 
 
@@ -481,7 +496,7 @@ body.pagina-legal .legal-pie a:hover {
 
     body.pagina-legal .legal-titulo {
 
-        margin-bottom: 3.5rem;
+        margin-bottom: 3.8rem;
     }
 
 
@@ -497,7 +512,8 @@ body.pagina-legal .legal-pie a:hover {
 
     body.pagina-legal .legal-titulo h1 {
 
-        font-size: clamp(2.8rem, 12vw, 4rem);
+        font-size:
+            clamp(2.8rem, 12vw, 4rem);
 
         line-height: 0.95;
     }
@@ -518,7 +534,7 @@ body.pagina-legal .legal-pie a:hover {
         padding-top: 2.5rem;
 
         border-top:
-            1px solid rgba(32, 32, 32, 0.15);
+            1px solid rgba(32, 32, 32, 0.13);
     }
 
 
@@ -530,9 +546,9 @@ body.pagina-legal .legal-pie a:hover {
 
         gap: 0.7rem;
 
-        margin-bottom: 1.1rem;
+        margin-bottom: 1.15rem;
 
-        font-size: 1.65rem;
+        font-size: 1.7rem;
 
         line-height: 1.15;
     }
@@ -548,9 +564,9 @@ body.pagina-legal .legal-pie a:hover {
 
         line-height: 1.85;
 
-        letter-spacing: 0.005em;
+        letter-spacing: 0.004em;
 
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.25rem;
     }
 
 
@@ -564,7 +580,7 @@ body.pagina-legal .legal-pie a:hover {
 
         gap: 0.7rem;
 
-        padding: 0 1.5rem 2rem;
+        padding: 1.5rem 1.5rem 2rem;
 
         font-size: 0.5rem;
 
