@@ -121,22 +121,17 @@
     cursor: pointer;
 
     /*
-     * Evita el recuadro de selección táctil
-     * en navegadores móviles.
+     * Elimina el rectángulo de selección táctil
+     * que aparece en algunos navegadores móviles.
      */
 
     -webkit-tap-highlight-color: transparent;
 
-    /*
-     * Evita contornos automáticos de foco.
-
-     */
-
     outline: none;
 
     /*
-     * Microinteracción elegante:
-     * el enlace aumenta ligeramente de tamaño.
+     * La ampliación se produce únicamente
+     * mediante una microinteracción.
      */
 
     transition:
@@ -147,8 +142,7 @@
 
 
 /* ==========================================================================
-   05 · BARRIDO EDITORIAL
-   EL DESTELLO QUEDA CONFINADO AL ENLACE
+   05 · DESTELLO SOBRE LAS LETRAS
    ========================================================================== */
 
 .footer-artista::after,
@@ -160,19 +154,25 @@
 
     top: 0;
 
-    left: -140%;
+    left: -160%;
 
-    width: 80%;
+    width: 100%;
 
     height: 100%;
+
+    /*
+     * Banda de luz muy estrecha.
+     * El overflow del propio enlace hace que
+     * el efecto permanezca dentro de la palabra.
+     */
 
     background:
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.03) 35%,
-            rgba(255, 255, 255, 0.18) 50%,
-            rgba(255, 255, 255, 0.03) 65%,
+            rgba(255, 255, 255, 0.04) 35%,
+            rgba(255, 255, 255, 0.28) 50%,
+            rgba(255, 255, 255, 0.04) 65%,
             rgba(255, 255, 255, 0) 100%
         );
 
@@ -222,19 +222,25 @@
 
     0% {
 
-        left: -140%;
+        left: -160%;
 
         opacity: 0;
 
     }
 
-    15% {
+    12% {
 
         opacity: 1;
 
     }
 
-    85% {
+    50% {
+
+        opacity: 1;
+
+    }
+
+    88% {
 
         opacity: 1;
 
@@ -242,7 +248,7 @@
 
     100% {
 
-        left: 140%;
+        left: 160%;
 
         opacity: 0;
 
@@ -252,8 +258,7 @@
 
 
 /* ==========================================================================
-   08 · ESTADO DURANTE EL CLIC
-   TAMBIÉN FUNCIONA EN MÓVIL
+   08 · ESTADO DURANTE EL BARRIDO
    ========================================================================== */
 
 .footer-artista.barrido,
@@ -267,28 +272,7 @@
 
 
 /* ==========================================================================
-   09 · FOCO
-   SIN RECTÁNGULOS DEL NAVEGADOR
-   ========================================================================== */
-
-.footer-artista:focus,
-.footer-terminos:focus {
-
-    outline: none;
-
-}
-
-
-.footer-artista:focus-visible,
-.footer-terminos:focus-visible {
-
-    outline: none;
-
-}
-
-
-/* ==========================================================================
-   10 · SEPARADORES EDITORIALES
+   09 · SEPARADORES EDITORIALES
    ========================================================================== */
 
 .footer-separador {
@@ -317,6 +301,27 @@
     letter-spacing: 0;
 
     user-select: none;
+
+}
+
+
+/* ==========================================================================
+   10 · FOCO
+   SIN RECUADRO
+   ========================================================================== */
+
+.footer-artista:focus,
+.footer-terminos:focus {
+
+    outline: none;
+
+}
+
+
+.footer-artista:focus-visible,
+.footer-terminos:focus-visible {
+
+    outline: none;
 
 }
 
@@ -394,7 +399,7 @@ body.pagina-legal .footer-terminos:hover {
 
 
 /* ==========================================================================
-   15 · BARRIDO EN PÁGINA LEGAL
+   15 · DESTELLO EN PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista::after,
@@ -405,7 +410,7 @@ body.pagina-legal .footer-terminos::after {
             90deg,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.02) 35%,
-            rgba(255, 255, 255, 0.10) 50%,
+            rgba(255, 255, 255, 0.12) 50%,
             rgba(255, 255, 255, 0.02) 65%,
             rgba(255, 255, 255, 0) 100%
         );
@@ -461,8 +466,8 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * En móvil el toque activa la misma
-     * microampliación elegante.
+     * En móvil conservamos la ampliación
+     * durante el toque.
      */
 
     .footer-artista:active,
@@ -476,8 +481,8 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * El navegador móvil no debe mostrar
-     * ningún resaltado táctil.
+     * Elimina completamente el resaltado
+     * táctil del navegador.
      */
 
     .footer-artista,
