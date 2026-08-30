@@ -6,8 +6,15 @@
 
 
 /* ======================================================
-   01. BASE
+   01. BASE · PÁGINA LEGAL
 ====================================================== */
+
+html {
+
+    min-height: 100%;
+
+}
+
 
 body.pagina-legal {
 
@@ -25,13 +32,13 @@ body.pagina-legal {
 
     font-family: "Montserrat", sans-serif;
 
-    background: #f5f5f5;
+    background-color: #f5f5f5;
 
 }
 
 
 /* ======================================================
-   02. CONTENEDOR LEGAL
+   02. CONTENEDOR PRINCIPAL
 ====================================================== */
 
 body.pagina-legal .legal {
@@ -50,18 +57,20 @@ body.pagina-legal .legal {
 
 
 /* ======================================================
-   03. FONDO LEGAL
+   03. FONDO LEGAL · ESCRITORIO
 ====================================================== */
 
 body.pagina-legal .legal-fondo {
 
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
     width: 100%;
-
-    height: 100vh;
+    height: 100%;
 
     z-index: 0;
 
@@ -87,9 +96,12 @@ body.pagina-legal .legal-fondo::after {
 
     position: absolute;
 
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-    background: rgba(245, 245, 245, 0.16);
+    background: rgba(245, 245, 245, 0.12);
 
 }
 
@@ -114,7 +126,7 @@ body.pagina-legal .legal-cabecera {
 
 
 /* ======================================================
-   06. VOLVER
+   06. ENLACE · VOLVER
 ====================================================== */
 
 body.pagina-legal .legal-volver {
@@ -254,7 +266,7 @@ body.pagina-legal .legal-seccion {
 
     padding: 2.5rem 3.5rem;
 
-    background: rgba(245, 245, 245, 0.82);
+    background: rgba(245, 245, 245, 0.78);
 
     border: 1px solid rgba(32, 32, 32, 0.06);
 
@@ -345,12 +357,16 @@ body.pagina-legal .legal-seccion a {
 
     text-decoration-color: rgba(32, 32, 32, 0.35);
 
+    text-decoration-thickness: 1px;
+
     text-underline-offset: 0.2rem;
 
 }
 
 
 body.pagina-legal .legal-seccion a:hover {
+
+    color: #000000;
 
     text-decoration-color: #202020;
 
@@ -433,19 +449,24 @@ body.pagina-legal .legal-pie a:hover {
 
 @media (max-width: 767px) {
 
+
     body.pagina-legal .legal-fondo {
 
         background-image:
             url("../../images/fondo/mobile/fondo-legal-movil.jpg");
 
+        background-size: cover;
+
         background-position: center center;
+
+        background-repeat: no-repeat;
 
     }
 
 
     body.pagina-legal .legal-fondo::after {
 
-        background: rgba(245, 245, 245, 0.20);
+        background: rgba(245, 245, 245, 0.16);
 
     }
 
@@ -497,6 +518,8 @@ body.pagina-legal .legal-pie a:hover {
 
         font-size: clamp(2.7rem, 12vw, 4rem);
 
+        line-height: 0.95;
+
     }
 
 
@@ -517,7 +540,7 @@ body.pagina-legal .legal-pie a:hover {
 
         padding: 1.8rem 1.25rem;
 
-        background: rgba(245, 245, 245, 0.84);
+        background: rgba(245, 245, 245, 0.82);
 
         backdrop-filter: blur(6px);
 
