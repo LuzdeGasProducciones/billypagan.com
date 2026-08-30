@@ -107,7 +107,7 @@
 
 
 /* ======================================================
-   06. ENLACES · ESTADO NORMAL
+   06. ENLACES · BASE
 ====================================================== */
 
 .footer a {
@@ -118,23 +118,59 @@
 
     text-decoration: none;
 
-    transform: scale(1);
-
-    transition:
-        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center center;
 
 }
 
 
 /* ======================================================
-   07. HOVER · SOLO ESCALA
+   07. ESCRITORIO · CURSOR
+   Hover = únicamente crecimiento
 ====================================================== */
 
 @media (hover: hover) and (pointer: fine) {
 
+    .footer a {
+
+        transition:
+            transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+    }
+
+
     .footer a:hover {
 
-        transform: scale(1.05);
+        transform: scale(1.04);
+
+    }
+
+
+    /* --------------------------------------------------
+       DESTELLO · SOLO AL HACER CLIC
+    -------------------------------------------------- */
+
+    .footer a.destello {
+
+        background: linear-gradient(
+            90deg,
+            rgba(32, 32, 32, 0.55) 0%,
+            rgba(32, 32, 32, 0.55) 35%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(32, 32, 32, 0.55) 65%,
+            rgba(32, 32, 32, 0.55) 100%
+        );
+
+        background-size: 250% 100%;
+
+        background-position: 100% center;
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+        animation: footerDestello 0.65s ease-out forwards;
 
     }
 
@@ -142,57 +178,77 @@
 
 
 /* ======================================================
-   08. DESTELLO · ESTADO ACTIVO
-   El efecto solamente aparece después del clic.
+   08. MÓVIL · DESTELLO AL TOCAR
 ====================================================== */
 
-.footer a.destello-activo {
+@media (hover: none) and (pointer: coarse) {
 
-    background: linear-gradient(
-        to right,
-        rgba(32, 32, 32, 0.55) 0%,
-        rgba(32, 32, 32, 0.55) 42%,
-        rgba(255, 255, 255, 0.85) 48%,
-        rgba(255, 255, 255, 0.95) 50%,
-        rgba(255, 255, 255, 0.85) 52%,
-        rgba(32, 32, 32, 0.55) 58%,
-        rgba(32, 32, 32, 0.55) 100%
-    );
+    .footer a {
 
-    background-size: 200% auto;
+        transition:
+            transform 0.2s ease;
 
-    background-position: 0% center;
+    }
 
-    -webkit-background-clip: text;
 
-    background-clip: text;
+    /* --------------------------------------------------
+       AL TOCAR
+    -------------------------------------------------- */
 
-    -webkit-text-fill-color: transparent;
+    .footer a:active {
 
-    animation:
-        destelloFooter
-        0.75s
-        cubic-bezier(0.16, 1, 0.3, 1)
-        forwards;
+        transform: scale(1.04);
+
+    }
+
+
+    /* --------------------------------------------------
+       CLASE JS · DESTELLO
+    -------------------------------------------------- */
+
+    .footer a.destello {
+
+        background: linear-gradient(
+            90deg,
+            rgba(32, 32, 32, 0.55) 0%,
+            rgba(32, 32, 32, 0.55) 35%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(32, 32, 32, 0.55) 65%,
+            rgba(32, 32, 32, 0.55) 100%
+        );
+
+        background-size: 250% 100%;
+
+        background-position: 100% center;
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+
+        animation: footerDestello 0.65s ease-out forwards;
+
+    }
 
 }
 
 
 /* ======================================================
-   09. ANIMACIÓN DEL DESTELLO
+   09. ANIMACIÓN · DESTELLO
 ====================================================== */
 
-@keyframes destelloFooter {
+@keyframes footerDestello {
 
     0% {
 
-        background-position: 0% center;
+        background-position: 100% center;
 
     }
 
     100% {
 
-        background-position: -200% center;
+        background-position: 0% center;
 
     }
 
@@ -228,14 +284,20 @@
 
 
 /* ======================================================
-   12. MÓVIL
+   12. REDUCCIÓN DE MOVIMIENTO
 ====================================================== */
 
-@media (max-width: 767px) {
+@media (prefers-reduced-motion: reduce) {
 
     .footer a {
 
-        transform: none;
+        transition: none;
+
+    }
+
+    .footer a.destello {
+
+        animation: none;
 
     }
 
