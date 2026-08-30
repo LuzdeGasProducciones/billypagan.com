@@ -1,410 +1,416 @@
 /* ======================================================
-   BILLY PAGÁN · SITIO OFICIAL
-   legal.css
-   PÁGINAS LEGALES · TÉRMINOS Y CONDICIONES
+BILLY PAGÁN · SITIO OFICIAL
+legal.css
+PÁGINA · TÉRMINOS Y CONDICIONES
 ====================================================== */
 
-
 /* ======================================================
-   01. PÁGINA LEGAL
+01. PÁGINA LEGAL
 ====================================================== */
 
 .pagina-legal {
 
-    position: relative;
+```
+position: relative;
 
-    width: 100%;
+width: 100%;
 
-    min-height: 100vh;
+min-height: 100vh;
 
-    margin: 0;
+margin: 0;
 
-    padding: 0;
+padding: 0;
 
-    color: #202020;
+color: #202020;
 
-    background-color: #f5f5f5;
+font-family: "Montserrat", sans-serif;
+
+background-color: #f5f5f5;
+
+overflow-x: hidden;
+```
 
 }
 
-
 /* ======================================================
-   02. FONDO LEGAL
+02. FONDO
 ====================================================== */
 
 .pagina-legal::before {
 
-    content: "";
+```
+content: "";
 
-    position: fixed;
+position: fixed;
 
-    inset: 0;
+inset: 0;
 
-    z-index: 0;
+z-index: -1;
+
+width: 100%;
+
+height: 100%;
+
+background-image:
+    url("../../images/fondo /desktop/fondo-legal-desktop.jpg");
+
+background-size: cover;
+
+background-position: center center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+```
+
+}
+
+/* ======================================================
+03. CONTENEDOR PRINCIPAL
+====================================================== */
+
+.legal-contenido {
+
+```
+width: min(900px, 88%);
+
+margin: 0 auto;
+
+padding: 9rem 0 8rem;
+```
+
+}
+
+/* ======================================================
+04. CABECERA
+====================================================== */
+
+.legal-cabecera {
+
+```
+margin: 0 0 4rem;
+
+text-align: center;
+```
+
+}
+
+.legal-cabecera h1 {
+
+```
+margin: 0;
+
+color: #202020;
+
+font-family: "Cormorant Garamond", serif;
+
+font-size: clamp(
+    3rem,
+    6vw,
+    5.5rem
+);
+
+font-weight: 500;
+
+line-height: 0.95;
+
+letter-spacing: 0.01em;
+```
+
+}
+
+.legal-cabecera p {
+
+```
+margin: 1.25rem 0 0;
+
+color: rgba(32, 32, 32, 0.6);
+
+font-family: "Montserrat", sans-serif;
+
+font-size: 0.62rem;
+
+font-weight: 400;
+
+line-height: 1.5;
+
+letter-spacing: 0.22em;
+
+text-transform: uppercase;
+```
+
+}
+
+/* ======================================================
+05. TEXTO LEGAL
+====================================================== */
+
+.legal-texto {
+
+```
+width: 100%;
+
+margin: 0 auto;
+```
+
+}
+
+.legal-texto h2 {
+
+```
+margin: 3rem 0 1rem;
+
+color: #202020;
+
+font-family: "Montserrat", sans-serif;
+
+font-size: 0.72rem;
+
+font-weight: 400;
+
+line-height: 1.5;
+
+letter-spacing: 0.16em;
+
+text-transform: uppercase;
+```
+
+}
+
+.legal-texto h2:first-child {
+
+```
+margin-top: 0;
+```
+
+}
+
+.legal-texto p {
+
+```
+margin: 0 0 1.25rem;
+
+color: rgba(32, 32, 32, 0.78);
+
+font-family: "Montserrat", sans-serif;
+
+font-size: 0.78rem;
+
+font-weight: 300;
+
+line-height: 1.9;
+
+letter-spacing: 0.015em;
+```
+
+}
+
+.legal-texto ul {
+
+```
+margin: 0 0 1.5rem;
+
+padding-left: 1.4rem;
+```
+
+}
+
+.legal-texto li {
+
+```
+margin-bottom: 0.65rem;
+
+color: rgba(32, 32, 32, 0.78);
+
+font-size: 0.78rem;
+
+font-weight: 300;
+
+line-height: 1.9;
+```
+
+}
+
+/* ======================================================
+06. ENLACES LEGALES
+====================================================== */
+
+.legal-texto a {
+
+```
+color: #202020;
+
+text-decoration: underline;
+
+text-decoration-color: rgba(32, 32, 32, 0.3);
+
+text-underline-offset: 0.2rem;
+
+transition:
+    text-decoration-color 0.3s ease,
+    opacity 0.3s ease;
+```
+
+}
+
+.legal-texto a:hover {
+
+```
+opacity: 0.65;
+
+text-decoration-color: rgba(32, 32, 32, 0.7);
+```
+
+}
+
+/* ======================================================
+07. SEPARADOR
+====================================================== */
+
+.legal-separador {
+
+```
+width: 3rem;
+
+height: 1px;
+
+margin: 3.5rem auto;
+
+background: rgba(32, 32, 32, 0.25);
+```
+
+}
+
+/* ======================================================
+08. FOOTER
+====================================================== */
+
+.pagina-legal .footer {
+
+```
+position: relative;
+
+width: 100%;
+
+margin-top: 2rem;
+```
+
+}
+
+/* ======================================================
+09. MÓVIL
+====================================================== */
+
+@media (max-width: 767px) {
+
+```
+.pagina-legal::before {
 
     background-image:
-        url("../../images/fondo /desktop/fondo-legal-desktop.jpg");
-
-    background-size: cover;
+        url("../../images/fondo /mobile/fondo-legal-movil.jpg");
 
     background-position: center center;
 
-    background-repeat: no-repeat;
-
-    pointer-events: none;
+    background-attachment: scroll;
 
 }
 
 
-/* ======================================================
-   03. CAPA DE LECTURA
-   Muy ligera para conservar la imagen.
-====================================================== */
+.legal-contenido {
 
-.pagina-legal::after {
+    width: 88%;
 
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 1;
-
-    background: rgba(245, 245, 245, 0.18);
-
-    pointer-events: none;
+    padding: 6rem 0 5rem;
 
 }
 
 
-/* ======================================================
-   04. CONTENIDO LEGAL
-====================================================== */
+.legal-cabecera {
 
-.contenido-legal {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: min(900px, 88%);
-
-    margin: 0 auto;
-
-    padding: 8rem 0 7rem;
+    margin-bottom: 3rem;
 
 }
 
 
-/* ======================================================
-   05. TÍTULO
-====================================================== */
+.legal-cabecera h1 {
 
-.contenido-legal h1 {
+    font-size: clamp(
+        2.7rem,
+        13vw,
+        4rem
+    );
 
-    margin: 0 0 4.5rem;
-
-    color: #202020;
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: clamp(2.8rem, 6vw, 5rem);
-
-    font-weight: 500;
-
-    line-height: 1;
-
-    letter-spacing: 0.02em;
-
-    text-align: center;
+    line-height: 0.95;
 
 }
 
 
-/* ======================================================
-   06. SECCIONES
-====================================================== */
+.legal-cabecera p {
 
-.legal-seccion {
+    margin-top: 1rem;
 
-    margin: 0 0 3rem;
+    font-size: 0.52rem;
 
-}
-
-
-/* ======================================================
-   07. TÍTULOS DE SECCIÓN
-====================================================== */
-
-.legal-seccion h2 {
-
-    margin: 0 0 1rem;
-
-    color: #202020;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.75rem;
-
-    font-weight: 400;
-
-    line-height: 1.4;
-
-    letter-spacing: 0.18em;
-
-    text-transform: uppercase;
+    letter-spacing: 0.16em;
 
 }
 
 
-/* ======================================================
-   08. TEXTO
-====================================================== */
+.legal-texto h2 {
 
-.legal-seccion p {
+    margin-top: 2.5rem;
 
-    margin: 0 0 1rem;
+    font-size: 0.62rem;
 
-    color: rgba(32, 32, 32, 0.78);
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.82rem;
-
-    font-weight: 300;
-
-    line-height: 1.9;
-
-    letter-spacing: 0.01em;
+    letter-spacing: 0.12em;
 
 }
 
 
-/* ======================================================
-   09. LISTAS
-====================================================== */
+.legal-texto p,
+.legal-texto li {
 
-.legal-seccion ul {
-
-    margin: 0 0 1rem;
-
-    padding-left: 1.25rem;
-
-}
-
-
-.legal-seccion li {
-
-    margin-bottom: 0.6rem;
-
-    color: rgba(32, 32, 32, 0.78);
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.82rem;
-
-    font-weight: 300;
+    font-size: 0.72rem;
 
     line-height: 1.8;
 
 }
 
 
-/* ======================================================
-   10. ENLACES
-====================================================== */
+.legal-separador {
 
-.contenido-legal a {
-
-    color: #202020;
-
-    text-decoration: underline;
-
-    text-decoration-thickness: 1px;
-
-    text-underline-offset: 3px;
-
-    transition: opacity 0.3s ease;
+    margin: 2.75rem auto;
 
 }
 
 
-.contenido-legal a:hover {
+.pagina-legal .footer {
 
-    opacity: 0.55;
+    margin-top: 1rem;
+
+    padding-bottom: 1rem;
 
 }
+```
 
+}
 
 /* ======================================================
-   11. BLOQUE DESTACADO
-====================================================== */
-
-.legal-destacado {
-
-    margin: 2rem 0;
-
-    padding: 1.5rem;
-
-    border-left: 1px solid rgba(32, 32, 32, 0.25);
-
-    background: rgba(245, 245, 245, 0.35);
-
-}
-
-
-/* ======================================================
-   12. VOLVER
-====================================================== */
-
-.legal-volver {
-
-    margin-top: 5rem;
-
-    text-align: center;
-
-}
-
-
-.legal-volver a {
-
-    display: inline-block;
-
-    color: rgba(32, 32, 32, 0.65);
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.62rem;
-
-    font-weight: 400;
-
-    letter-spacing: 0.15em;
-
-    text-decoration: none;
-
-    text-transform: uppercase;
-
-    transition: opacity 0.3s ease;
-
-}
-
-
-.legal-volver a:hover {
-
-    opacity: 0.5;
-
-}
-
-
-/* ======================================================
-   13. MÓVIL
-====================================================== */
-
-@media (max-width: 767px) {
-
-    .pagina-legal::before {
-
-        background-image:
-            url("../../images/fondo /mobile/fondo-legal-movil.jpg");
-
-        background-position: center center;
-
-    }
-
-
-    .pagina-legal::after {
-
-        background: rgba(245, 245, 245, 0.22);
-
-    }
-
-
-    .contenido-legal {
-
-        width: 88%;
-
-        padding: 5rem 0 5rem;
-
-    }
-
-
-    .contenido-legal h1 {
-
-        margin-bottom: 3rem;
-
-        font-size: clamp(2.4rem, 11vw, 3.5rem);
-
-        line-height: 1.05;
-
-    }
-
-
-    .legal-seccion {
-
-        margin-bottom: 2.5rem;
-
-    }
-
-
-    .legal-seccion h2 {
-
-        font-size: 0.68rem;
-
-        letter-spacing: 0.15em;
-
-    }
-
-
-    .legal-seccion p {
-
-        font-size: 0.78rem;
-
-        line-height: 1.85;
-
-    }
-
-
-    .legal-seccion li {
-
-        font-size: 0.78rem;
-
-        line-height: 1.75;
-
-    }
-
-
-    .legal-destacado {
-
-        padding: 1rem;
-
-    }
-
-
-    .legal-volver {
-
-        margin-top: 4rem;
-
-    }
-
-}
-
-
-/* ======================================================
-   14. REDUCCIÓN DE MOVIMIENTO
+10. ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .contenido-legal a {
+```
+.legal-texto a {
 
-        transition: none;
+    transition: none;
 
-    }
+}
+```
 
 }
 
-
 /* ======================================================
-   FIN · legal.css
+FIN · legal.css
 ====================================================== */
