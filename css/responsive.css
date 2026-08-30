@@ -6,831 +6,390 @@
 
 
 /* ======================================================
-   01. MÓVIL · VERTICAL
-   Hasta 767px · Portrait
+   01 · MÓVIL · VERTICAL
 ====================================================== */
 
 @media (max-width: 767px) and (orientation: portrait) {
 
-
-    /* --------------------------------------------------
-       PORTADA
-    -------------------------------------------------- */
-
     .pagina-inicio {
-
         width: 100%;
-
         height: 100svh;
-
         min-height: 100svh;
-
         overflow: hidden;
-
     }
-
-
-    /* --------------------------------------------------
-       HERO
-    -------------------------------------------------- */
 
     .hero {
-
         position: relative;
-
         width: 100%;
-
         height: 100svh;
-
         min-height: 100svh;
-
-        background-image:
-            url("../images/fondo/mobile/fondo-general-movil.jpg");
-
+        background-image: url("../images/fondos/movil/fondo-general-movil.jpg");
         background-size: cover;
-
         background-position: center center;
-
         background-repeat: no-repeat;
-
         background-attachment: scroll;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ PRINCIPAL
-       Oculto en móvil vertical
-    -------------------------------------------------- */
 
     .menu {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       HAMBURGUESA
-    -------------------------------------------------- */
 
     .hamburguesa {
-
         display: flex;
-
     }
 
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL
-    -------------------------------------------------- */
-
     .menu-movil {
-
         position: fixed;
-
         top: 0;
-
         left: 0;
-
         z-index: 40;
-
         display: flex;
-
         flex-direction: column;
-
         justify-content: center;
-
         align-items: center;
-
         gap: 1.8rem;
-
         width: 100%;
-
         height: 100svh;
-
         padding: 5rem 2rem;
-
         background: rgba(245, 245, 245, 0.94);
-
         backdrop-filter: blur(10px);
-
         -webkit-backdrop-filter: blur(10px);
-
         opacity: 0;
-
         visibility: hidden;
-
         pointer-events: none;
-
         transition:
             opacity 0.3s ease,
             visibility 0.3s ease;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL · ABIERTO
-    -------------------------------------------------- */
 
     .menu-movil.abierto {
-
         opacity: 1;
-
         visibility: visible;
-
         pointer-events: auto;
-
     }
-
-
-    /* --------------------------------------------------
-       ENLACES MENÚ MÓVIL
-    -------------------------------------------------- */
 
     .menu-movil a {
-
         display: block;
-
         color: #202020;
-
         font-family: "Montserrat", sans-serif;
-
         font-size: 0.82rem;
-
         font-weight: 400;
-
         line-height: 1.2;
-
         letter-spacing: 0.2em;
-
         text-align: center;
-
         white-space: nowrap;
-
         transition: opacity 0.3s ease;
-
     }
-
 
     .menu-movil a:hover {
-
         opacity: 0.55;
-
     }
-
 
     .menu-movil a.activo {
-
         opacity: 1;
-
     }
-
-
-    /* --------------------------------------------------
-       CONTENIDO CENTRAL
-    -------------------------------------------------- */
 
     .contenido {
-
         width: 92%;
-
     }
-
 
     .contenido h1 {
-
-        font-size: clamp(
-            3.4rem,
-            15vw,
-            5.5rem
-        );
-
+        font-size: clamp(3.4rem, 15vw, 5.5rem);
         line-height: 0.9;
-
         letter-spacing: 0.01em;
-
     }
-
 
     .subtitulo {
-
         margin-top: 1rem;
-
         font-size: 0.6rem;
-
         line-height: 1.2;
-
         letter-spacing: 0.32em;
-
     }
-
-
-    /* --------------------------------------------------
-       FOOTER · MÓVIL VERTICAL
-       Dos líneas centradas
-    -------------------------------------------------- */
 
     .pagina-inicio .footer {
-
         padding: 0 0.75rem 1rem;
-
         font-size: 0.48rem;
-
         line-height: 1.5;
-
         letter-spacing: 0.045em;
-
     }
-
 
     .pagina-inicio .footer-contenido {
-
         display: flex;
-
         flex-direction: column;
-
         justify-content: center;
-
         align-items: center;
-
         gap: 0.2rem;
-
         width: 100%;
-
         margin: 0 auto;
-
         text-align: center;
-
         white-space: normal;
-
     }
-
 
     .pagina-inicio .footer-copy {
-
         display: block;
-
         width: 100%;
-
         margin: 0;
-
         white-space: nowrap;
-
         text-align: center;
-
     }
-
 
     .pagina-inicio .footer-terminos {
-
         display: block;
-
         width: 100%;
-
         margin: 0;
-
         white-space: nowrap;
-
         text-align: center;
-
     }
-
-
-    /* --------------------------------------------------
-       FOOTER · ENLACES TÁCTILES
-    -------------------------------------------------- */
 
     .pagina-inicio .footer a:hover {
-
         color: rgba(32, 32, 32, 0.55);
-
         letter-spacing: 0.045em;
-
     }
-
 
     .pagina-inicio .footer a::after {
-
         display: none;
-
     }
-
 }
 
 
 /* ======================================================
-   02. MÓVIL · HORIZONTAL
-   Hasta 767px · Landscape
+   02 · MÓVIL · HORIZONTAL
 ====================================================== */
 
 @media (max-width: 767px) and (orientation: landscape) {
 
-
-    /* --------------------------------------------------
-       PORTADA
-    -------------------------------------------------- */
-
     .pagina-inicio {
-
         width: 100%;
-
         height: 100svh;
-
         min-height: 100svh;
-
         overflow: hidden;
-
     }
-
-
-    /* --------------------------------------------------
-       HERO
-    -------------------------------------------------- */
 
     .hero {
-
         position: relative;
-
         width: 100%;
-
         height: 100svh;
-
         min-height: 100svh;
-
-        background-image:
-            url("../images/fondo/mobile/fondo-general-movil.jpg");
-
+        background-image: url("../images/fondos/movil/fondo-general-movil.jpg");
         background-size: cover;
-
         background-position: center center;
-
         background-repeat: no-repeat;
-
         background-attachment: scroll;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ PRINCIPAL · HORIZONTAL
-    -------------------------------------------------- */
 
     .menu {
-
         display: block;
-
         width: 100%;
-
         overflow-x: auto;
-
         overflow-y: hidden;
-
         -webkit-overflow-scrolling: touch;
-
         scrollbar-width: none;
-
     }
-
 
     .menu::-webkit-scrollbar {
-
         display: none;
-
     }
-
 
     .menu ul {
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
-
         gap: 1.15rem;
-
         width: max-content;
-
         min-width: 100%;
-
         margin: 0;
-
         padding: 1.25rem 1rem;
-
         list-style: none;
-
     }
-
 
     .menu a {
-
         display: block;
-
         font-size: 0.55rem;
-
         letter-spacing: 0.11em;
-
         line-height: 1.2;
-
         white-space: nowrap;
-
     }
-
-
-    /* --------------------------------------------------
-       HAMBURGUESA
-       Oculta en horizontal
-    -------------------------------------------------- */
 
     .hamburguesa {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL
-       No se utiliza en horizontal
-    -------------------------------------------------- */
 
     .menu-movil {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       CONTENIDO CENTRAL
-    -------------------------------------------------- */
 
     .contenido {
-
         width: 90%;
-
     }
-
 
     .contenido h1 {
-
-        font-size: clamp(
-            3.5rem,
-            10vw,
-            5.5rem
-        );
-
+        font-size: clamp(3.5rem, 10vw, 5.5rem);
         line-height: 0.9;
-
     }
-
 
     .subtitulo {
-
         margin-top: 0.8rem;
-
         font-size: 0.55rem;
-
         letter-spacing: 0.28em;
-
     }
-
-
-    /* --------------------------------------------------
-       FOOTER · MÓVIL HORIZONTAL
-       Una sola línea como escritorio
-    -------------------------------------------------- */
 
     .pagina-inicio .footer {
-
         padding: 0 1rem 1rem;
-
         font-size: 0.48rem;
-
         line-height: 1.5;
-
         letter-spacing: 0.045em;
-
         text-align: center;
-
     }
-
 
     .pagina-inicio .footer-contenido {
-
         display: flex;
-
         flex-direction: row;
-
         justify-content: center;
-
         align-items: center;
-
         flex-wrap: nowrap;
-
         width: 100%;
-
         margin: 0 auto;
-
         text-align: center;
-
         white-space: nowrap;
-
     }
-
 
     .pagina-inicio .footer-copy {
-
         display: inline;
-
         width: auto;
-
         margin: 0;
-
         white-space: nowrap;
-
     }
-
 
     .pagina-inicio .footer-terminos {
-
         display: inline;
-
         width: auto;
-
         margin: 0 0 0 0.35rem;
-
         white-space: nowrap;
-
     }
-
-
-    /* --------------------------------------------------
-       FOOTER · ENLACES TÁCTILES
-    -------------------------------------------------- */
 
     .pagina-inicio .footer a:hover {
-
         color: rgba(32, 32, 32, 0.55);
-
         letter-spacing: 0.045em;
-
     }
-
 
     .pagina-inicio .footer a::after {
-
         display: none;
-
     }
-
 }
 
 
 /* ======================================================
-   03. TABLET
-   768px — 1199px
+   03 · TABLET
 ====================================================== */
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
-
-    /* --------------------------------------------------
-       PORTADA
-    -------------------------------------------------- */
-
     .pagina-inicio {
-
         width: 100%;
-
         height: 100vh;
-
         min-height: 100vh;
-
         overflow: hidden;
-
     }
-
-
-    /* --------------------------------------------------
-       HERO
-    -------------------------------------------------- */
 
     .hero {
-
         position: relative;
-
         width: 100%;
-
         height: 100vh;
-
         min-height: 100vh;
-
         background-size: cover;
-
         background-position: center center;
-
         background-repeat: no-repeat;
-
         background-attachment: fixed;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ
-    -------------------------------------------------- */
 
     .menu {
-
         display: block;
-
     }
-
 
     .menu ul {
-
         gap: 1.5rem;
-
         padding: 1.75rem 1rem;
-
     }
-
 
     .menu a {
-
         font-size: 0.65rem;
-
         letter-spacing: 0.15em;
-
     }
-
-
-    /* --------------------------------------------------
-       HAMBURGUESA
-    -------------------------------------------------- */
 
     .hamburguesa {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL
-    -------------------------------------------------- */
 
     .menu-movil {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       CONTENIDO
-    -------------------------------------------------- */
 
     .contenido {
-
         width: 90%;
-
     }
-
 
     .contenido h1 {
-
-        font-size: clamp(
-            4rem,
-            10vw,
-            7rem
-        );
-
+        font-size: clamp(4rem, 10vw, 7rem);
     }
-
 
     .subtitulo {
-
         font-size: 0.7rem;
-
         letter-spacing: 0.38em;
-
     }
-
 }
 
 
 /* ======================================================
-   04. ESCRITORIO
-   Desde 1200px
+   04 · ESCRITORIO
 ====================================================== */
 
 @media (min-width: 1200px) {
 
-
-    /* --------------------------------------------------
-       MENÚ
-    -------------------------------------------------- */
-
     .menu {
-
         display: block;
-
     }
-
 
     .menu ul {
-
         gap: 2.5rem;
-
         padding: 2rem;
-
     }
-
 
     .menu a {
-
         font-size: 0.72rem;
-
     }
-
-
-    /* --------------------------------------------------
-       HAMBURGUESA
-    -------------------------------------------------- */
 
     .hamburguesa {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL
-    -------------------------------------------------- */
 
     .menu-movil {
-
         display: none;
-
     }
-
-
-    /* --------------------------------------------------
-       CONTENIDO
-    -------------------------------------------------- */
 
     .contenido h1 {
-
-        font-size: clamp(
-            4rem,
-            9vw,
-            8rem
-        );
-
+        font-size: clamp(4rem, 9vw, 8rem);
     }
-
 }
 
 
 /* ======================================================
-   05. PANTALLAS MUY GRANDES
-   Desde 1600px
+   05 · PANTALLAS MUY GRANDES
 ====================================================== */
 
 @media (min-width: 1600px) {
 
-
-    /* --------------------------------------------------
-       MENÚ
-    -------------------------------------------------- */
-
     .menu ul {
-
         gap: 3rem;
-
     }
-
-
-    /* --------------------------------------------------
-       TÍTULO
-    -------------------------------------------------- */
 
     .contenido h1 {
-
         font-size: 8rem;
-
     }
-
 }
 
 
 /* ======================================================
-   06. ACCESIBILIDAD
+   06 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -838,20 +397,15 @@
     *,
     *::before,
     *::after {
-
         scroll-behavior: auto !important;
-
         animation-duration: 0.01ms !important;
-
         animation-iteration-count: 1 !important;
-
         transition-duration: 0.01ms !important;
-
     }
-
 }
 
 
 /* ======================================================
    FIN · responsive.css
 ====================================================== */
+
