@@ -1,510 +1,137 @@
-/* ==========================================================================
+/* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   footer.css
+   footer.js
    COMPONENTE · FOOTER GLOBAL
    ELEGANT MINIMAL · EDITORIAL LIGHT SWEEP
-   ========================================================================== */
+====================================================== */
 
 
-/* ==========================================================================
-   01 · FOOTER GENERAL
-   ========================================================================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-.footer {
 
-    position: relative;
+    /* ==================================================
+       ENLACES DEL FOOTER
+    ================================================== */
 
-    z-index: 20;
+    const enlacesFooter = document.querySelectorAll(
+        ".footer-artista, .footer-terminos"
+    );
 
-    width: 100%;
 
-    box-sizing: border-box;
+    /* ==================================================
+       BARRIDO AL HACER CLIC
+    ================================================== */
 
-}
+    enlacesFooter.forEach(function (enlace) {
 
 
-/* ==========================================================================
-   02 · CONTENIDO
-   ========================================================================== */
+        enlace.addEventListener("click", function (event) {
 
-.footer-contenido {
 
-    display: flex;
+            /*
+             * Evitamos dobles clics mientras
+             * se ejecuta el barrido.
+             */
 
-    justify-content: center;
+            if (enlace.classList.contains("barrido")) {
 
-    align-items: center;
+                event.preventDefault();
 
-    width: 100%;
+                return;
 
-    margin: 0 auto;
+            }
 
-    padding: 1.8rem 2rem 2.5rem;
 
-    box-sizing: border-box;
+            /*
+             * Guardamos el destino original.
+             */
 
-    text-align: center;
+            const destino = enlace.href;
 
-}
 
+            /*
+             * Detenemos temporalmente la navegación
+             * para mostrar el destello.
+             */
 
-/* ==========================================================================
-   03 · LÍNEA PRINCIPAL
-   ========================================================================== */
+            event.preventDefault();
 
-.footer-copy {
 
-    display: block;
+            /*
+             * Reiniciamos cualquier animación anterior.
+             */
 
-    margin: 0;
+            enlace.classList.remove("barrido");
 
-    padding: 0;
 
-    color: rgba(44, 44, 44, 0.45);
+            /*
+             * Forzamos un nuevo cálculo de layout
+             * para garantizar el reinicio de la animación.
+             */
 
-    font-family:
-        "Montserrat",
-        sans-serif;
+            void enlace.offsetWidth;
 
-    font-size: 0.55rem;
 
-    font-weight: 300;
+            /*
+             * Activamos el barrido.
+             */
 
-    line-height: 1.5;
+            enlace.classList.add("barrido");
 
-    letter-spacing: 0.16em;
 
-    text-transform: uppercase;
+            /* ==================================================
+               NAVEGACIÓN AL TERMINAR EL DESTELLO
+            ================================================== */
 
-    white-space: nowrap;
+            const finalizarNavegacion = function (evento) {
 
-    user-select: none;
 
-}
+                /*
+                 * Solo respondemos a nuestra animación.
+                 */
 
+                if (evento.animationName !== "footerSweep") {
 
-/* ==========================================================================
-   04 · ENLACES
-   ALINEACIÓN TIPOGRÁFICA EXACTA
-   ========================================================================== */
+                    return;
 
-.footer-artista,
-.footer-terminos {
+                }
 
-    position: relative;
 
-    display: inline-block;
+                /*
+                 * Eliminamos el listener.
+                 */
 
-    vertical-align: baseline;
+                enlace.removeEventListener(
+                    "animationend",
+                    finalizarNavegacion
+                );
 
-    margin: 0;
 
-    padding: 0;
+                /*
+                 * Navegamos inmediatamente.
+                 */
 
-    /*
-     * Color base idéntico al resto del footer.
-     */
+                window.location.href = destino;
 
-    color: rgba(44, 44, 44, 0.45);
+            };
 
-    font-family: inherit;
 
-    font-size: inherit;
+            /*
+             * Escuchamos el final real de la animación.
+             */
 
-    font-weight: inherit;
+            enlace.addEventListener(
+                "animationend",
+                finalizarNavegacion
+            );
 
-    line-height: inherit;
 
-    letter-spacing: inherit;
+        });
 
-    text-transform: inherit;
 
-    text-decoration: none;
+    });
 
-    cursor: pointer;
 
-    /*
-     * Evita el recuadro azul/negro de selección
-     * en dispositivos táctiles.
-     */
-
-    -webkit-tap-highlight-color: transparent;
-
-    /*
-     * Evita desplazamientos verticales.
-     */
-
-    transform-origin: center center;
-
-    /*
-     * La ampliación es independiente del barrido.
-     */
-
-    transition:
-        color 0.45s cubic-bezier(0.25, 1, 0.5, 1),
-        transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-
-}
-
-
-/* ==========================================================================
-   05 · DESTELLO EDITORIAL
-   EL EFECTO PERTENECE ÚNICAMENTE AL TEXTO
-   ========================================================================== */
-
-.footer-artista.barrido,
-.footer-terminos.barrido {
-
-    /*
-     * El texto se mantiene perfectamente alineado.
-     */
-
-    color: transparent;
-
-    /*
-     * El destello se dibuja sobre las propias letras.
-     */
-
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(44, 44, 44, 0.78) 0%,
-            rgba(44, 44, 44, 0.78) 38%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(44, 44, 44, 0.78) 62%,
-            rgba(44, 44, 44, 0.78) 100%
-        );
-
-    background-size: 300% 100%;
-
-    background-position: 200% center;
-
-    background-repeat: no-repeat;
-
-    background-clip: text;
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    /*
-     * El tamaño y posición del elemento NO cambian.
-     */
-
-    transform: none;
-
-    animation:
-        footerSweep
-        0.95s
-        cubic-bezier(0.22, 1, 0.36, 1)
-        forwards;
-
-}
-
-
-/* ==========================================================================
-   06 · HOVER
-   AMPLIACIÓN MUY SUTIL
-   ========================================================================== */
-
-.footer-artista:hover,
-.footer-terminos:hover {
-
-    color: rgba(44, 44, 44, 0.72);
-
-    transform: scale(1.03);
-
-}
-
-
-/* ==========================================================================
-   07 · BARRIDO EDITORIAL
-   ========================================================================== */
-
-@keyframes footerSweep {
-
-    0% {
-
-        background-position: 200% center;
-
-    }
-
-    100% {
-
-        background-position: -100% center;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   08 · SEPARADORES
-   ========================================================================== */
-
-.footer-separador {
-
-    display: inline-block;
-
-    vertical-align: baseline;
-
-    margin:
-        0 0.42em;
-
-    padding: 0;
-
-    color: rgba(44, 44, 44, 0.24);
-
-    font-family:
-        "Montserrat",
-        sans-serif;
-
-    font-size: inherit;
-
-    font-weight: 300;
-
-    line-height: inherit;
-
-    letter-spacing: 0;
-
-    user-select: none;
-
-}
-
-
-/* ==========================================================================
-   09 · FOCO
-   ========================================================================== */
-
-.footer-artista:focus,
-.footer-terminos:focus {
-
-    outline: none;
-
-}
-
-
-.footer-artista:focus-visible,
-.footer-terminos:focus-visible {
-
-    outline: none;
-
-}
-
-
-/* ==========================================================================
-   10 · PÁGINA DE INICIO
-   ========================================================================== */
-
-body.pagina-inicio .footer {
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 100%;
-
-}
-
-
-/* ==========================================================================
-   11 · PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer {
-
-    position: relative;
-
-    width: 100%;
-
-    margin-top: 0;
-
-}
-
-
-/* ==========================================================================
-   12 · FOOTER LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-copy {
-
-    color: rgba(255, 255, 255, 0.48);
-
-}
-
-
-body.pagina-legal .footer-artista,
-body.pagina-legal .footer-terminos {
-
-    color: rgba(255, 255, 255, 0.48);
-
-}
-
-
-/* ==========================================================================
-   13 · SEPARADORES · PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-separador {
-
-    color: rgba(255, 255, 255, 0.25);
-
-}
-
-
-/* ==========================================================================
-   14 · HOVER · PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-artista:hover,
-body.pagina-legal .footer-terminos:hover {
-
-    color: rgba(255, 255, 255, 0.72);
-
-    transform: scale(1.03);
-
-}
-
-
-/* ==========================================================================
-   15 · DESTELLO · PÁGINA LEGAL
-   ========================================================================== */
-
-body.pagina-legal .footer-artista.barrido,
-body.pagina-legal .footer-terminos.barrido {
-
-    color: transparent;
-
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.76) 0%,
-            rgba(255, 255, 255, 0.76) 38%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(255, 255, 255, 0.76) 62%,
-            rgba(255, 255, 255, 0.76) 100%
-        );
-
-    background-size: 300% 100%;
-
-    background-position: 200% center;
-
-    background-repeat: no-repeat;
-
-    background-clip: text;
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    transform: none;
-
-}
-
-
-/* ==========================================================================
-   16 · MÓVIL
-   ========================================================================== */
-
-@media (max-width: 767px) {
-
-    .footer-contenido {
-
-        padding:
-            1.5rem 0.75rem 2rem;
-
-    }
-
-
-    .footer-copy {
-
-        font-size: 0.46rem;
-
-        letter-spacing: 0.10em;
-
-        white-space: nowrap;
-
-    }
-
-
-    .footer-separador {
-
-        margin:
-            0 0.32em;
-
-    }
-
-
-    /*
-     * En móvil NO utilizamos transform.
-     *
-     * Así evitamos cualquier sensación de salto,
-     * desplazamiento o recuadro al tocar.
-     */
-
-    .footer-artista:active,
-    .footer-terminos:active {
-
-        color: inherit;
-
-        transform: none;
-
-    }
-
-
-    /*
-     * Eliminación completa del resaltado táctil
-     * de Safari / iOS / navegadores móviles.
-     */
-
-    .footer-artista,
-    .footer-terminos {
-
-        -webkit-tap-highlight-color: transparent;
-
-        -webkit-touch-callout: none;
-
-        outline: none;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   17 · ACCESIBILIDAD
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .footer-artista,
-    .footer-terminos {
-
-        transition: none;
-
-    }
-
-
-    .footer-artista.barrido,
-    .footer-terminos.barrido {
-
-        animation: none;
-
-        background: none;
-
-        color: inherit;
-
-        -webkit-text-fill-color: currentColor;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   FIN · footer.css
-   ========================================================================== */
+});
 
 
