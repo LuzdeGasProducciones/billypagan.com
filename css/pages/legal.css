@@ -6,86 +6,37 @@
 
 
 /* ======================================================
-   01 · VARIABLES
-====================================================== */
-
-:root {
-
-    --legal-negro: #202020;
-
-    --legal-texto: rgba(32, 32, 32, 0.82);
-
-    --legal-secundario: rgba(32, 32, 32, 0.52);
-
-    --legal-borde: rgba(32, 32, 32, 0.12);
-
-    --legal-fondo-seccion: rgba(255, 255, 255, 0.64);
-
-}
-
-
-/* ======================================================
-   02 · BASE
-====================================================== */
-
-html,
-body {
-
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
-    min-height: 100%;
-
-}
-
-
-/* ======================================================
-   03 · PÁGINA LEGAL
+   01 · PÁGINA LEGAL · BASE
 ====================================================== */
 
 body.pagina-legal {
 
-    position: relative;
+    margin: 0;
+    padding: 0;
 
     min-height: 100vh;
 
-    color: var(--legal-texto);
+    color: #202020;
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.78rem;
-
-    font-weight: 300;
-
-    line-height: 1.9;
-
-    text-rendering: optimizeLegibility;
-
-    -webkit-font-smoothing: antialiased;
-
-    /*
-       IMPORTANTE:
-       Esta es la imagen EXCLUSIVA de la página legal.
-       No utiliza fondo-general-desktop.jpg.
-    */
+    background-color: #4f554f;
 
     background-image:
         url("../../images/fondos/escritorio/fondo-legal-desktop.jpg");
 
-    background-size: cover;
-
     background-position: center center;
-
+    background-size: cover;
     background-repeat: no-repeat;
-
     background-attachment: fixed;
 
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 
 /* ======================================================
-   04 · CAPA DE LECTURA
+   02 · CAPA DE LECTURA
 ====================================================== */
 
 body.pagina-legal::before {
@@ -100,14 +51,18 @@ body.pagina-legal::before {
 
     pointer-events: none;
 
-    background:
-        rgba(245, 245, 245, 0.48);
+    /*
+       La imagen permanece claramente visible.
+       La capa es muy ligera para no sustituir
+       visualmente el fondo.
+    */
 
+    background: rgba(245, 245, 245, 0.18);
 }
 
 
 /* ======================================================
-   05 · CONTENEDOR PRINCIPAL
+   03 · CONTENEDOR GENERAL
 ====================================================== */
 
 body.pagina-legal .legal {
@@ -119,12 +74,11 @@ body.pagina-legal .legal {
     width: 100%;
 
     min-height: 100vh;
-
 }
 
 
 /* ======================================================
-   06 · CABECERA
+   04 · CABECERA
 ====================================================== */
 
 body.pagina-legal .legal-cabecera {
@@ -135,10 +89,9 @@ body.pagina-legal .legal-cabecera {
 
     width: 100%;
 
-    padding: 2.5rem 2rem 0;
+    padding: 3rem 3rem 0;
 
     text-align: center;
-
 }
 
 
@@ -146,43 +99,38 @@ body.pagina-legal .legal-volver {
 
     display: inline-block;
 
-    color: var(--legal-secundario);
+    color: rgba(32, 32, 32, 0.72);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.58rem;
+    font-size: 0.62rem;
 
     font-weight: 400;
 
     line-height: 1;
 
-    letter-spacing: 0.24em;
+    letter-spacing: 0.22em;
 
     text-transform: uppercase;
-
-    text-decoration: none;
 
     border-bottom: 1px solid transparent;
 
     transition:
         color 0.3s ease,
         border-color 0.3s ease;
-
 }
 
 
 body.pagina-legal .legal-volver:hover {
 
-    color: var(--legal-negro);
+    color: #202020;
 
-    border-bottom-color:
-        rgba(32, 32, 32, 0.35);
-
+    border-bottom-color: #202020;
 }
 
 
 /* ======================================================
-   07 · CONTENIDO
+   05 · CONTENIDO
 ====================================================== */
 
 body.pagina-legal .legal-contenido {
@@ -191,17 +139,16 @@ body.pagina-legal .legal-contenido {
 
     z-index: 2;
 
-    width: min(760px, 88%);
+    width: min(820px, 90%);
 
     margin: 0 auto;
 
-    padding: 4.5rem 0 5rem;
-
+    padding: 4.5rem 0 6rem;
 }
 
 
 /* ======================================================
-   08 · TÍTULO
+   06 · TÍTULO
 ====================================================== */
 
 body.pagina-legal .legal-titulo {
@@ -209,25 +156,20 @@ body.pagina-legal .legal-titulo {
     margin: 0 0 4rem;
 
     text-align: center;
-
 }
 
-
-/* ======================================================
-   09 · ETIQUETA
-====================================================== */
 
 body.pagina-legal .legal-etiqueta {
 
     display: block;
 
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 
-    color: var(--legal-secundario);
+    color: rgba(32, 32, 32, 0.58);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.52rem;
+    font-size: 0.56rem;
 
     font-weight: 400;
 
@@ -236,83 +178,69 @@ body.pagina-legal .legal-etiqueta {
     letter-spacing: 0.28em;
 
     text-transform: uppercase;
-
 }
 
-
-/* ======================================================
-   10 · TÍTULO PRINCIPAL
-====================================================== */
 
 body.pagina-legal .legal-titulo h1 {
 
     margin: 0;
 
-    color: var(--legal-negro);
+    color: #202020;
 
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
 
-    font-size: clamp(3.2rem, 6vw, 5rem);
+    font-size: clamp(3rem, 6vw, 5rem);
 
-    font-weight: 500;
+    font-weight: 400;
 
-    line-height: 0.95;
+    line-height: 1;
 
-    letter-spacing: 0.005em;
-
+    letter-spacing: -0.01em;
 }
 
 
-/* ======================================================
-   11 · FECHA
-====================================================== */
-
 body.pagina-legal .legal-fecha {
 
-    margin: 1.3rem 0 0;
+    margin: 1.25rem 0 0;
 
-    color: var(--legal-secundario);
+    color: rgba(32, 32, 32, 0.55);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.52rem;
+    font-size: 0.55rem;
 
     font-weight: 300;
 
     line-height: 1.5;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
 
     text-transform: uppercase;
-
 }
 
 
 /* ======================================================
-   12 · SECCIONES
+   07 · SECCIONES
 ====================================================== */
 
 body.pagina-legal .legal-seccion {
 
-    margin: 0 0 1.8rem;
+    margin: 0 0 1.75rem;
 
     padding: 2.5rem 3rem;
 
-    background:
-        var(--legal-fondo-seccion);
+    background: rgba(245, 245, 245, 0.78);
 
-    border-top:
-        1px solid var(--legal-borde);
+    border: 1px solid rgba(32, 32, 32, 0.08);
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
 
-    -webkit-backdrop-filter: blur(8px);
-
+    -webkit-backdrop-filter: blur(6px);
 }
 
 
 /* ======================================================
-   13 · TÍTULOS DE SECCIÓN
+   08 · TÍTULOS DE SECCIÓN
 ====================================================== */
 
 body.pagina-legal .legal-seccion h2 {
@@ -323,36 +251,35 @@ body.pagina-legal .legal-seccion h2 {
 
     gap: 1rem;
 
-    margin: 0 0 1.35rem;
+    margin: 0 0 1.3rem;
 
-    color: var(--legal-negro);
+    color: #202020;
 
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
 
-    font-size: 1.75rem;
+    font-size: 1.55rem;
 
-    font-weight: 500;
+    font-weight: 400;
 
-    line-height: 1.1;
+    line-height: 1.15;
 
-    letter-spacing: 0.015em;
-
+    letter-spacing: 0.01em;
 }
 
 
 /* ======================================================
-   14 · TEXTO
+   09 · TEXTO
 ====================================================== */
 
 body.pagina-legal .legal-seccion p {
 
     margin: 0 0 1.15rem;
 
-    color: var(--legal-texto);
+    color: rgba(32, 32, 32, 0.84);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.76rem;
+    font-size: 0.75rem;
 
     font-weight: 300;
 
@@ -360,59 +287,48 @@ body.pagina-legal .legal-seccion p {
 
     letter-spacing: 0.012em;
 
+    text-align: left;
 }
 
 
 body.pagina-legal .legal-seccion p:last-child {
 
     margin-bottom: 0;
-
 }
 
-
-/* ======================================================
-   15 · TEXTO DESTACADO
-====================================================== */
 
 body.pagina-legal .legal-seccion strong {
 
-    color: var(--legal-negro);
+    color: #202020;
 
     font-weight: 400;
-
 }
 
 
 /* ======================================================
-   16 · ENLACES
+   10 · ENLACES
 ====================================================== */
 
 body.pagina-legal .legal-seccion a {
 
-    color: var(--legal-negro);
+    color: #202020;
 
     text-decoration: underline;
 
-    text-decoration-color:
-        rgba(32, 32, 32, 0.3);
-
-    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(32, 32, 32, 0.35);
 
     text-underline-offset: 0.2rem;
-
 }
 
 
 body.pagina-legal .legal-seccion a:hover {
 
-    text-decoration-color:
-        var(--legal-negro);
-
+    text-decoration-color: #202020;
 }
 
 
 /* ======================================================
-   17 · ÚLTIMA SECCIÓN
+   11 · ÚLTIMA SECCIÓN
 ====================================================== */
 
 body.pagina-legal .legal-final {
@@ -420,13 +336,12 @@ body.pagina-legal .legal-final {
     margin-bottom: 0;
 
     border-top:
-        1px solid rgba(32, 32, 32, 0.22);
-
+        1px solid rgba(32, 32, 32, 0.16);
 }
 
 
 /* ======================================================
-   18 · PIE LEGAL
+   12 · PIE LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-pie {
@@ -447,44 +362,38 @@ body.pagina-legal .legal-pie {
 
     padding: 0 2rem 3rem;
 
-    color:
-        rgba(32, 32, 32, 0.42);
+    color: rgba(32, 32, 32, 0.52);
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 0.52rem;
+    font-size: 0.54rem;
 
     font-weight: 300;
 
     line-height: 1.5;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
 
     text-align: center;
 
     text-transform: uppercase;
-
 }
 
 
 body.pagina-legal .legal-pie a {
 
-    color:
-        rgba(32, 32, 32, 0.58);
-
+    color: rgba(32, 32, 32, 0.68);
 }
 
 
 body.pagina-legal .legal-pie a:hover {
 
-    color:
-        var(--legal-negro);
-
+    color: #202020;
 }
 
 
 /* ======================================================
-   19 · MÓVIL
+   13 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -494,39 +403,33 @@ body.pagina-legal .legal-pie a:hover {
         background-image:
             url("../../images/fondos/movil/fondo-legal-movil.jpg");
 
-        background-size: cover;
-
         background-position: center center;
+
+        background-size: cover;
 
         background-repeat: no-repeat;
 
         background-attachment: scroll;
-
     }
 
 
     body.pagina-legal::before {
 
-        background:
-            rgba(245, 245, 245, 0.52);
-
+        background: rgba(245, 245, 245, 0.20);
     }
 
 
     body.pagina-legal .legal-cabecera {
 
-        padding:
-            1.75rem 1.5rem 0;
-
+        padding: 1.5rem 1.5rem 0;
     }
 
 
     body.pagina-legal .legal-volver {
 
-        font-size: 0.5rem;
+        font-size: 0.54rem;
 
         letter-spacing: 0.18em;
-
     }
 
 
@@ -534,35 +437,29 @@ body.pagina-legal .legal-pie a:hover {
 
         width: 90%;
 
-        padding:
-            3.5rem 0 3.5rem;
-
+        padding: 4rem 0 3rem;
     }
 
 
     body.pagina-legal .legal-titulo {
 
-        margin-bottom: 3rem;
-
+        margin-bottom: 2.5rem;
     }
 
 
     body.pagina-legal .legal-etiqueta {
 
-        margin-bottom: 1rem;
+        margin-bottom: 0.9rem;
 
-        font-size: 0.47rem;
+        font-size: 0.5rem;
 
         letter-spacing: 0.18em;
-
     }
 
 
     body.pagina-legal .legal-titulo h1 {
 
-        font-size:
-            clamp(2.7rem, 12vw, 4rem);
-
+        font-size: clamp(2.7rem, 12vw, 4rem);
     }
 
 
@@ -570,47 +467,41 @@ body.pagina-legal .legal-pie a:hover {
 
         margin-top: 1rem;
 
-        font-size: 0.46rem;
+        font-size: 0.48rem;
 
-        letter-spacing: 0.09em;
-
+        letter-spacing: 0.1em;
     }
 
 
     body.pagina-legal .legal-seccion {
 
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem;
 
-        padding:
-            1.8rem 1.35rem;
+        padding: 1.8rem 1.25rem;
 
-        background:
-            rgba(255, 255, 255, 0.68);
+        background: rgba(245, 245, 245, 0.84);
 
         backdrop-filter: blur(6px);
 
         -webkit-backdrop-filter: blur(6px);
-
     }
 
 
     body.pagina-legal .legal-seccion h2 {
 
-        gap: 0.65rem;
+        gap: 0.7rem;
 
         margin-bottom: 1rem;
 
-        font-size: 1.45rem;
-
+        font-size: 1.4rem;
     }
 
 
     body.pagina-legal .legal-seccion p {
 
-        font-size: 0.67rem;
+        font-size: 0.69rem;
 
         line-height: 1.85;
-
     }
 
 
@@ -620,20 +511,17 @@ body.pagina-legal .legal-pie a:hover {
 
         gap: 0.7rem;
 
-        padding:
-            0 1.5rem 2rem;
+        padding: 0 1.5rem 2rem;
 
-        font-size: 0.47rem;
+        font-size: 0.5rem;
 
-        letter-spacing: 0.1em;
-
+        letter-spacing: 0.12em;
     }
-
 }
 
 
 /* ======================================================
-   20 · ACCESIBILIDAD
+   14 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -643,9 +531,7 @@ body.pagina-legal .legal-pie a:hover {
     body.pagina-legal .legal-pie a {
 
         transition: none;
-
     }
-
 }
 
 
