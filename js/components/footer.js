@@ -1,35 +1,75 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   footer.js · COMPONENTE FOOTER
+   footer.js
+   COMPONENTE · FOOTER GLOBAL
 ====================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const enlaces = document.querySelectorAll(".footer a");
 
-    enlaces.forEach(enlace => {
+    /* ==================================================
+       ENLACES DEL FOOTER
+    ================================================== */
 
-        enlace.addEventListener("click", event => {
+    const enlacesFooter = document.querySelectorAll(
+        ".footer-artista, .footer-terminos"
+    );
 
-            if (enlace.classList.contains("destello")) {
-                event.preventDefault();
-                return;
-            }
 
-            enlace.classList.add("destello");
+    /* ==================================================
+       BARRIDO DE LUZ AL HACER CLIC
+    ================================================== */
+
+    enlacesFooter.forEach(function (enlace) {
+
+        enlace.addEventListener("click", function (event) {
+
+            /*
+             * Guardamos el destino original.
+             */
 
             const destino = enlace.href;
 
+
+            /*
+             * Evitamos la navegación inmediata
+             * para permitir que el efecto visual
+             * pueda completarse.
+             */
+
             event.preventDefault();
 
-            setTimeout(() => {
+
+            /*
+             * Reiniciamos la animación por si el usuario
+             * vuelve a pulsar rápidamente.
+             */
+
+            enlace.classList.remove("barrido");
+
+
+            void enlace.offsetWidth;
+
+
+            /*
+             * Activamos el barrido.
+             */
+
+            enlace.classList.add("barrido");
+
+
+            /*
+             * Navegamos una vez terminado el efecto.
+             */
+
+            setTimeout(function () {
+
                 window.location.href = destino;
-            }, 650);
+
+            }, 500);
 
         });
 
     });
 
 });
-
-
