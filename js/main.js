@@ -11,17 +11,33 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!hamburguesa || !menuMovil) return;
 
     const cerrarMenu = () => {
+
         menuMovil.classList.remove("abierto");
+
         hamburguesa.classList.remove("abierta");
-        hamburguesa.setAttribute("aria-expanded", "false");
-        hamburguesa.setAttribute("aria-label", "Abrir menú");
+
+        hamburguesa.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        hamburguesa.setAttribute(
+            "aria-label",
+            "Abrir menú"
+        );
+
     };
+
 
     hamburguesa.addEventListener("click", () => {
 
-        const abierto = menuMovil.classList.toggle("abierto");
+        const abierto =
+            menuMovil.classList.toggle("abierto");
 
-        hamburguesa.classList.toggle("abierta", abierto);
+        hamburguesa.classList.toggle(
+            "abierta",
+            abierto
+        );
 
         hamburguesa.setAttribute(
             "aria-expanded",
@@ -30,14 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hamburguesa.setAttribute(
             "aria-label",
-            abierto ? "Cerrar menú" : "Abrir menú"
+            abierto
+                ? "Cerrar menú"
+                : "Abrir menú"
         );
 
     });
 
+
     menuMovil.querySelectorAll("a").forEach(enlace => {
-        enlace.addEventListener("click", cerrarMenu);
+
+        enlace.addEventListener(
+            "click",
+            cerrarMenu
+        );
+
     });
+
 
     document.addEventListener("keydown", event => {
 
@@ -45,7 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
             event.key === "Escape" &&
             menuMovil.classList.contains("abierto")
         ) {
+
             cerrarMenu();
+
         }
 
     });
