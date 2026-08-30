@@ -19,7 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       BARRIDO AL HACER CLIC
+       DURACIÓN DEL DESTELLO
+    ================================================== */
+
+    const DURACION_DESTELLO = 480;
+
+
+    /* ==================================================
+       INTERACCIÓN
     ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
@@ -30,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Si el enlace ya está ejecutando
-             * el barrido, no permitimos otro clic.
+             * el efecto, no permitimos otro clic.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -50,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Detenemos temporalmente la navegación
-             * para mostrar el destello.
+             * Evitamos la navegación inmediata.
              */
 
             event.preventDefault();
@@ -61,54 +67,32 @@ document.addEventListener("DOMContentLoaded", function () {
              * Activamos el barrido.
              */
 
-            enlace.classList.add("barrido");
-
-
-            /* ==================================================
-               FINAL DE LA ANIMACIÓN
-            ================================================== */
-
-            const finalizarNavegacion = function (evento) {
-
-
-                /*
-                 * Solo reaccionamos a nuestra animación.
-                 */
-
-                if (evento.animationName !== "footerSweep") {
-
-                    return;
-
-                }
-
-
-                /*
-                 * Eliminamos el listener.
-                 */
-
-                enlace.removeEventListener(
-                    "animationend",
-                    finalizarNavegacion
-                );
-
-
-                /*
-                 * Navegación inmediata.
-                 */
-
-                window.location.href = destino;
-
-            };
+            enlace.classList.remove("barrido");
 
 
             /*
-             * Escuchamos el final real de la animación.
+             * Forzamos el reinicio de la animación.
              */
 
-            enlace.addEventListener(
-                "animationend",
-                finalizarNavegacion
-            );
+            void enlace.offsetWidth;
+
+
+            /*
+             * Iniciamos el destello.
+             */
+
+            enlace.classList.add("barrido");
+
+
+            /*
+             * Navegación rápida después del destello.
+             */
+
+            setTimeout(function () {
+
+                window.location.href = destino;
+
+            }, DURACION_DESTELLO);
 
 
         });
