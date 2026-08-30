@@ -121,6 +121,7 @@ a {
 
 /* ======================================================
    05 · IMAGEN DE BILLY · MARCA DE AGUA
+   ESCRITORIO
 ====================================================== */
 
 .imagen-billy-portada {
@@ -129,7 +130,7 @@ a {
 
     top: 50%;
 
-    left: 0;
+    left: -195px;
 
     z-index: 1;
 
@@ -230,8 +231,8 @@ a {
 
 
 /* ======================================================
-   07 · IMAGEN DE BILLY · MÓVIL
-   MÓVIL · VUELVE A QUEDAR CENTRADA
+   07 · MÓVIL
+   LA IMAGEN VUELVE A ESTAR CENTRADA
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -249,40 +250,6 @@ a {
 
 
 /* ======================================================
-   IMAGEN BILLY · POSICIÓN ESCRITORIO
-====================================================== */
-
-@media (min-width: 768px) {
-
-    .imagen-billy-portada {
-
-        position: absolute !important;
-
-        top: 50% !important;
-
-        left: -195px !important;
-
-        width: auto !important;
-
-        height: 105% !important;
-
-        max-width: none !important;
-
-        max-height: none !important;
-
-        margin: 0 !important;
-
-        padding: 0 !important;
-
-        transform: translateY(-50%) !important;
-
-    }
-
-}
-
-
-/* ======================================================
    FIN · styles.css
 ====================================================== */
-
 
