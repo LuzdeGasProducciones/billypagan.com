@@ -1,137 +1,498 @@
-/* ======================================================
+```css
+/* ==========================================================================
    BILLY PAGÁN · SITIO OFICIAL
-   footer.js
+   footer.css
    COMPONENTE · FOOTER GLOBAL
    ELEGANT MINIMAL · EDITORIAL LIGHT SWEEP
-====================================================== */
+   ========================================================================== */
 
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ==========================================================================
+   01 · FOOTER GENERAL
+   ========================================================================== */
+
+.footer {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+}
 
 
-    /* ==================================================
-       ENLACES DEL FOOTER
-    ================================================== */
+/* ==========================================================================
+   02 · CONTENIDO
+   ========================================================================== */
 
-    const enlacesFooter = document.querySelectorAll(
-        ".footer-artista, .footer-terminos"
-    );
+.footer-contenido {
 
+    display: flex;
 
-    /* ==================================================
-       BARRIDO AL HACER CLIC
-    ================================================== */
+    justify-content: center;
 
-    enlacesFooter.forEach(function (enlace) {
+    align-items: center;
 
+    width: 100%;
 
-        enlace.addEventListener("click", function (event) {
+    margin: 0 auto;
 
+    padding: 1.8rem 2rem 2.5rem;
 
-            /*
-             * Evitamos dobles clics mientras
-             * se ejecuta el barrido.
-             */
+    box-sizing: border-box;
 
-            if (enlace.classList.contains("barrido")) {
+    text-align: center;
 
-                event.preventDefault();
-
-                return;
-
-            }
+}
 
 
-            /*
-             * Guardamos el destino original.
-             */
+/* ==========================================================================
+   03 · LÍNEA PRINCIPAL
+   ========================================================================== */
 
-            const destino = enlace.href;
+.footer-copy {
 
+    display: block;
 
-            /*
-             * Detenemos temporalmente la navegación
-             * para mostrar el destello.
-             */
+    margin: 0;
 
-            event.preventDefault();
+    padding: 0;
 
+    color: rgba(44, 44, 44, 0.45);
 
-            /*
-             * Reiniciamos cualquier animación anterior.
-             */
+    font-family:
+        "Montserrat",
+        sans-serif;
 
-            enlace.classList.remove("barrido");
+    font-size: 0.55rem;
 
+    font-weight: 300;
 
-            /*
-             * Forzamos un nuevo cálculo de layout
-             * para garantizar el reinicio de la animación.
-             */
+    line-height: 1.5;
 
-            void enlace.offsetWidth;
+    letter-spacing: 0.16em;
 
+    text-transform: uppercase;
 
-            /*
-             * Activamos el barrido.
-             */
+    white-space: nowrap;
 
-            enlace.classList.add("barrido");
+    user-select: none;
+
+}
 
 
-            /* ==================================================
-               NAVEGACIÓN AL TERMINAR EL DESTELLO
-            ================================================== */
+/* ==========================================================================
+   04 · ENLACES
+   ALINEACIÓN EXACTA CON EL RESTO DEL TEXTO
+   ========================================================================== */
 
-            const finalizarNavegacion = function (evento) {
+.footer-artista,
+.footer-terminos {
 
+    position: relative;
 
-                /*
-                 * Solo respondemos a nuestra animación.
-                 */
+    display: inline-block;
 
-                if (evento.animationName !== "footerSweep") {
+    vertical-align: baseline;
 
-                    return;
+    margin: 0;
 
-                }
+    padding: 0;
 
+    color: rgba(44, 44, 44, 0.45);
 
-                /*
-                 * Eliminamos el listener.
-                 */
+    font-family: inherit;
 
-                enlace.removeEventListener(
-                    "animationend",
-                    finalizarNavegacion
-                );
+    font-size: inherit;
 
+    font-weight: inherit;
 
-                /*
-                 * Navegamos inmediatamente.
-                 */
+    line-height: inherit;
 
-                window.location.href = destino;
+    letter-spacing: inherit;
 
-            };
+    text-transform: inherit;
 
+    text-decoration: none;
 
-            /*
-             * Escuchamos el final real de la animación.
-             */
+    cursor: pointer;
 
-            enlace.addEventListener(
-                "animationend",
-                finalizarNavegacion
-            );
+    transform-origin: center center;
 
+    -webkit-tap-highlight-color: transparent;
 
-        });
+    outline: none;
 
+    transition:
+        color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 
-    });
+}
 
 
-});
+/* ==========================================================================
+   05 · CAPA DEL DESTELLO
+   ========================================================================== */
+
+.footer-artista::after,
+.footer-terminos::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -70%;
+
+    width: 45%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.04) 35%,
+            rgba(255, 255, 255, 0.30) 50%,
+            rgba(255, 255, 255, 0.04) 65%,
+            rgba(255, 255, 255, 0) 100%
+        );
+
+    transform: skewX(-20deg);
+
+    pointer-events: none;
+
+    opacity: 0;
+
+}
 
 
+/* ==========================================================================
+   06 · HOVER
+   AMPLIACIÓN SUTIL
+   ========================================================================== */
+
+.footer-artista:hover,
+.footer-terminos:hover {
+
+    color: rgba(44, 44, 44, 0.72);
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================================================
+   07 · BARRIDO AL HACER CLIC
+   ========================================================================== */
+
+.footer-artista.barrido::after,
+.footer-terminos.barrido::after {
+
+    opacity: 1;
+
+    animation:
+        footerSweep
+        0.35s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+}
+
+
+/* ==========================================================================
+   08 · ANIMACIÓN DEL DESTELLO
+   ========================================================================== */
+
+@keyframes footerSweep {
+
+    0% {
+
+        left: -70%;
+
+        opacity: 0;
+
+    }
+
+    12% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    88% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        left: 115%;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   09 · ESTADO DURANTE EL DESTELLO
+   ========================================================================== */
+
+.footer-artista.barrido,
+.footer-terminos.barrido {
+
+    color: rgba(44, 44, 44, 0.78);
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================================================
+   10 · SEPARADORES
+   ========================================================================== */
+
+.footer-separador {
+
+    display: inline-block;
+
+    vertical-align: baseline;
+
+    margin:
+        0 0.42em;
+
+    padding: 0;
+
+    color: rgba(44, 44, 44, 0.24);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: inherit;
+
+    font-weight: 300;
+
+    line-height: inherit;
+
+    letter-spacing: 0;
+
+    user-select: none;
+
+}
+
+
+/* ==========================================================================
+   11 · FOCO
+   ========================================================================== */
+
+.footer-artista:focus,
+.footer-terminos:focus,
+.footer-artista:focus-visible,
+.footer-terminos:focus-visible {
+
+    outline: none;
+
+}
+
+
+/* ==========================================================================
+   12 · PÁGINA DE INICIO
+   ========================================================================== */
+
+body.pagina-inicio .footer {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+}
+
+
+/* ==========================================================================
+   13 · PÁGINA LEGAL
+   ========================================================================== */
+
+body.pagina-legal .footer {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 0;
+
+}
+
+
+/* ==========================================================================
+   14 · FOOTER LEGAL
+   ========================================================================== */
+
+body.pagina-legal .footer-copy {
+
+    color: rgba(255, 255, 255, 0.48);
+
+}
+
+
+body.pagina-legal .footer-artista,
+body.pagina-legal .footer-terminos {
+
+    color: rgba(255, 255, 255, 0.48);
+
+}
+
+
+body.pagina-legal .footer-separador {
+
+    color: rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* ==========================================================================
+   15 · HOVER PÁGINA LEGAL
+   ========================================================================== */
+
+body.pagina-legal .footer-artista:hover,
+body.pagina-legal .footer-terminos:hover {
+
+    color: rgba(255, 255, 255, 0.72);
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================================================
+   16 · DESTELLO PÁGINA LEGAL
+   ========================================================================== */
+
+body.pagina-legal .footer-artista.barrido::after,
+body.pagina-legal .footer-terminos.barrido::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.02) 35%,
+            rgba(255, 255, 255, 0.14) 50%,
+            rgba(255, 255, 255, 0.02) 65%,
+            rgba(255, 255, 255, 0) 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   17 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .footer-contenido {
+
+        padding:
+            1.5rem 0.75rem 2rem;
+
+    }
+
+
+    .footer-copy {
+
+        font-size: 0.46rem;
+
+        letter-spacing: 0.10em;
+
+        white-space: nowrap;
+
+    }
+
+
+    .footer-separador {
+
+        margin:
+            0 0.32em;
+
+    }
+
+
+    /*
+     * En móvil no desplazamos ni elevamos
+     * los enlaces al tocar.
+     */
+
+    .footer-artista:active,
+    .footer-terminos:active {
+
+        color: inherit;
+
+        transform: none;
+
+    }
+
+
+    /*
+     * Eliminamos cualquier resaltado táctil
+     * del navegador.
+     */
+
+    .footer-artista,
+    .footer-terminos {
+
+        -webkit-tap-highlight-color: transparent;
+
+        -webkit-touch-callout: none;
+
+        outline: none;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   18 · ACCESIBILIDAD
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-artista,
+    .footer-terminos {
+
+        transition: none;
+
+    }
+
+
+    .footer-artista.barrido::after,
+    .footer-terminos.barrido::after {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   FIN · footer.css
+   ========================================================================== */
+```
