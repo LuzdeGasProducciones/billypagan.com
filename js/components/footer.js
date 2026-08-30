@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==================================================
-       BARRIDO Y NAVEGACIÓN
+       INTERACCIÓN
     ================================================== */
 
     enlacesFooter.forEach(function (enlace) {
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Si ya está ejecutándose el efecto,
-             * evitamos nuevos clics.
+             * Si el barrido ya está activo,
+             * evitamos un segundo clic.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -50,10 +50,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Detenemos temporalmente la navegación.
+             * Detenemos temporalmente la navegación
+             * para mostrar el destello.
              */
 
             event.preventDefault();
+
+
+            /*
+             * Reiniciamos cualquier animación anterior.
+             */
+
+            enlace.classList.remove("barrido");
+
+
+            /*
+             * Forzamos el navegador a recalcular
+             * el estado del elemento.
+             */
+
+            void enlace.offsetWidth;
 
 
             /*
@@ -82,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Eliminamos el listener.
+                 * Evitamos que el listener permanezca activo.
                  */
 
                 enlace.removeEventListener(
@@ -92,7 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * Navegación inmediata.
+                 * Limpiamos el estado visual.
+                 */
+
+                enlace.classList.remove("barrido");
+
+
+                /*
+                 * Navegamos inmediatamente.
                  */
 
                 window.location.href = destino;
@@ -101,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Escuchamos el final real del CSS.
+             * Esperamos el final real del destello.
              */
 
             enlace.addEventListener(
