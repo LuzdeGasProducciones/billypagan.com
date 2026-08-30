@@ -120,6 +120,8 @@
 
     transform-origin: center center;
 
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 
@@ -170,7 +172,11 @@
 
         -webkit-text-fill-color: transparent;
 
-        animation: footerDestello 0.65s ease-out forwards;
+        animation:
+            footerDestello
+            0.65s
+            ease-out
+            forwards;
 
     }
 
@@ -178,7 +184,7 @@
 
 
 /* ======================================================
-   08. MÓVIL · DESTELLO AL TOCAR
+   08. MÓVIL · TOQUE
 ====================================================== */
 
 @media (hover: none) and (pointer: coarse) {
@@ -192,18 +198,22 @@
 
 
     /* --------------------------------------------------
-       AL TOCAR
+       AL TOCAR · LIGERA AMPLIACIÓN
     -------------------------------------------------- */
 
     .footer a:active {
 
         transform: scale(1.04);
 
+        outline: none;
+
+        box-shadow: none;
+
     }
 
 
     /* --------------------------------------------------
-       CLASE JS · DESTELLO
+       DESTELLO · AL TOCAR
     -------------------------------------------------- */
 
     .footer a.destello {
@@ -227,7 +237,11 @@
 
         -webkit-text-fill-color: transparent;
 
-        animation: footerDestello 0.65s ease-out forwards;
+        animation:
+            footerDestello
+            0.65s
+            ease-out
+            forwards;
 
     }
 
@@ -295,37 +309,12 @@
 
     }
 
+
     .footer a.destello {
 
         animation: none;
 
     }
-
-}
-
-
-/* ======================================================
-   10. MÓVIL · ELIMINAR SOMBRA DE PULSACIÓN
-====================================================== */
-
-.footer a {
-
-    -webkit-tap-highlight-color: transparent;
-
-    tap-highlight-color: transparent;
-
-    outline: none;
-
-}
-
-
-.footer a:active {
-
-    outline: none;
-
-    background-color: transparent;
-
-    box-shadow: none;
 
 }
 
