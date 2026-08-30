@@ -6,15 +6,13 @@
 
 
 /* ======================================================
-   01. FOOTER · BASE
+   01. BASE
 ====================================================== */
 
 .footer {
 
     width: 100%;
-
     margin: 0;
-
     padding: 0 1.5rem 1.5rem;
 
     color: rgba(32, 32, 32, 0.45);
@@ -22,24 +20,19 @@
     background: transparent;
 
     font-family: "Montserrat", sans-serif;
-
     font-size: 0.62rem;
-
     font-weight: 400;
-
     line-height: 1.6;
 
     letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-
     text-align: center;
+    text-transform: uppercase;
 
 }
 
 
 /* ======================================================
-   02. FOOTER · PORTADA
+   02. PORTADA
 ====================================================== */
 
 .pagina-inicio .footer {
@@ -47,9 +40,7 @@
     position: fixed;
 
     left: 0;
-
     right: 0;
-
     bottom: 0;
 
     z-index: 30;
@@ -58,7 +49,7 @@
 
 
 /* ======================================================
-   03. FOOTER · CONTENIDO
+   03. CONTENIDO
 ====================================================== */
 
 .footer-contenido {
@@ -66,48 +57,41 @@
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
-    flex-wrap: nowrap;
-
     width: 100%;
-
     margin: 0 auto;
 
     text-align: center;
-
-}
-
-
-/* ======================================================
-   04. COPYRIGHT
-====================================================== */
-
-.footer-copy {
-
-    display: inline;
-
-    margin: 0;
-
     white-space: nowrap;
 
 }
 
 
 /* ======================================================
-   05. ARTISTA
+   04. ELEMENTOS
 ====================================================== */
 
-.footer-artista {
+.footer-copy,
+.footer-artista,
+.footer-terminos {
 
     display: inline;
+
+    margin: 0;
+
+}
+
+
+.footer-terminos {
+
+    margin-left: 0.35rem;
 
 }
 
 
 /* ======================================================
-   06. ENLACES · BASE
+   05. ENLACES
 ====================================================== */
 
 .footer a {
@@ -118,7 +102,7 @@
 
     text-decoration: none;
 
-    transform-origin: center center;
+    transform-origin: center;
 
     -webkit-tap-highlight-color: transparent;
 
@@ -126,8 +110,7 @@
 
 
 /* ======================================================
-   07. ESCRITORIO · CURSOR
-   Hover = únicamente crecimiento
+   06. INTERACCIÓN
 ====================================================== */
 
 @media (hover: hover) and (pointer: fine) {
@@ -146,79 +129,32 @@
 
     }
 
-
-    /* --------------------------------------------------
-       DESTELLO · SOLO AL HACER CLIC
-    -------------------------------------------------- */
-
-    .footer a.destello {
-
-        background: linear-gradient(
-            90deg,
-            rgba(32, 32, 32, 0.55) 0%,
-            rgba(32, 32, 32, 0.55) 35%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(32, 32, 32, 0.55) 65%,
-            rgba(32, 32, 32, 0.55) 100%
-        );
-
-        background-size: 250% 100%;
-
-        background-position: 100% center;
-
-        -webkit-background-clip: text;
-
-        background-clip: text;
-
-        -webkit-text-fill-color: transparent;
-
-        animation:
-            footerDestello
-            0.65s
-            ease-out
-            forwards;
-
-    }
-
 }
 
 
 /* ======================================================
-   08. MÓVIL · TOQUE
+   07. TOQUE
 ====================================================== */
 
 @media (hover: none) and (pointer: coarse) {
-
-    .footer a {
-
-        transition:
-            transform 0.2s ease;
-
-    }
-
-
-    /* --------------------------------------------------
-       AL TOCAR · LIGERA AMPLIACIÓN
-    -------------------------------------------------- */
 
     .footer a:active {
 
         transform: scale(1.04);
 
-        outline: none;
-
-        box-shadow: none;
-
     }
 
+}
 
-    /* --------------------------------------------------
-       DESTELLO · AL TOCAR
-    -------------------------------------------------- */
 
-    .footer a.destello {
+/* ======================================================
+   08. DESTELLO
+====================================================== */
 
-        background: linear-gradient(
+.footer a.destello {
+
+    background:
+        linear-gradient(
             90deg,
             rgba(32, 32, 32, 0.55) 0%,
             rgba(32, 32, 32, 0.55) 35%,
@@ -227,40 +163,36 @@
             rgba(32, 32, 32, 0.55) 100%
         );
 
-        background-size: 250% 100%;
+    background-size: 250% 100%;
+    background-position: 100% center;
 
-        background-position: 100% center;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-        background-clip: text;
-
-        -webkit-text-fill-color: transparent;
-
-        animation:
-            footerDestello
-            0.65s
-            ease-out
-            forwards;
-
-    }
+    animation:
+        footerDestello
+        0.65s
+        ease-out
+        forwards;
 
 }
 
 
 /* ======================================================
-   09. ANIMACIÓN · DESTELLO
+   09. ANIMACIÓN
 ====================================================== */
 
 @keyframes footerDestello {
 
-    0% {
+    from {
 
         background-position: 100% center;
 
     }
 
-    100% {
+    to {
 
         background-position: 0% center;
 
@@ -276,30 +208,10 @@
 .footer a:focus-visible {
 
     outline: 1px solid rgba(32, 32, 32, 0.3);
-
     outline-offset: 0.2rem;
 
 }
 
-
-/* ======================================================
-   11. TÉRMINOS
-====================================================== */
-
-.footer-terminos {
-
-    display: inline;
-
-    margin: 0 0 0 0.35rem;
-
-    white-space: nowrap;
-
-}
-
-
-/* ======================================================
-   12. REDUCCIÓN DE MOVIMIENTO
-====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -322,3 +234,4 @@
 /* ======================================================
    FIN · footer.css
 ====================================================== */
+
