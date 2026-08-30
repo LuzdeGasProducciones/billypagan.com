@@ -6,7 +6,7 @@
 
 
 /* ======================================================
-   01. MÓVIL · VERTICAL
+   01 · MÓVIL · VERTICAL
    Hasta 767px · Portrait
 ====================================================== */
 
@@ -45,7 +45,9 @@
 
 
     /* --------------------------------------------------
-       IMAGEN DE BILLY · MARCA DE AGUA
+       IMAGEN DE BILLY
+       POSICIÓN PROVISIONAL · CENTRADA
+       La versión móvil se rediseñará después.
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -102,7 +104,9 @@
         display: flex;
 
         flex-direction: column;
+
         justify-content: center;
+
         align-items: center;
 
         gap: 1.8rem;
@@ -112,13 +116,16 @@
 
         padding: 5rem 2rem;
 
-        background: rgba(245, 245, 245, 0.94);
+        background:
+            rgba(245, 245, 245, 0.94);
 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
         opacity: 0;
+
         visibility: hidden;
+
         pointer-events: none;
 
         transition:
@@ -131,7 +138,9 @@
     .pagina-inicio .menu-movil.abierto {
 
         opacity: 1;
+
         visibility: visible;
+
         pointer-events: auto;
 
     }
@@ -150,7 +159,8 @@
 
     .pagina-inicio .contenido h1 {
 
-        font-size: clamp(3.4rem, 15vw, 5.5rem);
+        font-size:
+            clamp(3.4rem, 15vw, 5.5rem);
 
         line-height: 0.9;
 
@@ -174,7 +184,8 @@
 
     .pagina-inicio .footer {
 
-        padding: 0 0.75rem 1rem;
+        padding:
+            0 0.75rem 1rem;
 
         font-size: 0.48rem;
 
@@ -213,7 +224,7 @@
 
 
 /* ======================================================
-   02. MÓVIL · HORIZONTAL
+   02 · MÓVIL · HORIZONTAL
    Hasta 767px · Landscape
 ====================================================== */
 
@@ -252,7 +263,8 @@
 
 
     /* --------------------------------------------------
-       IMAGEN DE BILLY · MARCA DE AGUA
+       IMAGEN DE BILLY
+       POSICIÓN PROVISIONAL · CENTRADA
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -280,6 +292,7 @@
         display: block;
 
         overflow-x: auto;
+
         overflow-y: hidden;
 
         -webkit-overflow-scrolling: touch;
@@ -299,6 +312,7 @@
     .pagina-inicio .menu ul {
 
         width: max-content;
+
         min-width: 100%;
 
         gap: 1.15rem;
@@ -352,7 +366,8 @@
 
     .pagina-inicio .contenido h1 {
 
-        font-size: clamp(3.5rem, 10vw, 5.5rem);
+        font-size:
+            clamp(3.5rem, 10vw, 5.5rem);
 
     }
 
@@ -374,7 +389,8 @@
 
     .pagina-inicio .footer {
 
-        padding: 0 1rem 1rem;
+        padding:
+            0 1rem 1rem;
 
         font-size: 0.48rem;
 
@@ -417,7 +433,7 @@
 
 
 /* ======================================================
-   03. TABLET
+   03 · TABLET
    768px — 1199px
 ====================================================== */
 
@@ -431,6 +447,7 @@
     .pagina-inicio {
 
         height: 100vh;
+
         min-height: 100vh;
 
         overflow: hidden;
@@ -445,13 +462,15 @@
     .pagina-inicio .hero {
 
         height: 100vh;
+
         min-height: 100vh;
 
     }
 
 
     /* --------------------------------------------------
-       IMAGEN DE BILLY · MARCA DE AGUA
+       IMAGEN DE BILLY
+       POSICIÓN PROVISIONAL · CENTRADA
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -527,7 +546,8 @@
 
     .pagina-inicio .contenido h1 {
 
-        font-size: clamp(4rem, 10vw, 7rem);
+        font-size:
+            clamp(4rem, 10vw, 7rem);
 
     }
 
@@ -544,31 +564,15 @@
 
 
 /* ======================================================
-   04. ESCRITORIO
+   04 · ESCRITORIO
    Desde 1200px
+
+   IMPORTANTE:
+   La posición de Billy NO se controla aquí.
+   Se controla exclusivamente desde styles.css.
 ====================================================== */
 
 @media (min-width: 1200px) {
-
-
-    /* --------------------------------------------------
-       IMAGEN DE BILLY · MARCA DE AGUA
-    -------------------------------------------------- */
-
-    .pagina-inicio .imagen-billy-portada {
-
-        height: 100vh;
-
-        width: auto;
-
-        top: 50%;
-
-        left: 50%;
-
-        transform:
-            translate(-50%, -50%);
-
-    }
 
 
     /* --------------------------------------------------
@@ -598,6 +602,10 @@
     }
 
 
+    /* --------------------------------------------------
+       HAMBURGUESA / MENÚ MÓVIL
+    -------------------------------------------------- */
+
     .pagina-inicio .hamburguesa,
     .pagina-inicio .menu-movil {
 
@@ -612,7 +620,8 @@
 
     .pagina-inicio .contenido h1 {
 
-        font-size: clamp(4rem, 9vw, 8rem);
+        font-size:
+            clamp(4rem, 9vw, 8rem);
 
     }
 
@@ -620,7 +629,7 @@
 
 
 /* ======================================================
-   05. PANTALLAS MUY GRANDES
+   05 · PANTALLAS MUY GRANDES
    Desde 1600px
 ====================================================== */
 
@@ -644,7 +653,7 @@
 
 
 /* ======================================================
-   06. ACCESIBILIDAD
+   06 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
