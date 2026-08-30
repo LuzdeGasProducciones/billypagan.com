@@ -1,90 +1,35 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
-   footer.js
-   COMPONENTE · FOOTER
+   footer.js · COMPONENTE FOOTER
 ====================================================== */
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const enlaces = document.querySelectorAll(".footer a");
 
-    /* ==================================================
-       ELEMENTOS
-    ================================================== */
-
-    const enlacesFooter =
-        document.querySelectorAll(".footer a");
-
-
-    /* ==================================================
-       COMPROBACIÓN
-    ================================================== */
-
-    if (!enlacesFooter.length) {
-
-        return;
-
-    }
-
-
-    /* ==================================================
-       DESTELLO AL HACER CLIC / TOCAR
-    ================================================== */
-
-    enlacesFooter.forEach(enlace => {
-
+    enlaces.forEach(enlace => {
 
         enlace.addEventListener("click", event => {
 
-
-            /* ------------------------------------------
-               EVITAR DOBLE CLIC DURANTE EL EFECTO
-            ------------------------------------------ */
-
-            if (
-                enlace.classList.contains("destello")
-            ) {
-
+            if (enlace.classList.contains("destello")) {
                 event.preventDefault();
-
                 return;
-
             }
-
-
-            /* ------------------------------------------
-               AÑADIR DESTELLO
-            ------------------------------------------ */
 
             enlace.classList.add("destello");
 
-
-            /* ------------------------------------------
-               GUARDAR DESTINO
-            ------------------------------------------ */
-
-            const destino =
-                enlace.href;
-
-
-            /* ------------------------------------------
-               DEJAR QUE EL DESTELLO TERMINE
-            ------------------------------------------ */
+            const destino = enlace.href;
 
             event.preventDefault();
 
-
             setTimeout(() => {
-
                 window.location.href = destino;
-
             }, 650);
-
 
         });
 
-
     });
 
-
 });
+
+
