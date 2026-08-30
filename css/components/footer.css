@@ -50,7 +50,6 @@
 
 /* ==========================================================================
    03 · LÍNEA PRINCIPAL
-   CONTENEDOR TIPOGRÁFICO MAESTRO
    ========================================================================== */
 
 .footer-copy {
@@ -85,8 +84,8 @@
 
 
 /* ==========================================================================
-   04 · ENLACES CLICABLES
-   MISMA TIPOGRAFÍA · MISMO TAMAÑO
+   04 · ENLACES
+   ALINEACIÓN TIPOGRÁFICA EXACTA
    ========================================================================== */
 
 .footer-artista,
@@ -121,16 +120,13 @@
     cursor: pointer;
 
     /*
-     * MUY IMPORTANTE:
-     * recorta el destello exactamente al área
-     * de cada enlace.
+     * El destello no puede salir del enlace.
      */
 
     overflow: hidden;
 
     /*
-     * Evita el recuadro táctil en móviles.
-
+     * Elimina el recuadro táctil de iOS / Android.
      */
 
     -webkit-tap-highlight-color: transparent;
@@ -138,9 +134,11 @@
     outline: none;
 
     /*
-     * Microampliación elegante.
-
+     * La transformación se realiza desde el centro
+     * para evitar desplazamientos verticales.
      */
+
+    transform-origin: center center;
 
     transition:
         color 0.45s cubic-bezier(0.25, 1, 0.5, 1),
@@ -151,7 +149,7 @@
 
 /* ==========================================================================
    05 · DESTELLO
-   EXCLUSIVAMENTE DENTRO DE CADA ENLACE
+   SOLO DENTRO DE LA PALABRA CLICABLE
    ========================================================================== */
 
 .footer-artista::after,
@@ -189,7 +187,8 @@
 
 
 /* ==========================================================================
-   06 · HOVER · ESCRITORIO
+   06 · HOVER
+   AMPLIACIÓN MUY SUTIL
    ========================================================================== */
 
 .footer-artista:hover,
@@ -274,7 +273,7 @@
 
 
 /* ==========================================================================
-   09 · SEPARADORES EDITORIALES
+   09 · SEPARADORES
    ========================================================================== */
 
 .footer-separador {
@@ -309,7 +308,6 @@
 
 /* ==========================================================================
    10 · FOCO
-   SIN RECUADRO
    ========================================================================== */
 
 .footer-artista:focus,
@@ -361,7 +359,7 @@ body.pagina-legal .footer {
 
 
 /* ==========================================================================
-   13 · FOOTER EN PÁGINA LEGAL
+   13 · FOOTER LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-copy {
@@ -387,7 +385,7 @@ body.pagina-legal .footer-separador {
 
 
 /* ==========================================================================
-   14 · HOVER EN PÁGINA LEGAL
+   14 · HOVER PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista:hover,
@@ -401,7 +399,7 @@ body.pagina-legal .footer-terminos:hover {
 
 
 /* ==========================================================================
-   15 · DESTELLO EN PÁGINA LEGAL
+   15 · DESTELLO PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista::after,
@@ -421,7 +419,7 @@ body.pagina-legal .footer-terminos::after {
 
 
 /* ==========================================================================
-   16 · ESTADO ACTIVO EN PÁGINA LEGAL
+   16 · ESTADO ACTIVO PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista.barrido,
@@ -468,7 +466,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * Mantiene la ampliación al tocar.
+     * La ampliación también funciona al tocar.
      */
 
     .footer-artista:active,
@@ -482,8 +480,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
     /*
-     * Sin resaltado táctil del navegador.
-
+     * Sin resaltado rectangular del navegador.
      */
 
     .footer-artista,
