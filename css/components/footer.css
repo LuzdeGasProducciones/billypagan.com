@@ -2,6 +2,7 @@
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
    COMPONENTE · FOOTER GLOBAL
+   PREMIUM SWEEP LIGHT
 ====================================================== */
 
 
@@ -83,48 +84,17 @@
 
 
 /* ======================================================
-   04 · NOMBRE DEL ARTISTA
+   04 · ENLACES
 ====================================================== */
 
-.footer-artista {
-
-    position: relative;
-
-    display: inline-block;
-
-    color: rgba(44, 44, 44, 0.80);
-
-    font: inherit;
-
-    font-weight: 400;
-
-    letter-spacing: inherit;
-
-    text-transform: inherit;
-
-    text-decoration: none;
-
-    transition:
-        color 0.35s ease;
-
-}
-
-
-/* ======================================================
-   05 · TÉRMINOS
-====================================================== */
-
+.footer-artista,
 .footer-terminos {
 
     position: relative;
 
     display: inline-block;
 
-    color: rgba(44, 44, 44, 0.45);
-
     font: inherit;
-
-    font-weight: 300;
 
     letter-spacing: inherit;
 
@@ -132,63 +102,48 @@
 
     text-decoration: none;
 
-    transition:
-        color 0.35s ease;
+    overflow: hidden;
 
-}
-
-
-/* ======================================================
-   06 · SEPARADOR
-====================================================== */
-
-.footer-separador {
-
-    display: inline-block;
-
-    margin: 0 0.45em;
-
-    color: rgba(44, 44, 44, 0.20);
-
-}
-
-
-/* ======================================================
-   07 · LÍNEA EDITORIAL
-====================================================== */
-
-.footer-artista::after,
-.footer-terminos::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: -3px;
-
-    width: 100%;
-
-    height: 1px;
-
-    background:
-        #111111;
-
-    transform:
-        scaleX(0);
-
-    transform-origin:
-        left center;
+    cursor: pointer;
 
     transition:
-        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.3s ease;
 
 }
 
 
 /* ======================================================
-   08 · REALCE AL PASAR EL RATÓN
+   05 · NOMBRE DEL ARTISTA
+====================================================== */
+
+.footer-artista {
+
+    color:
+        rgba(44, 44, 44, 0.80);
+
+    font-weight:
+        400;
+
+}
+
+
+/* ======================================================
+   06 · TÉRMINOS
+====================================================== */
+
+.footer-terminos {
+
+    color:
+        rgba(44, 44, 44, 0.45);
+
+    font-weight:
+        300;
+
+}
+
+
+/* ======================================================
+   07 · REALCE
 ====================================================== */
 
 .footer-artista:hover,
@@ -197,27 +152,99 @@
     color:
         #111111;
 
-    cursor:
-        pointer;
-
 }
 
 
-.footer-artista:hover::after,
-.footer-terminos:hover::after {
+/* ======================================================
+   08 · BARRIDO DE LUZ
+====================================================== */
+
+.footer-artista::before,
+.footer-terminos::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -25%;
+
+    left:
+        -150%;
+
+    width:
+        80%;
+
+    height:
+        150%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.15) 25%,
+            rgba(255,255,255,0.95) 50%,
+            rgba(255,255,255,0.15) 75%,
+            rgba(255,255,255,0) 100%
+        );
 
     transform:
-        scaleX(1);
+        skewX(-25deg);
+
+    pointer-events:
+        none;
+
+    opacity:
+        0;
 
 }
 
 
 /* ======================================================
-   09 · RESPUESTA AL CLIC
+   09 · ANIMACIÓN DE BARRIDO
 ====================================================== */
 
-.footer-artista:active,
-.footer-terminos:active {
+.footer-artista.barrido::before,
+.footer-terminos.barrido::before {
+
+    opacity:
+        1;
+
+    animation:
+        footerSweep 0.55s
+        cubic-bezier(0.25, 1, 0.5, 1)
+        forwards;
+
+}
+
+
+@keyframes footerSweep {
+
+    0% {
+
+        left:
+            -150%;
+
+    }
+
+    100% {
+
+        left:
+            160%;
+
+    }
+
+}
+
+
+/* ======================================================
+   10 · RESPUESTA DURANTE EL CLIC
+====================================================== */
+
+.footer-artista.barrido,
+.footer-terminos.barrido {
 
     color:
         #000000;
@@ -226,39 +253,46 @@
 
 
 /* ======================================================
-   10 · PÁGINA DE INICIO
+   11 · PÁGINA DE INICIO
 ====================================================== */
 
 body.pagina-inicio .footer {
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 0;
+    left:
+        0;
 
-    bottom: 0;
+    bottom:
+        0;
 
-    width: 100%;
+    width:
+        100%;
 
 }
 
 
 /* ======================================================
-   11 · PÁGINA LEGAL
+   12 · PÁGINA LEGAL
 ====================================================== */
 
 body.pagina-legal .footer {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    margin-top: 0;
+    margin-top:
+        0;
 
 }
 
 
 /* ======================================================
-   12 · MÓVIL
+   13 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -266,7 +300,7 @@ body.pagina-legal .footer {
     .footer-contenido {
 
         padding:
-            1.5rem 0.75rem 2rem;
+            1.5rem 1rem 2rem;
 
     }
 
@@ -284,19 +318,11 @@ body.pagina-legal .footer {
 
     }
 
-
-    .footer-separador {
-
-        margin:
-            0 0.3em;
-
-    }
-
 }
 
 
 /* ======================================================
-   13 · ACCESIBILIDAD
+   14 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -310,10 +336,10 @@ body.pagina-legal .footer {
     }
 
 
-    .footer-artista::after,
-    .footer-terminos::after {
+    .footer-artista::before,
+    .footer-terminos::before {
 
-        transition:
+        display:
             none;
 
     }
