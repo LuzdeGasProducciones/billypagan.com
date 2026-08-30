@@ -1,4 +1,3 @@
-```css
 /* ==========================================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
@@ -86,7 +85,7 @@
 
 /* ==========================================================================
    04 · ENLACES
-   ALINEACIÓN EXACTA CON EL RESTO DEL TEXTO
+   ALINEACIÓN EXACTA
    ========================================================================== */
 
 .footer-artista,
@@ -120,21 +119,38 @@
 
     cursor: pointer;
 
-    transform-origin: center center;
+    /*
+     * El destello queda encerrado
+     * exclusivamente dentro del enlace.
+     */
+
+    overflow: hidden;
+
+    /*
+     * Elimina el resaltado rectangular
+     * de dispositivos táctiles.
+     */
 
     -webkit-tap-highlight-color: transparent;
 
     outline: none;
 
+    /*
+     * Evita desplazamientos visuales.
+     */
+
+    transform-origin: center center;
+
     transition:
-        color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
-        transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+        color 0.25s ease,
+        transform 0.25s ease;
 
 }
 
 
 /* ==========================================================================
-   05 · CAPA DEL DESTELLO
+   05 · DESTELLO
+   BARRIDO MUY ESTRECHO Y EXCLUSIVO DEL TEXTO
    ========================================================================== */
 
 .footer-artista::after,
@@ -148,7 +164,7 @@
 
     left: -70%;
 
-    width: 45%;
+    width: 30%;
 
     height: 100%;
 
@@ -156,13 +172,14 @@
         linear-gradient(
             90deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.04) 35%,
-            rgba(255, 255, 255, 0.30) 50%,
-            rgba(255, 255, 255, 0.04) 65%,
+            rgba(255, 255, 255, 0.10) 35%,
+            rgba(255, 255, 255, 0.48) 50%,
+            rgba(255, 255, 255, 0.10) 65%,
             rgba(255, 255, 255, 0) 100%
         );
 
-    transform: skewX(-20deg);
+    transform:
+        skewX(-18deg);
 
     pointer-events: none;
 
@@ -173,7 +190,6 @@
 
 /* ==========================================================================
    06 · HOVER
-   AMPLIACIÓN SUTIL
    ========================================================================== */
 
 .footer-artista:hover,
@@ -187,7 +203,7 @@
 
 
 /* ==========================================================================
-   07 · BARRIDO AL HACER CLIC
+   07 · BARRIDO
    ========================================================================== */
 
 .footer-artista.barrido::after,
@@ -197,16 +213,12 @@
 
     animation:
         footerSweep
-        0.35s
+        0.42s
         cubic-bezier(0.22, 1, 0.36, 1)
         forwards;
 
 }
 
-
-/* ==========================================================================
-   08 · ANIMACIÓN DEL DESTELLO
-   ========================================================================== */
 
 @keyframes footerSweep {
 
@@ -224,13 +236,7 @@
 
     }
 
-    50% {
-
-        opacity: 1;
-
-    }
-
-    88% {
+    78% {
 
         opacity: 1;
 
@@ -238,7 +244,7 @@
 
     100% {
 
-        left: 115%;
+        left: 120%;
 
         opacity: 0;
 
@@ -248,7 +254,7 @@
 
 
 /* ==========================================================================
-   09 · ESTADO DURANTE EL DESTELLO
+   08 · ESTADO DURANTE EL BARRIDO
    ========================================================================== */
 
 .footer-artista.barrido,
@@ -262,7 +268,7 @@
 
 
 /* ==========================================================================
-   10 · SEPARADORES
+   09 · SEPARADORES
    ========================================================================== */
 
 .footer-separador {
@@ -296,11 +302,17 @@
 
 
 /* ==========================================================================
-   11 · FOCO
+   10 · FOCO
    ========================================================================== */
 
 .footer-artista:focus,
-.footer-terminos:focus,
+.footer-terminos:focus {
+
+    outline: none;
+
+}
+
+
 .footer-artista:focus-visible,
 .footer-terminos:focus-visible {
 
@@ -310,7 +322,7 @@
 
 
 /* ==========================================================================
-   12 · PÁGINA DE INICIO
+   11 · PÁGINA DE INICIO
    ========================================================================== */
 
 body.pagina-inicio .footer {
@@ -327,7 +339,7 @@ body.pagina-inicio .footer {
 
 
 /* ==========================================================================
-   13 · PÁGINA LEGAL
+   12 · PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer {
@@ -342,7 +354,7 @@ body.pagina-legal .footer {
 
 
 /* ==========================================================================
-   14 · FOOTER LEGAL
+   13 · FOOTER LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-copy {
@@ -360,15 +372,8 @@ body.pagina-legal .footer-terminos {
 }
 
 
-body.pagina-legal .footer-separador {
-
-    color: rgba(255, 255, 255, 0.25);
-
-}
-
-
 /* ==========================================================================
-   15 · HOVER PÁGINA LEGAL
+   14 · HOVER PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer-artista:hover,
@@ -382,11 +387,11 @@ body.pagina-legal .footer-terminos:hover {
 
 
 /* ==========================================================================
-   16 · DESTELLO PÁGINA LEGAL
+   15 · DESTELLO PÁGINA LEGAL
    ========================================================================== */
 
-body.pagina-legal .footer-artista.barrido::after,
-body.pagina-legal .footer-terminos.barrido::after {
+body.pagina-legal .footer-artista::after,
+body.pagina-legal .footer-terminos::after {
 
     background:
         linear-gradient(
@@ -397,6 +402,20 @@ body.pagina-legal .footer-terminos.barrido::after {
             rgba(255, 255, 255, 0.02) 65%,
             rgba(255, 255, 255, 0) 100%
         );
+
+}
+
+
+/* ==========================================================================
+   16 · ESTADO ACTIVO PÁGINA LEGAL
+   ========================================================================== */
+
+body.pagina-legal .footer-artista.barrido,
+body.pagina-legal .footer-terminos.barrido {
+
+    color: rgba(255, 255, 255, 0.78);
+
+    transform: scale(1.03);
 
 }
 
@@ -434,32 +453,20 @@ body.pagina-legal .footer-terminos.barrido::after {
     }
 
 
-    /*
-     * En móvil no desplazamos ni elevamos
-     * los enlaces al tocar.
-     */
-
     .footer-artista:active,
     .footer-terminos:active {
 
-        color: inherit;
+        color: rgba(44, 44, 44, 0.72);
 
-        transform: none;
+        transform: scale(1.03);
 
     }
 
-
-    /*
-     * Eliminamos cualquier resaltado táctil
-     * del navegador.
-     */
 
     .footer-artista,
     .footer-terminos {
 
         -webkit-tap-highlight-color: transparent;
-
-        -webkit-touch-callout: none;
 
         outline: none;
 
@@ -482,8 +489,8 @@ body.pagina-legal .footer-terminos.barrido::after {
     }
 
 
-    .footer-artista.barrido::after,
-    .footer-terminos.barrido::after {
+    .footer-artista::after,
+    .footer-terminos::after {
 
         display: none;
 
@@ -495,4 +502,5 @@ body.pagina-legal .footer-terminos.barrido::after {
 /* ==========================================================================
    FIN · footer.css
    ========================================================================== */
-```
+
+
