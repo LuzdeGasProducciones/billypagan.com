@@ -21,6 +21,14 @@
 
     padding: 1.2rem 2.5rem;
 
+    background: rgba(36, 36, 36, 0.38);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    color: rgba(255, 255, 255, 0.72);
+
 }
 
 
@@ -38,6 +46,10 @@
 
     width: 100%;
 
+    max-width: 1400px;
+
+    margin: 0 auto;
+
     box-sizing: border-box;
 
 }
@@ -49,7 +61,7 @@
 
 .footer-copy {
 
-    margin: 0;
+    display: block;
 
     font-family:
         "Montserrat",
@@ -65,6 +77,8 @@
 
     text-transform: uppercase;
 
+    color: rgba(255, 255, 255, 0.62);
+
 }
 
 
@@ -73,6 +87,9 @@
 ====================================================== */
 
 .footer-artista {
+
+    color:
+        rgba(255, 255, 255, 0.82);
 
     text-decoration: none;
 
@@ -86,7 +103,6 @@
 .footer-artista:hover {
 
     opacity: 0.65;
-
 }
 
 
@@ -95,6 +111,9 @@
 ====================================================== */
 
 .footer-terminos {
+
+    color:
+        rgba(255, 255, 255, 0.62);
 
     text-decoration: none;
 
@@ -105,8 +124,6 @@
     font-size: 0.55rem;
 
     font-weight: 300;
-
-    line-height: 1.5;
 
     letter-spacing: 0.12em;
 
@@ -120,7 +137,6 @@
 .footer-terminos:hover {
 
     opacity: 0.65;
-
 }
 
 
@@ -129,16 +145,20 @@
 ====================================================== */
 
 /*
-   El footer pertenece al documento.
-   No se fija a la pantalla.
+   En la portada el footer queda después
+   del contenido principal.
+
+   No es fixed.
+   No es sticky.
 */
 
 body.pagina-inicio .footer {
 
     position: relative;
 
-    display: block;
+    width: 100%;
 
+    margin-top: 0;
 }
 
 
@@ -147,25 +167,49 @@ body.pagina-inicio .footer {
 ====================================================== */
 
 /*
-   En la página legal el footer también pertenece
-   al flujo normal del documento.
+   En términos y condiciones el footer forma
+   parte del documento.
 
-   Aparece al terminar todo el contenido legal.
+   Aparece únicamente después de todo
+   el contenido legal.
+
+   NO es fixed.
+   NO es sticky.
 */
 
 body.pagina-legal .footer {
 
     position: relative;
 
-    display: block;
+    width: 100%;
 
     margin-top: 0;
 
+    background:
+        rgba(36, 36, 36, 0.42);
+
+    color:
+        rgba(255, 255, 255, 0.72);
 }
 
 
 /* ======================================================
-   08 · MÓVIL
+   08 · ASEGURAR VISIBILIDAD
+====================================================== */
+
+body.pagina-inicio .footer,
+body.pagina-legal .footer {
+
+    display: block;
+
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+/* ======================================================
+   09 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -173,33 +217,53 @@ body.pagina-legal .footer {
     .footer {
 
         padding:
-            1.2rem
-            1.5rem
-            1.5rem;
-
+            1.2rem 1.5rem;
     }
 
 
     .footer-contenido {
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        justify-content: center;
+        justify-content:
+            center;
 
-        gap: 0.8rem;
+        align-items:
+            center;
 
-        text-align: center;
+        gap:
+            0.8rem;
 
+        text-align:
+            center;
     }
 
 
     .footer-copy,
     .footer-terminos {
 
-        font-size: 0.48rem;
+        font-size:
+            0.48rem;
 
-        letter-spacing: 0.10em;
+        letter-spacing:
+            0.10em;
+    }
 
+}
+
+
+/* ======================================================
+   10 · ACCESIBILIDAD
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-artista,
+    .footer-terminos {
+
+        transition:
+            none;
     }
 
 }
