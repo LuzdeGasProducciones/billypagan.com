@@ -1,8 +1,7 @@
 /* ======================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
-   COMPONENTE · FOOTER GLOBAL
-   PREMIUM SWEEP LIGHT
+   COMPONENTE · FOOTER GLOBAL (Premium Slow Sweep Light)
 ====================================================== */
 
 
@@ -84,7 +83,7 @@
 
 
 /* ======================================================
-   04 · ENLACES
+   04 · ENLACES EDITORIALES
 ====================================================== */
 
 .footer-artista,
@@ -93,6 +92,8 @@
     position: relative;
 
     display: inline-block;
+
+    vertical-align: baseline;
 
     font: inherit;
 
@@ -107,7 +108,7 @@
     cursor: pointer;
 
     transition:
-        color 0.3s ease;
+        color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 
 }
 
@@ -118,11 +119,9 @@
 
 .footer-artista {
 
-    color:
-        rgba(44, 44, 44, 0.80);
+    color: rgba(44, 44, 44, 0.80);
 
-    font-weight:
-        400;
+    font-weight: 300;
 
 }
 
@@ -133,24 +132,21 @@
 
 .footer-terminos {
 
-    color:
-        rgba(44, 44, 44, 0.45);
+    color: rgba(44, 44, 44, 0.45);
 
-    font-weight:
-        300;
+    font-weight: 300;
 
 }
 
 
 /* ======================================================
-   07 · REALCE
+   07 · REALCE AL PASAR EL RATÓN
 ====================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
-    color:
-        #111111;
+    color: #111111;
 
 }
 
@@ -162,59 +158,49 @@
 .footer-artista::before,
 .footer-terminos::before {
 
-    content:
-        "";
+    content: "";
 
-    position:
-        absolute;
+    position: absolute;
 
-    top:
-        -25%;
+    top: 0;
 
-    left:
-        -150%;
+    left: -150%;
 
-    width:
-        80%;
+    width: 100%;
 
-    height:
-        150%;
+    height: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0) 0%,
-            rgba(255,255,255,0.15) 25%,
-            rgba(255,255,255,0.95) 50%,
-            rgba(255,255,255,0.15) 75%,
-            rgba(255,255,255,0) 100%
-        );
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.12) 20%,
+        rgba(255, 255, 255, 0.40) 50%,
+        rgba(255, 255, 255, 0.12) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
 
-    transform:
-        skewX(-25deg);
+    transform: skewX(-30deg);
 
-    pointer-events:
-        none;
+    pointer-events: none;
 
-    opacity:
-        0;
+    opacity: 0;
 
 }
 
 
 /* ======================================================
-   09 · ANIMACIÓN DE BARRIDO
+   09 · ANIMACIÓN DE BARRIDO EDITORIAL
 ====================================================== */
 
 .footer-artista.barrido::before,
 .footer-terminos.barrido::before {
 
-    opacity:
-        1;
+    opacity: 1;
 
     animation:
-        footerSweep 0.55s
-        cubic-bezier(0.25, 1, 0.5, 1)
+        footerSweep
+        0.95s
+        cubic-bezier(0.22, 1, 0.36, 1)
         forwards;
 
 }
@@ -224,15 +210,13 @@
 
     0% {
 
-        left:
-            -150%;
+        left: -150%;
 
     }
 
     100% {
 
-        left:
-            160%;
+        left: 150%;
 
     }
 
@@ -246,8 +230,7 @@
 .footer-artista.barrido,
 .footer-terminos.barrido {
 
-    color:
-        #000000;
+    color: #000000;
 
 }
 
@@ -258,17 +241,13 @@
 
 body.pagina-inicio .footer {
 
-    position:
-        absolute;
+    position: absolute;
 
-    left:
-        0;
+    left: 0;
 
-    bottom:
-        0;
+    bottom: 0;
 
-    width:
-        100%;
+    width: 100%;
 
 }
 
@@ -279,14 +258,11 @@ body.pagina-inicio .footer {
 
 body.pagina-legal .footer {
 
-    position:
-        relative;
+    position: relative;
 
-    width:
-        100%;
+    width: 100%;
 
-    margin-top:
-        0;
+    margin-top: 0;
 
 }
 
@@ -330,8 +306,7 @@ body.pagina-legal .footer {
     .footer-artista,
     .footer-terminos {
 
-        transition:
-            none;
+        transition: none;
 
     }
 
@@ -339,8 +314,7 @@ body.pagina-legal .footer {
     .footer-artista::before,
     .footer-terminos::before {
 
-        display:
-            none;
+        display: none;
 
     }
 
