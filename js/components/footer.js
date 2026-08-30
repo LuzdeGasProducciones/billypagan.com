@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             /*
              * Evitamos dobles clics durante
-             * el pequeño efecto de transición.
+             * la animación.
              */
 
             if (enlace.classList.contains("barrido")) {
@@ -43,52 +43,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             /*
-             * Guardamos el destino.
+             * Guardamos el destino original.
              */
 
             const destino = enlace.href;
 
 
             /*
-             * Detenemos momentáneamente
-             * la navegación.
+             * Detenemos temporalmente la navegación
+             * para mostrar el barrido.
              */
 
             event.preventDefault();
 
 
             /*
-             * Reiniciamos el efecto.
+             * Activamos el barrido.
              */
 
             enlace.classList.remove("barrido");
 
-
-            /*
-             * Forzamos el navegador a recalcular
-             * el estado antes de iniciar la animación.
-             */
-
             void enlace.offsetWidth;
-
-
-            /*
-             * Activamos el destello.
-             */
 
             enlace.classList.add("barrido");
 
 
             /*
-             * Función de navegación.
+             * Navegamos al terminar el barrido.
              */
 
-            const finalizarNavegacion = function (evento) {
+            const finalizar = function (evento) {
 
-
-                /*
-                 * Solo respondemos a footerSweep.
-                 */
 
                 if (evento.animationName !== "footerSweep") {
 
@@ -97,35 +82,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
-                /*
-                 * Eliminamos el listener.
-
-                 */
-
                 enlace.removeEventListener(
                     "animationend",
-                    finalizarNavegacion
+                    finalizar
                 );
 
-
-                /*
-                 * Navegamos inmediatamente.
-                 */
 
                 window.location.href = destino;
 
             };
 
 
-            /*
-             * Esperamos únicamente los 0.35 s
-             * de la animación real.
-             */
-
             enlace.addEventListener(
                 "animationend",
-                finalizarNavegacion
+                finalizar
             );
+
+
+            /*
+             * Respaldo de seguridad.
+             *
+             * Si el navegador no dispara animationend,
+             * la navegación sigue produciéndose.
+             */
+
+            setTimeout(function () {
+
+                window.location.href = destino;
+
+            }, 480);
 
 
         });
