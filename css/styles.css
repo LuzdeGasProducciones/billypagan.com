@@ -18,7 +18,8 @@
 }
 
 
-html {
+html,
+body {
 
     width: 100%;
 
@@ -31,15 +32,14 @@ html {
 }
 
 
+html {
+
+    font-size: 16px;
+
+}
+
+
 body {
-
-    width: 100%;
-
-    min-height: 100%;
-
-    margin: 0;
-
-    padding: 0;
 
     color: #202020;
 
@@ -85,7 +85,7 @@ a {
 
     overflow: hidden;
 
-    background: #f5f5f5;
+    background-color: #f5f5f5;
 
 }
 
@@ -96,7 +96,11 @@ a {
 
 .hero {
 
-    position: relative;
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
 
     width: 100%;
 
@@ -132,11 +136,11 @@ a {
 
     position: absolute;
 
-    z-index: 1;
-
     top: 50%;
 
     left: 50%;
+
+    z-index: 1;
 
     display: block;
 
@@ -170,11 +174,11 @@ a {
 
     position: absolute;
 
-    z-index: 5;
-
     top: 50%;
 
     left: 50%;
+
+    z-index: 5;
 
     width: 90%;
 
@@ -237,3 +241,4 @@ a {
 /* ======================================================
    FIN · styles.css
 ====================================================== */
+
