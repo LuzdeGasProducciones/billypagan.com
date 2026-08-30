@@ -6,183 +6,311 @@
 
 
 /* ======================================================
-   01 · FOOTER
+   01 · VARIABLES
+====================================================== */
+
+:root {
+
+    --footer-color:
+        rgba(255, 255, 255, 0.45);
+
+    --footer-color-artista:
+        rgba(255, 255, 255, 0.75);
+
+    --footer-color-hover:
+        rgba(255, 255, 255, 0.95);
+
+    --footer-fuente:
+        "Montserrat",
+        sans-serif;
+
+}
+
+
+/* ======================================================
+   02 · FOOTER GENERAL
 ====================================================== */
 
 .footer {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 20;
+    z-index:
+        20;
 
-    width: 100%;
+    width:
+        100%;
 
-    box-sizing: border-box;
+    margin:
+        0;
+
+    padding:
+        0;
+
+    box-sizing:
+        border-box;
 
 }
 
 
 /* ======================================================
-   02 · CONTENIDO
+   03 · CONTENIDO
 ====================================================== */
 
 .footer-contenido {
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    align-items: center;
+    align-items:
+        center;
 
-    width: 100%;
+    width:
+        100%;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    padding: 1.5rem 2rem;
+    padding:
+        2rem 2rem 3rem;
 
-    box-sizing: border-box;
+    box-sizing:
+        border-box;
 
-    text-align: center;
+    text-align:
+        center;
 
 }
 
 
 /* ======================================================
-   03 · COPYRIGHT
+   04 · COPYRIGHT
 ====================================================== */
 
 .footer-copy {
 
-    display: block;
+    display:
+        block;
 
-    margin: 0;
+    margin:
+        0;
 
-    color: rgba(255, 255, 255, 0.68);
+    padding:
+        0;
+
+    color:
+        var(--footer-color);
 
     font-family:
-        "Montserrat",
-        sans-serif;
+        var(--footer-fuente);
 
-    font-size: 0.55rem;
+    font-size:
+        0.55rem;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
-    letter-spacing: 0.12em;
+    letter-spacing:
+        0.16em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 
-}
-
-
-/* ======================================================
-   04 · NOMBRE DEL ARTISTA
-====================================================== */
-
-.footer-artista {
-
-    color:
-        rgba(255, 255, 255, 0.88);
-
-    text-decoration: none;
-
-    font-weight: 400;
-
-    transition:
-        opacity 0.3s ease;
-}
-
-
-.footer-artista:hover {
-
-    opacity: 0.65;
-}
-
-
-/* ======================================================
-   05 · ENLACE · TÉRMINOS
-====================================================== */
-
-.footer-terminos {
-
-    color:
-        rgba(255, 255, 255, 0.68);
-
-    text-decoration: none;
-
-    transition:
-        opacity 0.3s ease;
-}
-
-
-.footer-terminos:hover {
-
-    opacity: 0.65;
-}
-
-
-/* ======================================================
-   06 · PÁGINA DE INICIO
-====================================================== */
-
-body.pagina-inicio .footer {
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 100%;
+    user-select:
+        none;
 
 }
 
 
 /* ======================================================
-   07 · PÁGINA LEGAL
-====================================================== */
-
-body.pagina-legal .footer {
-
-    position: relative;
-
-    width: 100%;
-
-    margin-top: 0;
-
-}
-
-
-/* ======================================================
-   08 · DESTELLO / REALCE AL PASAR Y PINCHAR
+   05 · ENLACES
 ====================================================== */
 
 .footer-artista,
 .footer-terminos {
 
+    display:
+        inline;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    color:
+        var(--footer-color);
+
+    font-family:
+        inherit;
+
+    font-size:
+        inherit;
+
+    font-weight:
+        inherit;
+
+    line-height:
+        inherit;
+
+    letter-spacing:
+        inherit;
+
+    text-transform:
+        inherit;
+
+    text-decoration:
+        none;
+
     transition:
-        color 0.3s ease,
+        color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        text-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
         opacity 0.3s ease,
-        text-shadow 0.3s ease;
-}
-
-
-.footer-artista:hover,
-.footer-terminos:hover {
-
-    opacity: 1;
-
-    text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.35);
+        transform 0.2s ease;
 
 }
 
 
 /* ======================================================
-   09 · MÓVIL
+   06 · NOMBRE DEL ARTISTA
+====================================================== */
+
+.footer-artista {
+
+    color:
+        var(--footer-color-artista);
+
+}
+
+
+/* ======================================================
+   07 · REALCE
+====================================================== */
+
+.footer-artista:hover,
+.footer-terminos:hover {
+
+    color:
+        var(--footer-color-hover);
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.40);
+
+}
+
+
+/* ======================================================
+   08 · DESTELLO AL PULSAR
+====================================================== */
+
+.footer-artista:active,
+.footer-terminos:active {
+
+    animation:
+        footer-destello 0.45s ease-out forwards;
+
+    transform:
+        scale(0.98);
+
+}
+
+
+@keyframes footer-destello {
+
+    0% {
+
+        filter:
+            brightness(1);
+
+        color:
+            var(--footer-color-hover);
+
+        text-shadow:
+            0 0 0 rgba(255, 255, 255, 0);
+
+    }
+
+    15% {
+
+        filter:
+            brightness(3);
+
+        color:
+            #ffffff;
+
+        text-shadow:
+            0 0 12px rgba(255, 255, 255, 0.90),
+            0 0 20px rgba(255, 255, 255, 0.40);
+
+    }
+
+    100% {
+
+        filter:
+            brightness(1);
+
+        color:
+            var(--footer-color-hover);
+
+        text-shadow:
+            0 0 10px rgba(255, 255, 255, 0.40);
+
+    }
+
+}
+
+
+/* ======================================================
+   09 · PÁGINA DE INICIO
+====================================================== */
+
+body.pagina-inicio .footer {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        100%;
+
+}
+
+
+/* ======================================================
+   10 · PÁGINA LEGAL
+====================================================== */
+
+body.pagina-legal .footer {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    margin:
+        0;
+
+}
+
+
+/* ======================================================
+   11 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
@@ -190,7 +318,7 @@ body.pagina-legal .footer {
     .footer-contenido {
 
         padding:
-            1.2rem 1rem;
+            1.5rem 1rem 2rem;
 
     }
 
@@ -201,10 +329,10 @@ body.pagina-legal .footer {
             0.48rem;
 
         letter-spacing:
-            0.09em;
+            0.12em;
 
         white-space:
-            nowrap;
+            normal;
 
     }
 
@@ -212,7 +340,7 @@ body.pagina-legal .footer {
 
 
 /* ======================================================
-   10 · ACCESIBILIDAD
+   12 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -221,6 +349,12 @@ body.pagina-legal .footer {
     .footer-terminos {
 
         transition:
+            none;
+
+        animation:
+            none;
+
+        transform:
             none;
 
         text-shadow:
