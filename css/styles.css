@@ -81,7 +81,9 @@ body {
 
     width: 100%;
 
-    height: 100%;
+    height: auto;
+
+    min-height: 100%;
 
     margin: 0;
 
@@ -93,7 +95,7 @@ body {
 
     font-family: var(--fuente-sans);
 
-    overflow: hidden;
+    overflow-x: hidden;
 
 }
 

@@ -115,13 +115,7 @@
 
     position: relative;
 
-    display: inline-block;
-
-    flex-shrink: 0;
-
-    margin: 0;
-
-    padding: 0;
+    display: inline;
 
     color:
         rgba(35, 35, 35, 0.66);
@@ -161,7 +155,7 @@
 
     transition:
         color 0.45s ease,
-        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        font-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 
 }
 
@@ -189,8 +183,8 @@
     color:
         rgba(25, 25, 25, 0.90);
 
-    transform:
-        scale(1.035);
+    font-size:
+        103.5%;
 
 }
 
@@ -594,8 +588,8 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-artista:hover,
     .footer-terminos:hover {
 
-        transform:
-            scale(1.025);
+        font-size:
+            102.5%;
 
     }
 
@@ -674,8 +668,8 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-artista:hover,
     .footer-terminos:hover {
 
-        transform:
-            none;
+        font-size:
+            inherit;
 
     }
 
