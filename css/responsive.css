@@ -49,13 +49,12 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       POSICIÓN PROVISIONAL · CENTRADA
-       La versión móvil se rediseñará después.
+       MÓVIL VERTICAL · CENTRADA
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 88svh;
+        height: 80svh;
 
         width: auto;
 
@@ -276,21 +275,16 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       POSICIÓN PROVISIONAL · CENTRADA
+       MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
+       Solo se ajusta el tamaño; la posición (top, left,
+       transform) se hereda de la regla base en styles.css.
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 95svh;
+        height: 98svh;
 
         width: auto;
-
-        top: 52%;
-
-        left: 50%;
-
-        transform:
-            translate(-50%, -50%);
 
     }
 
