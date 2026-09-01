@@ -213,7 +213,8 @@
     margin:
         0 0.48em;
 
-    padding: 0;
+    padding:
+        0;
 
     color:
         rgba(35, 35, 35, 0.34);
@@ -242,35 +243,47 @@
 
 /* ==========================================================================
    08 · DESTELLO
-   SOLO AL HACER CLIC
    ========================================================================== */
+
+/*
+ * El pseudo-elemento permanece dentro de la caja geométrica
+ * del enlace.
+ *
+ * El overflow no se aplica al enlace porque el enlace utiliza
+ * transform: scale() durante el hover.
+ *
+ * El barrido se limita mediante clip-path a la propia caja
+ * del enlace y no puede invadir los elementos adyacentes.
+ */
 
 .footer-artista::after,
 .footer-terminos::after {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
     top:
-        -20%;
+        -25%;
 
     left:
-        -75%;
+        -65%;
 
     width:
-        24%;
+        18%;
 
     height:
-        140%;
+        150%;
 
     background:
         linear-gradient(
             90deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.03) 25%,
-            rgba(255, 255, 255, 0.42) 50%,
-            rgba(255, 255, 255, 0.03) 75%,
+            rgba(255, 255, 255, 0.02) 25%,
+            rgba(255, 255, 255, 0.38) 50%,
+            rgba(255, 255, 255, 0.02) 75%,
             transparent 100%
         );
 
@@ -282,6 +295,9 @@
 
     pointer-events:
         none;
+
+    clip-path:
+        inset(0);
 
 }
 
@@ -314,7 +330,7 @@
     0% {
 
         left:
-            -75%;
+            -65%;
 
         opacity:
             0;
@@ -324,28 +340,28 @@
     18% {
 
         opacity:
-            0.55;
+            0.50;
 
     }
 
     50% {
 
         opacity:
-            0.55;
+            0.50;
 
     }
 
     82% {
 
         opacity:
-            0.30;
+            0.25;
 
     }
 
     100% {
 
         left:
-            125%;
+            120%;
 
         opacity:
             0;
