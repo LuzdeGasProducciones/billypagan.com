@@ -240,6 +240,12 @@
 
     .pagina-inicio {
 
+        background:
+            url("../images/fondos/movil/fondo-general-movil.jpg")
+            center center
+            / cover
+            no-repeat;
+
         height: 100svh;
         min-height: 100svh;
 
@@ -684,4 +690,3 @@
 /* ======================================================
    FIN · responsive.css
 ====================================================== */
-
