@@ -49,21 +49,24 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL VERTICAL · CENTRADA
+       MÓVIL VERTICAL · ABAJO Y MÁS PEQUEÑA
+       Pegada al borde inferior para que se vea entera.
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 80svh;
+        height: 52svh;
 
         width: auto;
 
-        top: 53%;
+        top: auto;
+
+        bottom: 0;
 
         left: 50%;
 
         transform:
-            translate(-50%, -50%);
+            translateX(-50%);
 
     }
 
@@ -275,18 +278,10 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
-       Solo se ajusta el tamaño; la posición (top, left,
-       transform) se hereda de la regla base en styles.css.
+       MÓVIL HORIZONTAL · IDÉNTICA A ESCRITORIO
+       Sin overrides: hereda tamaño, posición y transform
+       exactamente de la regla base en styles.css.
     -------------------------------------------------- */
-
-    .pagina-inicio .imagen-billy-portada {
-
-        height: 98svh;
-
-        width: auto;
-
-    }
 
 
     /* --------------------------------------------------
