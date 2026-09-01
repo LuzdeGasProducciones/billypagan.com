@@ -123,10 +123,12 @@
 
     /*
      * El enlace conserva exactamente su posición
-     * dentro de la línea de texto.
+     * dentro de la línea de texto en reposo.
      */
 
-    transform: none;
+    transform: scale(1);
+
+    transform-origin: center;
 
     /*
      * El destello queda completamente contenido
@@ -158,11 +160,14 @@
     outline: none;
 
     /*
-     * Transición exclusivamente visual.
+     * Transición exclusivamente visual:
+     * color al pasar el cursor y el ligero
+     * aumento de tamaño (transform).
      */
 
     transition:
-        color 0.3s ease;
+        color 0.3s ease,
+        transform 0.3s ease;
 
 }
 
@@ -209,7 +214,7 @@
 
 /* ==========================================================================
    06 · AMPLIACIÓN AL PASAR EL RATÓN
-   SIN ALTERAR LA ALINEACIÓN DEL TEXTO
+   LIGERO AUMENTO DE TAMAÑO · SIN DESPLAZAR LA LÍNEA
    ========================================================================== */
 
 .footer-artista:hover,
@@ -217,22 +222,15 @@
 
     color: rgba(44, 44, 44, 0.72);
 
-}
+    /*
+     * "transform: scale()" no afecta la caja usada
+     * por el navegador para calcular el alto de línea
+     * ni la línea base del resto del texto, por lo que
+     * el enlace puede aumentar de tamaño sin desplazar
+     * verticalmente "BILLY PAGÁN" ni el resto del footer.
+     */
 
-
-/*
- * La ampliación visual se realiza mediante text-shadow.
- *
- * No usamos transform: scale() en el enlace porque puede
- * hacer que el texto parezca desplazado verticalmente
- * respecto al resto de la línea.
- */
-
-.footer-artista:hover,
-.footer-terminos:hover {
-
-    text-shadow:
-        0 0 0.01px currentColor;
+    transform: scale(1.08);
 
 }
 
@@ -535,6 +533,14 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-terminos {
 
         transition: none;
+
+    }
+
+
+    .footer-artista:hover,
+    .footer-terminos:hover {
+
+        transform: none;
 
     }
 
