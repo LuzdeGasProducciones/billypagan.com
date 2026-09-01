@@ -131,9 +131,20 @@
     /*
      * El destello queda completamente contenido
      * dentro del propio enlace.
+     *
+     * Se usa "clip-path" en lugar de "overflow: hidden"
+     * porque "overflow" distinto de "visible" cambia la
+     * línea base que el navegador usa para alinear el
+     * elemento "inline-block" (pasa a ser el borde inferior
+     * de la caja en vez de la línea base real del texto).
+     * Esto hacía que "Billy Pagán" y "Términos y condiciones"
+     * se vieran más altos que el resto del texto del footer.
+     * "clip-path" recorta el destello de igual forma sin
+     * alterar la línea base, manteniendo todo el texto
+     * perfectamente alineado.
      */
 
-    overflow: hidden;
+    clip-path: inset(0);
 
     /*
      * Elimina el resaltado rectangular táctil
