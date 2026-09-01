@@ -43,7 +43,8 @@
 
 html {
 
-    min-height: 100%;
+    min-height:
+        100%;
 
     background:
         #4f554f;
@@ -52,10 +53,14 @@ html {
 
 body.pagina-legal {
 
-    margin: 0;
-    padding: 0;
+    margin:
+        0;
 
-    min-height: 100vh;
+    padding:
+        0;
+
+    min-height:
+        100vh;
 
     color:
         var(--color-principal);
@@ -64,8 +69,7 @@ body.pagina-legal {
         var(--fuente-sans);
 
     /*
-       IMPORTANTE:
-       Este es el fondo EXCLUSIVO de la página legal.
+       Fondo exclusivo de la página legal.
     */
 
     background-color:
@@ -99,23 +103,26 @@ body.pagina-legal {
 ====================================================== */
 
 /*
-   Esta capa NO sustituye la fotografía.
-
-   Es prácticamente transparente para que el fondo
-   legal permanezca claramente visible.
+   Capa prácticamente transparente.
+   La fotografía permanece claramente visible.
 */
 
 body.pagina-legal::before {
 
-    content: "";
+    content:
+        "";
 
-    position: fixed;
+    position:
+        fixed;
 
-    inset: 0;
+    inset:
+        0;
 
-    z-index: 0;
+    z-index:
+        0;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
     background:
         rgba(245, 245, 245, 0.035);
@@ -139,6 +146,12 @@ body.pagina-legal .legal {
 
     min-height:
         100vh;
+
+    height:
+        auto;
+
+    overflow:
+        visible;
 }
 
 
@@ -199,7 +212,8 @@ body.pagina-legal .legal-volver {
         none;
 
     border-bottom:
-        1px solid transparent;
+        1px solid
+        transparent;
 
     transition:
         color 0.3s ease,
@@ -218,7 +232,174 @@ body.pagina-legal .legal-volver:hover {
 
 
 /* ======================================================
-   07 · SUPERFICIE ÚNICA DE LECTURA
+   07 · VOLVER A INICIO
+       NAVEGACIÓN FIJA
+====================================================== */
+
+/*
+   Enlace permanente para abandonar la página legal.
+
+   Permanece visible durante todo el scroll.
+   No depende de JavaScript.
+*/
+
+body.pagina-legal .legal-volver-inicio {
+
+    position:
+        fixed;
+
+    top:
+        1.5rem;
+
+    left:
+        1.5rem;
+
+    z-index:
+        100;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.55rem;
+
+    padding:
+        0.65rem 0.9rem;
+
+    color:
+        rgba(32, 32, 32, 0.68);
+
+    background:
+        rgba(248, 248, 245, 0.72);
+
+    border:
+        1px solid
+        rgba(32, 32, 32, 0.10);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    font-family:
+        var(--fuente-sans);
+
+    font-size:
+        0.57rem;
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        0.16em;
+
+    text-transform:
+        uppercase;
+
+    text-decoration:
+        none;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ----------------------------------------------
+   FLECHA
+---------------------------------------------- */
+
+body.pagina-legal
+.legal-volver-inicio
+span {
+
+    display:
+        inline-block;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        400;
+
+    line-height:
+        0.8;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* ----------------------------------------------
+   HOVER
+---------------------------------------------- */
+
+body.pagina-legal
+.legal-volver-inicio:hover {
+
+    color:
+        var(--color-principal);
+
+    background:
+        rgba(248, 248, 245, 0.92);
+
+    border-color:
+        rgba(32, 32, 32, 0.18);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.09);
+}
+
+
+body.pagina-legal
+.legal-volver-inicio:hover
+span {
+
+    transform:
+        translateX(-3px);
+}
+
+
+/* ----------------------------------------------
+   FOCUS · TECLADO
+---------------------------------------------- */
+
+body.pagina-legal
+.legal-volver-inicio:focus-visible {
+
+    outline:
+        1px solid
+        rgba(32, 32, 32, 0.65);
+
+    outline-offset:
+        4px;
+}
+
+
+/* ======================================================
+   08 · SUPERFICIE ÚNICA DE LECTURA
 ====================================================== */
 
 /*
@@ -252,8 +433,8 @@ body.pagina-legal .legal-contenido {
         var(--color-papel);
 
     /*
-       El desenfoque afecta únicamente a lo que queda
-       detrás de esta superficie.
+       El desenfoque afecta únicamente a lo que
+       queda detrás de esta superficie.
     */
 
     backdrop-filter:
@@ -269,7 +450,7 @@ body.pagina-legal .legal-contenido {
 
 
 /* ======================================================
-   08 · TÍTULO
+   09 · TÍTULO
 ====================================================== */
 
 body.pagina-legal .legal-titulo {
@@ -339,7 +520,7 @@ body.pagina-legal .legal-titulo h1 {
 
 
 /* ======================================================
-   09 · FECHA
+   10 · FECHA
 ====================================================== */
 
 body.pagina-legal .legal-fecha {
@@ -371,7 +552,7 @@ body.pagina-legal .legal-fecha {
 
 
 /* ======================================================
-   10 · SECCIONES
+   11 · SECCIONES
 ====================================================== */
 
 body.pagina-legal .legal-seccion {
@@ -402,7 +583,7 @@ body.pagina-legal
 
 
 /* ======================================================
-   11 · TÍTULOS DE SECCIÓN
+   12 · TÍTULOS DE SECCIÓN
 ====================================================== */
 
 body.pagina-legal .legal-seccion h2 {
@@ -440,7 +621,7 @@ body.pagina-legal .legal-seccion h2 {
 
 
 /* ======================================================
-   12 · TEXTO LEGAL
+   13 · TEXTO LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-seccion p {
@@ -481,7 +662,7 @@ p:last-child {
 
 
 /* ======================================================
-   13 · TEXTO DESTACADO
+   14 · TEXTO DESTACADO
 ====================================================== */
 
 body.pagina-legal
@@ -497,7 +678,7 @@ strong {
 
 
 /* ======================================================
-   14 · ENLACES
+   15 · ENLACES
 ====================================================== */
 
 body.pagina-legal
@@ -531,7 +712,7 @@ a:hover {
 
 
 /* ======================================================
-   15 · ÚLTIMA SECCIÓN
+   16 · ÚLTIMA SECCIÓN
 ====================================================== */
 
 body.pagina-legal
@@ -546,7 +727,7 @@ body.pagina-legal
 
 
 /* ======================================================
-   16 · PIE LEGAL
+   17 · PIE LEGAL
 ====================================================== */
 
 body.pagina-legal .legal-pie {
@@ -626,15 +807,15 @@ a:hover {
 
 
 /* ======================================================
-   17 · MÓVIL
+   18 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px) {
 
 
-    /*
+    /* ----------------------------------------------
        FONDO LEGAL EXCLUSIVO PARA MÓVIL
-    */
+    ---------------------------------------------- */
 
     body.pagina-legal {
 
@@ -684,6 +865,43 @@ a:hover {
 
         letter-spacing:
             0.18em;
+    }
+
+
+    /* ----------------------------------------------
+       VOLVER A INICIO
+    ---------------------------------------------- */
+
+    body.pagina-legal
+    .legal-volver-inicio {
+
+        top:
+            1rem;
+
+        left:
+            1rem;
+
+        padding:
+            0.58rem
+            0.72rem;
+
+        gap:
+            0.42rem;
+
+        font-size:
+            0.50rem;
+
+        letter-spacing:
+            0.12em;
+    }
+
+
+    body.pagina-legal
+    .legal-volver-inicio
+    span {
+
+        font-size:
+            0.82rem;
     }
 
 
@@ -837,13 +1055,16 @@ a:hover {
 
 
 /* ======================================================
-   18 · ACCESIBILIDAD
+   19 · ACCESIBILIDAD
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
     body.pagina-legal
     .legal-volver,
+
+    body.pagina-legal
+    .legal-volver-inicio,
 
     body.pagina-legal
     .legal-seccion
@@ -859,54 +1080,53 @@ a:hover {
 }
 
 
-/* ==================================================
-   FIX SCROLL · SOLO PÁGINA LEGAL
-   (no afecta home ni otras páginas)
-================================================== */
+/* ======================================================
+   20 · SCROLL
+       SOLO PÁGINA LEGAL
+====================================================== */
+
+/*
+   Se mantiene el flujo natural del documento para
+   permitir la lectura completa de los términos.
+*/
+
 body.pagina-legal {
-    height: auto;
-    min-height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: static;
+
+    position:
+        static;
+
+    min-height:
+        100%;
+
+    height:
+        auto;
+
+    overflow-y:
+        auto;
+
+    overflow-x:
+        hidden;
+
+    -webkit-overflow-scrolling:
+        touch;
 }
 
-body.pagina-legal .legal {
-    min-height: 100vh; /* mantiene presencia visual full-height */
-    height: auto;      /* permite crecer según el contenido */
-    overflow: visible;
-}
 
+/*
+   El contenido legal puede crecer libremente.
+*/
 
-/* ==================================================
-   PATCH · SCROLL CONTROLADO PARA PÁGINAS LEGALES
-   Alcance: SOLO body.pagina-legal
-   Objetivo: permitir lectura completa sin alterar diseño global
-================================================== */
-
-/* 1) Restaurar flujo natural del documento en legal */
-body.pagina-legal {
-    position: static;
-    min-height: 100%;
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* 2) Evitar recorte del contenedor principal legal */
-body.pagina-legal .legal {
-    min-height: 100vh; /* mantiene presencia premium de pantalla completa */
-    height: auto;      /* permite crecer según el contenido real */
-    overflow: visible;
-}
-
-/* 3) Blindaje ante bloqueos globales (html/body con overflow hidden) */
 html body.pagina-legal {
-    overflow-y: auto;
+
+    overflow-y:
+        auto;
+
+    overflow-x:
+        hidden;
 }
 
 
 /* ======================================================
    FIN · legal.css
 ====================================================== */
+
