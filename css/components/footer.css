@@ -95,9 +95,23 @@
 
     position: relative;
 
-    display: inline-block;
+    /*
+     * "display: inline" es la única forma de garantizar,
+     * en cualquier navegador, que el texto del enlace
+     * quede exactamente sobre la misma línea base que el
+     * resto del texto del footer.
+     *
+     * Con "inline-block" el navegador calcula una línea
+     * base propia para el enlace (independiente de la del
+     * resto del texto), lo que provocaba que "Billy Pagán"
+     * y "Términos y condiciones" aparecieran más altos.
+     * Con "inline" el enlace no genera caja ni línea base
+     * propias: sus caracteres pasan a formar parte de la
+     * misma línea que el resto del texto, sin posibilidad
+     * de desalineación.
+     */
 
-    vertical-align: baseline;
+    display: inline;
 
     margin: 0;
 
@@ -122,28 +136,11 @@
     cursor: pointer;
 
     /*
-     * El enlace conserva exactamente su posición
-     * dentro de la línea de texto en reposo.
-     */
-
-    transform: scale(1);
-
-    transform-origin: center;
-
-    /*
-     * El destello queda completamente contenido
-     * dentro del propio enlace.
-     *
-     * Se usa "clip-path" en lugar de "overflow: hidden"
-     * porque "overflow" distinto de "visible" cambia la
-     * línea base que el navegador usa para alinear el
-     * elemento "inline-block" (pasa a ser el borde inferior
-     * de la caja en vez de la línea base real del texto).
-     * Esto hacía que "Billy Pagán" y "Términos y condiciones"
-     * se vieran más altos que el resto del texto del footer.
-     * "clip-path" recorta el destello de igual forma sin
-     * alterar la línea base, manteniendo todo el texto
-     * perfectamente alineado.
+     * El destello queda completamente contenido dentro
+     * del propio enlace. "clip-path" recorta el contenido
+     * igual que "overflow: hidden", pero -a diferencia de
+     * "overflow"- nunca influye en el cálculo de la línea
+     * base de un elemento.
      */
 
     clip-path: inset(0);
@@ -160,14 +157,21 @@
     outline: none;
 
     /*
-     * Transición exclusivamente visual:
-     * color al pasar el cursor y el ligero
-     * aumento de tamaño (transform).
+     * Transición exclusivamente visual: color al pasar
+     * el cursor y el ligero aumento de tamaño.
+     *
+     * El aumento de tamaño se hace con "font-size" y no
+     * con "transform: scale()" porque "transform" no
+     * tiene efecto sobre elementos "inline" no
+     * reemplazados. Además, al crecer mediante "font-size"
+     * el texto se agranda de forma natural apoyado sobre
+     * su propia línea base, en vez de escalarse como un
+     * bloque flotante.
      */
 
     transition:
         color 0.3s ease,
-        transform 0.3s ease;
+        font-size 0.3s ease;
 
 }
 
@@ -214,7 +218,7 @@
 
 /* ==========================================================================
    06 · AMPLIACIÓN AL PASAR EL RATÓN
-   LIGERO AUMENTO DE TAMAÑO · SIN DESPLAZAR LA LÍNEA
+   LIGERO AUMENTO DE TAMAÑO · SIEMPRE SOBRE LA LÍNEA BASE
    ========================================================================== */
 
 .footer-artista:hover,
@@ -223,14 +227,13 @@
     color: rgba(44, 44, 44, 0.72);
 
     /*
-     * "transform: scale()" no afecta la caja usada
-     * por el navegador para calcular el alto de línea
-     * ni la línea base del resto del texto, por lo que
-     * el enlace puede aumentar de tamaño sin desplazar
-     * verticalmente "BILLY PAGÁN" ni el resto del footer.
+     * Al ser "font-size" y no "transform", el texto crece
+     * apoyado en su propia línea base: aumenta hacia
+     * arriba de forma natural, sin desplazar ni descuadrar
+     * el resto del texto del footer.
      */
 
-    transform: scale(1.08);
+    font-size: 1.08em;
 
 }
 
@@ -540,7 +543,7 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-artista:hover,
     .footer-terminos:hover {
 
-        transform: none;
+        font-size: inherit;
 
     }
 
