@@ -2,7 +2,6 @@
    BILLY PAGÁN · SITIO OFICIAL
    legal.css
    TÉRMINOS Y CONDICIONES
-   FONDO LEGAL PROPIO · EDICIÓN PREMIUM
 ====================================================== */
 
 
@@ -857,6 +856,25 @@ a:hover {
         transition:
             none;
     }
+}
+
+
+/* ==================================================
+   FIX SCROLL · SOLO PÁGINA LEGAL
+   (no afecta home ni otras páginas)
+================================================== */
+body.pagina-legal {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: static;
+}
+
+body.pagina-legal .legal {
+    min-height: 100vh; /* mantiene presencia visual full-height */
+    height: auto;      /* permite crecer según el contenido */
+    overflow: visible;
 }
 
 
