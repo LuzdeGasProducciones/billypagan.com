@@ -243,17 +243,16 @@
 
 /* ==========================================================================
    08 · DESTELLO
+   SOLO SOBRE LAS LETRAS DEL ENLACE
    ========================================================================== */
 
 /*
- * El pseudo-elemento permanece dentro de la caja geométrica
- * del enlace.
+ * El pseudo-elemento utiliza exactamente el mismo texto que
+ * el enlace y convierte el fondo en transparente excepto
+ * en las formas de las letras.
  *
- * El overflow no se aplica al enlace porque el enlace utiliza
- * transform: scale() durante el hover.
- *
- * El barrido se limita mediante clip-path a la propia caja
- * del enlace y no puede invadir los elementos adyacentes.
+ * De esta manera el destello jamás ocupa visualmente el
+ * espacio vacío alrededor del texto.
  */
 
 .footer-artista::after,
@@ -265,39 +264,53 @@
     position:
         absolute;
 
-    top:
-        -25%;
-
-    left:
-        -65%;
+    inset:
+        0;
 
     width:
-        18%;
+        100%;
 
     height:
-        150%;
+        100%;
 
     background:
         linear-gradient(
-            90deg,
+            100deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.02) 25%,
-            rgba(255, 255, 255, 0.38) 50%,
-            rgba(255, 255, 255, 0.02) 75%,
+            transparent 40%,
+            rgba(255, 255, 255, 0.00) 43%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(255, 255, 255, 0.00) 57%,
+            transparent 60%,
             transparent 100%
         );
 
-    transform:
-        skewX(-18deg);
+    background-size:
+        250% 100%;
+
+    background-position:
+        100% 0;
+
+    background-repeat:
+        no-repeat;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    color:
+        transparent;
 
     opacity:
         0;
 
     pointer-events:
         none;
-
-    clip-path:
-        inset(0);
 
 }
 
@@ -314,7 +327,7 @@
 
     animation:
         footerSweep
-        1.05s
+        1.15s
         cubic-bezier(0.4, 0, 0.2, 1)
         forwards;
 
@@ -329,39 +342,39 @@
 
     0% {
 
-        left:
-            -65%;
+        background-position:
+            100% 0;
 
         opacity:
             0;
 
     }
 
-    18% {
+    15% {
 
         opacity:
-            0.50;
+            0.75;
 
     }
 
     50% {
 
         opacity:
-            0.50;
+            0.75;
 
     }
 
-    82% {
+    85% {
 
         opacity:
-            0.25;
+            0.35;
 
     }
 
     100% {
 
-        left:
-            120%;
+        background-position:
+            0% 0;
 
         opacity:
             0;
@@ -503,16 +516,22 @@ body.pagina-legal .footer-terminos::after {
 
     background:
         linear-gradient(
-            90deg,
+            100deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.02) 25%,
-            rgba(255, 255, 255, 0.15) 50%,
-            rgba(255, 255, 255, 0.02) 75%,
+            transparent 40%,
+            rgba(255, 255, 255, 0.00) 43%,
+            rgba(255, 255, 255, 0.30) 50%,
+            rgba(255, 255, 255, 0.00) 57%,
+            transparent 60%,
             transparent 100%
         );
 
 }
 
+
+/* ==========================================================================
+   19 · ESTADO DURANTE DESTELLO · PÁGINA LEGAL
+   ========================================================================== */
 
 body.pagina-legal .footer-artista.barrido,
 body.pagina-legal .footer-terminos.barrido {
@@ -524,7 +543,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   19 · MÓVIL
+   20 · MÓVIL
    ========================================================================== */
 
 @media (max-width: 767px) {
@@ -593,7 +612,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   20 · PANTALLAS MUY PEQUEÑAS
+   21 · PANTALLAS MUY PEQUEÑAS
    ========================================================================== */
 
 @media (max-width: 380px) {
@@ -638,7 +657,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   21 · ACCESIBILIDAD
+   22 · ACCESIBILIDAD
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
