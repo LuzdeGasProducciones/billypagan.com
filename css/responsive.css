@@ -39,6 +39,9 @@
         background-image:
             url("../images/fondos/movil/fondo-general-movil.jpg");
 
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         background-attachment: scroll;
 
     }
@@ -257,6 +260,9 @@
         background-image:
             url("../images/fondos/movil/fondo-general-movil.jpg");
 
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         background-attachment: scroll;
 
     }
