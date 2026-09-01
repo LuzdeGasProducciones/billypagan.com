@@ -2,6 +2,7 @@
    BILLY PAGÁN · SITIO OFICIAL
    footer.css
    COMPONENTE · FOOTER GLOBAL
+   EDITORIAL · MINIMAL · ELEGANTE
    ========================================================================== */
 
 
@@ -158,11 +159,6 @@
     outline:
         none;
 
-    /*
-     * La ampliación se realiza desde el centro para que
-     * el enlace conserve su equilibrio dentro de la línea.
-     */
-
     transition:
         color 0.45s ease,
         transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -171,7 +167,19 @@
 
 
 /* ==========================================================================
-   05 · HOVER
+   05 · SEPARACIÓN ENTRE © 2026 Y BILLY PAGÁN
+   ========================================================================== */
+
+.footer-artista {
+
+    margin-left:
+        0.22em;
+
+}
+
+
+/* ==========================================================================
+   06 · HOVER
    AMPLIACIÓN MÍNIMA Y ELEGANTE
    ========================================================================== */
 
@@ -188,7 +196,7 @@
 
 
 /* ==========================================================================
-   06 · SEPARADORES
+   07 · SEPARADORES
    PUNTO EDITORIAL
    ========================================================================== */
 
@@ -233,7 +241,7 @@
 
 
 /* ==========================================================================
-   07 · DESTELLO
+   08 · DESTELLO
    EXCLUSIVAMENTE AL HACER CLIC
    ========================================================================== */
 
@@ -275,7 +283,7 @@
 
 
 /* ==========================================================================
-   08 · ACTIVACIÓN DEL DESTELLO
+   09 · ACTIVACIÓN DEL DESTELLO
    ========================================================================== */
 
 .footer-artista.barrido::after,
@@ -294,8 +302,7 @@
 
 
 /* ==========================================================================
-   09 · ANIMACIÓN DEL DESTELLO
-   MUY LENTA · MUY SUTIL
+   10 · ANIMACIÓN DEL DESTELLO
    ========================================================================== */
 
 @keyframes footerSweep {
@@ -345,7 +352,7 @@
 
 
 /* ==========================================================================
-   10 · ESTADO DURANTE EL DESTELLO
+   11 · ESTADO DURANTE EL DESTELLO
    ========================================================================== */
 
 .footer-artista.barrido,
@@ -358,7 +365,7 @@
 
 
 /* ==========================================================================
-   11 · FOCO DE TECLADO
+   12 · FOCO DE TECLADO
    ========================================================================== */
 
 .footer-artista:focus,
@@ -383,7 +390,7 @@
 
 
 /* ==========================================================================
-   12 · PÁGINA DE INICIO
+   13 · PÁGINA DE INICIO
    ========================================================================== */
 
 body.pagina-inicio .footer {
@@ -404,7 +411,7 @@ body.pagina-inicio .footer {
 
 
 /* ==========================================================================
-   13 · PÁGINA LEGAL
+   14 · PÁGINA LEGAL
    ========================================================================== */
 
 body.pagina-legal .footer {
@@ -422,7 +429,7 @@ body.pagina-legal .footer {
 
 
 /* ==========================================================================
-   14 · PÁGINA LEGAL · TEXTO
+   15 · PÁGINA LEGAL · TEXTO
    ========================================================================== */
 
 body.pagina-legal .footer-copy {
@@ -442,6 +449,10 @@ body.pagina-legal .footer-terminos {
 }
 
 
+/* ==========================================================================
+   16 · PÁGINA LEGAL · SEPARADORES
+   ========================================================================== */
+
 body.pagina-legal .footer-separador {
 
     color:
@@ -451,7 +462,7 @@ body.pagina-legal .footer-separador {
 
 
 /* ==========================================================================
-   15 · PÁGINA LEGAL · HOVER
+   17 · PÁGINA LEGAL · HOVER
    ========================================================================== */
 
 body.pagina-legal .footer-artista:hover,
@@ -464,7 +475,7 @@ body.pagina-legal .footer-terminos:hover {
 
 
 /* ==========================================================================
-   16 · PÁGINA LEGAL · DESTELLO
+   18 · PÁGINA LEGAL · DESTELLO
    ========================================================================== */
 
 body.pagina-legal .footer-artista::after,
@@ -493,7 +504,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   17 · MÓVIL
+   19 · MÓVIL
    ========================================================================== */
 
 @media (max-width: 767px) {
@@ -515,6 +526,14 @@ body.pagina-legal .footer-terminos.barrido {
 
         letter-spacing:
             0.085em;
+
+    }
+
+
+    .footer-artista {
+
+        margin-left:
+            0.18em;
 
     }
 
@@ -554,7 +573,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   18 · PANTALLAS MUY PEQUEÑAS
+   20 · PANTALLAS MUY PEQUEÑAS
    ========================================================================== */
 
 @media (max-width: 380px) {
@@ -580,6 +599,14 @@ body.pagina-legal .footer-terminos.barrido {
     }
 
 
+    .footer-artista {
+
+        margin-left:
+            0.15em;
+
+    }
+
+
     .footer-separador {
 
         margin:
@@ -591,7 +618,7 @@ body.pagina-legal .footer-terminos.barrido {
 
 
 /* ==========================================================================
-   19 · ACCESIBILIDAD
+   21 · ACCESIBILIDAD
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
