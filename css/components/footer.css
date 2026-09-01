@@ -7,7 +7,7 @@
 
 
 /* ==========================================================================
-   01 · FOOTER
+   01 · FOOTER GENERAL
    ========================================================================== */
 
 .footer {
@@ -37,9 +37,9 @@
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 
     width: 100%;
 
@@ -58,7 +58,7 @@
 
 
 /* ==========================================================================
-   03 · LÍNEA PRINCIPAL
+   03 · TEXTO PRINCIPAL
    ========================================================================== */
 
 .footer-copy {
@@ -124,7 +124,7 @@
     padding: 0;
 
     color:
-        rgba(35, 35, 35, 0.64);
+        rgba(35, 35, 35, 0.66);
 
     font-family:
         inherit;
@@ -167,27 +167,27 @@
 
 
 /* ==========================================================================
-   05 · SEPARACIÓN ENTRE © 2026 Y BILLY PAGÁN
+   05 · ESPACIO ENTRE © 2026 Y BILLY PAGÁN
    ========================================================================== */
 
 .footer-artista {
 
     margin-left:
-        0.22em;
+        0.20em;
 
 }
 
 
 /* ==========================================================================
    06 · HOVER
-   AMPLIACIÓN MÍNIMA Y ELEGANTE
+   AMPLIACIÓN MUY SUTIL
    ========================================================================== */
 
 .footer-artista:hover,
 .footer-terminos:hover {
 
     color:
-        rgba(25, 25, 25, 0.88);
+        rgba(25, 25, 25, 0.90);
 
     transform:
         scale(1.035);
@@ -197,7 +197,6 @@
 
 /* ==========================================================================
    07 · SEPARADORES
-   PUNTO EDITORIAL
    ========================================================================== */
 
 .footer-separador {
@@ -208,7 +207,8 @@
 
     justify-content: center;
 
-    width: 1.15em;
+    width:
+        1em;
 
     margin:
         0 0.48em;
@@ -242,7 +242,7 @@
 
 /* ==========================================================================
    08 · DESTELLO
-   EXCLUSIVAMENTE AL HACER CLIC
+   SOLO AL HACER CLIC
    ========================================================================== */
 
 .footer-artista::after,
@@ -252,21 +252,25 @@
 
     position: absolute;
 
-    top: -20%;
+    top:
+        -20%;
 
-    left: -75%;
+    left:
+        -75%;
 
-    width: 24%;
+    width:
+        24%;
 
-    height: 140%;
+    height:
+        140%;
 
     background:
         linear-gradient(
             90deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.04) 25%,
-            rgba(255, 255, 255, 0.46) 50%,
-            rgba(255, 255, 255, 0.04) 75%,
+            rgba(255, 255, 255, 0.03) 25%,
+            rgba(255, 255, 255, 0.42) 50%,
+            rgba(255, 255, 255, 0.03) 75%,
             transparent 100%
         );
 
@@ -302,7 +306,7 @@
 
 
 /* ==========================================================================
-   10 · ANIMACIÓN DEL DESTELLO
+   10 · ANIMACIÓN
    ========================================================================== */
 
 @keyframes footerSweep {
@@ -320,21 +324,21 @@
     18% {
 
         opacity:
-            0.65;
+            0.55;
 
     }
 
     50% {
 
         opacity:
-            0.65;
+            0.55;
 
     }
 
     82% {
 
         opacity:
-            0.35;
+            0.30;
 
     }
 
@@ -359,7 +363,7 @@
 .footer-terminos.barrido {
 
     color:
-        rgba(25, 25, 25, 0.82);
+        rgba(25, 25, 25, 0.84);
 
 }
 
@@ -486,7 +490,7 @@ body.pagina-legal .footer-terminos::after {
             90deg,
             transparent 0%,
             rgba(255, 255, 255, 0.02) 25%,
-            rgba(255, 255, 255, 0.16) 50%,
+            rgba(255, 255, 255, 0.15) 50%,
             rgba(255, 255, 255, 0.02) 75%,
             transparent 100%
         );
@@ -533,7 +537,7 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-artista {
 
         margin-left:
-            0.18em;
+            0.16em;
 
     }
 
@@ -602,7 +606,7 @@ body.pagina-legal .footer-terminos.barrido {
     .footer-artista {
 
         margin-left:
-            0.15em;
+            0.14em;
 
     }
 
@@ -655,4 +659,5 @@ body.pagina-legal .footer-terminos.barrido {
 /* ==========================================================================
    FIN · footer.css
    ========================================================================== */
+
 
