@@ -878,6 +878,35 @@ body.pagina-legal .legal {
 }
 
 
+/* ==================================================
+   PATCH · SCROLL CONTROLADO PARA PÁGINAS LEGALES
+   Alcance: SOLO body.pagina-legal
+   Objetivo: permitir lectura completa sin alterar diseño global
+================================================== */
+
+/* 1) Restaurar flujo natural del documento en legal */
+body.pagina-legal {
+    position: static;
+    min-height: 100%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 2) Evitar recorte del contenedor principal legal */
+body.pagina-legal .legal {
+    min-height: 100vh; /* mantiene presencia premium de pantalla completa */
+    height: auto;      /* permite crecer según el contenido real */
+    overflow: visible;
+}
+
+/* 3) Blindaje ante bloqueos globales (html/body con overflow hidden) */
+html body.pagina-legal {
+    overflow-y: auto;
+}
+
+
 /* ======================================================
    FIN · legal.css
 ====================================================== */
