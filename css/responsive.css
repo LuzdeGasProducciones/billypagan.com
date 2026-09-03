@@ -276,8 +276,11 @@
     /* --------------------------------------------------
        IMAGEN DE BILLY
        MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
-       Solo se ajusta el tamaño; la posición (top, left,
-       transform) se hereda de la regla base en styles.css.
+       Solo se ajusta el tamaño a la altura disponible;
+       la posición (top, left, transform) y la animación
+       se heredan de la regla base en styles.css, que ya
+       no se ve afectada por el bloque móvil (restringido
+       a la orientación vertical).
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -290,150 +293,12 @@
 
 
     /* --------------------------------------------------
-       MENÚ
+       MENÚ, HAMBURGUESA, CONTENIDO Y FOOTER
+       MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
+       No se sobrescriben aquí: se heredan las reglas
+       base (menu.css, hamburguesa.css, styles.css,
+       footer.css), idénticas a la versión de escritorio.
     -------------------------------------------------- */
-
-    .pagina-inicio .menu {
-
-        display: block;
-
-        overflow-x: auto;
-
-        overflow-y: hidden;
-
-        -webkit-overflow-scrolling: touch;
-
-        scrollbar-width: none;
-
-    }
-
-
-    .pagina-inicio .menu::-webkit-scrollbar {
-
-        display: none;
-
-    }
-
-
-    .pagina-inicio .menu ul {
-
-        width: max-content;
-
-        min-width: 100%;
-
-        gap: 1.15rem;
-
-        padding: 1.25rem 1rem;
-
-    }
-
-
-    .pagina-inicio .menu a {
-
-        font-size: 0.55rem;
-
-        letter-spacing: 0.11em;
-
-    }
-
-
-    /* --------------------------------------------------
-       HAMBURGUESA
-    -------------------------------------------------- */
-
-    .pagina-inicio .hamburguesa {
-
-        display: none;
-
-    }
-
-
-    /* --------------------------------------------------
-       MENÚ MÓVIL
-    -------------------------------------------------- */
-
-    .pagina-inicio .menu-movil {
-
-        display: none;
-
-    }
-
-
-    /* --------------------------------------------------
-       CONTENIDO
-    -------------------------------------------------- */
-
-    .pagina-inicio .contenido {
-
-        width: 90%;
-
-    }
-
-
-    .pagina-inicio .contenido h1 {
-
-        font-size:
-            clamp(3.5rem, 10vw, 5.5rem);
-
-    }
-
-
-    .pagina-inicio .subtitulo {
-
-        margin-top: 0.8rem;
-
-        font-size: 0.55rem;
-
-        letter-spacing: 0.28em;
-
-    }
-
-
-    /* --------------------------------------------------
-       FOOTER
-    -------------------------------------------------- */
-
-    .pagina-inicio .footer {
-
-        padding:
-            0 1rem 1rem;
-
-        font-size: 0.48rem;
-
-        letter-spacing: 0.045em;
-
-    }
-
-
-    .pagina-inicio .footer-contenido {
-
-        flex-direction: row;
-
-        flex-wrap: nowrap;
-
-        white-space: nowrap;
-
-    }
-
-
-    .pagina-inicio .footer-copy {
-
-        display: inline;
-
-        width: auto;
-
-    }
-
-
-    .pagina-inicio .footer-terminos {
-
-        display: inline;
-
-        width: auto;
-
-        margin-left: 0.35rem;
-
-    }
 
 }
 

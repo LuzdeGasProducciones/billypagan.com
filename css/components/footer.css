@@ -538,9 +538,11 @@ body.pagina-legal .footer-terminos.barrido {
 
 /* ==========================================================================
    20 · MÓVIL
+   Solo vertical (portrait). En horizontal (landscape)
+   el footer debe verse igual que en escritorio.
    ========================================================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
 
     .footer-contenido {
 

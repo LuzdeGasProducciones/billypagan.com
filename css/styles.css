@@ -492,9 +492,11 @@ a {
 
 /* ======================================================
    15 · MÓVIL
+   Solo vertical (portrait). En horizontal (landscape)
+   el diseño debe ser igual que en escritorio.
 ====================================================== */
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
 
     .pagina-inicio {
 
