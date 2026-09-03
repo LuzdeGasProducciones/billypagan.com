@@ -515,7 +515,7 @@ a {
 
         bottom: 0;
 
-        left: 50%;
+        left: 0;
 
         height: 42svh;
 
@@ -527,7 +527,7 @@ a {
 
         transform:
 
-            translateX(-30%)
+            translateX(0)
 
             scale(1.015);
 
@@ -591,7 +591,7 @@ a {
 
         transform:
 
-            translateX(-30%)
+            translateX(0)
 
             scale(1.015);
 
@@ -601,7 +601,7 @@ a {
 
         transform:
 
-            translateX(-30%)
+            translateX(0)
 
             scale(1.035);
 
