@@ -55,7 +55,7 @@
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 58svh;
+        height: 42svh;
 
         width: auto;
 
@@ -298,25 +298,32 @@
     /* --------------------------------------------------
        MENÚ
        MÓVIL HORIZONTAL · AJUSTADO AL ANCHO DISPONIBLE
-       Se reduce tamaño y espaciado para que los enlaces
-       quepan dentro del ancho reducido de la pantalla,
-       sin que el menú se corte ni se desborde.
+       Tamaño de fuente y espaciado fluidos (clamp) para
+       que los 8 enlaces quepan en cualquier ancho de
+       pantalla en horizontal, incluso en los teléfonos
+       más pequeños; el ajuste con flex-wrap actúa como
+       red de seguridad si aun así no cupieran en una
+       sola línea.
     -------------------------------------------------- */
 
     .pagina-inicio .menu ul {
 
-        gap: 1rem;
+        flex-wrap: wrap;
 
-        padding: 1rem 0.75rem;
+        row-gap: 0.4rem;
+
+        gap: clamp(0.4rem, 2vw, 1rem);
+
+        padding: 0.6rem 0.5rem;
 
     }
 
 
     .pagina-inicio .menu a {
 
-        font-size: 0.55rem;
+        font-size: clamp(0.42rem, 1.7vw, 0.55rem);
 
-        letter-spacing: 0.08em;
+        letter-spacing: 0.05em;
 
     }
 
