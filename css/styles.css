@@ -41,6 +41,7 @@
     /* ANIMACIÓN */
 
     --duracion-imagen: 28s;
+    --duracion-identidad: 1.2s;
 
 }
 
@@ -352,6 +353,13 @@ a {
 
     text-rendering: optimizeLegibility;
 
+    animation:
+        identidadEntrada var(--duracion-identidad)
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    will-change: opacity, transform;
+
 }
 
 
@@ -397,6 +405,35 @@ a {
 
     white-space: nowrap;
 
+    animation:
+        identidadEntrada var(--duracion-identidad)
+        0.18s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    will-change: opacity, transform;
+
+}
+
+
+@keyframes identidadEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(1.2rem);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
 }
 
 
@@ -410,6 +447,17 @@ a {
     .imagen-billy-portada {
 
         animation: none;
+
+    }
+
+    .contenido h1,
+    .subtitulo {
+
+        animation: none;
+
+        opacity: 1;
+
+        transform: none;
 
     }
 
