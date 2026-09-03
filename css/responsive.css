@@ -49,21 +49,24 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL VERTICAL · CENTRADA
+       MÓVIL VERTICAL · MÁS PEQUEÑA, CENTRADA
+       Y PEGADA A LA PARTE INFERIOR
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 80svh;
+        height: 42svh;
 
         width: auto;
 
-        top: 40%;
+        top: auto;
 
-        left: 100%;
+        bottom: 0;
+
+        left: 50%;
 
         transform:
-            translate(-50%, -50%);
+            translateX(-30%);
 
     }
 
@@ -293,11 +296,44 @@
 
 
     /* --------------------------------------------------
-       MENÚ, HAMBURGUESA, CONTENIDO Y FOOTER
+       MENÚ
+       MÓVIL HORIZONTAL · AJUSTADO AL ANCHO DISPONIBLE
+       Tamaño de fuente y espaciado fluidos (clamp) para
+       que los 8 enlaces quepan en cualquier ancho de
+       pantalla en horizontal, incluso en los teléfonos
+       más pequeños; el ajuste con flex-wrap actúa como
+       red de seguridad si aun así no cupieran en una
+       sola línea.
+    -------------------------------------------------- */
+
+    .pagina-inicio .menu ul {
+
+        flex-wrap: wrap;
+
+        row-gap: 0.4rem;
+
+        gap: clamp(0.4rem, 2vw, 1rem);
+
+        padding: 0.6rem 0.5rem;
+
+    }
+
+
+    .pagina-inicio .menu a {
+
+        font-size: clamp(0.42rem, 1.7vw, 0.55rem);
+
+        letter-spacing: 0.05em;
+
+    }
+
+
+    /* --------------------------------------------------
+       HAMBURGUESA, CONTENIDO Y FOOTER
        MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
        No se sobrescriben aquí: se heredan las reglas
-       base (menu.css, hamburguesa.css, styles.css,
-       footer.css), idénticas a la versión de escritorio.
+       base (hamburguesa.css, styles.css, footer.css),
+       idénticas a la versión de escritorio.
     -------------------------------------------------- */
 
 }
