@@ -2,7 +2,6 @@
    BILLY PAGÁN · SITIO OFICIAL
    footer.js
    COMPONENTE · FOOTER GLOBAL
-   ELEGANT MINIMAL · EDITORIAL LIGHT SWEEP
 ====================================================== */
 
 
