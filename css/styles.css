@@ -351,6 +351,10 @@ a {
 
     letter-spacing: -0.025em;
 
+    text-shadow:
+        0 0.08em 0
+        rgba(255, 255, 255, 0.18);
+
     text-rendering: optimizeLegibility;
 
     animation:
@@ -369,12 +373,11 @@ a {
 
 .subtitulo {
 
+    display: inline-block;
+
     margin:
-
         1.7rem
-
         0
-
         0;
 
     padding: 0;
@@ -402,6 +405,18 @@ a {
     letter-spacing: var(--espacio-subtitulo);
 
     text-transform: uppercase;
+
+    padding:
+        0.65rem
+        1.2rem;
+
+    border-top:
+        1px solid
+        rgba(32, 32, 32, 0.28);
+
+    border-bottom:
+        1px solid
+        rgba(32, 32, 32, 0.28);
 
     white-space: nowrap;
 
