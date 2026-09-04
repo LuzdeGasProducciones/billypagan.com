@@ -49,13 +49,13 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL VERTICAL · MÁS PEQUEÑA, CENTRADA
-       Y PEGADA A LA PARTE INFERIOR
+       MÓVIL VERTICAL · MÁS GRANDE
+       Y PEGADA A LOS MÁRGENES IZQUIERDO E INFERIOR
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 42svh;
+        height: 48svh;
 
         width: auto;
 
