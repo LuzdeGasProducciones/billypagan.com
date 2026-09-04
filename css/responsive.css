@@ -281,18 +281,26 @@
     /* --------------------------------------------------
        IMAGEN DE BILLY
        MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
-       Solo se ajusta el tamaño a la altura disponible;
-       la posición (top, left, transform) y la animación
-       se heredan de la regla base en styles.css, que ya
-       no se ve afectada por el bloque móvil (restringido
-       a la orientación vertical).
+       AJUSTADA A LOS BORDES INFERIOR E IZQUIERDO
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
 
-        height: 98svh;
+       top: auto;
 
-        width: auto;
+       bottom: 0;
+
+       left: 0;
+
+       height: 100svh;
+
+       width: auto;
+
+       transform: none;
+
+       transform-origin: left bottom;
+
+       animation: none;
 
     }
 
