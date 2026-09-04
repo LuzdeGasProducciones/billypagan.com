@@ -506,7 +506,7 @@ body.pagina-legal .legal-titulo h1 {
         var(--fuente-serif);
 
     font-size:
-        clamp(1.65rem, 6vw, 4rem);
+        clamp(1.2rem, 4vw, 2rem);
 
     font-weight:
         500;
@@ -956,7 +956,7 @@ a:hover {
     h1 {
 
         font-size:
-            clamp(1.5rem, 8.5vw, 3rem);
+            clamp(1.2rem, 4vw, 2rem);
 
         white-space:
             normal;
