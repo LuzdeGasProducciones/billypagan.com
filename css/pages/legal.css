@@ -956,7 +956,13 @@ a:hover {
     h1 {
 
         font-size:
-            clamp(1.65rem, 8.5vw, 3rem);
+            clamp(1.5rem, 8.5vw, 3rem);
+
+        white-space:
+            normal;
+
+        line-height:
+            1.15;
     }
 
 
