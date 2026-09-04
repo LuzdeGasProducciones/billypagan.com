@@ -540,9 +540,39 @@ a {
 
 /* ======================================================
    15 · MÓVIL
-   Solo vertical (portrait). En horizontal (landscape)
-   el diseño debe ser igual que en escritorio.
+   Tanto en vertical (portrait) como en horizontal
+   (landscape) la imagen de Billy queda pegada a los
+   márgenes izquierdo e inferior.
 ====================================================== */
+
+@media (max-width: 767px) and (orientation: portrait),
+       (max-width: 767px) and (orientation: landscape) {
+
+    .imagen-billy-portada {
+
+        top: auto;
+
+        bottom: 0;
+
+        left: 0;
+
+        width: auto;
+
+        max-width: none;
+
+        max-height: none;
+
+        transform:
+
+            scale(1.015);
+
+        transform-origin: left bottom;
+
+        animation-name: presenciaBillyMovil;
+
+    }
+
+}
 
 @media (max-width: 767px) and (orientation: portrait) {
 
