@@ -561,9 +561,9 @@ a {
 
         top: auto;
 
-        bottom: -10;
+        bottom: 0;
 
-        left: 10%;
+        left: 0;
 
         height: 42svh;
 
@@ -575,9 +575,9 @@ a {
 
         transform:
 
-            translateX(-30%)
-
             scale(1.015);
+
+        transform-origin: left bottom;
 
         animation-name: presenciaBillyMovil;
 
@@ -639,8 +639,6 @@ a {
 
         transform:
 
-            translateX(-30%)
-
             scale(1.015);
 
     }
@@ -648,8 +646,6 @@ a {
     to {
 
         transform:
-
-            translateX(-30%)
 
             scale(1.035);
 

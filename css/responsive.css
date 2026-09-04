@@ -63,10 +63,12 @@
 
         bottom: 0;
 
-        left: 50%;
+        left: 0;
 
         transform:
-            translateX(-30%);
+            scale(1.015);
+
+        transform-origin: left bottom;
 
     }
 
