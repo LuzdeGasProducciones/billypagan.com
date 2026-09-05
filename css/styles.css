@@ -359,10 +359,10 @@ a {
 
     animation:
         identidadEntrada var(--duracion-identidad)
-        cubic-bezier(0.22, 1, 0.36, 1)
+        cubic-bezier(0.16, 1, 0.3, 1)
         both;
 
-    will-change: opacity, transform;
+    will-change: opacity, transform, filter;
 
 }
 
@@ -410,12 +410,12 @@ a {
     white-space: nowrap;
 
     animation:
-        identidadEntrada var(--duracion-identidad)
-        0.18s
-        cubic-bezier(0.22, 1, 0.36, 1)
+        subtituloEntrada var(--duracion-identidad)
+        0.3s
+        cubic-bezier(0.16, 1, 0.3, 1)
         both;
 
-    will-change: opacity, transform;
+    will-change: opacity, transform, filter, letter-spacing;
 
 }
 
@@ -426,7 +426,40 @@ a {
 
         opacity: 0;
 
-        transform: translateY(1.2rem);
+        transform:
+            translateY(0.35em)
+            scale(0.985);
+
+        filter: blur(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+
+    }
+
+}
+
+
+@keyframes subtituloEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(0.6rem);
+
+        filter: blur(4px);
+
+        letter-spacing: 0.7em;
 
     }
 
@@ -435,6 +468,10 @@ a {
         opacity: 1;
 
         transform: translateY(0);
+
+        filter: blur(0);
+
+        letter-spacing: var(--espacio-subtitulo);
 
     }
 
