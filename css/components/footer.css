@@ -114,7 +114,7 @@
 
     position: relative;
 
-    display: inline;
+    display: inline-block;
 
     color:
         rgba(35, 35, 35, 0.66);
@@ -151,6 +151,9 @@
 
     outline:
         none;
+
+    overflow:
+        hidden;
 
     transition:
         color 0.45s ease,
@@ -236,17 +239,8 @@
 
 /* ==========================================================================
    08 · DESTELLO
-   SOLO SOBRE LAS LETRAS DEL ENLACE
+   BARRIDO HORIZONTAL SOBRE EL ENLACE
    ========================================================================== */
-
-/*
- * El pseudo-elemento utiliza exactamente el mismo texto que
- * el enlace y convierte el fondo en transparente excepto
- * en las formas de las letras.
- *
- * De esta manera el destello jamás ocupa visualmente el
- * espacio vacío alrededor del texto.
- */
 
 .footer-artista::after,
 .footer-terminos::after {
@@ -257,8 +251,11 @@
     position:
         absolute;
 
-    inset:
+    top:
         0;
+
+    left:
+        -150%;
 
     width:
         100%;
@@ -268,39 +265,14 @@
 
     background:
         linear-gradient(
-            100deg,
-            transparent 0%,
-            transparent 40%,
-            rgba(255, 255, 255, 0.00) 43%,
-            rgba(255, 255, 255, 0.55) 50%,
-            rgba(255, 255, 255, 0.00) 57%,
-            transparent 60%,
-            transparent 100%
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.40),
+            transparent
         );
 
-    background-size:
-        250% 100%;
-
-    background-position:
-        100% 0;
-
-    background-repeat:
-        no-repeat;
-
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
-
-    -webkit-text-fill-color:
-        transparent;
-
-    color:
-        transparent;
-
-    opacity:
-        0;
+    transform:
+        skewX(-20deg);
 
     pointer-events:
         none;
@@ -315,13 +287,10 @@
 .footer-artista.barrido::after,
 .footer-terminos.barrido::after {
 
-    opacity:
-        1;
-
     animation:
         footerSweep
-        1.15s
-        cubic-bezier(0.4, 0, 0.2, 1)
+        0.6s
+        cubic-bezier(0.25, 1, 0.5, 1)
         forwards;
 
 }
@@ -335,42 +304,15 @@
 
     0% {
 
-        background-position:
-            100% 0;
-
-        opacity:
-            0;
-
-    }
-
-    15% {
-
-        opacity:
-            0.75;
-
-    }
-
-    50% {
-
-        opacity:
-            0.75;
-
-    }
-
-    85% {
-
-        opacity:
-            0.35;
+        left:
+            -150%;
 
     }
 
     100% {
 
-        background-position:
-            0% 0;
-
-        opacity:
-            0;
+        left:
+            150%;
 
     }
 
@@ -509,14 +451,10 @@ body.pagina-legal .footer-terminos::after {
 
     background:
         linear-gradient(
-            100deg,
-            transparent 0%,
-            transparent 40%,
-            rgba(255, 255, 255, 0.00) 43%,
-            rgba(255, 255, 255, 0.30) 50%,
-            rgba(255, 255, 255, 0.00) 57%,
-            transparent 60%,
-            transparent 100%
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.30),
+            transparent
         );
 
 }
@@ -689,4 +627,3 @@ body.pagina-legal .footer-terminos.barrido {
 /* ==========================================================================
    FIN · footer.css
    ========================================================================== */
-
