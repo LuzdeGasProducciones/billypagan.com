@@ -1,141 +1,86 @@
-/* ======================================================
+/* ==========================================================================
    BILLY PAGÁN · SITIO OFICIAL
    footer.js
-   COMPONENTE · FOOTER GLOBAL
-====================================================== */
+   COMPONENTE · FOOTER GLOBAL (ANIMACIONES DE NAVEGACIÓN)
+   ========================================================================== */
 
+class FooterNavigation {
+    constructor() {
+        // Selectores de los elementos a animar
+        this.selectors = '.footer-artista, .footer-terminos';
+        this.animationClass = 'barrido';
+        this.animationName = 'footerSweep';
+        
+        this.init();
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
+    /**
+     * Inicializa el componente de forma segura
+     */
+    init() {
+        // Usamos delegación de eventos en el documento para optimizar rendimiento
+        document.addEventListener('click', (event) => this.handleNavigation(event));
+    }
 
+    /**
+     * Gestiona la lógica de interacción y redirección diferida
+     * @param {MouseEvent} event 
+     */
+    handleNavigation(event) {
+        // Buscamos si el clic ocurrió dentro de uno de nuestros enlaces objetivos
+        const targetLink = event.target.closest(this.selectors);
+        
+        if (!targetLink) return;
 
-    /* ==================================================
-       ENLACES DEL FOOTER
-    ================================================== */
+        // PERMITIR COMPORTAMIENTO NATIVO
+        // Si el usuario presiona Ctrl, Cmd, Shift o Clic Central, dejamos que abra pestaña nueva de fondo
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) {
+            return; 
+        }
 
-    const enlacesFooter = document.querySelectorAll(
-        ".footer-artista, .footer-terminos"
-    );
-
-
-    /* ==================================================
-       INTERACCIÓN
-    ================================================== */
-
-    enlacesFooter.forEach(function (enlace) {
-
-
-        enlace.addEventListener("click", function (event) {
-
-
-            /*
-             * Si el barrido ya está activo,
-             * evitamos un segundo clic.
-             */
-
-            if (enlace.classList.contains("barrido")) {
-
-                event.preventDefault();
-
-                return;
-
-            }
-
-
-            /*
-             * Guardamos el destino original.
-             */
-
-            const destino = enlace.href;
-
-
-            /*
-             * Detenemos temporalmente la navegación
-             * para mostrar el destello.
-             */
-
+        // CONTROL DE DOBLE CLIC
+        // Si la animación ya está en progreso, cancelamos cualquier acción posterior
+        if (targetLink.classList.contains(this.animationClass)) {
             event.preventDefault();
+            return;
+        }
+
+        // Guardamos las propiedades originales del enlace de forma segura
+        const destination = targetLink.href;
+        const targetWindow = targetLink.target || '_self';
+
+        // Detenemos la navegación inmediata
+        event.preventDefault();
+
+        // REINICIO DE LA ANIMACIÓN
+        // Forzamos el reflow del navegador para garantizar que la animación vuelva a empezar desde cero
+        targetLink.classList.remove(this.animationClass);
+        void targetLink.offsetWidth; 
+        targetLink.classList.add(this.animationClass);
+
+        // CONTROL DEL FINAL DE LA ANIMACIÓN
+        // Escuchamos el fin de la animación. Con { once: true }, el propio navegador borra el listener al ejecutarse
+        targetLink.addEventListener('animationend', (animEvent) => {
+            
+            // Nos aseguramos de responder únicamente a nuestra animación específica
+            if (animEvent.animationName !== this.animationName) return;
+
+            // Limpiamos la clase visual
+            targetLink.classList.remove(this.animationClass);
+
+            // NAVEGACIÓN ATÓMICA Y SEGURA
+            // Evaluamos el tipo de redirección configurada nativamente en el HTML
+            if (targetWindow === '_blank') {
+                window.open(destination, '_blank', 'noopener,noreferrer');
+            } else {
+                window.location.href = destination;
+            }
+            
+        }, { once: true });
+    }
+}
+
+// Inicializar el controlador del footer en cuanto el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => new FooterNavigation());
 
 
-            /*
-             * Reiniciamos cualquier animación anterior.
-             */
-
-            enlace.classList.remove("barrido");
-
-
-            /*
-             * Forzamos el navegador a recalcular
-             * el estado del elemento.
-             */
-
-            void enlace.offsetWidth;
-
-
-            /*
-             * Activamos el barrido.
-             */
-
-            enlace.classList.add("barrido");
-
-
-            /* ==================================================
-               FINAL DE LA ANIMACIÓN
-            ================================================== */
-
-            const finalizarNavegacion = function (evento) {
-
-
-                /*
-                 * Solo respondemos a nuestra animación.
-                 */
-
-                if (evento.animationName !== "footerSweep") {
-
-                    return;
-
-                }
-
-
-                /*
-                 * Evitamos que el listener permanezca activo.
-                 */
-
-                enlace.removeEventListener(
-                    "animationend",
-                    finalizarNavegacion
-                );
-
-
-                /*
-                 * Limpiamos el estado visual.
-                 */
-
-                enlace.classList.remove("barrido");
-
-
-                /*
-                 * Navegamos inmediatamente.
-                 */
-
-                window.location.href = destino;
-
-            };
-
-
-            /*
-             * Esperamos el final real del destello.
-             */
-
-            enlace.addEventListener(
-                "animationend",
-                finalizarNavegacion
-            );
-
-
-        });
-
-
-    });
-
-
-});
