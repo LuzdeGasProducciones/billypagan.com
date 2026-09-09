@@ -1,1 +1,341 @@
+/* ==========================================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   musica.css
+   PÁGINA · MÚSICA · EN CONSTRUCCIÓN
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01 · FONDO DE LA PÁGINA
+   ========================================================================== */
+
+.pagina-musica {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    isolation: isolate;
+
+    background:
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg")
+        center center / cover
+        fixed
+        no-repeat;
+
+}
+
+
+/* ==========================================================================
+   02 · ATMÓSFERA
+   ========================================================================== */
+
+.pagina-musica::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(0, 0, 0, 0.025) 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   03 · CONTENEDOR PRINCIPAL
+   ========================================================================== */
+
+.musica-hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================================================
+   04 · CONTENIDO
+   ========================================================================== */
+
+.musica-contenido {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 8rem 6%;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   05 · TÍTULO
+   ========================================================================== */
+
+.musica-contenido h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulo);
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            6rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+
+    text-align: center;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+/* ==========================================================================
+   06 · ESTADO
+   ========================================================================== */
+
+.musica-contenido p {
+
+    margin: 1.4rem 0 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.68rem;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.28em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ==========================================================================
+   07 · PANTALLAS GRANDES
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+
+    .musica-contenido h1 {
+
+        font-size:
+            clamp(
+                4rem,
+                5vw,
+                6.5rem
+            );
+
+    }
+
+
+    .musica-contenido p {
+
+        margin-top: 1.6rem;
+
+        font-size: 0.72rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   08 · TABLET
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .musica-contenido {
+
+        padding:
+            8rem
+            6%;
+
+    }
+
+
+    .musica-contenido h1 {
+
+        font-size:
+            clamp(
+                3rem,
+                7vw,
+                5rem
+            );
+
+    }
+
+
+    .musica-contenido p {
+
+        font-size: 0.64rem;
+
+        letter-spacing: 0.24em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   09 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-musica {
+
+        background-position: center center;
+
+        background-attachment: fixed;
+
+    }
+
+
+    .musica-hero {
+
+        min-height: 100svh;
+
+    }
+
+
+    .musica-contenido {
+
+        min-height: 100svh;
+
+        padding:
+            7rem
+            8%;
+
+    }
+
+
+    .musica-contenido h1 {
+
+        font-size:
+            clamp(
+                2.8rem,
+                12vw,
+                4rem
+            );
+
+    }
+
+
+    .musica-contenido p {
+
+        margin-top: 1.2rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.2em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   10 · MÓVILES PEQUEÑOS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .musica-contenido {
+
+        padding:
+            6.5rem
+            7%;
+
+    }
+
+
+    .musica-contenido h1 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .musica-contenido p {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.16em;
+
+    }
+
+}
+
+
 
