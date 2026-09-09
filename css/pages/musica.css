@@ -1,12 +1,12 @@
 /* ==========================================================================
    BILLY PAGÁN · SITIO OFICIAL
    musica.css
-   PÁGINA · MÚSICA · EN CONSTRUCCIÓN
+   PÁGINA · MÚSICA
    ========================================================================== */
 
 
 /* ==========================================================================
-   01 · FONDO DE LA PÁGINA
+   01 · PÁGINA
    ========================================================================== */
 
 .pagina-musica {
@@ -27,7 +27,8 @@
 
     background:
         url("../../images/fondos/escritorio/fondo-general-desktop.jpg")
-        center center / cover
+        center center
+        / cover
         fixed
         no-repeat;
 
@@ -94,25 +95,28 @@
 
     z-index: 5;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
+    width: min(88%, 820px);
 
     min-height: 100vh;
 
     min-height: 100svh;
 
-    margin: 0;
+    margin: 0 auto;
 
-    padding: 8rem 6%;
+    padding:
+        10rem
+        0
+        8rem;
 
-    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    text-align: left;
 
 }
 
@@ -121,7 +125,16 @@
    05 · TÍTULO
    ========================================================================== */
 
-.musica-contenido h1 {
+.musica-titulo {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.musica-titulo h1 {
 
     margin: 0;
 
@@ -133,9 +146,9 @@
 
     font-size:
         clamp(
-            3rem,
-            6vw,
-            6rem
+            2.6rem,
+            4.5vw,
+            4.5rem
         );
 
     font-weight: 500;
@@ -144,7 +157,7 @@
 
     letter-spacing: -0.02em;
 
-    text-align: center;
+    text-align: left;
 
     text-rendering: optimizeLegibility;
 
@@ -152,12 +165,21 @@
 
 
 /* ==========================================================================
-   06 · ESTADO
+   06 · MENSAJE
    ========================================================================== */
 
-.musica-contenido p {
+.musica-mensaje {
 
-    margin: 1.4rem 0 0;
+    margin: 2rem 0 0;
+
+    padding: 0;
+
+}
+
+
+.musica-mensaje p {
+
+    margin: 0;
 
     padding: 0;
 
@@ -171,11 +193,9 @@
 
     line-height: 1.6;
 
-    letter-spacing: 0.28em;
+    letter-spacing: 0.25em;
 
-    text-align: center;
-
-    text-transform: uppercase;
+    text-align: left;
 
 }
 
@@ -186,21 +206,38 @@
 
 @media (min-width: 1600px) {
 
-    .musica-contenido h1 {
+    .musica-contenido {
+
+        width: min(82%, 900px);
+
+        padding:
+            11rem
+            0
+            9rem;
+
+    }
+
+
+    .musica-titulo h1 {
 
         font-size:
             clamp(
-                4rem,
-                5vw,
-                6.5rem
+                3.2rem,
+                4vw,
+                5rem
             );
 
     }
 
 
-    .musica-contenido p {
+    .musica-mensaje {
 
-        margin-top: 1.6rem;
+        margin-top: 2.2rem;
+
+    }
+
+
+    .musica-mensaje p {
 
         font-size: 0.72rem;
 
@@ -217,30 +254,38 @@
 
     .musica-contenido {
 
+        width: min(86%, 760px);
+
         padding:
-            8rem
-            6%;
+            9rem
+            0
+            7rem;
 
     }
 
 
-    .musica-contenido h1 {
+    .musica-titulo h1 {
 
         font-size:
             clamp(
-                3rem,
-                7vw,
-                5rem
+                2.8rem,
+                5vw,
+                4rem
             );
 
     }
 
 
-    .musica-contenido p {
+    .musica-mensaje {
+
+        margin-top: 1.8rem;
+
+    }
+
+
+    .musica-mensaje p {
 
         font-size: 0.64rem;
-
-        letter-spacing: 0.24em;
 
     }
 
@@ -271,34 +316,44 @@
 
     .musica-contenido {
 
+        width: 88%;
+
         min-height: 100svh;
 
         padding:
             7rem
-            8%;
+            0
+            5rem;
+
+        justify-content: center;
 
     }
 
 
-    .musica-contenido h1 {
+    .musica-titulo h1 {
 
         font-size:
             clamp(
-                2.8rem,
-                12vw,
-                4rem
+                2.5rem,
+                10vw,
+                3.5rem
             );
 
     }
 
 
-    .musica-contenido p {
+    .musica-mensaje {
 
-        margin-top: 1.2rem;
+        margin-top: 1.6rem;
+
+    }
+
+
+    .musica-mensaje p {
 
         font-size: 0.58rem;
 
-        letter-spacing: 0.2em;
+        letter-spacing: 0.20em;
 
     }
 
@@ -313,21 +368,31 @@
 
     .musica-contenido {
 
+        width: 86%;
+
         padding:
             6.5rem
-            7%;
+            0
+            5rem;
 
     }
 
 
-    .musica-contenido h1 {
+    .musica-titulo h1 {
 
-        font-size: 2.7rem;
+        font-size: 2.4rem;
 
     }
 
 
-    .musica-contenido p {
+    .musica-mensaje {
+
+        margin-top: 1.4rem;
+
+    }
+
+
+    .musica-mensaje p {
 
         font-size: 0.54rem;
 
@@ -336,6 +401,4 @@
     }
 
 }
-
-
 
