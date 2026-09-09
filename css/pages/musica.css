@@ -15,7 +15,7 @@
 
     width: 100%;
 
-    min-height: 100%;
+    min-height: 100vh;
 
     margin: 0;
 
@@ -411,6 +411,21 @@
         font-size: 0.54rem;
 
         letter-spacing: 0.16em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   11 · REDUCCIÓN DE MOVIMIENTO
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-musica {
+
+        background-attachment: scroll;
 
     }
 
