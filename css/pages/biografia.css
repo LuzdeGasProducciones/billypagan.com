@@ -1,430 +1,500 @@
 /* ======================================================
-BILLY PAGÁN · SITIO OFICIAL
-biografia.css
-PÁGINA · BIOGRAFÍA
+   BILLY PAGÁN · SITIO OFICIAL
+   biografia.css
+   PÁGINA · BIOGRAFÍA
 ====================================================== */
 
+
 /* ======================================================
-01 · CONTENEDOR
+   01 · PÁGINA
+====================================================== */
+
+.pagina-biografia {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg")
+
+        center center
+
+        / cover
+
+        no-repeat;
+
+}
+
+
+/* ======================================================
+   02 · CAPA DE ATMÓSFERA
+   Igual que en la portada
+====================================================== */
+
+.pagina-biografia::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,0.04) 0%,
+
+            rgba(255,255,255,0) 45%,
+
+            rgba(0,0,0,0.025) 100%
+
+        );
+
+}
+
+
+/* ======================================================
+   03 · CONTENEDOR
 ====================================================== */
 
 .biografia-hero {
 
-```
-position: relative;
+    position: relative;
 
-width: 100%;
+    width: 100%;
 
-height: 100%;
+    height: 100%;
 
-min-height: 100svh;
+    min-height: 100svh;
 
-margin: 0;
+    margin: 0;
 
-padding: 0;
+    padding: 0;
 
-overflow: hidden;
-```
+    overflow: hidden;
 
 }
 
+
 /* ======================================================
-02 · CONTENIDO CENTRAL
+   04 · CONTENIDO CENTRAL
 ====================================================== */
 
 .biografia-contenido {
 
-```
-position: absolute;
+    position: absolute;
 
-top: 50%;
+    top: 50%;
 
-left: 50%;
+    left: 50%;
 
-z-index: 5;
+    z-index: 5;
 
-width: min(90%, 1200px);
+    width: min(90%, 1200px);
 
-margin: 0;
+    margin: 0;
 
-padding: 0;
+    padding: 0;
 
-text-align: center;
+    text-align: center;
 
-transform:
+    transform:
 
-    translate(-50%, -50%);
-```
+        translate(-50%, -50%);
 
 }
 
+
 /* ======================================================
-03 · TÍTULO
+   05 · TÍTULO
 ====================================================== */
 
 .biografia-contenido h1 {
 
-```
-margin: 0;
+    margin: 0;
 
-padding: 0;
+    padding: 0;
 
-color: var(--color-texto);
+    color: var(--color-texto);
 
-font-family: var(--fuente-titulo);
+    font-family: var(--fuente-titulo);
 
-font-size:
+    font-size:
 
-    clamp(
+        clamp(
 
-        4.2rem,
+            4.2rem,
 
-        10vw,
+            10vw,
 
-        9rem
+            9rem
 
-    );
+        );
 
-font-weight: 500;
+    font-weight: 500;
 
-line-height: 0.82;
+    line-height: 0.82;
 
-letter-spacing: -0.025em;
+    letter-spacing: -0.025em;
 
-text-shadow:
+    text-shadow:
 
-    0 0.08em 0
+        0 0.08em 0
 
-    rgba(255, 255, 255, 0.18);
+        rgba(255, 255, 255, 0.18);
 
-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
 
-animation:
+    animation:
 
-    biografiaEntrada
+        biografiaEntrada
 
-    var(--duracion-identidad)
+        var(--duracion-identidad)
 
-    cubic-bezier(0.16, 1, 0.3, 1)
+        cubic-bezier(0.16, 1, 0.3, 1)
 
-    both;
+        both;
 
-will-change:
+    will-change:
 
-    opacity,
+        opacity,
 
-    transform,
+        transform,
 
-    filter;
-```
+        filter;
 
 }
 
+
 /* ======================================================
-04 · SUBTÍTULO
+   06 · SUBTÍTULO
 ====================================================== */
 
 .biografia-subtitulo {
 
-```
-display: inline-block;
+    display: inline-block;
 
-margin: 1.7rem 0 0;
+    margin: 1.7rem 0 0;
 
-padding:
+    padding:
 
-    0.65rem
+        0.65rem
 
-    1.2rem;
+        1.2rem;
 
-color: var(--color-texto-suave);
+    color: var(--color-texto-suave);
 
-font-family: var(--fuente-sans);
+    font-family: var(--fuente-sans);
 
-font-size:
+    font-size:
 
-    clamp(
+        clamp(
 
-        0.58rem,
+            0.58rem,
 
-        0.85vw,
+            0.85vw,
 
-        0.78rem
+            0.78rem
 
-    );
+        );
 
-font-weight: 400;
+    font-weight: 400;
 
-line-height: 1.5;
+    line-height: 1.5;
 
-letter-spacing: var(--espacio-subtitulo);
+    letter-spacing: var(--espacio-subtitulo);
 
-text-transform: uppercase;
+    text-transform: uppercase;
 
-white-space: nowrap;
+    white-space: nowrap;
 
-animation:
+    animation:
 
-    biografiaSubtituloEntrada
+        biografiaSubtituloEntrada
 
-    var(--duracion-identidad)
+        var(--duracion-identidad)
 
-    0.3s
+        0.3s
 
-    cubic-bezier(0.16, 1, 0.3, 1)
+        cubic-bezier(0.16, 1, 0.3, 1)
 
-    both;
+        both;
 
-will-change:
+    will-change:
 
-    opacity,
+        opacity,
 
-    transform,
+        transform,
 
-    filter,
+        filter,
 
-    letter-spacing;
-```
+        letter-spacing;
 
 }
 
+
 /* ======================================================
-05 · ANIMACIÓN · TÍTULO
+   07 · ANIMACIÓN · TÍTULO
 ====================================================== */
 
 @keyframes biografiaEntrada {
 
-```
-from {
+    from {
 
-    opacity: 0;
+        opacity: 0;
 
-    transform:
+        transform:
 
-        translateY(0.35em)
+            translateY(0.35em)
 
-        scale(0.985);
+            scale(0.985);
 
-    filter: blur(8px);
+        filter: blur(8px);
 
-}
+    }
 
-to {
+    to {
 
-    opacity: 1;
+        opacity: 1;
 
-    transform:
+        transform:
 
-        translateY(0)
+            translateY(0)
 
-        scale(1);
+            scale(1);
 
-    filter: blur(0);
+        filter: blur(0);
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-06 · ANIMACIÓN · SUBTÍTULO
+   08 · ANIMACIÓN · SUBTÍTULO
 ====================================================== */
 
 @keyframes biografiaSubtituloEntrada {
 
-```
-from {
+    from {
 
-    opacity: 0;
+        opacity: 0;
 
-    transform:
+        transform:
 
-        translateY(0.6rem);
+            translateY(0.6rem);
 
-    filter: blur(4px);
+        filter: blur(4px);
 
-    letter-spacing: 0.7em;
+        letter-spacing: 0.7em;
 
-}
+    }
 
-to {
+    to {
 
-    opacity: 1;
+        opacity: 1;
 
-    transform:
+        transform:
 
-        translateY(0);
+            translateY(0);
 
-    filter: blur(0);
+        filter: blur(0);
 
-    letter-spacing:
+        letter-spacing:
 
-        var(--espacio-subtitulo);
+            var(--espacio-subtitulo);
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-07 · PANTALLAS GRANDES
+   09 · PANTALLAS GRANDES
 ====================================================== */
 
 @media (min-width: 1600px) {
 
-```
-.biografia-contenido h1 {
+    .biografia-contenido h1 {
 
-    font-size:
+        font-size:
 
-        clamp(
+            clamp(
 
-            7rem,
+                7rem,
 
-            9vw,
+                9vw,
 
-            10rem
+                10rem
 
-        );
+            );
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-08 · TABLET
+   10 · TABLET
 ====================================================== */
 
 @media (min-width: 768px)
-and (max-width: 1199px) {
+       and (max-width: 1199px) {
 
-```
-.biografia-contenido {
+    .biografia-contenido {
 
-    width: 92%;
+        width: 92%;
 
-}
+    }
 
 
-.biografia-contenido h1 {
+    .biografia-contenido h1 {
 
-    font-size:
+        font-size:
 
-        clamp(
+            clamp(
 
-            4.5rem,
+                4.5rem,
 
-            10vw,
+                10vw,
 
-            7rem
+                7rem
 
-        );
+            );
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-09 · MÓVIL
+   11 · MÓVIL
 ====================================================== */
 
 @media (max-width: 767px)
-and (orientation: portrait) {
+       and (orientation: portrait) {
 
-```
-.biografia-contenido {
+    .pagina-biografia {
 
-    top: 50%;
+        min-height: 100svh;
 
-    width: 90%;
+        background-position:
+
+            center center;
+
+    }
+
+
+    .biografia-contenido {
+
+        top: 50%;
+
+        width: 90%;
+
+    }
+
+
+    .biografia-contenido h1 {
+
+        font-size:
+
+            clamp(
+
+                3.6rem,
+
+                17vw,
+
+                5.5rem
+
+            );
+
+        line-height: 0.84;
+
+        letter-spacing: -0.025em;
+
+    }
+
+
+    .biografia-subtitulo {
+
+        margin-top: 1.35rem;
+
+        font-size: 0.55rem;
+
+        letter-spacing: 0.32em;
+
+        white-space: normal;
+
+    }
 
 }
 
-
-.biografia-contenido h1 {
-
-    font-size:
-
-        clamp(
-
-            3.6rem,
-
-            17vw,
-
-            5.5rem
-
-        );
-
-    line-height: 0.84;
-
-    letter-spacing: -0.025em;
-
-}
-
-
-.biografia-subtitulo {
-
-    margin-top: 1.35rem;
-
-    font-size: 0.55rem;
-
-    letter-spacing: 0.32em;
-
-    white-space: normal;
-
-}
-```
-
-}
 
 /* ======================================================
-10 · MÓVILES MUY PEQUEÑOS
+   12 · MÓVILES MUY PEQUEÑOS
 ====================================================== */
 
 @media (max-width: 380px) {
 
-```
-.biografia-contenido h1 {
+    .biografia-contenido h1 {
 
-    font-size: 3.35rem;
+        font-size: 3.35rem;
 
-}
+    }
 
 
-.biografia-subtitulo {
+    .biografia-subtitulo {
 
-    font-size: 0.5rem;
+        font-size: 0.5rem;
 
-    letter-spacing: 0.28em;
+        letter-spacing: 0.28em;
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-11 · REDUCCIÓN DE MOVIMIENTO
+   13 · REDUCCIÓN DE MOVIMIENTO
 ====================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-```
-.biografia-contenido h1,
-.biografia-subtitulo {
+    .biografia-contenido h1,
+    .biografia-subtitulo {
 
-    animation: none;
+        animation: none;
 
-    opacity: 1;
+        opacity: 1;
 
-    transform: none;
+        transform: none;
 
-}
-```
+    }
 
 }
+
 
 /* ======================================================
-FIN · biografia.css
+   FIN · biografia.css
 ====================================================== */
