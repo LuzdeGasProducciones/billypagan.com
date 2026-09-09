@@ -15,7 +15,7 @@
 
     width: 100%;
 
-    height: 100vh;
+    min-height: 100vh;
 
     min-height: 100svh;
 
@@ -23,7 +23,7 @@
 
     padding: 0;
 
-    overflow: hidden;
+    overflow-x: hidden;
 
     isolation: isolate;
 
@@ -42,18 +42,17 @@
 
 /* ======================================================
    02 · CAPA DE ATMÓSFERA
-   Igual que en la portada
 ====================================================== */
 
 .pagina-biografia::after {
 
     content: "";
 
-    position: absolute;
+    position: fixed;
 
     inset: 0;
 
-    z-index: 2;
+    z-index: 0;
 
     pointer-events: none;
 
@@ -75,7 +74,7 @@
 
 
 /* ======================================================
-   03 · CONTENEDOR
+   03 · CONTENEDOR PRINCIPAL
 ====================================================== */
 
 .biografia-hero {
@@ -84,15 +83,13 @@
 
     width: 100%;
 
-    height: 100%;
+    min-height: 100vh;
 
     min-height: 100svh;
 
     margin: 0;
 
     padding: 0;
-
-    overflow: hidden;
 
 }
 
@@ -103,25 +100,29 @@
 
 .biografia-contenido {
 
-    position: absolute;
-
-    top: 50%;
-
-    left: 50%;
+    position: relative;
 
     z-index: 5;
 
-    width: min(90%, 1200px);
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
 
     margin: 0;
 
     padding: 0;
 
     text-align: center;
-
-    transform:
-
-        translate(-50%, -50%);
 
 }
 
@@ -362,13 +363,6 @@
 @media (min-width: 768px)
        and (max-width: 1199px) {
 
-    .biografia-contenido {
-
-        width: 92%;
-
-    }
-
-
     .biografia-contenido h1 {
 
         font-size:
@@ -403,14 +397,16 @@
 
             center center;
 
+        background-attachment: scroll;
+
     }
 
 
     .biografia-contenido {
 
-        top: 50%;
+        min-height: 100svh;
 
-        width: 90%;
+        width: 100%;
 
     }
 
