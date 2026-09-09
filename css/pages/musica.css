@@ -25,12 +25,16 @@
 
     isolation: isolate;
 
-    background:
-        url("../../images/fondos/escritorio/fondo-general-desktop.jpg")
-        center center
-        / cover
-        fixed
-        no-repeat;
+    background-image:
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-position: center center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
 
 }
 
@@ -95,17 +99,17 @@
 
     z-index: 5;
 
-    width: min(88%, 820px);
+    width: 100%;
 
     min-height: 100vh;
 
     min-height: 100svh;
 
-    margin: 0 auto;
+    margin: 0;
 
     padding:
         10rem
-        0
+        6%
         8rem;
 
     display: flex;
@@ -114,9 +118,9 @@
 
     justify-content: center;
 
-    align-items: flex-start;
+    align-items: center;
 
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -157,7 +161,7 @@
 
     letter-spacing: -0.02em;
 
-    text-align: left;
+    text-align: center;
 
     text-rendering: optimizeLegibility;
 
@@ -173,6 +177,8 @@
     margin: 2rem 0 0;
 
     padding: 0;
+
+    text-align: center;
 
 }
 
@@ -195,7 +201,7 @@
 
     letter-spacing: 0.25em;
 
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -208,11 +214,9 @@
 
     .musica-contenido {
 
-        width: min(82%, 900px);
-
         padding:
             11rem
-            0
+            6%
             9rem;
 
     }
@@ -254,11 +258,9 @@
 
     .musica-contenido {
 
-        width: min(86%, 760px);
-
         padding:
             9rem
-            0
+            6%
             7rem;
 
     }
@@ -302,6 +304,10 @@
 
         background-position: center center;
 
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
         background-attachment: fixed;
 
     }
@@ -316,16 +322,20 @@
 
     .musica-contenido {
 
-        width: 88%;
+        width: 100%;
 
         min-height: 100svh;
 
         padding:
             7rem
-            0
+            7%
             5rem;
 
         justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
 
     }
 
@@ -339,12 +349,16 @@
                 3.5rem
             );
 
+        text-align: center;
+
     }
 
 
     .musica-mensaje {
 
         margin-top: 1.6rem;
+
+        text-align: center;
 
     }
 
@@ -354,6 +368,8 @@
         font-size: 0.58rem;
 
         letter-spacing: 0.20em;
+
+        text-align: center;
 
     }
 
@@ -368,11 +384,9 @@
 
     .musica-contenido {
 
-        width: 86%;
-
         padding:
             6.5rem
-            0
+            7%
             5rem;
 
     }
