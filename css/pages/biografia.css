@@ -1,1 +1,430 @@
+/* ======================================================
+BILLY PAGÁN · SITIO OFICIAL
+biografia.css
+PÁGINA · BIOGRAFÍA
+====================================================== */
 
+/* ======================================================
+01 · CONTENEDOR
+====================================================== */
+
+.biografia-hero {
+
+```
+position: relative;
+
+width: 100%;
+
+height: 100%;
+
+min-height: 100svh;
+
+margin: 0;
+
+padding: 0;
+
+overflow: hidden;
+```
+
+}
+
+/* ======================================================
+02 · CONTENIDO CENTRAL
+====================================================== */
+
+.biografia-contenido {
+
+```
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+z-index: 5;
+
+width: min(90%, 1200px);
+
+margin: 0;
+
+padding: 0;
+
+text-align: center;
+
+transform:
+
+    translate(-50%, -50%);
+```
+
+}
+
+/* ======================================================
+03 · TÍTULO
+====================================================== */
+
+.biografia-contenido h1 {
+
+```
+margin: 0;
+
+padding: 0;
+
+color: var(--color-texto);
+
+font-family: var(--fuente-titulo);
+
+font-size:
+
+    clamp(
+
+        4.2rem,
+
+        10vw,
+
+        9rem
+
+    );
+
+font-weight: 500;
+
+line-height: 0.82;
+
+letter-spacing: -0.025em;
+
+text-shadow:
+
+    0 0.08em 0
+
+    rgba(255, 255, 255, 0.18);
+
+text-rendering: optimizeLegibility;
+
+animation:
+
+    biografiaEntrada
+
+    var(--duracion-identidad)
+
+    cubic-bezier(0.16, 1, 0.3, 1)
+
+    both;
+
+will-change:
+
+    opacity,
+
+    transform,
+
+    filter;
+```
+
+}
+
+/* ======================================================
+04 · SUBTÍTULO
+====================================================== */
+
+.biografia-subtitulo {
+
+```
+display: inline-block;
+
+margin: 1.7rem 0 0;
+
+padding:
+
+    0.65rem
+
+    1.2rem;
+
+color: var(--color-texto-suave);
+
+font-family: var(--fuente-sans);
+
+font-size:
+
+    clamp(
+
+        0.58rem,
+
+        0.85vw,
+
+        0.78rem
+
+    );
+
+font-weight: 400;
+
+line-height: 1.5;
+
+letter-spacing: var(--espacio-subtitulo);
+
+text-transform: uppercase;
+
+white-space: nowrap;
+
+animation:
+
+    biografiaSubtituloEntrada
+
+    var(--duracion-identidad)
+
+    0.3s
+
+    cubic-bezier(0.16, 1, 0.3, 1)
+
+    both;
+
+will-change:
+
+    opacity,
+
+    transform,
+
+    filter,
+
+    letter-spacing;
+```
+
+}
+
+/* ======================================================
+05 · ANIMACIÓN · TÍTULO
+====================================================== */
+
+@keyframes biografiaEntrada {
+
+```
+from {
+
+    opacity: 0;
+
+    transform:
+
+        translateY(0.35em)
+
+        scale(0.985);
+
+    filter: blur(8px);
+
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+
+        translateY(0)
+
+        scale(1);
+
+    filter: blur(0);
+
+}
+```
+
+}
+
+/* ======================================================
+06 · ANIMACIÓN · SUBTÍTULO
+====================================================== */
+
+@keyframes biografiaSubtituloEntrada {
+
+```
+from {
+
+    opacity: 0;
+
+    transform:
+
+        translateY(0.6rem);
+
+    filter: blur(4px);
+
+    letter-spacing: 0.7em;
+
+}
+
+to {
+
+    opacity: 1;
+
+    transform:
+
+        translateY(0);
+
+    filter: blur(0);
+
+    letter-spacing:
+
+        var(--espacio-subtitulo);
+
+}
+```
+
+}
+
+/* ======================================================
+07 · PANTALLAS GRANDES
+====================================================== */
+
+@media (min-width: 1600px) {
+
+```
+.biografia-contenido h1 {
+
+    font-size:
+
+        clamp(
+
+            7rem,
+
+            9vw,
+
+            10rem
+
+        );
+
+}
+```
+
+}
+
+/* ======================================================
+08 · TABLET
+====================================================== */
+
+@media (min-width: 768px)
+and (max-width: 1199px) {
+
+```
+.biografia-contenido {
+
+    width: 92%;
+
+}
+
+
+.biografia-contenido h1 {
+
+    font-size:
+
+        clamp(
+
+            4.5rem,
+
+            10vw,
+
+            7rem
+
+        );
+
+}
+```
+
+}
+
+/* ======================================================
+09 · MÓVIL
+====================================================== */
+
+@media (max-width: 767px)
+and (orientation: portrait) {
+
+```
+.biografia-contenido {
+
+    top: 50%;
+
+    width: 90%;
+
+}
+
+
+.biografia-contenido h1 {
+
+    font-size:
+
+        clamp(
+
+            3.6rem,
+
+            17vw,
+
+            5.5rem
+
+        );
+
+    line-height: 0.84;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.biografia-subtitulo {
+
+    margin-top: 1.35rem;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.32em;
+
+    white-space: normal;
+
+}
+```
+
+}
+
+/* ======================================================
+10 · MÓVILES MUY PEQUEÑOS
+====================================================== */
+
+@media (max-width: 380px) {
+
+```
+.biografia-contenido h1 {
+
+    font-size: 3.35rem;
+
+}
+
+
+.biografia-subtitulo {
+
+    font-size: 0.5rem;
+
+    letter-spacing: 0.28em;
+
+}
+```
+
+}
+
+/* ======================================================
+11 · REDUCCIÓN DE MOVIMIENTO
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+```
+.biografia-contenido h1,
+.biografia-subtitulo {
+
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+
+}
+```
+
+}
+
+/* ======================================================
+FIN · biografia.css
+====================================================== */
