@@ -81,6 +81,8 @@
 
     position: relative;
 
+    z-index: 1;
+
     width: 100%;
 
     min-height: 100vh;
@@ -398,6 +400,13 @@
             center center;
 
         background-attachment: scroll;
+
+    }
+
+
+    .biografia-hero {
+
+        min-height: 100svh;
 
     }
 
