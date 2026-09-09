@@ -1,1 +1,450 @@
+/* ==========================================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   videos.css
+   PÁGINA · VÍDEOS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01 · PÁGINA
+   ========================================================================== */
+
+.pagina-videos {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    isolation: isolate;
+
+    background: transparent;
+
+}
+
+
+/* ==========================================================================
+   02 · FONDO
+   ========================================================================== */
+
+.pagina-videos::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-position: center center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ==========================================================================
+   03 · ATMÓSFERA
+   ========================================================================== */
+
+.pagina-videos::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(0, 0, 0, 0.025) 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   04 · CONTENEDOR PRINCIPAL
+   ========================================================================== */
+
+.videos-hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================================================
+   05 · CONTENIDO
+   ========================================================================== */
+
+.videos-contenido {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding:
+        10rem
+        6%
+        8rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   06 · TÍTULO
+   ========================================================================== */
+
+.videos-titulo {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.videos-titulo h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulo);
+
+    font-size:
+        clamp(
+            2.6rem,
+            4.5vw,
+            4.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+
+    text-align: center;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+/* ==========================================================================
+   07 · MENSAJE
+   ========================================================================== */
+
+.videos-mensaje {
+
+    margin: 2rem 0 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+
+.videos-mensaje p {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.68rem;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.25em;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   08 · PANTALLAS GRANDES
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+
+    .videos-contenido {
+
+        padding:
+            11rem
+            6%
+            9rem;
+
+    }
+
+
+    .videos-titulo h1 {
+
+        font-size:
+            clamp(
+                3.2rem,
+                4vw,
+                5rem
+            );
+
+    }
+
+
+    .videos-mensaje {
+
+        margin-top: 2.2rem;
+
+    }
+
+
+    .videos-mensaje p {
+
+        font-size: 0.72rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   09 · TABLET
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .videos-contenido {
+
+        padding:
+            9rem
+            6%
+            7rem;
+
+    }
+
+
+    .videos-titulo h1 {
+
+        font-size:
+            clamp(
+                2.8rem,
+                5vw,
+                4rem
+            );
+
+    }
+
+
+    .videos-mensaje {
+
+        margin-top: 1.8rem;
+
+    }
+
+
+    .videos-mensaje p {
+
+        font-size: 0.64rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   10 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-videos::before {
+
+        background-position: center center;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+    }
+
+
+    .videos-hero {
+
+        min-height: 100svh;
+
+    }
+
+
+    .videos-contenido {
+
+        width: 100%;
+
+        min-height: 100svh;
+
+        padding:
+            7rem
+            7%
+            5rem;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .videos-titulo h1 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                10vw,
+                3.5rem
+            );
+
+        text-align: center;
+
+    }
+
+
+    .videos-mensaje {
+
+        margin-top: 1.6rem;
+
+        text-align: center;
+
+    }
+
+
+    .videos-mensaje p {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.20em;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   11 · MÓVILES PEQUEÑOS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .videos-contenido {
+
+        padding:
+            6.5rem
+            7%
+            5rem;
+
+    }
+
+
+    .videos-titulo h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .videos-mensaje {
+
+        margin-top: 1.4rem;
+
+    }
+
+
+    .videos-mensaje p {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.16em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   12 · REDUCCIÓN DE MOVIMIENTO
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-videos::before {
+
+        position: absolute;
+
+    }
+
+}
 
