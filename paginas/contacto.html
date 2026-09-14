@@ -19,7 +19,87 @@
         content="Contratación de Billy Pagán · Sitio Oficial."
     >
 
+    <meta
+        name="author"
+        content="Billy Pagán"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+
+    <!-- ==================================================
+         TÍTULO
+    ================================================== -->
+
     <title>Billy Pagán | Contacto</title>
+
+
+    <!-- ==================================================
+         CANONICAL
+    ================================================== -->
+
+    <link
+        rel="canonical"
+        href="https://www.billypagan.com/paginas/contacto.html"
+    >
+
+
+    <!-- ==================================================
+         OPEN GRAPH
+    ================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Billy Pagán | Contacto"
+    >
+
+    <meta
+        property="og:description"
+        content="Contratación de Billy Pagán · Sitio Oficial."
+    >
+
+    <meta
+        property="og:url"
+        content="https://www.billypagan.com/paginas/contacto.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Billy Pagán · Sitio Oficial"
+    >
+
+    <meta
+        property="og:locale"
+        content="es_ES"
+    >
+
+
+    <!-- ==================================================
+         TWITTER
+    ================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Billy Pagán | Contacto"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Contratación de Billy Pagán · Sitio Oficial."
+    >
 
 
     <!-- ==================================================
@@ -38,13 +118,13 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap"
         rel="stylesheet"
     >
 
 
     <!-- ==================================================
-         CSS GENERAL
+         ESTILOS GLOBALES
     ================================================== -->
 
     <link
@@ -69,17 +149,27 @@
 
     <link
         rel="stylesheet"
+        href="../css/components/buttons.css"
+    >
+
+    <link
+        rel="stylesheet"
         href="../css/components/footer.css"
     >
 
     <link
         rel="stylesheet"
-        href="../css/pages/contacto.css"
+        href="../css/responsive.css"
     >
+
+
+    <!-- ==================================================
+         ESTILO DE LA PÁGINA
+    ================================================== -->
 
     <link
         rel="stylesheet"
-        href="../css/responsive.css"
+        href="../css/pages/contacto.css"
     >
 
 </head>
@@ -89,36 +179,171 @@
 
 
     <!-- ==================================================
-         HEADER
-    ================================================== -->
-
-    <header class="header">
-
-        <div
-            id="menu"
-            class="menu"
-        ></div>
-
-    </header>
-
-
-    <!-- ==================================================
-         CONTENIDO
+         CONTENIDO PRINCIPAL
     ================================================== -->
 
     <main class="contacto-hero">
 
-        <section class="contacto-contenido">
 
-            <div class="contacto-texto">
+        <!-- ==================================================
+             MENÚ MÓVIL
+        ================================================== -->
+
+        <nav
+            class="menu-movil"
+            id="menuMovil"
+            aria-label="Menú principal"
+        >
+
+            <a href="../index.html">
+                INICIO
+            </a>
+
+            <a href="biografia.html">
+                BIOGRAFÍA
+            </a>
+
+            <a href="musica/musica.html">
+                MÚSICA
+            </a>
+
+            <a href="videos.html">
+                VÍDEOS
+            </a>
+
+            <a href="conciertos/conciertos.html">
+                CONCIERTOS
+            </a>
+
+            <a href="galeria.html">
+                GALERÍA
+            </a>
+
+            <a href="tienda.html">
+                TIENDA
+            </a>
+
+            <a
+                href="contacto.html"
+                class="activo"
+                aria-current="page"
+            >
+                CONTACTO
+            </a>
+
+        </nav>
+
+
+        <!-- ==================================================
+             MENÚ ESCRITORIO
+        ================================================== -->
+
+        <header class="menu">
+
+            <nav aria-label="Menú principal">
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="biografia.html">
+                            BIOGRAFÍA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="musica/musica.html">
+                            MÚSICA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="videos.html">
+                            VÍDEOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conciertos/conciertos.html">
+                            CONCIERTOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="galeria.html">
+                            GALERÍA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tienda.html">
+                            TIENDA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contacto.html"
+                            class="activo"
+                            aria-current="page"
+                        >
+                            CONTACTO
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+        <!-- ==================================================
+             HAMBURGUESA
+        ================================================== -->
+
+        <button
+            class="hamburguesa"
+            id="hamburguesa"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menuMovil"
+        >
+
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+
+        </button>
+
+
+        <!-- ==================================================
+             CONTENIDO
+        ================================================== -->
+
+        <article class="contacto-contenido">
+
+
+            <div class="contacto-mensaje">
 
                 <p>
                     CONTRATACIÓN
                 </p>
 
+            </div>
+
+
+            <div class="contacto-produccion">
+
                 <a
-                    class="contacto-enlace"
                     href="https://www.musicartproducciones.com/producto/billy-pagan"
+                    class="contacto-boton-produccion"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -127,7 +352,9 @@
 
             </div>
 
-        </section>
+
+        </article>
+
 
     </main>
 
@@ -136,27 +363,62 @@
          FOOTER
     ================================================== -->
 
-    <footer
-        id="footer"
-        class="footer"
-    ></footer>
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <p class="footer-copy">
+
+                © 2026
+
+                <a
+                    href="../index.html"
+                    class="footer-artista"
+                    aria-label="Billy Pagán · Página de inicio"
+                >
+                    BILLY PAGÁN
+                </a>
+
+                <span
+                    class="footer-separador"
+                    aria-hidden="true"
+                >
+                    ·
+                </span>
+
+                TODOS LOS DERECHOS RESERVADOS
+
+                <span
+                    class="footer-separador"
+                    aria-hidden="true"
+                >
+                    ·
+                </span>
+
+                <a
+                    href="../legal/terminos-y-condiciones.html"
+                    class="footer-terminos"
+                >
+                    TÉRMINOS Y CONDICIONES
+                </a>
+
+            </p>
+
+        </div>
+
+    </footer>
 
 
     <!-- ==================================================
          JAVASCRIPT
     ================================================== -->
 
-    <script
-        src="../js/components/menu.js"
-    ></script>
+    <script src="../js/components/menu.js"></script>
 
-    <script
-        src="../js/components/navigation.js"
-    ></script>
+    <script src="../js/components/navigation.js"></script>
 
-    <script
-        src="../js/components/footer.js"
-    ></script>
+    <script src="../js/components/footer.js"></script>
+
 
 </body>
 
