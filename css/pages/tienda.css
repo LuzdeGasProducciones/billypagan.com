@@ -12,19 +12,12 @@
 .pagina-tienda {
 
     position: relative;
-
     width: 100%;
-
     min-height: 100vh;
-
     margin: 0;
-
     padding: 0;
-
     overflow-x: hidden;
-
     isolation: isolate;
-
     background: transparent;
 
 }
@@ -39,20 +32,15 @@
     content: "";
 
     position: fixed;
-
     inset: 0;
-
     z-index: -1;
-
     pointer-events: none;
 
     background-image:
         url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
 
     background-position: center center;
-
     background-size: cover;
-
     background-repeat: no-repeat;
 
 }
@@ -67,11 +55,8 @@
     content: "";
 
     position: fixed;
-
     inset: 0;
-
     z-index: 0;
-
     pointer-events: none;
 
     background:
@@ -92,17 +77,13 @@
 .tienda-hero {
 
     position: relative;
-
     z-index: 1;
 
     width: 100%;
-
     min-height: 100vh;
-
     min-height: 100svh;
 
     margin: 0;
-
     padding: 0;
 
 }
@@ -115,17 +96,14 @@
 .tienda-contenido {
 
     position: relative;
-
     z-index: 5;
 
     width: 100%;
 
     min-height: 100vh;
-
     min-height: 100svh;
 
     margin: 0;
-
     padding:
         10rem
         5%
@@ -134,46 +112,20 @@
     box-sizing: border-box;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 
 }
 
 
 /* ==========================================================================
-   06 · CABECERA
+   06 · TÍTULO
    ========================================================================== */
 
 .tienda-cabecera {
 
     margin: 0;
-
     padding: 0;
-
-    text-align: center;
-
-}
-
-
-.tienda-etiqueta {
-
-    margin: 0 0 0.8rem;
-
-    padding: 0;
-
-    color: var(--color-texto-suave);
-
-    font-family: var(--fuente-sans);
-
-    font-size: 0.62rem;
-
-    font-weight: 400;
-
-    line-height: 1.4;
-
-    letter-spacing: 0.28em;
 
     text-align: center;
 
@@ -183,7 +135,6 @@
 .tienda-cabecera h1 {
 
     margin: 0;
-
     padding: 0;
 
     color: var(--color-texto);
@@ -192,7 +143,7 @@
 
     font-size:
         clamp(
-            2.7rem,
+            2.8rem,
             5vw,
             5rem
         );
@@ -217,11 +168,9 @@
 .tienda-ediciones {
 
     width: 100%;
-
     max-width: 1180px;
 
     margin: 5.5rem auto 0;
-
     padding: 0;
 
     display: grid;
@@ -245,7 +194,6 @@
     position: relative;
 
     margin: 0;
-
     padding: 0;
 
     text-align: center;
@@ -256,7 +204,6 @@
 .edicion-informacion {
 
     margin: 2.2rem 0 0;
-
     padding: 0;
 
 }
@@ -265,7 +212,6 @@
 .edicion-informacion h2 {
 
     margin: 0;
-
     padding: 0;
 
     color: var(--color-texto);
@@ -273,7 +219,6 @@
     font-family: var(--fuente-sans);
 
     font-size: 0.63rem;
-
     font-weight: 400;
 
     line-height: 1.5;
@@ -288,7 +233,6 @@
 .edicion-informacion p {
 
     margin: 0.65rem 0 0;
-
     padding: 0;
 
     color: var(--color-texto-suave);
@@ -296,7 +240,6 @@
     font-family: var(--fuente-sans);
 
     font-size: 0.54rem;
-
     font-weight: 300;
 
     line-height: 1.5;
@@ -309,7 +252,7 @@
 
 
 /* ==========================================================================
-   09 · VINILO
+   09 · ESCENA VINILO
    ========================================================================== */
 
 .vinilo-escena {
@@ -317,7 +260,6 @@
     position: relative;
 
     width: 330px;
-
     max-width: 100%;
 
     height: 300px;
@@ -327,21 +269,22 @@
 }
 
 
-/* ---------- PORTADA ---------- */
+/* ==========================================================================
+   10 · PORTADA VINILO
+   ========================================================================== */
 
 .vinilo-portada {
 
     position: absolute;
 
     left: 50%;
-
-    top: 20px;
+    top: 50%;
 
     width: 245px;
-
     height: 245px;
 
-    transform: translateX(-50%);
+    transform:
+        translate(-50%, -50%);
 
     z-index: 2;
 
@@ -360,7 +303,9 @@
 }
 
 
-/* ---------- TEXTO PORTADA ---------- */
+/* ==========================================================================
+   11 · TEXTO PORTADA
+   ========================================================================== */
 
 .portada-texto {
 
@@ -369,11 +314,9 @@
     inset: 0;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     color: rgba(245, 244, 240, 0.88);
@@ -390,7 +333,6 @@
     font-family: var(--fuente-sans);
 
     font-size: 0.48rem;
-
     font-weight: 300;
 
     letter-spacing: 0.28em;
@@ -403,7 +345,6 @@
     font-family: var(--fuente-titulo);
 
     font-size: 2.1rem;
-
     font-weight: 400;
 
     line-height: 0.85;
@@ -413,23 +354,25 @@
 }
 
 
-/* ---------- DISCO ---------- */
+/* ==========================================================================
+   12 · DISCO DE VINILO
+   ========================================================================== */
 
 .vinilo-disco {
 
     position: absolute;
 
     left: 50%;
-
-    top: 50px;
+    top: 50%;
 
     width: 220px;
-
     height: 220px;
 
-    border-radius: 50%;
+    margin-top: -110px;
 
     z-index: 1;
+
+    border-radius: 50%;
 
     background:
         radial-gradient(
@@ -443,18 +386,21 @@
         0 18px 35px rgba(0, 0, 0, 0.24);
 
     transform:
-        translateX(-28%)
+        translateX(-34%)
         rotate(0deg);
 
     animation:
-        vinilo-salida 8s
+        vinilo-salida
+        8s
         ease-in-out
         infinite;
 
 }
 
 
-/* ---------- SURCOS ---------- */
+/* ==========================================================================
+   13 · SURCOS
+   ========================================================================== */
 
 .vinilo-surcos {
 
@@ -477,21 +423,22 @@
 }
 
 
-/* ---------- CENTRO ---------- */
+/* ==========================================================================
+   14 · CENTRO VINILO
+   ========================================================================== */
 
 .vinilo-centro {
 
     position: absolute;
 
     left: 50%;
-
     top: 50%;
 
     width: 36px;
-
     height: 36px;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     border-radius: 50%;
 
@@ -511,14 +458,13 @@
     position: absolute;
 
     left: 50%;
-
     top: 50%;
 
     width: 5px;
-
     height: 5px;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     border-radius: 50%;
 
@@ -527,7 +473,9 @@
 }
 
 
-/* ---------- ANIMACIÓN ---------- */
+/* ==========================================================================
+   15 · ANIMACIÓN VINILO
+   ========================================================================== */
 
 @keyframes vinilo-salida {
 
@@ -535,24 +483,24 @@
     100% {
 
         transform:
-            translateX(-28%)
+            translateX(-34%)
             rotate(0deg);
 
     }
 
-    45% {
+    42% {
 
         transform:
-            translateX(2%)
-            rotate(18deg);
+            translateX(3%)
+            rotate(12deg);
 
     }
 
-    60% {
+    58% {
 
         transform:
-            translateX(2%)
-            rotate(22deg);
+            translateX(3%)
+            rotate(16deg);
 
     }
 
@@ -560,7 +508,7 @@
 
 
 /* ==========================================================================
-   10 · CD
+   16 · ESCENA CD
    ========================================================================== */
 
 .cd-escena {
@@ -568,7 +516,6 @@
     position: relative;
 
     width: 330px;
-
     max-width: 100%;
 
     height: 300px;
@@ -578,21 +525,18 @@
 }
 
 
-/* ---------- FUNDA ---------- */
-
 .cd-funda {
 
     position: absolute;
 
     left: 50%;
-
-    top: 25px;
+    top: 50%;
 
     width: 235px;
-
     height: 235px;
 
-    transform: translateX(-50%);
+    transform:
+        translate(-50%, -50%);
 
     z-index: 2;
 
@@ -609,12 +553,9 @@
 }
 
 
-/* ---------- PORTADA CD ---------- */
-
 .cd-portada {
 
     width: 100%;
-
     height: 100%;
 
     display: flex;
@@ -622,7 +563,6 @@
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     color: rgba(245, 244, 240, 0.88);
@@ -646,7 +586,6 @@
     font-family: var(--fuente-sans);
 
     font-size: 0.46rem;
-
     font-weight: 300;
 
     letter-spacing: 0.28em;
@@ -659,7 +598,6 @@
     font-family: var(--fuente-titulo);
 
     font-size: 1.9rem;
-
     font-weight: 400;
 
     line-height: 0.85;
@@ -667,21 +605,20 @@
 }
 
 
-/* ---------- DISCO CD ---------- */
-
 .cd-disco {
 
     position: absolute;
 
     left: 50%;
-
-    top: 50px;
+    top: 50%;
 
     width: 215px;
-
     height: 215px;
 
-    transform: translateX(-36%);
+    margin-top: -107.5px;
+
+    transform:
+        translateX(-36%);
 
     z-index: 1;
 
@@ -728,14 +665,13 @@
     position: absolute;
 
     left: 50%;
-
     top: 50%;
 
     width: 43px;
-
     height: 43px;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     border-radius: 50%;
 
@@ -751,7 +687,7 @@
 
 
 /* ==========================================================================
-   11 · DIGITAL
+   17 · EDICIÓN DIGITAL
    ========================================================================== */
 
 .digital-escena {
@@ -759,7 +695,6 @@
     position: relative;
 
     width: 330px;
-
     max-width: 100%;
 
     height: 300px;
@@ -769,7 +704,6 @@
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
 }
@@ -780,7 +714,6 @@
     position: relative;
 
     width: 245px;
-
     height: 245px;
 
     display: flex;
@@ -788,7 +721,6 @@
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     color: rgba(245, 244, 240, 0.88);
@@ -820,7 +752,9 @@
 
     inset: 14px;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
 
 }
 
@@ -832,7 +766,6 @@
     font-family: var(--fuente-sans);
 
     font-size: 0.48rem;
-
     font-weight: 300;
 
     letter-spacing: 0.28em;
@@ -845,7 +778,6 @@
     font-family: var(--fuente-titulo);
 
     font-size: 2.1rem;
-
     font-weight: 400;
 
     line-height: 0.85;
@@ -855,7 +787,8 @@
 
 .edicion-digital:hover .digital-portada {
 
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
     box-shadow:
         0 24px 45px rgba(0, 0, 0, 0.18);
@@ -864,34 +797,113 @@
 
 
 /* ==========================================================================
-   12 · ESTADO GENERAL
+   18 · BOTÓN DE COMPRA
    ========================================================================== */
 
-.tienda-estado {
+.tienda-boton {
 
-    margin: 4.8rem 0 0;
+    position: relative;
 
-    padding: 0;
+    display: inline-block;
 
-    color: var(--color-texto-suave);
+    margin-top: 1.35rem;
+
+    padding:
+        0.85rem
+        1.65rem;
+
+    border:
+        1px solid
+        rgba(32, 32, 32, 0.42);
+
+    background: transparent;
+
+    color: var(--color-texto);
 
     font-family: var(--fuente-sans);
 
-    font-size: 0.57rem;
+    font-size: 0.58rem;
 
-    font-weight: 300;
+    font-weight: 400;
 
-    line-height: 1.5;
+    line-height: 1;
 
-    letter-spacing: 0.28em;
+    letter-spacing: 0.20em;
+
+    text-decoration: none;
 
     text-align: center;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        color 0.35s ease;
+
+}
+
+
+.tienda-boton::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 1.65rem;
+    right: 1.65rem;
+
+    bottom: 0.45rem;
+
+    height: 1px;
+
+    background:
+        currentColor;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        center;
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.tienda-boton:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(32, 32, 32, 0.65);
+
+}
+
+
+.tienda-boton:hover::after {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.tienda-boton:focus-visible {
+
+    outline:
+        1px solid
+        rgba(32, 32, 32, 0.7);
+
+    outline-offset:
+        4px;
 
 }
 
 
 /* ==========================================================================
-   13 · ESCRITORIOS GRANDES
+   19 · ESCRITORIOS GRANDES
    ========================================================================== */
 
 @media (min-width: 1600px) {
@@ -916,7 +928,7 @@
 
 
 /* ==========================================================================
-   14 · TABLET
+   20 · TABLET
    ========================================================================== */
 
 @media (max-width: 1100px) {
@@ -931,7 +943,8 @@
     .cd-escena,
     .digital-escena {
 
-        transform: scale(0.9);
+        transform:
+            scale(0.9);
 
     }
 
@@ -939,7 +952,7 @@
 
 
 /* ==========================================================================
-   15 · MÓVIL
+   21 · MÓVIL
    ========================================================================== */
 
 @media (max-width: 767px) {
@@ -983,7 +996,8 @@
     .cd-escena,
     .digital-escena {
 
-        transform: scale(0.92);
+        transform:
+            scale(0.92);
 
     }
 
@@ -998,7 +1012,7 @@
 
 
 /* ==========================================================================
-   16 · MÓVILES PEQUEÑOS
+   22 · MÓVILES PEQUEÑOS
    ========================================================================== */
 
 @media (max-width: 380px) {
@@ -1006,7 +1020,6 @@
     .tienda-contenido {
 
         padding-left: 4%;
-
         padding-right: 4%;
 
     }
@@ -1016,9 +1029,11 @@
     .cd-escena,
     .digital-escena {
 
-        transform: scale(0.82);
+        transform:
+            scale(0.82);
 
-        transform-origin: top center;
+        transform-origin:
+            top center;
 
     }
 
@@ -1033,7 +1048,7 @@
 
 
 /* ==========================================================================
-   17 · REDUCCIÓN DE MOVIMIENTO
+   23 · REDUCCIÓN DE MOVIMIENTO
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1044,6 +1059,7 @@
 
     }
 
+
     .digital-portada {
 
         transition: none;
@@ -1051,5 +1067,3 @@
     }
 
 }
-
-
