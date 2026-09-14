@@ -14,16 +14,19 @@
     position: relative;
 
     width: 100%;
+
     min-height: 100vh;
 
     margin: 0;
+
     padding: 0;
 
     overflow-x: hidden;
 
+    isolation: isolate;
+
     background: transparent;
 
-    isolation: isolate;
 }
 
 
@@ -39,7 +42,7 @@
 
     inset: 0;
 
-    z-index: -2;
+    z-index: -1;
 
     pointer-events: none;
 
@@ -51,6 +54,7 @@
     background-size: cover;
 
     background-repeat: no-repeat;
+
 }
 
 
@@ -66,7 +70,7 @@
 
     inset: 0;
 
-    z-index: -1;
+    z-index: 0;
 
     pointer-events: none;
 
@@ -77,11 +81,12 @@
             rgba(255, 255, 255, 0) 45%,
             rgba(0, 0, 0, 0.025) 100%
         );
+
 }
 
 
 /* ==========================================================================
-   04 · CONTENIDO PRINCIPAL
+   04 · CONTENEDOR PRINCIPAL
    ========================================================================== */
 
 .contacto-hero {
@@ -93,17 +98,18 @@
     width: 100%;
 
     min-height: 100vh;
+
     min-height: 100svh;
 
     margin: 0;
+
     padding: 0;
 
-    box-sizing: border-box;
 }
 
 
 /* ==========================================================================
-   05 · CONTENEDOR
+   05 · CONTENIDO
    ========================================================================== */
 
 .contacto-contenido {
@@ -115,46 +121,47 @@
     width: 100%;
 
     min-height: 100vh;
+
     min-height: 100svh;
 
     margin: 0;
-    padding: 10rem 6% 8rem;
+
+    padding:
+        10rem
+        6%
+        8rem;
 
     display: flex;
+
+    flex-direction: column;
 
     justify-content: center;
 
     align-items: center;
 
-    box-sizing: border-box;
-
     text-align: center;
+
 }
 
 
 /* ==========================================================================
-   06 · BLOQUE DE CONTACTO
+   06 · TEXTO · CONTRATACIÓN
    ========================================================================== */
 
-.contacto-texto {
+.contacto-mensaje {
 
-    position: relative;
-
-    z-index: 10;
+    width: min(100%, 720px);
 
     margin: 0;
 
     padding: 0;
 
     text-align: center;
+
 }
 
 
-/* ==========================================================================
-   07 · CONTRATACIÓN
-   ========================================================================== */
-
-.contacto-texto p {
+.contacto-mensaje p {
 
     margin: 0;
 
@@ -168,82 +175,384 @@
 
     font-weight: 300;
 
-    line-height: 1.6;
+    line-height: 1.8;
 
-    letter-spacing: 0.25em;
+    letter-spacing: 0.20em;
 
     text-align: center;
 
-    text-transform: uppercase;
 }
 
 
 /* ==========================================================================
-   08 · MUSIC ART PRODUCCIONES
+   07 · BOTÓN · MUSIC ART PRODUCCIONES
    ========================================================================== */
 
-.contacto-enlace {
+.contacto-produccion {
 
-    display: inline-block;
-
-    margin-top: 1.8rem;
+    margin: 3rem 0 0;
 
     padding: 0;
 
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.contacto-boton-produccion {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0;
+
+    padding:
+        0.85rem
+        1.8rem
+        0.75rem;
+
     color: var(--color-texto);
+
+    background: transparent;
+
+    border: 1px solid rgba(32, 32, 32, 0.42);
+
+    border-radius: 0;
 
     font-family: var(--fuente-sans);
 
-    font-size: 0.72rem;
+    font-size: 0.60rem;
 
-    font-weight: 400;
+    font-weight: 300;
 
-    line-height: 1.5;
+    line-height: 1;
 
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
 
     text-align: center;
 
     text-decoration: none;
 
-    text-transform: uppercase;
+    white-space: nowrap;
 
     transition:
-        opacity 0.6s ease,
-        letter-spacing 0.6s ease;
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
+
 }
 
 
-.contacto-enlace:hover {
+.contacto-boton-produccion::after {
 
-    opacity: 0.62;
+    content: "";
 
-    letter-spacing: 0.22em;
+    position: absolute;
+
+    left: 1.8rem;
+
+    right: 1.8rem;
+
+    bottom: 0.32rem;
+
+    height: 1px;
+
+    background: currentColor;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: transform 0.45s ease;
+
+}
+
+
+.contacto-boton-produccion:hover {
+
+    color: var(--color-texto-suave);
+
+    border-color: rgba(32, 32, 32, 0.68);
+
+    transform: translateY(-2px);
+
+}
+
+
+.contacto-boton-produccion:hover::after {
+
+    transform: scaleX(1);
+
 }
 
 
 /* ==========================================================================
-   09 · FOCUS
+   08 · FOCUS
    ========================================================================== */
 
-.contacto-enlace:focus-visible {
+.contacto-boton-produccion:focus-visible {
 
     outline: none;
 
-    opacity: 0.62;
+    color: var(--color-texto-suave);
 
-    letter-spacing: 0.22em;
+    border-color: rgba(32, 32, 32, 0.68);
+
 }
 
 
 /* ==========================================================================
-   10 · REDUCCIÓN DE MOVIMIENTO
+   09 · PANTALLAS GRANDES
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+
+    .contacto-contenido {
+
+        padding:
+            11rem
+            6%
+            9rem;
+
+    }
+
+
+    .contacto-mensaje p {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .contacto-produccion {
+
+        margin-top: 3.2rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   10 · TABLET
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .contacto-contenido {
+
+        padding:
+            9rem
+            6%
+            7rem;
+
+    }
+
+
+    .contacto-mensaje p {
+
+        font-size: 0.64rem;
+
+    }
+
+
+    .contacto-produccion {
+
+        margin-top: 2.8rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   11 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-contacto::before {
+
+        background-position: center center;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+    }
+
+
+    .contacto-hero {
+
+        min-height: 100svh;
+
+    }
+
+
+    .contacto-contenido {
+
+        width: 100%;
+
+        min-height: 100svh;
+
+        padding:
+            7rem
+            7%
+            5rem;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-mensaje {
+
+        max-width: 520px;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-mensaje p {
+
+        font-size: 0.58rem;
+
+        line-height: 1.8;
+
+        letter-spacing: 0.16em;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-produccion {
+
+        margin-top: 2.6rem;
+
+    }
+
+
+    .contacto-boton-produccion {
+
+        padding:
+            0.82rem
+            1.35rem
+            0.72rem;
+
+        font-size: 0.56rem;
+
+        letter-spacing: 0.18em;
+
+    }
+
+
+    .contacto-boton-produccion::after {
+
+        left: 1.35rem;
+
+        right: 1.35rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   12 · MÓVILES PEQUEÑOS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .contacto-contenido {
+
+        padding:
+            6.5rem
+            7%
+            5rem;
+
+    }
+
+
+    .contacto-mensaje p {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.14em;
+
+    }
+
+
+    .contacto-produccion {
+
+        margin-top: 2.3rem;
+
+    }
+
+
+    .contacto-boton-produccion {
+
+        padding:
+            0.78rem
+            1.1rem
+            0.68rem;
+
+        font-size: 0.52rem;
+
+        letter-spacing: 0.15em;
+
+    }
+
+
+    .contacto-boton-produccion::after {
+
+        left: 1.1rem;
+
+        right: 1.1rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   13 · REDUCCIÓN DE MOVIMIENTO
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .contacto-enlace {
+    .pagina-contacto::before {
+
+        position: absolute;
+
+    }
+
+
+    .contacto-boton-produccion {
 
         transition: none;
+
     }
+
+
+    .contacto-boton-produccion::after {
+
+        transition: none;
+
+    }
+
 }
