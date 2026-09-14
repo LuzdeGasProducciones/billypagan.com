@@ -116,7 +116,7 @@
 
     position: relative;
 
-    z-index: 5;
+    z-index: 10;
 
     width: 100%;
 
@@ -141,6 +141,8 @@
 
     text-align: center;
 
+    box-sizing: border-box;
+
 }
 
 
@@ -149,6 +151,10 @@
    ========================================================================== */
 
 .galeria-titulo {
+
+    position: relative;
+
+    z-index: 10;
 
     margin: 0;
 
@@ -193,6 +199,12 @@
 
 .galeria-mensaje {
 
+    position: relative;
+
+    z-index: 10;
+
+    width: min(100%, 720px);
+
     margin: 2rem 0 0;
 
     padding: 0;
@@ -216,9 +228,9 @@
 
     font-weight: 300;
 
-    line-height: 1.6;
+    line-height: 1.8;
 
-    letter-spacing: 0.25em;
+    letter-spacing: 0.20em;
 
     text-align: center;
 
@@ -373,6 +385,8 @@
 
     .galeria-mensaje {
 
+        max-width: 520px;
+
         margin-top: 1.6rem;
 
         text-align: center;
@@ -384,7 +398,9 @@
 
         font-size: 0.58rem;
 
-        letter-spacing: 0.20em;
+        line-height: 1.8;
+
+        letter-spacing: 0.16em;
 
         text-align: center;
 
@@ -427,7 +443,7 @@
 
         font-size: 0.54rem;
 
-        letter-spacing: 0.16em;
+        letter-spacing: 0.14em;
 
     }
 
