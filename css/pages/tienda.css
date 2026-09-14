@@ -1,1 +1,1055 @@
+/* ==========================================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   tienda.css
+   PÁGINA · TIENDA
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01 · PÁGINA
+   ========================================================================== */
+
+.pagina-tienda {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    isolation: isolate;
+
+    background: transparent;
+
+}
+
+
+/* ==========================================================================
+   02 · FONDO
+   ========================================================================== */
+
+.pagina-tienda::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-position: center center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ==========================================================================
+   03 · ATMÓSFERA
+   ========================================================================== */
+
+.pagina-tienda::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(0, 0, 0, 0.025) 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   04 · HERO
+   ========================================================================== */
+
+.tienda-hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================================================
+   05 · CONTENIDO
+   ========================================================================== */
+
+.tienda-contenido {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding:
+        10rem
+        5%
+        8rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* ==========================================================================
+   06 · CABECERA
+   ========================================================================== */
+
+.tienda-cabecera {
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+
+.tienda-etiqueta {
+
+    margin: 0 0 0.8rem;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.28em;
+
+    text-align: center;
+
+}
+
+
+.tienda-cabecera h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulo);
+
+    font-size:
+        clamp(
+            2.7rem,
+            5vw,
+            5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.025em;
+
+    text-align: center;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+/* ==========================================================================
+   07 · EDICIONES
+   ========================================================================== */
+
+.tienda-ediciones {
+
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 5.5rem auto 0;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 4rem;
+
+    align-items: start;
+
+}
+
+
+/* ==========================================================================
+   08 · EDICIÓN
+   ========================================================================== */
+
+.edicion {
+
+    position: relative;
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+
+.edicion-informacion {
+
+    margin: 2.2rem 0 0;
+
+    padding: 0;
+
+}
+
+
+.edicion-informacion h2 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.63rem;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.20em;
+
+    text-align: center;
+
+}
+
+
+.edicion-informacion p {
+
+    margin: 0.65rem 0 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.54rem;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.18em;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   09 · VINILO
+   ========================================================================== */
+
+.vinilo-escena {
+
+    position: relative;
+
+    width: 330px;
+
+    max-width: 100%;
+
+    height: 300px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ---------- PORTADA ---------- */
+
+.vinilo-portada {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 20px;
+
+    width: 245px;
+
+    height: 245px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(55, 55, 52, 0.92),
+            rgba(25, 25, 24, 0.98)
+        );
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* ---------- TEXTO PORTADA ---------- */
+
+.portada-texto {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(245, 244, 240, 0.88);
+
+    text-align: center;
+
+}
+
+
+.portada-texto span {
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.48rem;
+
+    font-weight: 300;
+
+    letter-spacing: 0.28em;
+
+}
+
+
+.portada-texto strong {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2.1rem;
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+/* ---------- DISCO ---------- */
+
+.vinilo-disco {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50px;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #b8b8b3 0 3%,
+            #262624 3.5% 5%,
+            #11110f 5.5% 100%
+        );
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.24);
+
+    transform:
+        translateX(-28%)
+        rotate(0deg);
+
+    animation:
+        vinilo-salida 8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ---------- SURCOS ---------- */
+
+.vinilo-surcos {
+
+    position: absolute;
+
+    inset: 8px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle at center,
+            transparent 0 3px,
+            rgba(255, 255, 255, 0.055) 3.5px 4px,
+            transparent 4.5px 7px
+        );
+
+    opacity: 0.8;
+
+}
+
+
+/* ---------- CENTRO ---------- */
+
+.vinilo-centro {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 36px;
+
+    height: 36px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #d0d0c8 0 16%,
+            #777770 17% 19%,
+            #252522 20% 100%
+        );
+
+}
+
+
+.vinilo-centro span {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 5px;
+
+    height: 5px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #11110f;
+
+}
+
+
+/* ---------- ANIMACIÓN ---------- */
+
+@keyframes vinilo-salida {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-28%)
+            rotate(0deg);
+
+    }
+
+    45% {
+
+        transform:
+            translateX(2%)
+            rotate(18deg);
+
+    }
+
+    60% {
+
+        transform:
+            translateX(2%)
+            rotate(22deg);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   10 · CD
+   ========================================================================== */
+
+.cd-escena {
+
+    position: relative;
+
+    width: 330px;
+
+    max-width: 100%;
+
+    height: 300px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ---------- FUNDA ---------- */
+
+.cd-funda {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 25px;
+
+    width: 235px;
+
+    height: 235px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(35, 35, 33, 0.92);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.14);
+
+}
+
+
+/* ---------- PORTADA CD ---------- */
+
+.cd-portada {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(245, 244, 240, 0.88);
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(70, 70, 67, 0.9),
+            rgba(28, 28, 27, 0.98)
+        );
+
+}
+
+
+.cd-portada span {
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.46rem;
+
+    font-weight: 300;
+
+    letter-spacing: 0.28em;
+
+}
+
+
+.cd-portada strong {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 1.9rem;
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+}
+
+
+/* ---------- DISCO CD ---------- */
+
+.cd-disco {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50px;
+
+    width: 215px;
+
+    height: 215px;
+
+    transform: translateX(-36%);
+
+    z-index: 1;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #bdbdb7 0 4%,
+            #e2e1da 4.5% 16%,
+            #aaa9a3 16.5% 17%,
+            #d8d7d0 17.5% 100%
+        );
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.cd-reflejo {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.35) 45%,
+            transparent 55%
+        );
+
+    opacity: 0.55;
+
+}
+
+
+.cd-centro {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 43px;
+
+    height: 43px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #222 0 8%,
+            #c5c4bd 9% 42%,
+            #8f8e88 43% 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   11 · DIGITAL
+   ========================================================================== */
+
+.digital-escena {
+
+    position: relative;
+
+    width: 330px;
+
+    max-width: 100%;
+
+    height: 300px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.digital-portada {
+
+    position: relative;
+
+    width: 245px;
+
+    height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(245, 244, 240, 0.88);
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(50, 50, 48, 0.94),
+            rgba(22, 22, 21, 0.98)
+        );
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.8s ease,
+        box-shadow 0.8s ease;
+
+}
+
+
+.digital-portada::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+}
+
+
+.digital-portada span {
+
+    margin-bottom: 0.7rem;
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.48rem;
+
+    font-weight: 300;
+
+    letter-spacing: 0.28em;
+
+}
+
+
+.digital-portada strong {
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2.1rem;
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+}
+
+
+.edicion-digital:hover .digital-portada {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 24px 45px rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* ==========================================================================
+   12 · ESTADO GENERAL
+   ========================================================================== */
+
+.tienda-estado {
+
+    margin: 4.8rem 0 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.57rem;
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.28em;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   13 · ESCRITORIOS GRANDES
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+
+    .tienda-contenido {
+
+        padding-top: 11rem;
+
+    }
+
+    .tienda-ediciones {
+
+        max-width: 1250px;
+
+        gap: 5rem;
+
+        margin-top: 6rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   14 · TABLET
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+
+    .tienda-ediciones {
+
+        gap: 2rem;
+
+    }
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+
+        transform: scale(0.9);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   15 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .tienda-contenido {
+
+        min-height: auto;
+
+        padding:
+            8rem
+            6%
+            6rem;
+
+    }
+
+
+    .tienda-cabecera h1 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                11vw,
+                3.5rem
+            );
+
+    }
+
+
+    .tienda-ediciones {
+
+        margin-top: 4rem;
+
+        grid-template-columns: 1fr;
+
+        gap: 5.5rem;
+
+    }
+
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+
+        transform: scale(0.92);
+
+    }
+
+
+    .tienda-estado {
+
+        margin-top: 4rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   16 · MÓVILES PEQUEÑOS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .tienda-contenido {
+
+        padding-left: 4%;
+
+        padding-right: 4%;
+
+    }
+
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+
+        transform: scale(0.82);
+
+        transform-origin: top center;
+
+    }
+
+
+    .tienda-ediciones {
+
+        gap: 4.5rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   17 · REDUCCIÓN DE MOVIMIENTO
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vinilo-disco {
+
+        animation: none;
+
+    }
+
+    .digital-portada {
+
+        transition: none;
+
+    }
+
+}
+
 
