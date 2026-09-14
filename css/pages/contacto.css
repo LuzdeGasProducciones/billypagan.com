@@ -1,1 +1,549 @@
+/* ==========================================================================
+   BILLY PAGÁN · SITIO OFICIAL
+   contacto.css
+   PÁGINA · CONTACTO
+   ========================================================================== */
 
+
+/* ==========================================================================
+   01 · PÁGINA
+   ========================================================================== */
+
+.pagina-contacto {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow-x: hidden;
+
+    isolation: isolate;
+
+    background: transparent;
+
+}
+
+
+/* ==========================================================================
+   02 · FONDO
+   ========================================================================== */
+
+.pagina-contacto::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+        url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
+
+    background-position: center center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* ==========================================================================
+   03 · ATMÓSFERA
+   ========================================================================== */
+
+.pagina-contacto::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(0, 0, 0, 0.025) 100%
+        );
+
+}
+
+
+/* ==========================================================================
+   04 · CONTENEDOR PRINCIPAL
+   ========================================================================== */
+
+.contacto-hero {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================================================
+   05 · CONTENIDO
+   ========================================================================== */
+
+.contacto-contenido {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    margin: 0;
+
+    padding:
+        10rem
+        6%
+        8rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   06 · TÍTULO
+   ========================================================================== */
+
+.contacto-titulo {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.contacto-titulo h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-titulo);
+
+    font-size:
+        clamp(
+            2.6rem,
+            4.5vw,
+            4.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+
+    text-align: center;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+/* ==========================================================================
+   07 · TEXTO
+   ========================================================================== */
+
+.contacto-texto {
+
+    margin: 2rem 0 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+
+.contacto-texto p {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.68rem;
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.25em;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   08 · ENLACE
+   ========================================================================== */
+
+.contacto-enlace {
+
+    display: inline-block;
+
+    margin-top: 1.8rem;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.72rem;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.18em;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.6s ease,
+        letter-spacing 0.6s ease;
+
+}
+
+
+.contacto-enlace:hover {
+
+    opacity: 0.62;
+
+    letter-spacing: 0.22em;
+
+}
+
+
+/* ==========================================================================
+   09 · PANTALLAS GRANDES
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+
+    .contacto-contenido {
+
+        padding:
+            11rem
+            6%
+            9rem;
+
+    }
+
+
+    .contacto-titulo h1 {
+
+        font-size:
+            clamp(
+                3.2rem,
+                4vw,
+                5rem
+            );
+
+    }
+
+
+    .contacto-texto {
+
+        margin-top: 2.2rem;
+
+    }
+
+
+    .contacto-texto p {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .contacto-enlace {
+
+        margin-top: 2rem;
+
+        font-size: 0.76rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   10 · TABLET
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .contacto-contenido {
+
+        padding:
+            9rem
+            6%
+            7rem;
+
+    }
+
+
+    .contacto-titulo h1 {
+
+        font-size:
+            clamp(
+                2.8rem,
+                5vw,
+                4rem
+            );
+
+    }
+
+
+    .contacto-texto {
+
+        margin-top: 1.8rem;
+
+    }
+
+
+    .contacto-texto p {
+
+        font-size: 0.64rem;
+
+    }
+
+
+    .contacto-enlace {
+
+        margin-top: 1.7rem;
+
+        font-size: 0.68rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   11 · MÓVIL
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .pagina-contacto::before {
+
+        background-position: center center;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+    }
+
+
+    .contacto-hero {
+
+        min-height: 100svh;
+
+    }
+
+
+    .contacto-contenido {
+
+        width: 100%;
+
+        min-height: 100svh;
+
+        padding:
+            7rem
+            7%
+            5rem;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-titulo h1 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                10vw,
+                3.5rem
+            );
+
+        text-align: center;
+
+    }
+
+
+    .contacto-texto {
+
+        margin-top: 1.6rem;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-texto p {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.20em;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-enlace {
+
+        margin-top: 1.5rem;
+
+        font-size: 0.62rem;
+
+        letter-spacing: 0.14em;
+
+        text-align: center;
+
+    }
+
+
+    .contacto-enlace:hover {
+
+        letter-spacing: 0.16em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   12 · MÓVILES PEQUEÑOS
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    .contacto-contenido {
+
+        padding:
+            6.5rem
+            7%
+            5rem;
+
+    }
+
+
+    .contacto-titulo h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .contacto-texto {
+
+        margin-top: 1.4rem;
+
+    }
+
+
+    .contacto-texto p {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.16em;
+
+    }
+
+
+    .contacto-enlace {
+
+        margin-top: 1.4rem;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.12em;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   13 · REDUCCIÓN DE MOVIMIENTO
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-contacto::before {
+
+        position: absolute;
+
+    }
+
+
+    .contacto-enlace {
+
+        transition: none;
+
+    }
+
+}
