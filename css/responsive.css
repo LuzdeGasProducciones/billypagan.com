@@ -49,8 +49,6 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL VERTICAL · MÁS GRANDE
-       Y PEGADA A LOS MÁRGENES IZQUIERDO E INFERIOR
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -74,10 +72,11 @@
 
 
     /* --------------------------------------------------
-       MENÚ
+       MENÚ PRINCIPAL
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .menu {
+    .menu {
 
         display: none;
 
@@ -86,9 +85,10 @@
 
     /* --------------------------------------------------
        HAMBURGUESA
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .hamburguesa {
+    .hamburguesa {
 
         display: flex;
 
@@ -97,9 +97,10 @@
 
     /* --------------------------------------------------
        MENÚ MÓVIL
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .menu-movil {
+    .menu-movil {
 
         position: fixed;
 
@@ -142,7 +143,7 @@
     }
 
 
-    .pagina-inicio .menu-movil.abierto {
+    .menu-movil.abierto {
 
         opacity: 1;
 
@@ -154,7 +155,7 @@
 
 
     /* --------------------------------------------------
-       CONTENIDO
+       CONTENIDO · PORTADA
     -------------------------------------------------- */
 
     .pagina-inicio .contenido {
@@ -188,7 +189,7 @@
 
 
     /* --------------------------------------------------
-       FOOTER
+       FOOTER · PORTADA
     -------------------------------------------------- */
 
     .pagina-inicio .footer {
@@ -253,6 +254,7 @@
             no-repeat;
 
         height: 100svh;
+
         min-height: 100svh;
 
         overflow: hidden;
@@ -267,14 +269,18 @@
     .pagina-inicio .hero {
 
         height: 100svh;
+
         min-height: 100svh;
 
         background-image:
             url("../images/fondos/movil/fondo-general-movil.jpg");
 
         background-position: center center;
+
         background-size: cover;
+
         background-repeat: no-repeat;
+
         background-attachment: scroll;
 
     }
@@ -282,8 +288,6 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
-       AJUSTADA A LOS BORDES INFERIOR E IZQUIERDO
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -308,17 +312,18 @@
 
 
     /* --------------------------------------------------
-       MENÚ
-       MÓVIL HORIZONTAL · AJUSTADO AL ANCHO DISPONIBLE
-       Tamaño de fuente y espaciado fluidos (clamp) para
-       que los 8 enlaces quepan en cualquier ancho de
-       pantalla en horizontal, incluso en los teléfonos
-       más pequeños; el ajuste con flex-wrap actúa como
-       red de seguridad si aun así no cupieran en una
-       sola línea.
+       MENÚ PRINCIPAL
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .menu ul {
+    .menu {
+
+        display: block;
+
+    }
+
+
+    .menu ul {
 
         flex-wrap: wrap;
 
@@ -331,9 +336,10 @@
     }
 
 
-    .pagina-inicio .menu a {
+    .menu a {
 
-        font-size: clamp(0.42rem, 1.7vw, 0.55rem);
+        font-size:
+            clamp(0.42rem, 1.7vw, 0.55rem);
 
         letter-spacing: 0.05em;
 
@@ -341,12 +347,16 @@
 
 
     /* --------------------------------------------------
-       HAMBURGUESA, CONTENIDO Y FOOTER
-       MÓVIL HORIZONTAL · MISMO DISEÑO QUE ESCRITORIO
-       No se sobrescriben aquí: se heredan las reglas
-       base (hamburguesa.css, styles.css, footer.css),
-       idénticas a la versión de escritorio.
+       HAMBURGUESA / MENÚ MÓVIL
+       GLOBAL · OCULTOS EN HORIZONTAL
     -------------------------------------------------- */
+
+    .hamburguesa,
+    .menu-movil {
+
+        display: none;
+
+    }
 
 }
 
@@ -389,7 +399,6 @@
 
     /* --------------------------------------------------
        IMAGEN DE BILLY
-       POSICIÓN PROVISIONAL · CENTRADA
     -------------------------------------------------- */
 
     .pagina-inicio .imagen-billy-portada {
@@ -409,10 +418,18 @@
 
 
     /* --------------------------------------------------
-       MENÚ
+       MENÚ PRINCIPAL
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .menu ul {
+    .menu {
+
+        display: block;
+
+    }
+
+
+    .menu ul {
 
         gap: 1.5rem;
 
@@ -421,7 +438,7 @@
     }
 
 
-    .pagina-inicio .menu a {
+    .menu a {
 
         font-size: 0.65rem;
 
@@ -431,10 +448,12 @@
 
 
     /* --------------------------------------------------
-       HAMBURGUESA
+       HAMBURGUESA / MENÚ MÓVIL
+       GLOBAL · OCULTOS EN TABLET
     -------------------------------------------------- */
 
-    .pagina-inicio .hamburguesa {
+    .hamburguesa,
+    .menu-movil {
 
         display: none;
 
@@ -442,18 +461,7 @@
 
 
     /* --------------------------------------------------
-       MENÚ MÓVIL
-    -------------------------------------------------- */
-
-    .pagina-inicio .menu-movil {
-
-        display: none;
-
-    }
-
-
-    /* --------------------------------------------------
-       CONTENIDO
+       CONTENIDO · PORTADA
     -------------------------------------------------- */
 
     .pagina-inicio .contenido {
@@ -495,17 +503,18 @@
 
 
     /* --------------------------------------------------
-       MENÚ
+       MENÚ PRINCIPAL
+       GLOBAL · TODAS LAS PÁGINAS
     -------------------------------------------------- */
 
-    .pagina-inicio .menu {
+    .menu {
 
         display: block;
 
     }
 
 
-    .pagina-inicio .menu ul {
+    .menu ul {
 
         gap: 2.5rem;
 
@@ -514,7 +523,7 @@
     }
 
 
-    .pagina-inicio .menu a {
+    .menu a {
 
         font-size: 0.72rem;
 
@@ -523,10 +532,11 @@
 
     /* --------------------------------------------------
        HAMBURGUESA / MENÚ MÓVIL
+       GLOBAL · OCULTOS EN ESCRITORIO
     -------------------------------------------------- */
 
-    .pagina-inicio .hamburguesa,
-    .pagina-inicio .menu-movil {
+    .hamburguesa,
+    .menu-movil {
 
         display: none;
 
@@ -534,7 +544,7 @@
 
 
     /* --------------------------------------------------
-       CONTENIDO
+       CONTENIDO · PORTADA
     -------------------------------------------------- */
 
     .pagina-inicio .contenido h1 {
@@ -555,12 +565,20 @@
 @media (min-width: 1600px) {
 
 
-    .pagina-inicio .menu ul {
+    /* --------------------------------------------------
+       MENÚ PRINCIPAL
+    -------------------------------------------------- */
+
+    .menu ul {
 
         gap: 3rem;
 
     }
 
+
+    /* --------------------------------------------------
+       TÍTULO · PORTADA
+    -------------------------------------------------- */
 
     .pagina-inicio .contenido h1 {
 
