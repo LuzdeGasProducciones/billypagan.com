@@ -1,7 +1,5 @@
 /* =========================================================
    TIENDA — BILLY PAGÁN
-   tienda.css
-   PAGINA - TIENDA
    ========================================================= */
 
 .pagina-tienda {
@@ -148,23 +146,23 @@
 .vinilo-escena {
     position: relative;
 
-    width: 300px;
-    height: 250px;
+    width: 270px;
+    height: 245px;
 
     display: block;
 }
 
 
-/* DISCO OCULTO DETRÁS */
+/* DISCO */
 
 .vinilo-disco {
     position: absolute;
 
-    width: 215px;
-    height: 215px;
+    width: 175px;
+    height: 175px;
 
-    left: 42px;
-    top: 18px;
+    left: 48px;
+    top: 35px;
 
     border-radius: 50%;
 
@@ -178,22 +176,24 @@
         );
 
     box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.18);
+        0 10px 22px rgba(0, 0, 0, 0.17);
 
     z-index: 1;
 
+    transform: translateX(0) rotate(0deg);
+
     transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
-/* CENTRO */
+/* CENTRO DEL VINILO */
 
 .vinilo-centro {
     position: absolute;
 
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 
     left: 50%;
     top: 50%;
@@ -214,8 +214,8 @@
     width: 205px;
     height: 205px;
 
-    left: 45px;
-    top: 22px;
+    left: 35px;
+    top: 20px;
 
     z-index: 2;
 
@@ -237,11 +237,10 @@
 }
 
 
-/* AL PASAR EL CURSOR:
-   EL DISCO SALE SOLO UN POCO POR LA DERECHA */
+/* SALE POR LA DERECHA Y GIRA */
 
 .vinilo-escena:hover .vinilo-disco {
-    transform: translateX(55px);
+    transform: translateX(45px) rotate(180deg);
 }
 
 
@@ -252,23 +251,23 @@
 .cd-escena {
     position: relative;
 
-    width: 300px;
-    height: 250px;
+    width: 270px;
+    height: 245px;
 
     display: block;
 }
 
 
-/* CD OCULTO DETRÁS */
+/* DISCO CD */
 
 .cd-disco {
     position: absolute;
 
-    width: 205px;
-    height: 205px;
+    width: 165px;
+    height: 165px;
 
-    left: 47px;
-    top: 22px;
+    left: 53px;
+    top: 40px;
 
     border-radius: 50%;
 
@@ -282,22 +281,24 @@
         );
 
     box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.14);
+        0 10px 20px rgba(0, 0, 0, 0.13);
 
     z-index: 1;
 
+    transform: translateX(0) rotate(0deg);
+
     transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
-/* CENTRO */
+/* CENTRO DEL CD */
 
 .cd-centro {
     position: absolute;
 
-    width: 32px;
-    height: 32px;
+    width: 27px;
+    height: 27px;
 
     left: 50%;
     top: 50%;
@@ -313,7 +314,7 @@
 }
 
 
-/* PORTADA */
+/* PORTADA CD */
 
 .cd-portada {
     position: absolute;
@@ -321,8 +322,8 @@
     width: 195px;
     height: 195px;
 
-    left: 50px;
-    top: 27px;
+    left: 38px;
+    top: 25px;
 
     z-index: 2;
 
@@ -344,21 +345,20 @@
 }
 
 
-/* AL PASAR EL CURSOR:
-   EL CD SALE SOLO UN POCO POR LA DERECHA */
+/* SALE POR LA DERECHA Y GIRA */
 
 .cd-escena:hover .cd-disco {
-    transform: translateX(52px);
+    transform: translateX(42px) rotate(180deg);
 }
 
 
 /* =========================================================
-   DIGITAL
+   EDICIÓN DIGITAL
    ========================================================= */
 
 .digital-escena {
     width: 270px;
-    height: 250px;
+    height: 245px;
 
     display: flex;
     justify-content: center;
@@ -391,6 +391,7 @@
 
 .edicion-informacion {
     width: 100%;
+
     margin-top: 1.5rem;
 }
 
@@ -481,45 +482,45 @@
     }
 
     .edicion-visual {
-        height: 280px;
+        height: 270px;
     }
 
     .vinilo-escena,
     .cd-escena {
-        width: 290px;
-        height: 250px;
+        width: 270px;
+        height: 240px;
     }
 
     .vinilo-disco {
-        width: 205px;
-        height: 205px;
+        width: 165px;
+        height: 165px;
 
-        left: 42px;
-        top: 20px;
+        left: 52px;
+        top: 38px;
     }
 
     .vinilo-portada {
         width: 190px;
         height: 190px;
 
-        left: 45px;
-        top: 27px;
+        left: 38px;
+        top: 24px;
     }
 
     .cd-disco {
-        width: 195px;
-        height: 195px;
+        width: 155px;
+        height: 155px;
 
-        left: 45px;
-        top: 25px;
+        left: 57px;
+        top: 42px;
     }
 
     .cd-portada {
         width: 185px;
         height: 185px;
 
-        left: 48px;
-        top: 32px;
+        left: 42px;
+        top: 29px;
     }
 
     .digital-portada {
@@ -531,9 +532,8 @@
         margin-top: 1.2rem;
     }
 
-    /* En móvil táctil no hay hover real.
-       Dejamos el disco ligeramente oculto,
-       sin movimiento automático. */
+    /* En dispositivos táctiles no activamos
+       el desplazamiento por hover. */
     .vinilo-escena:hover .vinilo-disco,
     .cd-escena:hover .cd-disco {
         transform: none;
