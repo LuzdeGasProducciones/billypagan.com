@@ -449,6 +449,25 @@
 
 
 /* =========================================================
+   TÍTULOS DE LAS EDICIONES
+   ========================================================= */
+
+.edicion-informacion h2 {
+    margin: 0 0 0.6rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.52rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.10em;
+
+    white-space: nowrap;
+
+    color: #202020;
+}
+
+
+/* =========================================================
    BOTÓN
    ========================================================= */
 
