@@ -1,5 +1,7 @@
 /* =========================================================
    TIENDA — BILLY PAGÁN
+   tienda.css
+   PÁGINA · TIENDA
    ========================================================= */
 
 .pagina-tienda {
@@ -272,23 +274,55 @@
     border-radius: 50%;
 
     background:
-        repeating-radial-gradient(
-            circle,
-            #d0d0d0 0px,
-            #d0d0d0 1px,
-            #eeeeee 2px,
-            #c8c8c8 3px
+        radial-gradient(
+            circle at 38% 32%,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.35) 7%,
+            transparent 18%
+        ),
+        conic-gradient(
+            from 20deg,
+            #bfc1c2,
+            #f4f4f4,
+            #b8babc,
+            #eeeeee,
+            #c2c4c5,
+            #fafafa,
+            #b7b9ba,
+            #e5e5e5,
+            #bfc1c2
         );
 
     box-shadow:
-        0 10px 20px rgba(0, 0, 0, 0.13);
+        0 10px 20px rgba(0, 0, 0, 0.14),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 
     z-index: 1;
 
     transform: translateX(0) rotate(0deg);
 
     transition:
-        transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cd-disco::before {
+    content: "";
+
+    position: absolute;
+    inset: 5px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            transparent 0px,
+            transparent 7px,
+            rgba(255, 255, 255, 0.16) 8px,
+            transparent 9px
+        );
+
+    pointer-events: none;
 }
 
 
@@ -297,8 +331,8 @@
 .cd-centro {
     position: absolute;
 
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
 
     left: 50%;
     top: 50%;
@@ -307,10 +341,16 @@
 
     border-radius: 50%;
 
-    background: #c8c8c8;
+    background:
+        radial-gradient(
+            circle,
+            #e8e8e8 0 28%,
+            #aeb0b1 29% 35%,
+            #d7d8d8 36% 100%
+        );
 
     box-shadow:
-        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+        inset 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -393,17 +433,6 @@
     width: 100%;
 
     margin-top: 1.5rem;
-}
-
-.edicion-informacion h2 {
-    margin: 0 0 0.6rem;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1;
-
-    color: #202020;
 }
 
 .edicion-informacion p {
@@ -567,9 +596,8 @@
         transform: scale(0.75);
     }
 
-    .edicion-informacion h2 {
-        font-size: 1.6rem;
-    }
+  .edicion-informacion h2 {
+    font-size: 0.58rem;
 }
 
 
