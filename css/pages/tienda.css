@@ -1,441 +1,554 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Billy Pagán | Tienda</title>
-
-    <meta
-        name="description"
-        content="Tienda oficial de Billy Pagán."
-    >
-
-    <link
-        rel="canonical"
-        href="https://billypagan.com/paginas/tienda.html"
-    >
-
-    <!-- ==================================================
-         FUENTES
-    ================================================== -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- ==================================================
-         ESTILOS
-    ================================================== -->
-    <link
-        rel="stylesheet"
-        href="../css/styles.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../css/components/header.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../css/components/menu.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../css/components/hamburguesa.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../css/components/footer.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../css/pages/tienda.css"
-    >
-
-    <!-- IMPORTANTE:
-         responsive.css debe quedar DESPUÉS
-         de los componentes -->
-    <link
-        rel="stylesheet"
-        href="../css/responsive.css"
-    >
-</head>
-
-
-<body class="pagina-tienda">
-
-    <!-- ==================================================
-         CABECERA
-    ================================================== -->
-    <header class="cabecera">
-
-        <!-- MENÚ PRINCIPAL · ESCRITORIO -->
-        <nav
-            class="menu"
-            aria-label="Menú principal"
-        >
-            <ul>
-                <li>
-                    <a href="../index.html">
-                        INICIO
-                    </a>
-                </li>
-
-                <li>
-                    <a href="biografia.html">
-                        BIOGRAFÍA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="musica/musica.html">
-                        MÚSICA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="videos.html">
-                        VÍDEOS
-                    </a>
-                </li>
-
-                <li>
-                    <a href="conciertos/conciertos.html">
-                        CONCIERTOS
-                    </a>
-                </li>
-
-                <li>
-                    <a href="galeria.html">
-                        GALERÍA
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="tienda.html"
-                        class="activo"
-                        aria-current="page"
-                    >
-                        TIENDA
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contacto.html">
-                        CONTACTO
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-
-        <!-- ==================================================
-             MENÚ MÓVIL
-             MISMA ESTRUCTURA QUE EL RESTO DE PÁGINAS
-        ================================================== -->
-        <nav
-            class="menu-movil"
-            id="menuMovil"
-            aria-label="Menú principal"
-        >
-            <a href="../index.html">
-                INICIO
-            </a>
-
-            <a href="biografia.html">
-                BIOGRAFÍA
-            </a>
-
-            <a href="musica/musica.html">
-                MÚSICA
-            </a>
-
-            <a href="videos.html">
-                VÍDEOS
-            </a>
-
-            <a href="conciertos/conciertos.html">
-                CONCIERTOS
-            </a>
-
-            <a href="galeria.html">
-                GALERÍA
-            </a>
-
-            <a
-                href="tienda.html"
-                class="activo"
-                aria-current="page"
-            >
-                TIENDA
-            </a>
-
-            <a href="contacto.html">
-                CONTACTO
-            </a>
-        </nav>
-
-
-        <!-- ==================================================
-             HAMBURGUESA
-        ================================================== -->
-        <button
-            class="hamburguesa"
-            id="hamburguesa"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="menuMovil"
-        >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </button>
+/* =========================================================
+   TIENDA — BILLY PAGÁN
+   ========================================================= */
+
+.pagina-tienda {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: transparent;
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   FONDO
+   ========================================================= */
+
+.pagina-tienda::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
 
-    </header>
+    background-image: url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+.pagina-tienda::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 
-    <!-- ==================================================
-         CONTENIDO · TIENDA
-    ================================================== -->
-    <main class="tienda-hero">
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0)
+    );
+}
 
-        <section class="tienda-contenido">
 
-            <!-- CABECERA -->
-            <div class="tienda-cabecera">
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
 
-                <h1>
-                    Tienda
-                </h1>
+.tienda-hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
 
-            </div>
+.tienda-contenido {
+    position: relative;
+    z-index: 5;
 
+    width: 100%;
+    min-height: 100vh;
 
-            <!-- ==================================================
-                 EDICIONES
-            ================================================== -->
-            <div class="tienda-ediciones">
+    box-sizing: border-box;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-                <!-- ==================================================
-                     VINILO
-                ================================================== -->
-                <article class="edicion edicion-vinilo">
+    padding: 9rem 5% 8rem;
+}
 
-                    <div class="edicion-visual">
 
-                        <div class="vinilo-escena">
+/* =========================================================
+   TÍTULO
+   ========================================================= */
 
-                            <div class="vinilo-disco">
-                                <div class="vinilo-centro"></div>
-                            </div>
+.tienda-cabecera {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-                            <div class="vinilo-portada">
+.tienda-cabecera h1 {
+    margin: 0;
 
-                                <img
-                                    src="../images/tienda/PORTADA [FRONT].jpg"
-                                    alt="Billy Pagán - Portada"
-                                >
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.8rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.02em;
 
-                            </div>
+    color: #202020;
+}
 
-                        </div>
 
-                    </div>
+/* =========================================================
+   EDICIONES
+   ========================================================= */
 
+.tienda-ediciones {
+    width: 100%;
+    max-width: 1200px;
 
-                    <div class="edicion-informacion">
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
 
-                        <h2>
-                            Vinilo
-                        </h2>
+    gap: 4rem;
 
-                        <p>
-                            Edición física en vinilo.
-                        </p>
+    margin-top: 5rem;
+}
 
-                        <a
-                            class="boton-tienda"
-                            href="https://payhip.com/LuzdeGasRecords"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Comprar
-                        </a>
 
-                    </div>
+/* =========================================================
+   TARJETA DE EDICIÓN
+   ========================================================= */
 
-                </article>
+.edicion {
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-                <!-- ==================================================
-                     CD
-                ================================================== -->
-                <article class="edicion edicion-cd">
+    text-align: center;
+}
 
-                    <div class="edicion-visual">
 
-                        <div class="cd-escena">
+/* =========================================================
+   ZONA VISUAL
+   ========================================================= */
 
-                            <div class="cd-disco">
-                                <div class="cd-centro"></div>
-                            </div>
+.edicion-visual {
+    width: 100%;
+    height: 300px;
 
-                            <div class="cd-portada">
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-                                <img
-                                    src="../images/tienda/PORTADA [FRONT].jpg"
-                                    alt="Billy Pagán - Portada"
-                                >
+    overflow: visible;
+}
 
-                            </div>
 
-                        </div>
+/* =========================================================
+   VINILO
+   ========================================================= */
 
-                    </div>
+.vinilo-escena {
+    position: relative;
 
+    width: 270px;
+    height: 250px;
 
-                    <div class="edicion-informacion">
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-                        <h2>
-                            CD
-                        </h2>
+.vinilo-disco {
+    position: absolute;
 
-                        <p>
-                            Edición física en CD.
-                        </p>
+    width: 220px;
+    height: 220px;
 
-                        <a
-                            class="boton-tienda"
-                            href="https://payhip.com/LuzdeGasRecords"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Comprar
-                        </a>
+    left: 5px;
+    top: 15px;
 
-                    </div>
+    border-radius: 50%;
 
-                </article>
+    background:
+        repeating-radial-gradient(
+            circle,
+            #111 0px,
+            #111 2px,
+            #191919 3px,
+            #111 4px
+        );
 
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.18);
 
-                <!-- ==================================================
-                     DIGITAL
-                ================================================== -->
-                <article class="edicion edicion-digital">
+    z-index: 1;
+}
 
-                    <div class="edicion-visual">
+.vinilo-centro {
+    position: absolute;
 
-                        <div class="digital-escena">
+    width: 38px;
+    height: 38px;
 
-                            <div class="digital-portada">
+    left: 50%;
+    top: 50%;
 
-                                <img
-                                    src="../images/tienda/PORTADA [FRONT].jpg"
-                                    alt="Billy Pagán - Portada"
-                                >
+    transform: translate(-50%, -50%);
 
-                            </div>
+    border-radius: 50%;
 
-                        </div>
+    background: #202020;
+}
 
-                    </div>
+.vinilo-portada {
+    position: absolute;
 
+    width: 205px;
+    height: 205px;
 
-                    <div class="edicion-informacion">
+    right: 0;
+    top: 22px;
 
-                        <h2>
-                            Digital
-                        </h2>
+    z-index: 2;
 
-                        <p>
-                            Edición digital.
-                        </p>
+    overflow: hidden;
 
-                        <a
-                            class="boton-tienda"
-                            href="https://payhip.com/LuzdeGasRecords"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Comprar
-                        </a>
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.20);
+}
 
-                    </div>
+.vinilo-portada img {
+    display: block;
 
-                </article>
+    width: 100%;
+    height: 100%;
 
+    object-fit: cover;
+}
 
-            </div>
 
-        </section>
+/* =========================================================
+   CD
+   ========================================================= */
 
-    </main>
+.cd-escena {
+    position: relative;
 
+    width: 270px;
+    height: 250px;
 
-    <!-- ==================================================
-         PIE DE PÁGINA
-    ================================================== -->
-    <footer class="footer">
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        <div class="footer-contenido">
+.cd-disco {
+    position: absolute;
 
-            <span class="footer-artista">
-                © 2026 BILLY PAGÁN
-            </span>
+    width: 205px;
+    height: 205px;
 
-            <span class="footer-separador">
-                ·
-            </span>
+    left: 8px;
+    top: 20px;
 
-            <span>
-                TODOS LOS DERECHOS RESERVADOS
-            </span>
+    border-radius: 50%;
 
-            <span class="footer-separador">
-                ·
-            </span>
+    background:
+        repeating-radial-gradient(
+            circle,
+            #d8d8d8 0px,
+            #d8d8d8 1px,
+            #eeeeee 2px,
+            #cfcfcf 3px
+        );
 
-            <a
-                class="footer-terminos"
-                href="legal/terminos-y-condiciones.html"
-            >
-                TÉRMINOS Y CONDICIONES
-            </a>
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.14);
 
-        </div>
+    z-index: 1;
+}
 
-    </footer>
+.cd-centro {
+    position: absolute;
 
+    width: 34px;
+    height: 34px;
 
-    <!-- ==================================================
-         JAVASCRIPT
-    ================================================== -->
-    <script src="../js/components/menu.js"></script>
+    left: 50%;
+    top: 50%;
 
-    <script src="../js/components/navigation.js"></script>
+    transform: translate(-50%, -50%);
 
-    <script src="../js/components/footer.js"></script>
+    border-radius: 50%;
 
-</body>
-</html>
+    background: #c8c8c8;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.cd-portada {
+    position: absolute;
+
+    width: 195px;
+    height: 195px;
+
+    right: 0;
+    top: 27px;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.cd-portada img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   EDICIÓN DIGITAL
+   ========================================================= */
+
+.digital-escena {
+    width: 270px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital-portada {
+    width: 205px;
+    height: 205px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.20);
+}
+
+.digital-portada img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.edicion-informacion {
+    width: 100%;
+
+    margin-top: 1.5rem;
+}
+
+.edicion-informacion h2 {
+    margin: 0 0 0.6rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+
+    color: #202020;
+}
+
+.edicion-informacion p {
+    margin: 0 0 1.4rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+
+    color: #5f5f5c;
+}
+
+
+/* =========================================================
+   BOTÓN COMPRAR
+   ========================================================= */
+
+.boton-tienda {
+    display: inline-block;
+
+    padding: 0.65rem 1.5rem;
+
+    border: 1px solid rgba(32, 32, 32, 0.45);
+
+    background: transparent;
+
+    color: #202020;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.boton-tienda:hover {
+    background: #202020;
+    color: #ffffff;
+    border-color: #202020;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .pagina-tienda::before {
+        background-image: url("../../images/fondos/movil/fondo-general-movil.jpg");
+    }
+
+    .tienda-contenido {
+        min-height: auto;
+        padding: 8rem 6% 6rem;
+    }
+
+    .tienda-cabecera h1 {
+        font-size: 3rem;
+    }
+
+    .tienda-ediciones {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        margin-top: 4rem;
+    }
+
+    .edicion-visual {
+        height: 270px;
+    }
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+        width: 270px;
+        height: 240px;
+    }
+
+    .vinilo-disco {
+        width: 205px;
+        height: 205px;
+    }
+
+    .vinilo-portada {
+        width: 190px;
+        height: 190px;
+    }
+
+    .cd-disco {
+        width: 195px;
+        height: 195px;
+    }
+
+    .cd-portada {
+        width: 185px;
+        height: 185px;
+    }
+
+    .digital-portada {
+        width: 190px;
+        height: 190px;
+    }
+
+    .edicion-informacion {
+        margin-top: 1.2rem;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL EN HORIZONTAL
+   ========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    .tienda-contenido {
+        padding-top: 5rem;
+    }
+
+    .tienda-ediciones {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .edicion-visual {
+        height: 220px;
+    }
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+        transform: scale(0.75);
+    }
+
+    .edicion-informacion h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .tienda-contenido {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .tienda-ediciones {
+        gap: 2rem;
+        max-width: 1000px;
+    }
+
+    .vinilo-escena,
+    .cd-escena,
+    .digital-escena {
+        transform: scale(0.88);
+    }
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .boton-tienda {
+        transition: none;
+    }
+}
