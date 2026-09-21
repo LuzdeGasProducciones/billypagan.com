@@ -145,8 +145,23 @@
 
 
 /* ==========================================================================
-   06 · TEXTO · CONTRATACIÓN
+   06 · CONTRATACIÓN
    ========================================================================== */
+
+.contacto-contratacion {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
 
 .contacto-mensaje {
 
@@ -296,7 +311,104 @@
 
 
 /* ==========================================================================
-   08 · FOCUS
+   08 · COMUNIDAD
+   ========================================================================== */
+
+.contacto-comunidad {
+
+    width: min(100%, 620px);
+
+    margin: 8rem auto 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.contacto-comunidad-cabecera {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.contacto-comunidad-cabecera h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: var(--color-texto);
+
+    font-family: var(--fuente-serif);
+
+    font-size: 2.2rem;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    letter-spacing: 0.02em;
+
+    text-align: center;
+
+}
+
+
+.contacto-comunidad-cabecera p {
+
+    max-width: 520px;
+
+    margin: 1.2rem auto 0;
+
+    padding: 0;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.66rem;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.12em;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================================
+   09 · CONTENEDOR DEL FORMULARIO
+   ========================================================================== */
+
+.contacto-formulario {
+
+    width: 100%;
+
+    margin: 3.5rem 0 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================================================
+   10 · FOCUS
    ========================================================================== */
 
 .contacto-boton-produccion:focus-visible {
@@ -311,7 +423,7 @@
 
 
 /* ==========================================================================
-   09 · PANTALLAS GRANDES
+   11 · PANTALLAS GRANDES
    ========================================================================== */
 
 @media (min-width: 1600px) {
@@ -339,11 +451,25 @@
 
     }
 
+
+    .contacto-comunidad {
+
+        margin-top: 9rem;
+
+    }
+
+
+    .contacto-comunidad-cabecera h1 {
+
+        font-size: 2.4rem;
+
+    }
+
 }
 
 
 /* ==========================================================================
-   10 · TABLET
+   12 · TABLET
    ========================================================================== */
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -371,16 +497,35 @@
 
     }
 
+
+    .contacto-comunidad {
+
+        margin-top: 7rem;
+
+        max-width: 600px;
+
+    }
+
+
+    .contacto-comunidad-cabecera h1 {
+
+        font-size: 2rem;
+
+    }
+
 }
 
 
 /* ==========================================================================
-   11 · MÓVIL
+   13 · MÓVIL
    ========================================================================== */
 
 @media (max-width: 767px) {
 
     .pagina-contacto::before {
+
+        background-image:
+            url("../../images/fondos/movil/fondo-general-movil.jpg");
 
         background-position: center center;
 
@@ -409,7 +554,7 @@
             7%
             5rem;
 
-        justify-content: center;
+        justify-content: flex-start;
 
         align-items: center;
 
@@ -469,11 +614,51 @@
 
     }
 
+
+    .contacto-comunidad {
+
+        width: 100%;
+
+        max-width: 520px;
+
+        margin-top: 6rem;
+
+    }
+
+
+    .contacto-comunidad-cabecera h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .contacto-comunidad-cabecera p {
+
+        max-width: 420px;
+
+        margin-top: 1rem;
+
+        font-size: 0.56rem;
+
+        line-height: 1.8;
+
+        letter-spacing: 0.10em;
+
+    }
+
+
+    .contacto-formulario {
+
+        margin-top: 2.8rem;
+
+    }
+
 }
 
 
 /* ==========================================================================
-   12 · MÓVILES PEQUEÑOS
+   14 · MÓVILES PEQUEÑOS
    ========================================================================== */
 
 @media (max-width: 380px) {
@@ -526,11 +711,41 @@
 
     }
 
+
+    .contacto-comunidad {
+
+        margin-top: 5rem;
+
+    }
+
+
+    .contacto-comunidad-cabecera h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .contacto-comunidad-cabecera p {
+
+        font-size: 0.53rem;
+
+        letter-spacing: 0.08em;
+
+    }
+
+
+    .contacto-formulario {
+
+        margin-top: 2.4rem;
+
+    }
+
 }
 
 
 /* ==========================================================================
-   13 · REDUCCIÓN DE MOVIMIENTO
+   15 · REDUCCIÓN DE MOVIMIENTO
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
