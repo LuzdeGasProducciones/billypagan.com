@@ -1,0 +1,241 @@
+/* ==================================================
+     FORMULARIO - COMPONENTE
+================================================== */
+
+/* Contenedor principal del formulario */
+.contacto-formulario-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: transparent;
+}
+
+/* Contenedor del formulario Brevo */
+.contacto-formulario {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilos específicos para el formulario Brevo */
+.sib-form {
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.sib-form-container {
+    width: 100%;
+}
+
+#sib-container {
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    max-width: 100% !important;
+    padding: 2rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos del formulario */
+.sib-form-block {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form__entry {
+    margin-bottom: 1rem;
+}
+
+.entry__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #3c4858;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+}
+
+.entry__field input,
+.entry__field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #3c4858;
+    transition: border-color 0.3s ease;
+}
+
+.entry__field input:focus,
+.entry__field select:focus {
+    outline: none;
+    border-color: #b8860b;
+    box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+}
+
+.entry__field input::placeholder {
+    color: #c0ccda;
+}
+
+/* Texto de especificación */
+.entry__specification {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    color: #8390a4;
+    font-family: 'Helvetica', sans-serif;
+    text-align: left;
+}
+
+/* Errores */
+.entry__error {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    color: #661d1d;
+    background-color: #ffeded;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.entry__error.visible {
+    display: block;
+}
+
+/* Botón de envío */
+.sib-form .sib-default-btn {
+    background-color: #b8860b !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 12px 24px !important;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sib-form .sib-default-btn:hover {
+    background-color: #9a7509 !important;
+}
+
+/* Selector de país/teléfono */
+.sib-sms-input-wrapper {
+    width: 100%;
+}
+
+.sib-sms-input .entry__field {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sib-sms-input .entry__field select {
+    flex-shrink: 0;
+    width: auto;
+    min-width: 100px;
+}
+
+.sib-sms-input .entry__field input {
+    flex-grow: 1;
+}
+
+/* Mensaje de éxito */
+.sib-form .sib-form-message-panel {
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 1rem;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Tipografía */
+.sib-form h2,
+.sib-form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #3c4858;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.sib-form p {
+    font-family: 'Montserrat', sans-serif;
+    color: #3c4858;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Links dentro del formulario */
+.sib-form a {
+    color: #b8860b;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.sib-form a:hover {
+    color: #9a7509;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sib-container {
+        padding: 1.5rem !important;
+    }
+
+    .entry__label {
+        font-size: 13px;
+    }
+
+    .entry__field input,
+    .entry__field select {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .sib-form h2,
+    .sib-form h3 {
+        font-size: 20px;
+    }
+
+    .sib-form p {
+        font-size: 13px;
+    }
+
+    .sib-form .sib-default-btn {
+        padding: 10px 20px !important;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-formulario-wrapper {
+        padding: 1rem 0;
+    }
+
+    #sib-container {
+        padding: 1rem !important;
+    }
+
+    .entry__label {
+        font-size: 12px;
+    }
+
+    .entry__field input,
+    .entry__field select {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .sib-form h2,
+    .sib-form h3 {
+        font-size: 18px;
+    }
+
+    .entry__specification {
+        font-size: 11px;
+    }
+}
