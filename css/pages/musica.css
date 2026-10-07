@@ -26,70 +26,230 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 100%;
     margin: 30px auto 50px;
+
+    overflow: hidden;
 }
 
 
+/*
+   Zona visible del carrusel.
+   Las portadas se posicionan mediante JavaScript.
+*/
+
 .discografia-portadas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
-    width: 100%;
-    max-width: 950px;
+    position: relative;
+
+    width: min(950px, calc(100% - 100px));
+    height: 430px;
+
     overflow: hidden;
-    min-height: 430px;
 }
 
 
 /* ==================================================
-   PORTADA
+   PORTADAS
 ================================================== */
 
 .disco-portada {
-    flex: 0 0 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 250px;
+
     cursor: pointer;
-    opacity: 0.45;
-    transform: scale(0.82);
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(0)
+        scale(0.72);
+
     transition:
-        transform 0.45s ease,
-        opacity 0.45s ease;
+        transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+        opacity 0.55s ease,
+        filter 0.7s ease;
+
+    will-change: transform, opacity;
+
+    z-index: 1;
 }
 
 
-.disco-portada.activa {
+/*
+   DISCO CENTRAL
+*/
+
+.disco-portada.posicion-central {
     opacity: 1;
-    transform: scale(1);
+
+    transform:
+        translate(-50%, -50%)
+        translateX(0)
+        scale(1);
+
+    z-index: 3;
+
+    filter: none;
 }
 
+
+/*
+   DISCO IZQUIERDO
+*/
+
+.disco-portada.posicion-izquierda {
+    opacity: 0.42;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(-285px)
+        scale(0.78);
+
+    z-index: 2;
+
+    filter: saturate(0.75);
+}
+
+
+/*
+   DISCO DERECHO
+*/
+
+.disco-portada.posicion-derecha {
+    opacity: 0.42;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(285px)
+        scale(0.78);
+
+    z-index: 2;
+
+    filter: saturate(0.75);
+}
+
+
+/*
+   PORTADAS FUERA DEL ÁREA VISIBLE
+*/
+
+.disco-portada.posicion-oculta-izquierda {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(-560px)
+        scale(0.65);
+
+    z-index: 0;
+}
+
+
+.disco-portada.posicion-oculta-derecha {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        translateX(560px)
+        scale(0.65);
+
+    z-index: 0;
+}
+
+
+/* ==================================================
+   IMAGEN
+================================================== */
 
 .disco-portada img {
     display: block;
+
     width: 250px;
     height: 250px;
+
     object-fit: cover;
+
     box-shadow:
         0 12px 35px rgba(0, 0, 0, 0.25);
+
+    transition:
+        box-shadow 0.7s ease;
 }
 
 
+.disco-portada.posicion-central img {
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
 .disco-portada-titulo {
     margin-top: 15px;
+
     text-align: center;
+
     font-family: "Cormorant Garamond", serif;
     font-size: 1.25rem;
+    line-height: 1.2;
     letter-spacing: 0.05em;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s ease;
 }
 
 
 .disco-portada-anio {
     display: block;
+
     margin-top: 4px;
+
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
+
     opacity: 0.65;
+
+    transition:
+        opacity 0.5s ease;
+}
+
+
+/*
+   Los datos de las portadas laterales
+   se muestran ligeramente atenuados.
+*/
+
+.disco-portada.posicion-izquierda .disco-portada-titulo,
+.disco-portada.posicion-derecha .disco-portada-titulo {
+    opacity: 0.7;
+}
+
+
+.disco-portada.posicion-izquierda .disco-portada-anio,
+.disco-portada.posicion-derecha .disco-portada-anio {
+    opacity: 0.4;
+}
+
+
+/* ==================================================
+   HOVER SOBRE PORTADAS LATERALES
+================================================== */
+
+.disco-portada.posicion-izquierda:hover,
+.disco-portada.posicion-derecha:hover {
+    opacity: 0.75;
 }
 
 
@@ -100,7 +260,7 @@
 .discografia-flecha {
     position: absolute;
     top: 50%;
-    z-index: 5;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -109,22 +269,40 @@
     width: 45px;
     height: 45px;
 
+    padding: 0;
+
     border: none;
     background: transparent;
 
     font-family: "Cormorant Garamond", serif;
     font-size: 3rem;
+    font-weight: 400;
     line-height: 1;
 
     cursor: pointer;
 
     transform: translateY(-50%);
-    transition: opacity 0.25s ease;
+
+    opacity: 0.8;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
 
 
 .discografia-flecha:hover {
-    opacity: 0.55;
+    opacity: 0.5;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+
+.discografia-flecha:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 4px;
 }
 
 
@@ -151,6 +329,19 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
     text-align: center;
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.45s ease;
+}
+
+
+.disco-informacion.cambiando {
+    opacity: 0;
+    transform: translateY(12px);
 }
 
 
@@ -178,6 +369,7 @@
 
 .disco-informacion-descripcion {
     max-width: 700px;
+
     margin: 25px auto 0;
 
     font-family: "Montserrat", sans-serif;
@@ -189,6 +381,7 @@
 
 .disco-creditos-generales {
     max-width: 700px;
+
     margin: 30px auto 0;
 
     text-align: left;
@@ -253,6 +446,9 @@
 .disco-tracklist {
     max-width: 900px;
     margin: 0 auto;
+
+    animation:
+        aparecerContenido 0.55s ease both;
 }
 
 
@@ -267,7 +463,9 @@
 
 .track {
     display: grid;
+
     grid-template-columns: 45px 1fr auto;
+
     align-items: center;
 
     min-height: 65px;
@@ -279,6 +477,7 @@
 .track-numero {
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
+
     opacity: 0.5;
 }
 
@@ -308,6 +507,9 @@
     cursor: pointer;
 
     opacity: 0.6;
+
+    transition:
+        opacity 0.2s ease;
 }
 
 
@@ -324,15 +526,20 @@
     position: relative;
 
     max-width: 900px;
+
     margin: 70px auto 0;
     padding: 45px;
 
     background: rgba(0, 0, 0, 0.035);
+
+    animation:
+        aparecerPanel 0.5s ease both;
 }
 
 
 .cancion-panel-cerrar {
     position: absolute;
+
     top: 15px;
     right: 20px;
 
@@ -343,6 +550,17 @@
     font-weight: 300;
 
     cursor: pointer;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.cancion-panel-cerrar:hover {
+    opacity: 0.55;
+
+    transform: rotate(90deg);
 }
 
 
@@ -416,7 +634,11 @@
     font-family: "Cormorant Garamond", serif;
     font-size: 1.25rem;
     line-height: 1.9;
+
     white-space: pre-line;
+
+    animation:
+        aparecerContenido 0.4s ease both;
 }
 
 
@@ -428,7 +650,11 @@
     font-family: "Courier New", monospace;
     font-size: 0.95rem;
     line-height: 1.9;
+
     white-space: pre-wrap;
+
+    animation:
+        aparecerContenido 0.4s ease both;
 }
 
 
@@ -445,6 +671,9 @@
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     line-height: 1.8;
+
+    animation:
+        aparecerContenido 0.4s ease both;
 }
 
 
@@ -454,8 +683,88 @@
 
 
 /* ==================================================
+   ANIMACIONES GENERALES
+================================================== */
+
+@keyframes aparecerContenido {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes aparecerPanel {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   ACCESIBILIDAD · REDUCIR MOVIMIENTO
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .disco-portada,
+    .disco-portada img,
+    .disco-portada-titulo,
+    .disco-portada-anio,
+    .disco-informacion,
+    .discografia-flecha,
+    .cancion-panel,
+    .letra-contenido,
+    .acordes-contenido,
+    .creditos-cancion {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
+
+
+/* ==================================================
    RESPONSIVE
 ================================================== */
+
+@media (max-width: 900px) {
+
+    .discografia-portadas {
+        width: calc(100% - 90px);
+    }
+
+    .disco-portada.posicion-izquierda {
+        transform:
+            translate(-50%, -50%)
+            translateX(-230px)
+            scale(0.72);
+    }
+
+    .disco-portada.posicion-derecha {
+        transform:
+            translate(-50%, -50%)
+            translateX(230px)
+            scale(0.72);
+    }
+
+}
+
 
 @media (max-width: 700px) {
 
@@ -465,14 +774,19 @@
     }
 
 
+    .discografia-carrusel {
+        margin-top: 20px;
+    }
+
+
     .discografia-portadas {
-        min-height: 350px;
-        gap: 10px;
+        width: calc(100% - 55px);
+        height: 350px;
     }
 
 
     .disco-portada {
-        flex-basis: 220px;
+        width: 220px;
     }
 
 
@@ -482,14 +796,64 @@
     }
 
 
+    .disco-portada.posicion-izquierda {
+        transform:
+            translate(-50%, -50%)
+            translateX(-180px)
+            scale(0.68);
+    }
+
+
+    .disco-portada.posicion-derecha {
+        transform:
+            translate(-50%, -50%)
+            translateX(180px)
+            scale(0.68);
+    }
+
+
+    .disco-portada.posicion-oculta-izquierda {
+        transform:
+            translate(-50%, -50%)
+            translateX(-360px)
+            scale(0.6);
+    }
+
+
+    .disco-portada.posicion-oculta-derecha {
+        transform:
+            translate(-50%, -50%)
+            translateX(360px)
+            scale(0.6);
+    }
+
+
+    .disco-portada-titulo {
+        font-size: 1.1rem;
+    }
+
+
     .discografia-flecha {
         width: 30px;
+        height: 40px;
+
         font-size: 2.3rem;
+    }
+
+
+    .disco-informacion {
+        margin-bottom: 45px;
+        padding: 30px 5px;
     }
 
 
     .disco-informacion h2 {
         font-size: 2.2rem;
+    }
+
+
+    .disco-informacion-descripcion {
+        padding: 0 10px;
     }
 
 
@@ -512,6 +876,12 @@
 
     .cancion-panel-cabecera h2 {
         font-size: 2rem;
+    }
+
+
+    .cancion-panel-menu {
+        gap: 18px;
+        overflow-x: auto;
     }
 
 }
