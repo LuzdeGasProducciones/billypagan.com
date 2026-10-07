@@ -566,10 +566,12 @@
     display: grid;
 
     grid-template-columns: 45px 1fr auto;
+    gap: 20px;
 
-    align-items: center;
+    align-items: start;
 
     min-height: 65px;
+    padding: 15px 0;
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -580,18 +582,65 @@
     font-size: 0.7rem;
 
     opacity: 0.5;
+
+    padding-top: 2px;
+}
+
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 
 .track-titulo {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+.track-detalles {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+
+    opacity: 0.7;
+}
+
+
+.track-duracion {
+    display: block;
+}
+
+
+.track-duracion::before {
+    content: "• ";
+    margin-right: 6px;
+}
+
+
+.track-autor {
+    display: block;
+}
+
+
+.track-autor::before {
+    content: "Autor: ";
+    font-weight: 500;
 }
 
 
 .track-opciones {
     display: flex;
     gap: 18px;
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
 }
 
 
@@ -604,6 +653,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 0.62rem;
     letter-spacing: 0.12em;
+    text-transform: uppercase;
 
     cursor: pointer;
 
@@ -718,12 +768,25 @@
     font-family: "Montserrat", sans-serif;
     font-size: 0.65rem;
     letter-spacing: 0.12em;
+    text-transform: uppercase;
 
     cursor: pointer;
+
+    opacity: 0.6;
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.cancion-panel-opcion:hover {
+    opacity: 0.8;
 }
 
 
 .cancion-panel-opcion.activo {
+    opacity: 1;
     border-bottom-color: currentColor;
 }
 
@@ -734,13 +797,23 @@
 
 .letra-contenido {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.25rem;
-    line-height: 1.9;
-
-    white-space: pre-line;
+    font-size: 1.2rem;
+    line-height: 2;
 
     animation:
         aparecerContenido 0.4s ease both;
+}
+
+
+.letra-contenido p {
+    margin: 0 0 20px 0;
+
+    white-space: pre-line;
+}
+
+
+.letra-contenido p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -762,6 +835,7 @@
 
 .acorde {
     font-weight: 700;
+    color: var(--color-texto);
 }
 
 
@@ -772,7 +846,7 @@
 .creditos-cancion {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
-    line-height: 1.8;
+    line-height: 1.9;
 
     animation:
         aparecerContenido 0.4s ease both;
@@ -780,7 +854,14 @@
 
 
 .creditos-cancion p {
-    margin: 0 0 8px;
+    margin: 0 0 10px 0;
+
+    padding-left: 20px;
+}
+
+
+.creditos-cancion p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -969,13 +1050,14 @@
 
     .track {
         grid-template-columns: 35px 1fr;
-        padding: 15px 0;
+        gap: 12px;
     }
 
 
     .track-opciones {
-        grid-column: 2;
+        grid-column: 1 / -1;
         margin-top: 8px;
+        justify-content: flex-start;
     }
 
 
