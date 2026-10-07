@@ -5,451 +5,513 @@
    ========================================================================== */
 
 
-/* ==========================================================================
-   01 · PÁGINA
-   ========================================================================== */
+/* ==================================================
+   DISCOGRAFÍA
+================================================== */
 
-.pagina-musica {
-
-    position: relative;
-
+.discografia {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 100px;
+}
 
-    min-height: 100vh;
 
+/* ==================================================
+   CARRUSEL
+================================================== */
+
+.discografia-carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto 50px;
+}
+
+
+.discografia-portadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+    max-width: 950px;
+    overflow: hidden;
+    min-height: 430px;
+}
+
+
+/* ==================================================
+   PORTADA
+================================================== */
+
+.disco-portada {
+    flex: 0 0 250px;
+    cursor: pointer;
+    opacity: 0.45;
+    transform: scale(0.82);
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+}
+
+
+.disco-portada.activa {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.disco-portada img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+.disco-portada-titulo {
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+}
+
+
+.disco-portada-anio {
+    display: block;
+    margin-top: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    opacity: 0.65;
+}
+
+
+/* ==================================================
+   FLECHAS
+================================================== */
+
+.discografia-flecha {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    transition: opacity 0.25s ease;
+}
+
+
+.discografia-flecha:hover {
+    opacity: 0.55;
+}
+
+
+.discografia-flecha-anterior {
+    left: 0;
+}
+
+
+.discografia-flecha-siguiente {
+    right: 0;
+}
+
+
+/* ==================================================
+   INFORMACIÓN DEL DISCO
+================================================== */
+
+.disco-informacion {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 35px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+.disco-informacion h2 {
     margin: 0;
 
-    padding: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
 
-    overflow-x: hidden;
 
-    isolation: isolate;
+.disco-informacion-meta {
+    margin-top: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+
+.disco-informacion-descripcion {
+    max-width: 700px;
+    margin: 25px auto 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+
+.disco-creditos-generales {
+    max-width: 700px;
+    margin: 30px auto 0;
+
+    text-align: left;
+}
+
+
+.disco-creditos-generales h3 {
+    margin-bottom: 15px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.disco-creditos-generales p {
+    margin: 5px 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   BOTÓN TIENDA
+================================================== */
+
+.disco-tienda {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+    padding: 12px 28px;
+
+    border: 1px solid currentColor;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.disco-tienda:hover {
+    background: currentColor;
+    color: white;
+}
+
+
+/* ==================================================
+   TRACKLIST
+================================================== */
+
+.disco-tracklist {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.disco-tracklist h2 {
+    margin-bottom: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+.track {
+    display: grid;
+    grid-template-columns: 45px 1fr auto;
+    align-items: center;
+
+    min-height: 65px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.track-numero {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+
+.track-titulo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.35rem;
+}
+
+
+.track-opciones {
+    display: flex;
+    gap: 18px;
+}
+
+
+.track-opcion {
+    padding: 5px 0;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    opacity: 0.6;
+}
+
+
+.track-opcion:hover {
+    opacity: 1;
+}
+
+
+/* ==================================================
+   PANEL DE CANCIÓN
+================================================== */
+
+.cancion-panel {
+    position: relative;
+
+    max-width: 900px;
+    margin: 70px auto 0;
+    padding: 45px;
+
+    background: rgba(0, 0, 0, 0.035);
+}
+
+
+.cancion-panel-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+.cancion-panel-cabecera {
+    margin-bottom: 30px;
+}
+
+
+.cancion-panel-numero {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+
+    opacity: 0.55;
+}
+
+
+.cancion-panel-cabecera h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   MENÚ DE CANCIÓN
+================================================== */
+
+.cancion-panel-menu {
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+.cancion-panel-opcion {
+    padding: 12px 0;
+
+    border: none;
+    border-bottom: 1px solid transparent;
 
     background: transparent;
 
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
 }
 
 
-/* ==========================================================================
-   02 · FONDO
-   ========================================================================== */
-
-.pagina-musica::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: -1;
-
-    pointer-events: none;
-
-    background-image:
-        url("../../images/fondos/escritorio/fondo-general-desktop.jpg");
-
-    background-position: center center;
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
+.cancion-panel-opcion.activo {
+    border-bottom-color: currentColor;
 }
 
 
-/* ==========================================================================
-   03 · ATMÓSFERA
-   ========================================================================== */
+/* ==================================================
+   LETRA
+================================================== */
 
-.pagina-musica::after {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 0;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.04) 0%,
-            rgba(255, 255, 255, 0) 45%,
-            rgba(0, 0, 0, 0.025) 100%
-        );
-
+.letra-contenido {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    white-space: pre-line;
 }
 
 
-/* ==========================================================================
-   04 · CONTENEDOR PRINCIPAL
-   ========================================================================== */
+/* ==================================================
+   ACORDES
+================================================== */
 
-.musica-hero {
-
-    position: relative;
-
-    z-index: 1;
-
-    width: 100%;
-
-    min-height: 100vh;
-
-    min-height: 100svh;
-
-    margin: 0;
-
-    padding: 0;
-
+.acordes-contenido {
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    white-space: pre-wrap;
 }
 
 
-/* ==========================================================================
-   05 · CONTENIDO
-   ========================================================================== */
-
-.musica-contenido {
-
-    position: relative;
-
-    z-index: 5;
-
-    width: 100%;
-
-    min-height: 100vh;
-
-    min-height: 100svh;
-
-    margin: 0;
-
-    padding:
-        10rem
-        6%
-        8rem;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
+.acorde {
+    font-weight: 700;
 }
 
 
-/* ==========================================================================
-   06 · TÍTULO
-   ========================================================================== */
+/* ==================================================
+   CRÉDITOS DE CANCIÓN
+================================================== */
 
-.musica-titulo {
-
-    margin: 0;
-
-    padding: 0;
-
+.creditos-cancion {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.8;
 }
 
 
-.musica-titulo h1 {
-
-    margin: 0;
-
-    padding: 0;
-
-    color: var(--color-texto);
-
-    font-family: var(--fuente-titulo);
-
-    font-size:
-        clamp(
-            2.6rem,
-            4.5vw,
-            4.5rem
-        );
-
-    font-weight: 500;
-
-    line-height: 0.95;
-
-    letter-spacing: -0.02em;
-
-    text-align: center;
-
-    text-rendering: optimizeLegibility;
-
+.creditos-cancion p {
+    margin: 0 0 8px;
 }
 
 
-/* ==========================================================================
-   07 · MENSAJE
-   ========================================================================== */
+/* ==================================================
+   RESPONSIVE
+================================================== */
 
-.musica-mensaje {
+@media (max-width: 700px) {
 
-    margin: 2rem 0 0;
-
-    padding: 0;
-
-    text-align: center;
-
-}
-
-
-.musica-mensaje p {
-
-    margin: 0;
-
-    padding: 0;
-
-    color: var(--color-texto-suave);
-
-    font-family: var(--fuente-sans);
-
-    font-size: 0.68rem;
-
-    font-weight: 300;
-
-    line-height: 1.6;
-
-    letter-spacing: 0.25em;
-
-    text-align: center;
-
-}
-
-
-/* ==========================================================================
-   08 · PANTALLAS GRANDES
-   ========================================================================== */
-
-@media (min-width: 1600px) {
-
-    .musica-contenido {
-
-        padding:
-            11rem
-            6%
-            9rem;
-
+    .discografia {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
 
-    .musica-titulo h1 {
-
-        font-size:
-            clamp(
-                3.2rem,
-                4vw,
-                5rem
-            );
-
+    .discografia-portadas {
+        min-height: 350px;
+        gap: 10px;
     }
 
 
-    .musica-mensaje {
-
-        margin-top: 2.2rem;
-
+    .disco-portada {
+        flex-basis: 220px;
     }
 
 
-    .musica-mensaje p {
+    .disco-portada img {
+        width: 220px;
+        height: 220px;
+    }
 
-        font-size: 0.72rem;
 
+    .discografia-flecha {
+        width: 30px;
+        font-size: 2.3rem;
+    }
+
+
+    .disco-informacion h2 {
+        font-size: 2.2rem;
+    }
+
+
+    .track {
+        grid-template-columns: 35px 1fr;
+        padding: 15px 0;
+    }
+
+
+    .track-opciones {
+        grid-column: 2;
+        margin-top: 8px;
+    }
+
+
+    .cancion-panel {
+        padding: 30px 20px;
+    }
+
+
+    .cancion-panel-cabecera h2 {
+        font-size: 2rem;
     }
 
 }
-
-
-/* ==========================================================================
-   09 · TABLET
-   ========================================================================== */
-
-@media (min-width: 768px) and (max-width: 1199px) {
-
-    .musica-contenido {
-
-        padding:
-            9rem
-            6%
-            7rem;
-
-    }
-
-
-    .musica-titulo h1 {
-
-        font-size:
-            clamp(
-                2.8rem,
-                5vw,
-                4rem
-            );
-
-    }
-
-
-    .musica-mensaje {
-
-        margin-top: 1.8rem;
-
-    }
-
-
-    .musica-mensaje p {
-
-        font-size: 0.64rem;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   10 · MÓVIL
-   ========================================================================== */
-
-@media (max-width: 767px) {
-
-    .pagina-musica::before {
-
-        background-position: center center;
-
-        background-size: cover;
-
-        background-repeat: no-repeat;
-
-    }
-
-
-    .musica-hero {
-
-        min-height: 100svh;
-
-    }
-
-
-    .musica-contenido {
-
-        width: 100%;
-
-        min-height: 100svh;
-
-        padding:
-            7rem
-            7%
-            5rem;
-
-        justify-content: center;
-
-        align-items: center;
-
-        text-align: center;
-
-    }
-
-
-    .musica-titulo h1 {
-
-        font-size:
-            clamp(
-                2.5rem,
-                10vw,
-                3.5rem
-            );
-
-        text-align: center;
-
-    }
-
-
-    .musica-mensaje {
-
-        margin-top: 1.6rem;
-
-        text-align: center;
-
-    }
-
-
-    .musica-mensaje p {
-
-        font-size: 0.58rem;
-
-        letter-spacing: 0.20em;
-
-        text-align: center;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   11 · MÓVILES PEQUEÑOS
-   ========================================================================== */
-
-@media (max-width: 380px) {
-
-    .musica-contenido {
-
-        padding:
-            6.5rem
-            7%
-            5rem;
-
-    }
-
-
-    .musica-titulo h1 {
-
-        font-size: 2.4rem;
-
-    }
-
-
-    .musica-mensaje {
-
-        margin-top: 1.4rem;
-
-    }
-
-
-    .musica-mensaje p {
-
-        font-size: 0.54rem;
-
-    }
-
-
-    .musica-mensaje p {
-
-        letter-spacing: 0.16em;
-
-    }
-
-}
-
-
-/* ==========================================================================
-   12 · REDUCCIÓN DE MOVIMIENTO
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .pagina-musica::before {
-
-        position: absolute;
-
-    }
-
-}
-
