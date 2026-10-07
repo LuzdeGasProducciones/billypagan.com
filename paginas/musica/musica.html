@@ -193,7 +193,6 @@ content="Música de Billy Pagán · Sitio Oficial."
 
 <main class="musica-hero">
 
-
 <!-- ==================================================
      NAVEGACIÓN MÓVIL
 ================================================== -->
@@ -204,136 +203,139 @@ content="Música de Billy Pagán · Sitio Oficial."
     aria-label="Menú principal"
 >
 
-    <a href="../../index.html">
-        INICIO
-    </a>
+```
+<a href="../../index.html">
+    INICIO
+</a>
 
-    <a href="../biografia.html">
-        BIOGRAFÍA
-    </a>
+<a href="../biografia.html">
+    BIOGRAFÍA
+</a>
 
-    <a
-        href="musica.html"
-        class="activo"
-        aria-current="page"
-    >
-        MÚSICA
-    </a>
+<a
+    href="musica.html"
+    class="activo"
+    aria-current="page"
+>
+    MÚSICA
+</a>
 
-    <a href="../videos.html">
-        VÍDEOS
-    </a>
+<a href="../videos.html">
+    VÍDEOS
+</a>
 
-    <a href="../conciertos/conciertos.html">
-        CONCIERTOS
-    </a>
+<a href="../conciertos/conciertos.html">
+    CONCIERTOS
+</a>
 
-    <a href="../galeria.html">
-        GALERÍA
-    </a>
+<a href="../galeria.html">
+    GALERÍA
+</a>
 
-    <a href="../tienda.html">
-        TIENDA
-    </a>
+<a href="../tienda.html">
+    TIENDA
+</a>
 
-    <a href="../contacto.html">
-        CONTACTO
-    </a>
+<a href="../contacto.html">
+    CONTACTO
+</a>
+```
 
 </nav>
 
-
 <!-- ==================================================
      NAVEGACIÓN ESCRITORIO
-     MISMA ESTRUCTURA QUE INICIO
 ================================================== -->
 
 <header class="menu">
 
-    <nav aria-label="Menú principal">
+```
+<nav aria-label="Menú principal">
 
-        <ul>
+    <ul>
 
-            <li>
-                <a href="../../index.html">
-                    INICIO
-                </a>
-            </li>
+        <li>
+            <a href="../../index.html">
+                INICIO
+            </a>
+        </li>
 
-            <li>
-                <a href="../biografia.html">
-                    BIOGRAFÍA
-                </a>
-            </li>
+        <li>
+            <a href="../biografia.html">
+                BIOGRAFÍA
+            </a>
+        </li>
 
-            <li>
-                <a
-                    href="musica.html"
-                    class="activo"
-                    aria-current="page"
-                >
-                    MÚSICA
-                </a>
-            </li>
+        <li>
+            <a
+                href="musica.html"
+                class="activo"
+                aria-current="page"
+            >
+                MÚSICA
+            </a>
+        </li>
 
-            <li>
-                <a href="../videos.html">
-                    VÍDEOS
-                </a>
-            </li>
+        <li>
+            <a href="../videos.html">
+                VÍDEOS
+            </a>
+        </li>
 
-            <li>
-                <a href="../conciertos/conciertos.html">
-                    CONCIERTOS
-                </a>
-            </li>
+        <li>
+            <a href="../conciertos/conciertos.html">
+                CONCIERTOS
+            </a>
+        </li>
 
-            <li>
-                <a href="../galeria.html">
-                    GALERÍA
-                </a>
-            </li>
+        <li>
+            <a href="../galeria.html">
+                GALERÍA
+            </a>
+        </li>
 
-            <li>
-                <a href="../tienda.html">
-                    TIENDA
-                </a>
-            </li>
+        <li>
+            <a href="../tienda.html">
+                TIENDA
+            </a>
+        </li>
 
-            <li>
-                <a href="../contacto.html">
-                    CONTACTO
-                </a>
-            </li>
+        <li>
+            <a href="../contacto.html">
+                CONTACTO
+            </a>
+        </li>
 
-        </ul>
+    </ul>
 
-    </nav>
+</nav>
+```
 
 </header>
-
 
 <!-- ==================================================
      MENÚ HAMBURGUESA · MÓVIL
 ================================================== -->
 
 <button
-    class="hamburguesa"
-    id="hamburguesa"
-    type="button"
-    aria-label="Abrir menú"
-    aria-expanded="false"
-    aria-controls="menuMovil"
+class="hamburguesa"
+id="hamburguesa"
+type="button"
+aria-label="Abrir menú"
+aria-expanded="false"
+aria-controls="menuMovil"
+
 >
 
-    <span aria-hidden="true"></span>
+```
+<span aria-hidden="true"></span>
 
-    <span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
 
-    <span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+```
 
 </button>
-
 
 <!-- ==================================================
      MÚSICA · DISCOGRAFÍA
@@ -341,164 +343,183 @@ content="Música de Billy Pagán · Sitio Oficial."
 
 <article class="musica-contenido">
 
-    <header class="musica-titulo">
+```
+<header class="musica-titulo">
 
-        <h1>
-            DISCOGRAFÍA
-        </h1>
+    <h1>
+        DISCOGRAFÍA
+    </h1>
 
-    </header>
-
-
-    <!-- ==================================================
-         CATÁLOGO · CARRUSEL
-    ================================================== -->
-
-    <section
-        class="discografia"
-        aria-label="Discografía de Billy Pagán"
-    >
-
-        <div class="discografia-carrusel">
-
-            <button
-                class="discografia-flecha discografia-flecha-anterior"
-                id="discoAnterior"
-                type="button"
-                aria-label="Disco anterior"
-            >
-                ‹
-            </button>
+</header>
 
 
-            <div
-                class="discografia-portadas"
-                id="discografiaPortadas"
-            >
-                <!-- Las portadas se generan mediante JavaScript -->
-            </div>
+<!-- ==================================================
+     CATÁLOGO · CARRUSEL
+================================================== -->
+
+<section
+    class="discografia"
+    aria-label="Discografía de Billy Pagán"
+>
 
 
-            <button
-                class="discografia-flecha discografia-flecha-siguiente"
-                id="discoSiguiente"
-                type="button"
-                aria-label="Disco siguiente"
-            >
-                ›
-            </button>
+    <div class="discografia-carrusel">
+
+
+        <button
+            class="discografia-flecha discografia-flecha-anterior"
+            id="discoAnterior"
+            type="button"
+            aria-label="Disco anterior"
+        >
+            ‹
+        </button>
+
+
+        <div
+            class="discografia-portadas"
+            id="discografiaPortadas"
+        >
+
+            <!-- Las portadas se generan mediante JavaScript -->
 
         </div>
 
 
-        <!-- ==================================================
-             INFORMACIÓN DEL DISCO
-        ================================================== -->
-
-        <section
-            class="disco-informacion"
-            id="discoInformacion"
-            aria-live="polite"
+        <button
+            class="discografia-flecha discografia-flecha-siguiente"
+            id="discoSiguiente"
+            type="button"
+            aria-label="Disco siguiente"
         >
-
-            <!-- Se genera mediante JavaScript -->
-
-        </section>
+            ›
+        </button>
 
 
-        <!-- ==================================================
-             TRACKLIST
-        ================================================== -->
-
-        <section
-            class="disco-tracklist"
-            id="discoTracklist"
-        >
-
-            <!-- Se genera mediante JavaScript -->
-
-        </section>
+    </div>
 
 
-        <!-- ==================================================
-             PANEL DE CANCIÓN
-        ================================================== -->
+    <!-- ==================================================
+         INFORMACIÓN DEL DISCO
+    ================================================== -->
 
-        <section
-            class="cancion-panel"
-            id="cancionPanel"
-            aria-live="polite"
-            hidden
-        >
+    <section
+        class="disco-informacion"
+        id="discoInformacion"
+        aria-live="polite"
+    >
 
-            <button
-                class="cancion-panel-cerrar"
-                id="cerrarCancion"
-                type="button"
-                aria-label="Cerrar"
-            >
-                ×
-            </button>
-
-
-            <header class="cancion-panel-cabecera">
-
-                <span
-                    class="cancion-panel-numero"
-                    id="cancionNumero"
-                ></span>
-
-                <h2
-                    id="cancionTitulo"
-                ></h2>
-
-            </header>
-
-
-            <nav
-                class="cancion-panel-menu"
-                aria-label="Información de la canción"
-            >
-
-                <button
-                    type="button"
-                    class="cancion-panel-opcion activo"
-                    data-vista="letra"
-                >
-                    LETRA
-                </button>
-
-                <button
-                    type="button"
-                    class="cancion-panel-opcion"
-                    data-vista="acordes"
-                >
-                    ACORDES
-                </button>
-
-                <button
-                    type="button"
-                    class="cancion-panel-opcion"
-                    data-vista="creditos"
-                >
-                    CRÉDITOS
-                </button>
-
-            </nav>
-
-
-            <div
-                class="cancion-panel-contenido"
-                id="cancionContenido"
-            >
-                <!-- Contenido generado mediante JavaScript -->
-            </div>
-
-        </section>
+        <!-- Se genera mediante JavaScript -->
 
     </section>
 
+
+    <!-- ==================================================
+         TRACKLIST
+    ================================================== -->
+
+    <section
+        class="disco-tracklist"
+        id="discoTracklist"
+    >
+
+        <!-- Se genera mediante JavaScript -->
+
+    </section>
+
+
+    <!-- ==================================================
+         PANEL DE CANCIÓN
+    ================================================== -->
+
+    <section
+        class="cancion-panel"
+        id="cancionPanel"
+        aria-live="polite"
+        hidden
+    >
+
+
+        <button
+            class="cancion-panel-cerrar"
+            id="cerrarCancion"
+            type="button"
+            aria-label="Cerrar"
+        >
+            ×
+        </button>
+
+
+        <header class="cancion-panel-cabecera">
+
+            <span
+                class="cancion-panel-numero"
+                id="cancionNumero"
+            ></span>
+
+
+            <h2
+                id="cancionTitulo"
+            ></h2>
+
+        </header>
+
+
+        <nav
+            class="cancion-panel-menu"
+            aria-label="Información de la canción"
+        >
+
+
+            <button
+                type="button"
+                class="cancion-panel-opcion activo"
+                data-vista="letra"
+            >
+                LETRA
+            </button>
+
+
+            <button
+                type="button"
+                class="cancion-panel-opcion"
+                data-vista="acordes"
+            >
+                ACORDES
+            </button>
+
+
+            <button
+                type="button"
+                class="cancion-panel-opcion"
+                data-vista="creditos"
+            >
+                CRÉDITOS
+            </button>
+
+
+        </nav>
+
+
+        <div
+            class="cancion-panel-contenido"
+            id="cancionContenido"
+        >
+
+            <!-- Contenido generado mediante JavaScript -->
+
+        </div>
+
+
+    </section>
+
+
+</section>
+```
+
 </article>
+
+</main>
 
 <!-- ==================================================
      FOOTER
@@ -506,12 +527,15 @@ content="Música de Billy Pagán · Sitio Oficial."
 
 <footer class="footer">
 
-
+```
 <div class="footer-contenido">
+
 
     <p class="footer-copy">
 
+
         © 2026
+
 
         <a
             href="../../index.html"
@@ -521,21 +545,25 @@ content="Música de Billy Pagán · Sitio Oficial."
             BILLY PAGÁN
         </a>
 
+
         <span
             class="footer-separador"
             aria-hidden="true"
         >
             ·
         </span>
+
 
         TODOS LOS DERECHOS RESERVADOS
 
+
         <span
             class="footer-separador"
             aria-hidden="true"
         >
             ·
         </span>
+
 
         <a
             href="../../legal/terminos-y-condiciones.html"
@@ -544,10 +572,12 @@ content="Música de Billy Pagán · Sitio Oficial."
             TÉRMINOS Y CONDICIONES
         </a>
 
+
     </p>
 
-</div>
 
+</div>
+```
 
 </footer>
 
@@ -561,7 +591,8 @@ content="Música de Billy Pagán · Sitio Oficial."
 
 <script src="../../js/components/footer.js"></script>
 
+<script src="../../js/pages/musica.js"></script>
+
 </body>
 
 </html>
-
