@@ -1,10 +1,10 @@
 /* ==================================================
-DISCOGRAFÍA · BILLY PAGÁN
+   DISCOGRAFÍA · BILLY PAGÁN
 ================================================== */
 
 
 /* ==================================================
-DATOS DE LOS DISCOS
+   DATOS DE LOS DISCOS
 ================================================== */
 
 const discografia = [
@@ -14,7 +14,7 @@ const discografia = [
         anio: "2013",
 
         portada:
-            "../../img/musica/certificado-de-existencia.jpg",
+            "images/tienda/portada-certificado.jpg",
 
         formato:
             "Álbum · 2013",
@@ -44,7 +44,7 @@ const discografia = [
         anio: "",
 
         portada:
-            "../../img/musica/ensayos-clinicos-vol-1.jpg",
+            "images/tienda/portada-ensayos1.png",
 
         formato:
             "Álbum",
@@ -67,7 +67,7 @@ const discografia = [
         anio: "2024",
 
         portada:
-            "../../img/musica/el-peregrino.jpg",
+            "images/tienda/portada-peregrino.JPG",
 
         formato:
             "Álbum · 2024",
@@ -90,7 +90,7 @@ const discografia = [
         anio: "2025",
 
         portada:
-            "../../images/tienda/portada-front.jpg",
+            "images/tienda/portada-front.jpg",
 
         formato:
             "Álbum · 2025",
@@ -111,7 +111,7 @@ const discografia = [
 
 
 /* ==================================================
-ESTADO
+   ESTADO
 ================================================== */
 
 let discoActual = 0;
@@ -122,7 +122,7 @@ let animacionEnCurso = false;
 
 
 /* ==================================================
-ELEMENTOS
+   ELEMENTOS
 ================================================== */
 
 const portadas =
@@ -157,7 +157,7 @@ const botonSiguiente =
 
 
 /* ==================================================
-CREAR PORTADAS
+   CREAR PORTADAS
 ================================================== */
 
 function crearPortadas() {
@@ -249,7 +249,7 @@ function crearPortadas() {
 
 
 /* ==================================================
-POSICIÓN DE CADA PORTADA
+   POSICIÓN DE CADA PORTADA
 ================================================== */
 
 function actualizarPosiciones() {
@@ -347,7 +347,7 @@ function actualizarPosiciones() {
 
 
 /* ==================================================
-DIFERENCIA CIRCULAR
+   DIFERENCIA CIRCULAR
 ================================================== */
 
 function obtenerDiferenciaCircular(
@@ -386,7 +386,7 @@ function obtenerDiferenciaCircular(
 
 
 /* ==================================================
-INFORMACIÓN DEL DISCO
+   INFORMACIÓN DEL DISCO
 ================================================== */
 
 function renderInformacion() {
@@ -451,7 +451,7 @@ function renderInformacion() {
 
 
 /* ==================================================
-ANIMACIÓN DE INFORMACIÓN
+   ANIMACIÓN DE INFORMACIÓN
 ================================================== */
 
 function actualizarInformacionConAnimacion() {
@@ -485,7 +485,7 @@ function actualizarInformacionConAnimacion() {
 
 
 /* ==================================================
-TRACKLIST
+   TRACKLIST
 ================================================== */
 
 function renderTracklist() {
@@ -614,7 +614,7 @@ function renderTracklist() {
 
 
 /* ==================================================
-ABRIR CANCIÓN
+   ABRIR CANCIÓN
 ================================================== */
 
 function abrirCancion(
@@ -665,7 +665,7 @@ function abrirCancion(
 
 
 /* ==================================================
-VISTA DE CANCIÓN
+   VISTA DE CANCIÓN
 ================================================== */
 
 function mostrarVistaCancion(
@@ -764,7 +764,7 @@ function mostrarVistaCancion(
 
 
 /* ==================================================
-ACORDES
+   ACORDES
 ================================================== */
 
 function formatearAcordes(
@@ -784,7 +784,7 @@ function formatearAcordes(
 
 
 /* ==================================================
-SEGURIDAD · TEXTO
+   SEGURIDAD · TEXTO
 ================================================== */
 
 function escapeHtml(
@@ -822,7 +822,7 @@ function escapeHtml(
 
 
 /* ==================================================
-CAMBIAR DISCO
+   CAMBIAR DISCO
 ================================================== */
 
 function cambiarDisco(
@@ -888,7 +888,7 @@ function cambiarDisco(
 
 
 /* ==================================================
-NAVEGACIÓN
+   NAVEGACIÓN
 ================================================== */
 
 botonAnterior.addEventListener(
@@ -912,7 +912,7 @@ botonSiguiente.addEventListener(
 
 
 /* ==================================================
-CERRAR CANCIÓN
+   CERRAR CANCIÓN
 ================================================== */
 
 cerrarCancion.addEventListener(
@@ -926,7 +926,7 @@ cerrarCancion.addEventListener(
 
 
 /* ==================================================
-CAMBIAR LETRA / ACORDES / CRÉDITOS
+   CAMBIAR LETRA / ACORDES / CRÉDITOS
 ================================================== */
 
 document
@@ -950,7 +950,7 @@ document
 
 
 /* ==================================================
-INICIALIZACIÓN
+   INICIALIZACIÓN
 ================================================== */
 
 crearPortadas();
