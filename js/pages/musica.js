@@ -14,7 +14,7 @@ const discografia = [
         anio: "2013",
 
         portada:
-            "images/tienda/portada-certificado.jpg",
+            "../../images/tienda/portada-certificado.jpg",
 
         formato:
             "Álbum · 2013",
@@ -44,7 +44,7 @@ const discografia = [
         anio: "",
 
         portada:
-            "images/tienda/portada-ensayos1.png",
+            "../../images/tienda/portada-ensayos1.png",
 
         formato:
             "Álbum",
@@ -67,7 +67,7 @@ const discografia = [
         anio: "2024",
 
         portada:
-            "images/tienda/portada-peregrino.JPG",
+            "../../images/tienda/portada-peregrino.JPG",
 
         formato:
             "Álbum · 2024",
@@ -90,7 +90,7 @@ const discografia = [
         anio: "2025",
 
         portada:
-            "images/tienda/portada-front.jpg",
+            "../../images/tienda/portada-front.jpg",
 
         formato:
             "Álbum · 2025",
