@@ -10,24 +10,42 @@
 ================================================== */
 
 .pagina-musica {
+    position: relative;
+
+    min-height: 100vh;
+
+    color: var(--color-texto);
+
     background:
         url("../../images/fondos/escritorio/fondo-general-desktop.jpg")
-        center center
-        / cover
+        center center / cover
         no-repeat;
 
     background-attachment: fixed;
-    min-height: 100vh;
 }
 
 
-/* ==================================================
-   HERO MÚSICA
-================================================== */
+.pagina-musica::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
 
 .musica-hero {
     position: relative;
+    z-index: 1;
+
     width: 100%;
+    min-height: 100vh;
     padding-bottom: 60px;
 }
 
@@ -47,7 +65,7 @@
 ================================================== */
 
 .musica-titulo {
-    padding: 60px 20px 40px;
+    padding: 60px 20px 20px;
     text-align: center;
 }
 
@@ -57,11 +75,13 @@
     padding: 0;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+    line-height: 0.96;
     font-weight: 500;
     letter-spacing: 0.04em;
 
     color: var(--color-texto);
+    text-shadow: 0 0.08em 0 rgba(255, 255, 255, 0.12);
 }
 
 
@@ -88,7 +108,7 @@
     justify-content: center;
 
     width: 100%;
-    margin: 30px auto 50px;
+    margin: 24px auto 54px;
 
     overflow: hidden;
 }
@@ -174,7 +194,7 @@
 
     z-index: 2;
 
-    filter: saturate(0.75);
+    filter: saturate(0.75) brightness(0.9);
 }
 
 
@@ -192,7 +212,7 @@
 
     z-index: 2;
 
-    filter: saturate(0.75);
+    filter: saturate(0.75) brightness(0.9);
 }
 
 
@@ -236,11 +256,19 @@
 
     object-fit: cover;
 
+    border-radius: 10px;
+
     box-shadow:
         0 12px 35px rgba(0, 0, 0, 0.25);
 
     transition:
-        box-shadow 0.7s ease;
+        box-shadow 0.7s ease,
+        transform 0.25s ease;
+}
+
+
+.disco-portada:hover img {
+    transform: translateY(-2px);
 }
 
 
@@ -260,7 +288,7 @@
     text-align: center;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
     line-height: 1.2;
     letter-spacing: 0.05em;
 
@@ -276,7 +304,7 @@
     margin-top: 4px;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     letter-spacing: 0.15em;
 
     opacity: 0.65;
@@ -334,6 +362,8 @@
     border: none;
     background: transparent;
 
+    color: var(--color-texto);
+
     font-family: "Cormorant Garamond", serif;
     font-size: 3rem;
     font-weight: 400;
@@ -347,7 +377,8 @@
 
     transition:
         opacity 0.25s ease,
-        transform 0.25s ease;
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
 }
 
 
@@ -357,6 +388,8 @@
     transform:
         translateY(-50%)
         scale(1.08);
+
+    text-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.12);
 }
 
 
@@ -383,10 +416,12 @@
 .disco-informacion {
     max-width: 900px;
     margin: 0 auto 60px;
-    padding: 35px 0;
+    padding: 35px 24px;
 
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    background: rgba(255, 255, 255, 0.06);
 
     text-align: center;
 
@@ -409,7 +444,7 @@
     margin: 0;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 2.7rem;
+    font-size: clamp(2.2rem, 4vw, 2.9rem);
     font-weight: 500;
     letter-spacing: 0.04em;
 }
@@ -479,6 +514,7 @@
     padding: 12px 28px;
 
     border: 1px solid currentColor;
+    border-radius: 999px;
 
     text-decoration: none;
 
@@ -489,13 +525,15 @@
 
     transition:
         background 0.25s ease,
-        color 0.25s ease;
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
 .disco-tienda:hover {
     background: currentColor;
     color: white;
+    transform: translateY(-1px);
 }
 
 
@@ -506,6 +544,9 @@
 .disco-tracklist {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 0 10px;
+
+    background: rgba(255, 255, 255, 0.03);
 
     animation:
         aparecerContenido 0.55s ease both;
@@ -590,7 +631,8 @@
     margin: 70px auto 0;
     padding: 45px;
 
-    background: rgba(0, 0, 0, 0.035);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 
     animation:
         aparecerPanel 0.5s ease both;
@@ -833,7 +875,7 @@
     }
 
     .musica-titulo h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
+        font-size: clamp(2.1rem, 5vw, 3rem);
     }
 
     .discografia {
@@ -897,7 +939,7 @@
 
 
     .disco-portada-titulo {
-        font-size: 1.1rem;
+        font-size: 1.08rem;
     }
 
 
@@ -911,7 +953,7 @@
 
     .disco-informacion {
         margin-bottom: 45px;
-        padding: 30px 5px;
+        padding: 30px 10px;
     }
 
 
