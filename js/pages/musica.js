@@ -80,7 +80,44 @@ const discografia = [
         tienda:
             "../tienda.html",
 
-        canciones: []
+        canciones: [
+
+            {
+                numero: 1,
+                titulo: "El Peregrino",
+                duracion: "5'10\"",
+                autor: "Billy Pagán",
+
+                letra:
+                    "Quiero perderme en tu piel,\nCapital de mis noches en calma,\nAgua clara que sacia mi sed\nCuando vuelvo a cruzar\nLos paisajes sombríos de mi corazón.\n\nRemedios para olvidar\nY curarme con tiempo y distancia,\nDe olvido y de soledad,\nY encontrar el lugar\nPara quien ya perdió la esperanza.\n\nUna vez consumida la calma y las horas,\nMe iré, a seguir mi camino.\nVolveré, con el paso del tiempo,\nCuando me hayan herido otra vez.\n\nDicen que soy peregrino\nY andando descubro paisajes de luz.\nVoy siguiendo caminos, etéreos,\nQue parten de mí.\n\nAdiós, mi tierra querida, me voy\nTras la estrella que me ha de guiar,\nA confines del tiempo infinito,\nCaudales de eternidad.\n\nConsumida mi alma y los días,\nPor fin, llegaré a mi destino.\nVolveré, con el paso del tiempo,\nCuando me hayan herido otra vez.\n\nDicen que soy peregrino\nY andando descubro paisajes de luz.\nVoy siguiendo senderos,\nQue nacen de mí.\n\nDicen que soy peregrino\nY andando descubro paisajes de luz.\nVoy siguiendo caminos, etéreos,\nQue nacen de mí.",
+
+                acordes:
+                    "Próximamente.",
+
+                creditos: [
+                    "Productor/a: Billy Pagán | Pepe Cifuentes",
+                    "Compositor/a: Billy Pagán",
+                    "Letrista: Billy Pagán",
+                    "Artista Principal: Billy Pagán",
+                    "Guitarra: Billy Pagán",
+                    "Coros: Billy Pagán | Alma | Manu Clavijo",
+                    "Arreglista: Billy Pagán",
+                    "Percusión: Billy Pagán | Manu Clavijo",
+                    "Ingeniero/a de Grabación: Pepe Cifuentes",
+                    "Ingeniero/a de Mezcla: Pepe Cifuentes",
+                    "Batería: Javier Milla",
+                    "Bajo: Darío Garrido",
+                    "Piano: Alma",
+                    "Sintetizador: Alma",
+                    "Órgano: Quino Lucas",
+                    "Violín: Manu Clavijo",
+                    "Viola: Manu Clavijo",
+                    "Fotografía de portada: Zuleika Valbuena"
+                ]
+
+            }
+
+        ]
 
     },
 
@@ -527,40 +564,28 @@ function renderTracklist() {
                             ).padStart(2, "0")}
                         </span>
 
-                        <span class="track-titulo">
-                            ${escapeHtml(
-                                cancion.titulo
-                            )}
-                        </span>
+                        <div class="track-info">
+
+                            <div class="track-titulo">
+                                ${escapeHtml(
+                                    cancion.titulo
+                                )}
+                            </div>
+
+                            <div class="track-detalles">
+                                ${cancion.duracion ? `<span class="track-duracion">${escapeHtml(cancion.duracion)}</span>` : ''}
+                                ${cancion.autor ? `<span class="track-autor">${escapeHtml(cancion.autor)}</span>` : ''}
+                            </div>
+
+                        </div>
 
                         <div class="track-opciones">
 
-                            <button
-                                type="button"
-                                class="track-opcion"
-                                data-cancion="${cancion.numero}"
-                                data-vista="letra"
-                            >
-                                LETRA
-                            </button>
+                            ${cancion.letra ? `<button type="button" class="track-opcion" data-cancion="${cancion.numero}" data-vista="letra">LETRA</button>` : ''}
 
-                            <button
-                                type="button"
-                                class="track-opcion"
-                                data-cancion="${cancion.numero}"
-                                data-vista="acordes"
-                            >
-                                ACORDES
-                            </button>
+                            ${cancion.acordes ? `<button type="button" class="track-opcion" data-cancion="${cancion.numero}" data-vista="acordes">ACORDES</button>` : ''}
 
-                            <button
-                                type="button"
-                                class="track-opcion"
-                                data-cancion="${cancion.numero}"
-                                data-vista="creditos"
-                            >
-                                CRÉDITOS
-                            </button>
+                            ${cancion.creditos ? `<button type="button" class="track-opcion" data-cancion="${cancion.numero}" data-vista="creditos">CRÉDITOS</button>` : ''}
 
                         </div>
 
@@ -697,10 +722,13 @@ function mostrarVistaCancion(
 
             <div class="letra-contenido">
 
-                ${escapeHtml(
-                    cancionActual.letra ||
-                    "Letra próximamente."
-                )}
+                ${cancionActual.letra
+                    ? cancionActual.letra
+                        .split('\n\n')
+                        .map(verso => `<p>${escapeHtml(verso).replace(/\n/g, '<br>')}</p>`)
+                        .join('')
+                    : 'Letra próximamente.'
+                }
 
             </div>
 
