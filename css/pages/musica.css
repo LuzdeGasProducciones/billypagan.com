@@ -65,7 +65,7 @@
 ================================================== */
 
 .musica-titulo {
-    padding: 60px 20px 20px;
+    padding: 40px 20px 30px;
     text-align: center;
 }
 
@@ -75,7 +75,7 @@
     padding: 0;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(2.7rem, 6vw, 4.3rem);
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
     line-height: 0.96;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -93,7 +93,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px 100px;
+    padding: 20px 20px 100px;
 }
 
 
@@ -108,7 +108,7 @@
     justify-content: center;
 
     width: 100%;
-    margin: 24px auto 54px;
+    margin: 20px auto 50px;
 
     overflow: hidden;
 }
@@ -256,7 +256,7 @@
 
     object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     box-shadow:
         0 12px 35px rgba(0, 0, 0, 0.25);
@@ -288,7 +288,7 @@
     text-align: center;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
     line-height: 1.2;
     letter-spacing: 0.05em;
 
@@ -304,7 +304,7 @@
     margin-top: 4px;
 
     font-family: "Montserrat", sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     letter-spacing: 0.15em;
 
     opacity: 0.65;
@@ -444,7 +444,7 @@
     margin: 0;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(2.2rem, 4vw, 2.9rem);
+    font-size: clamp(2rem, 3.5vw, 2.7rem);
     font-weight: 500;
     letter-spacing: 0.04em;
 }
@@ -871,11 +871,11 @@
 @media (max-width: 700px) {
 
     .musica-titulo {
-        padding: 50px 15px 30px;
+        padding: 35px 15px 25px;
     }
 
     .musica-titulo h1 {
-        font-size: clamp(2.1rem, 5vw, 3rem);
+        font-size: clamp(1.8rem, 4.5vw, 2.5rem);
     }
 
     .discografia {
@@ -958,7 +958,7 @@
 
 
     .disco-informacion h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
 
