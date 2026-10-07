@@ -336,34 +336,169 @@ content="Música de Billy Pagán · Sitio Oficial."
 
 
 <!-- ==================================================
-     MÚSICA
+     MÚSICA · DISCOGRAFÍA
 ================================================== -->
 
 <article class="musica-contenido">
 
-
     <header class="musica-titulo">
 
         <h1>
-            MÚSICA
+            DISCOGRAFÍA
         </h1>
 
     </header>
 
 
-    <div class="musica-mensaje">
+    <!-- ==================================================
+         CATÁLOGO · CARRUSEL
+    ================================================== -->
 
-        <p>
-            EN CONSTRUCCIÓN
-        </p>
+    <section
+        class="discografia"
+        aria-label="Discografía de Billy Pagán"
+    >
 
-    </div>
+        <div class="discografia-carrusel">
 
+            <button
+                class="discografia-flecha discografia-flecha-anterior"
+                id="discoAnterior"
+                type="button"
+                aria-label="Disco anterior"
+            >
+                ‹
+            </button>
+
+
+            <div
+                class="discografia-portadas"
+                id="discografiaPortadas"
+            >
+                <!-- Las portadas se generan mediante JavaScript -->
+            </div>
+
+
+            <button
+                class="discografia-flecha discografia-flecha-siguiente"
+                id="discoSiguiente"
+                type="button"
+                aria-label="Disco siguiente"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <!-- ==================================================
+             INFORMACIÓN DEL DISCO
+        ================================================== -->
+
+        <section
+            class="disco-informacion"
+            id="discoInformacion"
+            aria-live="polite"
+        >
+
+            <!-- Se genera mediante JavaScript -->
+
+        </section>
+
+
+        <!-- ==================================================
+             TRACKLIST
+        ================================================== -->
+
+        <section
+            class="disco-tracklist"
+            id="discoTracklist"
+        >
+
+            <!-- Se genera mediante JavaScript -->
+
+        </section>
+
+
+        <!-- ==================================================
+             PANEL DE CANCIÓN
+        ================================================== -->
+
+        <section
+            class="cancion-panel"
+            id="cancionPanel"
+            aria-live="polite"
+            hidden
+        >
+
+            <button
+                class="cancion-panel-cerrar"
+                id="cerrarCancion"
+                type="button"
+                aria-label="Cerrar"
+            >
+                ×
+            </button>
+
+
+            <header class="cancion-panel-cabecera">
+
+                <span
+                    class="cancion-panel-numero"
+                    id="cancionNumero"
+                ></span>
+
+                <h2
+                    id="cancionTitulo"
+                ></h2>
+
+            </header>
+
+
+            <nav
+                class="cancion-panel-menu"
+                aria-label="Información de la canción"
+            >
+
+                <button
+                    type="button"
+                    class="cancion-panel-opcion activo"
+                    data-vista="letra"
+                >
+                    LETRA
+                </button>
+
+                <button
+                    type="button"
+                    class="cancion-panel-opcion"
+                    data-vista="acordes"
+                >
+                    ACORDES
+                </button>
+
+                <button
+                    type="button"
+                    class="cancion-panel-opcion"
+                    data-vista="creditos"
+                >
+                    CRÉDITOS
+                </button>
+
+            </nav>
+
+
+            <div
+                class="cancion-panel-contenido"
+                id="cancionContenido"
+            >
+                <!-- Contenido generado mediante JavaScript -->
+            </div>
+
+        </section>
+
+    </section>
 
 </article>
-
-
-</main>
 
 <!-- ==================================================
      FOOTER
